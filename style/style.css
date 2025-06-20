@@ -1,0 +1,663 @@
+html { 
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background: #fff;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #607EF7;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #051854;
+}
+
+h2::before {
+    content: '';
+    width: 85px;
+    height: 3px;
+    display: grid;
+    background-color:#EC3055;
+    position: relative;
+    bottom: 1px;
+    left: calc(50% - 42.5px);
+    top: -14px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    text-align: center;
+    margin-bottom: 0;
+    color: #5f5f5f;
+    line-height: 40px;
+}
+
+.title {
+    padding-top: 14px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+.wrapper {
+    max-width: 1017px;
+    margin: 0 10%;
+    margin: 0 auto;
+    font-size: 22px;
+    color: #5f5f5f;
+}
+
+
+/*-----------------
+背景
+-----------------*/
+#backgraund01 {
+    background-color: #fff;
+    padding-top: 170px;
+}
+
+#backgraund02 {
+    background-color: #f5f5f5;
+}
+
+#backgraund03 {
+    background-color: #fff;
+}
+
+
+/*-----------------
+トップ画像
+-----------------*/
+
+/*-----------------
+アンカーリンク
+-----------------*/
+#link {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 70px;
+    background: #ffffffCC;
+
+    z-index: 20;
+}
+
+#link a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #051854;
+    margin-left: 60px;
+}
+
+#link ul {
+    display: inline-block;
+    width: 100%;
+    margin-top: 35px;
+    align-items: center;
+}
+
+#link li::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 11px solid transparent;
+    border-left: 11px solid transparent;
+    border-top: 13px solid #051854;
+    border-bottom: 0;
+    display: inline-block;
+    position: relative;
+    right: -15px;
+}
+
+/*#link {
+    width: 614px;
+    height: 63px;
+    margin: 0 auto;
+    margin-top: 436px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(90deg, #093C74, #465F85);
+    box-shadow: 0px 4px 20px 0px #10152926;
+    transform: translate(0, -40px);
+    z-index: 20;
+    
+}
+
+#link:before,
+#link:after {
+	position: absolute;
+	top: 0;
+	width: 0;
+	height: 0;
+	content: '';
+	border: 31.5px solid transparent;
+	border-right: 20px solid transparent;
+	border-left: 20px solid transparent;
+}
+#link:before {
+	right: 100%;
+	border-right-color: #093C74;
+}
+#link:after {
+	left: 100%;
+	border-left-color: #465F85;
+}
+
+#link a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#link ul {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#link li::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 11px solid transparent;
+    border-left: 11px solid transparent;
+    border-top: 13px solid #ffffff;
+    border-bottom: 0;
+    display: inline-block;
+    position: relative;
+    right: -15px;
+}*/
+
+
+
+/*-----------------
+会社概要
+-----------------*/
+#CompanyProfile {
+    margin-top: 50px;
+}
+
+#CompanyProfile table {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-spacing: 0;
+}
+
+#CompanyProfile tbody {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+#CompanyProfile th,
+#CompanyProfile td {
+    text-align: left;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    padding: 40px 20px 40px 0px;
+    margin: 0 0 -1px;
+    line-height: 33pt;
+    vertical-align: top;
+}
+
+/*
+#CompanyProfile .lastLine th,
+#CompanyProfile .lastLine td {
+    border-bottom: 1px solid #000;
+}
+*/
+
+#CompanyProfile th {
+    font-weight: 800;
+    min-width: 150px;
+    max-width: 200px;
+    padding-right: 42px;
+    line-height: 26pt;
+}
+
+#CompanyProfile td {
+    width: 100%;
+}
+
+
+/*-----------------
+アクセス
+-----------------*/
+#AccessMap{
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 140px;
+}
+
+.map iframe {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 16px;
+} 
+
+.map p {
+    width: 100%;
+    font-size: 22px;
+    line-height: 37px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-align: left;
+    padding-bottom: 50px;
+}
+
+
+/*-----------------
+事業内容
+-----------------*/
+#BusinessContant {
+    width: 1017px;
+    margin: auto;
+    font-size: 20px;
+    margin-bottom: 140px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.bcBox {
+    display: flex;
+    justify-content: center;
+}
+.bcBox .aiComputing {
+    margin-right: 70px;
+}
+
+#BusinessContant img {
+    width: 553px;
+    height: 344px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.TextBox {
+    color: #fff;
+    position: absolute;
+    transform: translate(80px, -294px);
+    width: 388px;
+}
+
+.TextBox h3 {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.TextBox p {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 37px;
+}
+
+.TextBox .btn {
+    font-size: 22px;
+    font-weight: 500;
+    width: 203px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #051854;
+    border-radius: 32px;
+}
+
+/*
+#BusinessContant a {
+    color: #000;
+}
+
+#BusinessContant p {
+    font-size: 20px;
+}
+
+#BusinessContant h3 {
+    font-size: 25px;
+}
+
+
+
+.imgBox01 {
+    height: 418px;
+}
+
+#BusinessContant img {
+    height: 418px;
+    width: 508px;
+    object-fit: cover;
+}
+
+#BusinessContant .TextBox {
+    width: 378px;
+    line-height: 37px;
+    margin: auto;
+}
+
+#BusinessContant .aiComputing .TextBox .TextBoxLink {
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    justify-content:right
+}
+
+.aiComputing {
+    width: 1017px;
+    height: 418px;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.149);
+    margin-bottom: 130px;
+}
+
+.aiComputing img {
+    border-radius: 16px 0 0 16px;
+}
+
+.aiComputing .TextBox {
+    font-size: 20px;
+    border-radius: 0 16px 16px 0;
+}
+
+.aiApp {
+    width: 1017px;
+    height: 418px;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.149);
+}
+
+.aiApp img {
+    border-radius: 0 16px 16px 0;
+}
+*/
+
+
+
+/*-----------------
+沿革
+-----------------*/
+#History {
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+#History .history-list li {
+    /*list-style: disc;*/
+    line-height: 37px;
+    padding: 14px;
+    color: #051854CC;
+    font-weight: 500;
+    display: list-item;
+    white-space: nowrap;
+    transform: translateX(50px);
+}
+
+#History .history-list li::before {
+    content: '';
+    display: grid;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0518544D;
+    top: 30px;
+    left: -60px;
+}
+
+#History .history-list .libr::before {
+    content: '';
+    display: grid;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0518544D;
+    top: 48px;
+    left: -60px;
+}
+
+/*リストマーカーの位置合わせ
+#History .history-list li>span{
+    vertical-align: 0.25em;
+}
+
+#History .history-list li::marker {
+    font-size: 40px;
+    color: #CAD4FC;
+}
+リストマーカーの位置合わせ*/
+
+
+
+/*-----------------
+AIフレームワークの開発の歴史
+-----------------*/
+.wrapper02 {
+    max-width: 1137px;
+    margin: 0 auto 120px auto;
+    font-size: 20px;
+    font-weight: 500;
+    color: #5f5f5f;
+}
+
+#History02 .history-list02 {
+    background-color: #ebebeb66;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 70px 80px;
+    border-radius: 16px;
+}
+
+#History02 .history-list02 h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    margin-top: 0;
+}
+
+#History02 .history-list02 ul {
+    padding: 0;
+    line-height: 56px;
+    margin: 0;
+}
+
+
+/*-----------------
+お問い合わせ
+-----------------*/
+#ContactUs {
+    width: 100%;
+    height: 271px;
+    background-color: #EC3055;
+    text-align: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#ContactUs a {
+    color: #fff;
+    display: block;
+    padding-top: 75px;
+}
+
+#ContactUs h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.arrow {
+    content: '';
+    width: 19px;
+    height: 19px;
+    border: 0;
+    border-bottom: solid 3px #ffffff;
+    border-right: solid 3px #ffffff;
+    transform: rotate(45deg);
+    display: flex;
+    margin: 0 auto 15px auto;
+}
+
+#ContactUs p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/*
+#ContactUs h1::before {
+    content: '';
+    width: 30px;
+    height: 3px;
+    display: grid;
+    background-color: #fff;
+    position: relative;
+    bottom: 1px;
+    left: calc(50% - 15px);
+}
+
+#ContactUs:hover {
+    background-position: 0;
+}
+
+#ContactUs a {
+    color: #fff;
+    display: block;
+    padding: 56px 0;
+}
+
+
+.ainyan {
+    position: absolute;
+    object-fit: cover;
+    transform: translate(400px, 125px) rotate(90deg);
+    transform-origin: left bottom;
+    transition: 1000ms ease-in-out;
+}
+
+#ContactUs:hover .ainyan {
+    transform:translate(400px, -125px);
+}
+*/
+
+/*-----------------
+ヘッダー
+-----------------*/
+#head01 {
+    background: #fff;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    position: fixed;
+
+    z-index: 30;
+}
+
+
+#head01 .headlogo {
+    width: 220px;
+    position: absolute;
+}
+
+#head01 .head01nav {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#head01 .head01nav li {
+    display: flex;
+    list-style: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin: 0 30px;
+}
+
+#head01 a {
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+#head01 a:hover {
+    color: #818181;
+    text-decoration: none;
+}
+
+#head01 .lang {
+    top: -10px;
+    position: relative;
+    padding: 10px;
+}
+
+#head01 .active {
+    color: #fff;
+    background-color: #898989;
+    border-radius: 30px;
+}
+
+
+/*-----------------
+フッター
+-----------------*/
+footer {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+    #footer01 {
+        background: #fff;
+        padding: 15px 20px;
+        min-width: 1000px;
+        margin: 0;
+        position: relative;
+        height: 162px;
+    }
+}
