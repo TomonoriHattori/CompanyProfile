@@ -30,16 +30,16 @@ h1 {
     font-size: 40px;
     margin: 0;
     text-align: center;
-
     color: #051854;
 }
 
-h2::before {
+h1::before {
     content: '';
     width: 85px;
     height: 3px;
     display: grid;
     background-color:#EC3055;
+    border-radius: 1.5px;
     position: relative;
     bottom: 1px;
     left: calc(50% - 42.5px);
@@ -54,6 +54,7 @@ h2 {
     margin-bottom: 0;
     color: #5f5f5f;
     line-height: 40px;
+    margin-top: 10px;
 }
 
 .title {
@@ -72,6 +73,26 @@ li {
     font-size: 18px;
     font-weight: 400;
     color: #5f5f5f;
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+    width: 400px;
+    margin: 0 10%;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 400;
+    color: #5f5f5f;
+    }
+    h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18vw;
+    margin: 0;
+    text-align: center;
+    color: #051854;
+    }
 }
 
 
@@ -105,7 +126,6 @@ li {
     position: fixed;
     top: 70px;
     background: #ffffffCC;
-
     z-index: 20;
 }
 
@@ -136,6 +156,8 @@ li {
     position: relative;
     right: -15px;
 }
+
+
 
 /*#link {
     width: 614px;
