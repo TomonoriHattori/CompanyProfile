@@ -75,6 +75,18 @@ li {
     color: #5f5f5f;
 }
 
+#a01,
+#a02,
+#a03,
+#a04 {
+    content: "";
+    display: block;
+    padding-top: 170px; /* 調整したい高さ（固定ヘッダーの高さ） */
+    margin-top: -170px; /* heightと同じ分のネガティブマージン */
+    visibility: hidden;
+}
+
+
 @media screen and (max-width: 767px) {
     .wrapper {
     width: 400px;
@@ -134,6 +146,10 @@ li {
     font-weight: 400;
     color: #051854;
     margin-left: 60px;
+}
+
+#link a:hover {
+    color: #5f78cc;
 }
 
 #link ul {
