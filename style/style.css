@@ -149,7 +149,7 @@ li {
 }
 
 #link a:hover {
-    color: #5f78cc;
+    color: #051754c4;
 }
 
 #link ul {
@@ -314,7 +314,7 @@ li {
 
 .map p {
     width: 100%;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 37px;
     margin-top: 40px;
     margin-left: auto;
@@ -340,9 +340,13 @@ li {
     display: flex;
     justify-content: center;
 }
-.bcBox .aiComputing {
+
+.bcBox a {
+    width: auto;
+    height: auto;
     margin-right: 70px;
 }
+
 
 #BusinessContant .imgBox {
     width: 553px;
@@ -385,17 +389,22 @@ li {
 }
 
 .btn {
-    font-size: 22px;
-    font-weight: 500;
-    width: 203px;
-    height: 50px;
+    font-size: 12px;
+    font-weight: 400;
+    width: 140px;
+    height: 34px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(90deg, #335BD1B2, #335BD1);
-    border-radius: 25px;
-    color: #fff;
-    transform: translate(240px, 0px);
+    background-color: #fff;
+    border-radius: 17px;
+    color: #051854;
+    transform: translate(315px, 0px);
+    padding: 0 auto;
+}
+
+.inactive {
+    background-color: #c4c4c4;
 }
 
 .btn .allow {
