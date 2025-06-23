@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style/style.css">
-    <script src="script/script.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 
@@ -70,6 +70,7 @@
                 </div>
                 
 
+                <div class="anim02">
                 <table class="company">
                     <tbody>
                         <tr>
@@ -114,6 +115,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
 
             </section>
         
@@ -125,6 +127,7 @@
                     <h2>アクセス</h2>
                 </div>
 
+                <div class="anim02">
                 <div class="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.9388919055646!2d139.69685951224517!3d35.653877172482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b50c4cb68dd%3A0x61e0ca85b8abee8f!2z5aGX6KOF5Lya6aSo!5e0!3m2!1sja!2sjp!4v1747769622060!5m2!1sja!2sjp" 
                     width="1170px" height="481px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -133,6 +136,7 @@
                     <p>JR 渋谷駅西口から徒歩10 分です。<br>
                         駐車場はございませんので、お車でお越しの際は、近隣の駐車場をご利用ください。
                     </p>
+                </div>
                 </div>
             
             </section>
@@ -147,6 +151,7 @@
                     <h2>事業内容</h2>
                 </div>
 
+                <div class="anim02">
                 <div class="bcBox">
                     <a href="https://ailia.ai/computing/">
                         <div class="aiComputing">
@@ -167,9 +172,10 @@
                         <div class="TextBox">
                             <h3>AI アプリケーション事業</h3>
                             <p>高度な技術力を持つ専門のスタッフが、<br>AIを駆使したアプリケーションを<br>開発・提供。</p>
-                            <p class="btn">準備中<span class="allow">→</span></p>
+                            <p class="btn inactive">準備中</p>
                         </div>
                     </div>
+                </div>
                 </div>
 
             </section>
@@ -183,6 +189,7 @@
                     <h1>History</h1>
                     <h2>沿革</h2>
                 </div>
+                <div class="anim03">
                 <div class="history-list">
                     <ul>
                         <li>2019/05/22 ax 株式会社（エーエックスカブシキガイシャ）設立</li>
@@ -210,11 +217,13 @@
                         <li>2025/07/01 アイリア株式会社に社名変更</li>
                     </ul>
                 </div>
+                </div>
 
             </section>
 
             <section id="History02" class="wrapper02">
 
+                <div class="anim03">
                 <div class="history-list02">
                     <h3>AIフレームワークの開発の歴史</h3>
                     <ul>
@@ -227,6 +236,7 @@
                         <li>2023年1 月 ailia TFLite Runtime 1.1.7をリリース、組み込み機器に量産採用。</li>
                         <li>2024年11 月 ailia SDK 1.5.0をリリース、Intel XMXを使用したNPU推論に対応。</li>
                     </ul>
+                </div>
                 </div>
 
             </section>
@@ -273,6 +283,24 @@
             </ul>
         </nav>
     </footer>
+
+    <script>
+        ScrollReveal().reveal('.title', {
+            duration: 3000,
+            viewFactor: 0.3,
+            reset: false
+        });
+        ScrollReveal().reveal('.anim02', {
+            duration: 3000,
+            viewFactor: 0.3,
+            reset: false
+        });
+        ScrollReveal().reveal('.anim03', {
+            duration: 3000,
+            viewFactor: 0.1,
+            reset: false
+        });
+    </script>
 
 </body>
 </html>
