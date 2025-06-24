@@ -89,22 +89,13 @@ li {
 
 @media screen and (max-width: 767px) {
     .wrapper {
-    width: 400px;
+    min-width: 100vw;
     margin: 0 10%;
-    margin: 0 auto;
-    font-size: 18px;
-    font-weight: 400;
-    color: #5f5f5f;
     }
     h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 18vw;
-    margin: 0;
     text-align: center;
-    color: #051854;
     }
+
 }
 
 
@@ -306,6 +297,7 @@ li {
 }
 
 .map iframe {
+    min-width: 800px;
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -508,6 +500,11 @@ li {
 .history-list {
     margin-top: 48px;
     margin-bottom: 91px;
+}
+
+.history-list .space {
+    content: '';
+    padding-left: 70px;
 }
 
 #History .history-list li {
