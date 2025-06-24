@@ -86,18 +86,45 @@ li {
     visibility: hidden;
 }
 
-
 @media screen and (max-width: 767px) {
     .wrapper {
-    min-width: 100vw;
-    margin: 0 10%;
+        max-width: none;
+        min-width: none;
+        width: 100vw;
+        margin: 0;
     }
     h1 {
-    text-align: center;
+        text-align: center;
+        font-size: 30px;
+    }
+    h1::before {
+        width: 50px;
+        height: 3px;
+        left: calc(50% - 25px);
     }
 
+    h2 {
+        font-size: 15px;
+        text-align: center;
+    }
 }
 
+/*-----------------
+文章改行のコントロール
+-----------------*/
+
+.br_appear {
+    display: none;
+}
+
+@media screen and (max-width: 767px){
+    .br_appear {
+        display: block;
+    }
+    .br_disappear {
+        display: none;
+    }
+}
 
 /*-----------------
 背景
@@ -164,70 +191,41 @@ li {
     right: -15px;
 }
 
+@media screen and (max-width: 767px) {
+    #link {
+    width: 100vw;
+    height: 60px;
+    text-align: center;
+    }
+    #link a {
+        font-size: 12px;
+        margin-left: 24px;
+    }
+    
+    #link ul {
+        display: inline-block;
+        width: 90%;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 8px;
+        transform: translateX(-12px);
+    }
 
-
-/*#link {
-    width: 614px;
-    height: 63px;
-    margin: 0 auto;
-    margin-top: 436px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(90deg, #093C74, #465F85);
-    box-shadow: 0px 4px 20px 0px #10152926;
-    transform: translate(0, -40px);
-    z-index: 20;
+    #link li::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+        border-top: 8px solid #051854;
+        border-bottom: 0;
+        display: inline-block;
+        right: -6px;
+    }
     
 }
-
-#link:before,
-#link:after {
-	position: absolute;
-	top: 0;
-	width: 0;
-	height: 0;
-	content: '';
-	border: 31.5px solid transparent;
-	border-right: 20px solid transparent;
-	border-left: 20px solid transparent;
-}
-#link:before {
-	right: 100%;
-	border-right-color: #093C74;
-}
-#link:after {
-	left: 100%;
-	border-left-color: #465F85;
-}
-
-#link a {
-    font-size: 20px;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-#link ul {
-    margin: auto;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-}
-
-#link li::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-right: 11px solid transparent;
-    border-left: 11px solid transparent;
-    border-top: 13px solid #ffffff;
-    border-bottom: 0;
-    display: inline-block;
-    position: relative;
-    right: -15px;
-}*/
-
 
 
 /*-----------------
@@ -249,7 +247,6 @@ li {
 
 #CompanyProfile tbody {
     width: 100%;
-
 }
 
 #CompanyProfile th,
@@ -263,13 +260,6 @@ li {
     vertical-align: top;
 }
 
-/*
-#CompanyProfile .lastLine th,
-#CompanyProfile .lastLine td {
-    border-bottom: 1px solid #000;
-}
-*/
-
 #CompanyProfile th {
     font-weight: 800;
     min-width: 150px;
@@ -280,6 +270,36 @@ li {
 
 #CompanyProfile td {
     width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    #CompanyProfile {
+        margin-top: 67px;
+        width: 100vw;
+    }
+    #CompanyProfile table {
+        text-align: left;
+    }
+    #CompanyProfile tbody {
+        width: 85vw;
+    }
+    #CompanyProfile th,
+    #CompanyProfile td {
+        width: 100%;
+        display: block;
+    }
+    #CompanyProfile th {
+
+        border-bottom: none;
+        padding: 30px 0 15px 0;
+        font-size: 16px;
+    }
+    #CompanyProfile td {
+        padding-top: 0;
+        padding-bottom: 30px;
+        line-height: 25px;
+        font-size: 14px;
+    }
 }
 
 
@@ -298,6 +318,8 @@ li {
 
 .map iframe {
     min-width: 800px;
+    width: 1170px;
+    height: 481px;
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -315,6 +337,34 @@ li {
     text-align: left;
 }
 
+@media screen and (max-width: 767px) {
+    .iframeWrap {
+        position: relative;
+        margin: 0 auto;
+        min-width: 340px;
+        width: 85vw;
+        height: 0;
+        padding-bottom: 88%;
+        overflow: hidden;
+        border-radius: 16px;
+    }
+    
+    .map iframe {
+        position: absolute;
+        width: 85vw;
+        min-width: none;
+        height: 100%;
+        left: 50%;
+        top: -50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .map p {
+        transform: translateX(5vw);
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
 
 /*-----------------
 事業内容
@@ -377,7 +427,6 @@ li {
 
 .TextBox p {
     margin-top: 30px;
-
 }
 
 .btn {
@@ -399,95 +448,51 @@ li {
     background-color: #c4c4c4;
 }
 
-.btn .allow {
-    transform: translate(5px);
-}
-
-/*ボタンアニメーション（予備）
-.aiComputing .btn:hover {
-    background-color: #051854;
-    color: #fff;
-    transition: 0.8s;
-    .allow {
-        transform: translateX(10px);
-        transition: 0.5s;
+@media screen and (max-width: 767px) {
+    .bcBox {
+        margin-top: 80px;
+        display: block;
+    }
+    #BusinessContant .imgBox {
+        width: 85vw;
+        height: 296px;
+        margin: 0 auto;
+    }
+    #BusinessContant img {
+        object-fit: cover;
+    }
+    .TextBox {
+        color: #fff;
+        display: block;
+        margin: 40px auto;
+        width: 80%;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 37px;
+        transform: translate(15vw, -302px);
+    }
+    .TextBox h3 {
+        font-size: 23px;
+        font-weight: 700;
+    }
+    .btn {
+        font-size: 12px;
+        font-weight: 400;
+        width: 140px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 17px;
+        color: #051854;
+        transform: translateX(38vw);
+        padding: 0 auto;
+    }
+    .TextBox p {
+        margin-top: 20px;
     }
 }
-*/
-
-
-/*
-#BusinessContant a {
-    color: #000;
-}
-
-#BusinessContant p {
-    font-size: 20px;
-}
-
-#BusinessContant h3 {
-    font-size: 25px;
-}
-
-
-
-.imgBox01 {
-    height: 418px;
-}
-
-#BusinessContant img {
-    height: 418px;
-    width: 508px;
-    object-fit: cover;
-}
-
-#BusinessContant .TextBox {
-    width: 378px;
-    line-height: 37px;
-    margin: auto;
-}
-
-#BusinessContant .aiComputing .TextBox .TextBoxLink {
-    font-size: 22px;
-    font-weight: 700;
-    display: flex;
-    justify-content:right
-}
-
-.aiComputing {
-    width: 1017px;
-    height: 418px;
-    display: flex;
-    justify-content: center;
-    border-radius: 16px;
-    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.149);
-    margin-bottom: 130px;
-}
-
-.aiComputing img {
-    border-radius: 16px 0 0 16px;
-}
-
-.aiComputing .TextBox {
-    font-size: 20px;
-    border-radius: 0 16px 16px 0;
-}
-
-.aiApp {
-    width: 1017px;
-    height: 418px;
-    display: flex;
-    justify-content: center;
-    border-radius: 16px;
-    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.149);
-}
-
-.aiApp img {
-    border-radius: 0 16px 16px 0;
-}
-*/
-
-
 
 /*-----------------
 沿革
@@ -518,6 +523,7 @@ li {
     transform: translateX(50px);
 }
 
+/*リストマーカーの位置合わせ*/
 #History .history-list li::before {
     content: '';
     display: grid;
@@ -540,18 +546,26 @@ li {
     left: -60px;
 }
 
-/*リストマーカーの位置合わせ
-#History .history-list li>span{
-    vertical-align: 0.25em;
+@media screen and (max-width: 767px) {
+    .history-list {
+        width: 100vw;
+        margin-top: 150px;
+        white-space: wrap;
+    }
+    .history-list ul {
+        width: 100vw;
+        white-space: wrap;
+    }
+    #History .history-list li{
+        width: 100vw;
+        overflow: hidden;
+        font-size: 15px;
+        overflow-wrap: break-all;
+        white-space: wrap;
+        transform: translateX(10px);
+    }
+    
 }
-
-#History .history-list li::marker {
-    font-size: 40px;
-    color: #CAD4FC;
-}
-リストマーカーの位置合わせ*/
-
-
 
 /*-----------------
 AIフレームワークの開発の歴史
@@ -591,6 +605,12 @@ AIフレームワークの開発の歴史
 
 #History02 .history-list02 li:last-child {
     padding-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper02 {
+        max-width: none;
+    }
 }
 
 
@@ -675,81 +695,9 @@ AIフレームワークの開発の歴史
 /*-----------------
 ヘッダー
 -----------------*/
-#head01 {
-    background: #fff;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
-    padding: 15px 20px;
-    width: 100%;
-    height: 70px;
-    margin: 0 auto;
-    position: fixed;
 
-    z-index: 30;
-}
-
-
-#head01 .headlogo {
-    width: 220px;
-    position: absolute;
-}
-
-#head01 .head01nav {
-    position: absolute;
-    top: 12px;
-    right: 15px;
-    display: flex;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-#head01 .head01nav li {
-    display: flex;
-    list-style: none;
-    box-sizing: border-box;
-    vertical-align: middle;
-    margin: 0 30px;
-}
-
-#head01 a {
-    color: #333;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-#head01 a:hover {
-    color: #818181;
-    text-decoration: none;
-}
-
-#head01 .lang {
-    top: -10px;
-    position: relative;
-    padding: 10px;
-}
-
-#head01 .active {
-    color: #fff;
-    background-color: #898989;
-    border-radius: 30px;
-}
 
 
 /*-----------------
 フッター
 -----------------*/
-footer {
-    margin: 0;
-    padding: 0;
-    text-align: right;
-}
-
-@media screen and (min-width: 768px) {
-    #footer01 {
-        background: #fff;
-        padding: 15px 20px;
-        min-width: 1000px;
-        margin: 0;
-        position: relative;
-        height: 162px;
-    }
-}
