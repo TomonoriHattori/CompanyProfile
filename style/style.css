@@ -263,7 +263,7 @@ li {
 
 #CompanyProfile .lastLine th,
 #CompanyProfile .lastLine td {
-    border-bottom: 0.3px solid #ececec;;
+    border-bottom: 0.3px solid #ececec;
 }
 
 #CompanyProfile th {
@@ -286,6 +286,7 @@ li {
     #CompanyProfile table {
         text-align: left;
         margin-top: 15px;
+        border-spacing: 100%;
     }
     #CompanyProfile tbody {
         width: 85%;
@@ -296,16 +297,21 @@ li {
         display: block;
     }
     #CompanyProfile th {
-
-        border-bottom: none;
-        padding: 30px 0 10px 0;
+        padding: 20px 0 10px 0;
         font-size: 16px;
+        min-width: none;
+        max-width: none;
+        width: 100%;
     }
     #CompanyProfile td {
+        border-top: none;
         padding-top: 0;
         padding-bottom: 30px;
         line-height: 25px;
         font-size: 14px;
+    }
+    #CompanyProfile .lastLine th {
+        border-bottom: none;
     }
 }
 
@@ -348,6 +354,7 @@ li {
 
 @media screen and (max-width: 767px) {
     #AccessMap{
+        width: 100%;
         margin-top: 92px;
         margin-bottom: 70px;
     }
@@ -464,6 +471,8 @@ li {
 
 @media screen and (max-width: 767px) {
     #BusinessContant {
+        width: 85%;
+        padding: 0 auto;
         padding-top: 65px;
         padding-bottom: 85px;
     }
@@ -471,6 +480,7 @@ li {
     .bcBox {
         margin-top: 50px;
         display: block;
+        padding-bottom: 40px;
     }
     .aiApp {
         margin-top: 15px;
@@ -478,7 +488,6 @@ li {
     #BusinessContant .imgBox {
         width: 85vw;
         height: 296px;
-        margin: 0 auto;
     }
     #BusinessContant img {
         object-fit: cover;
@@ -491,13 +500,16 @@ li {
         font-size: 15px;
         font-weight: 400;
         line-height: 37px;
-        transform: translate(15vw, -302px);
+        transform: translate(12vw, -290px);
     }
     .TextBox h3 {
-        font-size: 23px;
+        font-size: 22px;
         font-weight: 700;
     }
-
+    .TextBox p {
+        font-size: 14px;
+        margin-top: 14px;
+    }
     .btnBc {
         font-size: 12px;
         font-weight: 400;
@@ -512,9 +524,7 @@ li {
         transform: translateX(33vw);
         padding: 0 auto;
     }
-    .TextBox p {
-        margin-top: 20px;
-    }
+    
 }
 
 /*-----------------
@@ -665,17 +675,22 @@ AIフレームワークの開発の歴史
 
 @media screen and (max-width: 767px) {
     .wrapper02 {
-        max-width: 85%;
+        max-width: 95%;
+        padding: 0;
+        margin: 120px auto 150px auto;
     }
     #History02 .history-list02 {
         padding: 35px 20px;
     }
     #History02 .history-list02 h3 {
         text-align: center;
-        font-size: 23px;
+        font-size: 18px;
         font-weight: 500;
         margin-bottom: 30px;
         margin-top: 0;
+    }
+    #History02 .history-list02 li {
+        font-size: 15px;
     }
 }
 
