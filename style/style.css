@@ -288,7 +288,7 @@ li {
     }
     #CompanyProfile table {
         text-align: left;
-        margin-top: 43px;
+        margin-top: 15px;
     }
     #CompanyProfile tbody {
         width: 85%;
@@ -323,7 +323,7 @@ li {
 }
 
 .map {
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .map iframe {
@@ -511,7 +511,7 @@ li {
         background-color: #fff;
         border-radius: 17px;
         color: #051854;
-        transform: translateX(38vw);
+        transform: translateX(33vw);
         padding: 0 auto;
     }
     .TextBox p {
@@ -711,12 +711,36 @@ AIフレームワークの開発の歴史
 
 
 @media screen and (max-width: 767px) {
+    #ContactUs {
+        width: 100%;
+        height: 160px;
+    }
     #ContactUs h1 {
         font-size: 16px;
         font-weight: 700;
         color: #fff;
     }
     #ContactUs p {
+        margin-top: 12px;
         font-size: 12px;
     }
+    #ContactUs a {
+        padding-top: 30px;
+    }
+}
+
+
+/* アニメーションの初期状態 */
+.anim01,
+.title {
+    opacity: 0; /* 最初は完全に透明 */
+    transform: translateY(10px); /* 少し下にずらしておく */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* 透明度と位置が1秒かけて変化 */
+}
+
+/* 画面に表示されたときに適用するクラス */
+.anim01.is-visible,
+.title.is-visible {
+    opacity: 1; /* 不透明にして表示 */
+    transform: translateY(0); /* 元の位置に戻す */
 }
