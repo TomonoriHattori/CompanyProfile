@@ -41,7 +41,7 @@ h2 {
     margin-bottom: 0;
     color: #5f5f5f;
     line-height: 40px;
-    transform: translateY(-15px);
+    transform: translateY(-5px);
 }
 
 .titleTop h2 {
@@ -277,6 +277,7 @@ li {
     flex-direction: column;
     border-spacing: 0;
     width: 100%;
+    margin-bottom: 150px;
 }
 
 #CompanyProfile tbody {
@@ -301,8 +302,8 @@ li {
 
 #CompanyProfile th {
     font-weight: 800;
-    min-width: 150px;
-    max-width: 200px;
+    min-width: 250px;
+    max-width: 300px;
     padding-right: 42px;
     line-height: 26pt;
 }
@@ -354,13 +355,13 @@ li {
 -----------------*/
 #AccessMap{
     width: 950px;
-    margin-top: 200px;
+    margin-top: 50px;
     margin-bottom: 140px;
     padding: 0 20px;
 }
 
 .map {
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .map iframe {
@@ -534,7 +535,7 @@ li {
         transform: translate(12vw, -225px);
     }
     .TextBox h3 {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 700;
     }
     .TextBox p {
@@ -579,6 +580,7 @@ li {
 
 #History tbody {
     width: 100%;
+    transform: translateY(-20px);
 }
 
 #History th,
@@ -616,6 +618,7 @@ li {
         margin-top: 0;
     }
     #History tbody {
+        transform: translateY(-20px);
         width: 85%;
     }
     #History th,
@@ -712,7 +715,7 @@ AIフレームワークの開発の歴史
     .wrapper02 {
         max-width: 95%;
         padding: 0;
-        margin: 120px auto 150px auto;
+        margin: 90px auto 50px auto;
     }
     #History02 .history-list02 {
         padding: 35px 20px;
@@ -723,6 +726,7 @@ AIフレームワークの開発の歴史
         font-weight: 500;
         margin-bottom: 30px;
         margin-top: 0;
+        padding-top: 20px;
     }
     #History02 .history-list02 li {
         font-size: 15px;
@@ -730,6 +734,7 @@ AIフレームワークの開発の歴史
     }
     #History02 .history-list02 ul {
         width: 100%;
+        padding-bottom: 30px;
     }
 }
 
