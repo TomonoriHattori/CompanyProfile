@@ -302,9 +302,9 @@ li {
 
 #CompanyProfile th {
     font-weight: 800;
-    min-width: 200px;
+    min-width: 220px;
     max-width: 300px;
-    padding-right: 42px;
+    padding-right: 15px;
     line-height: 26pt;
 }
 
