@@ -72,3 +72,35 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn("ID 'link' を持つ要素が見つかりませんでした。");
     }
 });
+
+
+//フェードインアニメーション
+document.addEventListener('DOMContentLoaded', () => {
+    // アニメーション対象の要素をすべて取得
+    const animTargets = document.querySelectorAll('.anim01, .title');
+
+    // Intersection Observerの設定
+    const options = {
+        root: null, // ビューポートをルート（監視領域）とする
+        rootMargin: '0px', // ビューポートの余白（デフォルト）
+        threshold: 0.2 // 要素の20%が見えたら発火（必要に応じて調整）
+    };
+
+    // Intersection Observerのインスタンスを作成
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            // 要素がビューポートに入ったら
+            if (entry.isIntersecting) {
+                // is-visibleクラスを追加してアニメーションをトリガー
+                entry.target.classList.add('is-visible');
+                // 一度アニメーションしたら、その要素の監視を停止
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    // すべてのアニメーション対象要素を監視
+    animTargets.forEach(target => {
+        observer.observe(target);
+    });
+});
