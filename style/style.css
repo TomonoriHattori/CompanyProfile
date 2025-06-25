@@ -34,14 +34,14 @@ h1 {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 0.5em;
     text-align: center;
     margin-bottom: 0;
     color: #5f5f5f;
     line-height: 40px;
-    margin-top: 5px;
+    transform: translateY(-15px);
 }
 
 .titleTop h2 {
@@ -142,6 +142,37 @@ li {
 /*-----------------
 トップ画像
 -----------------*/
+#TopImg {
+    font-size: 65px;
+    font-weight: 650;
+    letter-spacing: 10px;
+    color: #051854;
+    text-align: center;
+    transform: translateX(60px);
+    padding-top: 60px;
+    padding-bottom: 130px;
+    opacity: 0; /* 最初は完全に透明 */
+    transition: opacity 3s ease-in-out; /* 2秒かけてゆっくりフェードイン */
+}
+
+/* JavaScriptで追加するクラス。これによりopacityが1になる */
+#TopImg.fade-in {
+  opacity: 1; /* フェードイン後、完全に表示 */
+}
+
+@media screen and (max-width: 767px) {
+    #TopImg {
+        font-size: 6vw;
+        letter-spacing: 1.5vw;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        margin-left: 8vw;
+        padding: auto;
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+}
 
 /*-----------------
 アンカーリンク
@@ -179,9 +210,9 @@ li {
     width: 0;
     height: 0;
     border-style: solid;
-    border-right: 11px solid transparent;
-    border-left: 11px solid transparent;
-    border-top: 13px solid #051854;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-top: 12px solid #051854;
     border-bottom: 0;
     display: inline-block;
     position: relative;
@@ -194,6 +225,7 @@ li {
     height: 45px;
     top: 48px;
     text-align: center;
+    object-fit: cover;
     }
     #link a {
         font-size: 12px;
@@ -208,7 +240,8 @@ li {
         margin-top: 15px;
         align-items: center;
         justify-content: space-around;
-        transform: translateX(-18px);
+        transform: translateX(-8px);
+        overflow: hidden;
     }
 
     #link li::after {
@@ -216,12 +249,12 @@ li {
         width: 0;
         height: 0;
         border-style: solid;
-        border-right: 7px solid transparent;
-        border-left: 7px solid transparent;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
         border-top: 8px solid #051854;
         border-bottom: 0;
         display: inline-block;
-        right: 0px;
+        right: -2px;
         transform: translateX(-8px);
     }
     
@@ -355,21 +388,26 @@ li {
 @media screen and (max-width: 767px) {
     #AccessMap{
         width: 100%;
-        margin-top: 92px;
+        margin-top: 50px;
         margin-bottom: 70px;
     }
     .map {
-        margin-top: 60px;
+        margin-top: 20px;
     }
     .map p {
-        margin-top: 20px;
+        display: block;
+        margin-top: 10px;
+        margin-left: 2%;
+        width: 90%;
+        font-size: 12px;
+        line-height: 25px;
     }
     .iframeWrap {
         position: relative;
         margin: 0 auto;
         width: 85vw;
         height: 0;
-        padding-bottom: 78vw;
+        padding-bottom: 60vw;
         overflow: hidden;
         border-radius: 16px;
     }
@@ -378,13 +416,6 @@ li {
         min-width: none;
         width: 85vw;
         height: 73vw;
-    }
-
-    .map p {
-        width: 85%;
-        margin-left: 7.5%;
-        font-size: 14px;
-        line-height: 25px;
     }
 }
 
@@ -473,12 +504,12 @@ li {
     #BusinessContant {
         width: 85%;
         padding: 0 auto;
-        padding-top: 65px;
-        padding-bottom: 85px;
+        padding-top: 35px;
+        padding-bottom: 28px;
     }
 
     .bcBox {
-        margin-top: 50px;
+        margin-top: 20px;
         display: block;
         padding-bottom: 40px;
     }
@@ -487,7 +518,7 @@ li {
     }
     #BusinessContant .imgBox {
         width: 85vw;
-        height: 296px;
+        height: 220px;
     }
     #BusinessContant img {
         object-fit: cover;
@@ -499,8 +530,8 @@ li {
         width: 80%;
         font-size: 15px;
         font-weight: 400;
-        line-height: 37px;
-        transform: translate(12vw, -290px);
+        line-height: 28px;
+        transform: translate(12vw, -225px);
     }
     .TextBox h3 {
         font-size: 22px;
@@ -521,7 +552,7 @@ li {
         background-color: #fff;
         border-radius: 17px;
         color: #051854;
-        transform: translateX(33vw);
+        transform: translate(33vw, -15px);
         padding: 0 auto;
     }
     
@@ -556,7 +587,7 @@ li {
     border: none;
     padding: 37px 20px 37px 0px;
     margin: 0 0 -1px;
-    line-height: 18pt;
+    line-height: 28pt;
     vertical-align: top;
     appearance: none;
     font-size: 18px;
@@ -578,10 +609,11 @@ li {
     #History {
         width: 100%;
         padding: 0;
+        margin-top: 50px;
     }
     #History table {
         text-align: left;
-        margin-top: 15px;
+        margin-top: 0;
     }
     #History tbody {
         width: 85%;
@@ -592,15 +624,17 @@ li {
         display: block;
     }
     #History th {
-
         border-bottom: none;
         padding: 30px 0 10px 0;
         font-size: 16px;
     }
+    #History th::first-line {
+        padding: 0 0 10px 0;
+    }
     #History td {
         padding-top: 0;
-        padding-bottom: 30px;
-        line-height: 25px;
+        padding-bottom: 10px;
+        line-height: 28px;
         font-size: 14px;
     }
 }
@@ -635,7 +669,7 @@ AIフレームワークの開発の歴史
     max-width: 950px;
     margin: 120px auto 150px auto;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     color: #5f5f5f;
     padding: 0 20px;
 }
@@ -657,7 +691,8 @@ AIフレームワークの開発の歴史
 }
 
 #History02 .history-list02 ul {
-    margin: 0;
+    margin: 0 auto;
+    width: 750px;
 }
 
 #History02 .history-list02 li {
@@ -691,6 +726,10 @@ AIフレームワークの開発の歴史
     }
     #History02 .history-list02 li {
         font-size: 15px;
+        display: block;
+    }
+    #History02 .history-list02 ul {
+        width: 100%;
     }
 }
 
@@ -766,7 +805,7 @@ AIフレームワークの開発の歴史
 .anim01,
 .title {
     opacity: 0; /* 最初は完全に透明 */
-    transform: translateY(10px); /* 少し下にずらしておく */
+    transform: translateY(5px); /* 少し下にずらしておく */
     transition: opacity 1s ease-out, transform 1s ease-out; /* 透明度と位置が1秒かけて変化 */
 }
 
