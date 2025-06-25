@@ -104,3 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(target);
     });
 });
+
+
+
+//トップイメージアニメーション
+document.addEventListener("DOMContentLoaded", function() {
+  const topImg = document.getElementById("TopImg");
+  if (topImg) {
+    // ページが完全に読み込まれた後に、少し遅れてフェードインを開始
+    setTimeout(() => {
+      topImg.classList.add("fade-in");
+    }, 100); // 100ミリ秒後にフェードイン開始 (任意で調整)
+  }
+});
