@@ -15,7 +15,7 @@ body {
     font-weight: 400;
     font-style: normal;
     background: #fff;
-    color: #000;
+    color: #5f5f5f;
 }
 
 a {
@@ -33,19 +33,6 @@ h1 {
     color: #051854;
 }
 
-h1::before {
-    content: '';
-    width: 85px;
-    height: 3px;
-    display: grid;
-    background-color:#EC3055;
-    border-radius: 1.5px;
-    position: relative;
-    bottom: 1px;
-    left: calc(50% - 42.5px);
-    top: -14px;
-}
-
 h2 {
     font-size: 22px;
     font-weight: 400;
@@ -54,7 +41,11 @@ h2 {
     margin-bottom: 0;
     color: #5f5f5f;
     line-height: 40px;
-    margin-top: 10px;
+    margin-top: 5px;
+}
+
+.titleTop h2 {
+    margin-top: 12px;
 }
 
 .title {
@@ -72,7 +63,6 @@ li {
     margin: 0 auto;
     font-size: 18px;
     font-weight: 400;
-    color: #5f5f5f;
 }
 
 #a01,
@@ -81,8 +71,8 @@ li {
 #a04 {
     content: "";
     display: block;
-    padding-top: 170px; /* 調整したい高さ（固定ヘッダーの高さ） */
-    margin-top: -170px; /* heightと同じ分のネガティブマージン */
+    padding-top: 70px; /* 調整したい高さ（固定ヘッダーの高さ） */
+    margin-top: -70px; /* heightと同じ分のネガティブマージン */
     visibility: hidden;
 }
 
@@ -179,7 +169,7 @@ li {
 
 #link ul {
     display: inline-block;
-    width: 100%;
+    max-width: 1070px;
     margin-top: 35px;
     align-items: center;
 }
@@ -243,11 +233,12 @@ li {
 -----------------*/
 #CompanyProfile {
     margin-top: 57px;
-    width: 1018px;
+    width: 950px;
+    padding: 0 20px;
 }
 
 #CompanyProfile table {
-    margin-top: 53px;
+    margin-top: 90px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -262,12 +253,17 @@ li {
 #CompanyProfile th,
 #CompanyProfile td {
     text-align: left;
-    border-bottom: 1px solid #000;
-    border-top: none;
+    border-bottom: none;
+    border-top: 0.3px solid #ececec;
     padding: 37px 20px 37px 0px;
     margin: 0 0 -1px;
     line-height: 33pt;
     vertical-align: top;
+}
+
+#CompanyProfile .lastLine th,
+#CompanyProfile .lastLine td {
+    border-bottom: 0.3px solid #ececec;;
 }
 
 #CompanyProfile th {
@@ -285,6 +281,7 @@ li {
 @media screen and (max-width: 767px) {
     #CompanyProfile {
         width: 100%;
+        padding: 0;
     }
     #CompanyProfile table {
         text-align: left;
@@ -317,32 +314,34 @@ li {
 アクセス
 -----------------*/
 #AccessMap{
-    width: 100%;
-    margin-top: 147px;
+    width: 950px;
+    margin-top: 200px;
     margin-bottom: 140px;
+    padding: 0 20px;
 }
 
 .map {
-    margin-top: 60px;
+    margin-top: 90px;
 }
 
 .map iframe {
     /*min-width: 800px;*/
-    width: 1170px;
-    height: 481px;
+    width: 100%;
+    height: 496px;
     display: flex;
     align-items: center;
     margin: 0 auto;
-    border-radius: 16px;
+    border-radius: 24px;
 } 
 
 .map p {
-    width: 100%;
+    max-width: 1080px;
     font-size: 18px;
-    line-height: 37px;
-    margin-top: 40px;
+    line-height: 32px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 auto;
     display: flex;
     text-align: left;
 }
@@ -386,38 +385,38 @@ li {
 事業内容
 -----------------*/
 #BusinessContant {
-    width: 100%;
+    width: 1212px;
     margin: auto;
     font-size: 20px;
-    padding-top: 119px;
-    padding-bottom: 119px;
+    padding-top: 90px;
 }
 
 .bcBox {
-    margin-top: 80px;
+    margin-top: 90px;
     display: flex;
     justify-content: center;
+    padding-bottom: 140px;
 }
 
 .bcBox a {
     width: auto;
     height: auto;
-    margin-right: 70px;
+    margin-right: 96px;
 }
 
 
 #BusinessContant .imgBox {
-    width: 553px;
-    height: 344px;
-    object-fit: cover;
+    width: 558px;
+    height: 274px;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: 24px;
 }
 
 #BusinessContant img {
     width: 100%;
     height: 100%;
     transition: 0.5s;
+    object-fit: cover;
 }
 
 #BusinessContant .aiComputing:hover {
@@ -428,21 +427,20 @@ li {
 .TextBox {
     color: #fff;
     position: absolute;
-    transform: translate(55px, -302px);
+    transform: translate(55px, -234px);
     width: 420px;
-
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 37px;
 }
 
 .TextBox h3 {
-    font-size: 35px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .TextBox p {
-    margin-top: 30px;
+    margin-top: 18px;
 }
 
 .btnBc {
@@ -456,7 +454,7 @@ li {
     background-color: #fff;
     border-radius: 17px;
     color: #051854;
-    transform: translate(315px, 0px);
+    transform: translate(315px, -12px);
     padding: 0 auto;
 }
 
@@ -523,52 +521,78 @@ li {
 沿革
 -----------------*/
 #History {
+    margin-top: 90px;
+    width: 790px;
+    padding: 0 20px;
+    list-style: none;
+}
+
+#History table {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-spacing: 0;
     width: 100%;
-    margin-top: 150px;
 }
 
-.history-list {
-    margin-top: 48px;
-    margin-bottom: 91px;
+#History tbody {
+    width: 100%;
 }
 
-.history-list .space {
-    content: '';
-    padding-left: 70px;
+#History th,
+#History td {
+    text-align: left;
+    border: none;
+    padding: 37px 20px 37px 0px;
+    margin: 0 0 -1px;
+    line-height: 18pt;
+    vertical-align: top;
+    appearance: none;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-#History .history-list li {
-    /*list-style: disc;*/
-    line-height: 37px;
-    padding: 13px;
-    color: #051854CC;
-    font-weight: 500;
-    display: list-item;
-    white-space: nowrap;
-    transform: translateX(50px);
+
+#History th {
+    min-width: 150px;
+    max-width: 200px;
+    padding-right: 42px;
 }
 
-/*リストマーカーの位置合わせ*/
-#History .history-list li::before {
-    content: '';
-    display: grid;
-    position: relative;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #0518544D;
-    top: 26px;
-    left: -60px;
+#History td {
+    width: 100%;
 }
 
-#History .history-list .libr::before {
-    content: '';
-    display: grid;
-    position: relative;
-    border-radius: 50%;
-    background-color: #0518544D;
-    top: 45px;
-    left: -60px;
+@media screen and (max-width: 767px) {
+    #History {
+        width: 100%;
+        padding: 0;
+    }
+    #History table {
+        text-align: left;
+        margin-top: 15px;
+    }
+    #History tbody {
+        width: 85%;
+    }
+    #History th,
+    #History td {
+        width: 100%;
+        display: block;
+    }
+    #History th {
+
+        border-bottom: none;
+        padding: 30px 0 10px 0;
+        font-size: 16px;
+    }
+    #History td {
+        padding-top: 0;
+        padding-bottom: 30px;
+        line-height: 25px;
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -590,19 +614,7 @@ li {
         font-size: 15px;
         overflow-wrap: break-all;
         white-space: wrap;
-        transform: translateX(2vw);
         line-height: 25px;
-    }
-    #History .history-list li::before {
-        content: '';
-        display: grid;
-        position: relative;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #0518544D;
-        top: 20px;
-        left: -20px;
     }
 }
 
@@ -610,26 +622,27 @@ li {
 AIフレームワークの開発の歴史
 -----------------*/
 .wrapper02 {
-    max-width: 1170px;
-    margin: 0 auto 150px auto;
+    max-width: 950px;
+    margin: 120px auto 150px auto;
     font-size: 18px;
     font-weight: 500;
     color: #5f5f5f;
+    padding: 0 20px;
 }
 
 #History02 .history-list02 {
     background-color: #ebebeb66;
     margin-left: auto;
     margin-right: auto;
-    padding: 77px 98px;
-    border-radius: 16px;
+    padding: 60px 60px;
+    border-radius: 24px;
 }
 
 #History02 .history-list02 h3 {
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 500;
-    margin-bottom: 60px;
+    margin-bottom: 85px;
     margin-top: 0;
 }
 
@@ -638,12 +651,16 @@ AIフレームワークの開発の歴史
 }
 
 #History02 .history-list02 li {
-    padding-bottom: 30px;
-    color: #00000073;
+    padding-bottom: 50px;
 }
 
 #History02 .history-list02 li:last-child {
     padding-bottom: 0;
+}
+
+#History02 .space {
+    content: '';
+    padding-left: 60px;
 }
 
 @media screen and (max-width: 767px) {
@@ -679,7 +696,7 @@ AIフレームワークの開発の歴史
 #ContactUs a {
     color: #fff;
     display: block;
-    padding-top: 47px;
+    padding-top: 60px;
 }
 
 #ContactUs h1 {
@@ -705,7 +722,7 @@ AIフレームワークの開発の歴史
 }
 
 #ContactUs p {
-    margin-top: 23px;
+    margin-top: 8px;
     font-size: 20px;
 }
 
