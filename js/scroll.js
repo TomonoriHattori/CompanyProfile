@@ -1,3 +1,5 @@
+//フローティングナビゲーションの動きをヘッダーに合わせる
+
 document.addEventListener('DOMContentLoaded', function() {
     const linkElement = document.getElementById('link');
     let lastScrollY = 0; // 前回のスクロール位置を記録する変数
@@ -75,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //フェードインアニメーション
+/*
 document.addEventListener('DOMContentLoaded', () => {
     // アニメーション対象の要素をすべて取得
     const animTargets = document.querySelectorAll('.anim01, .title');
@@ -104,7 +107,63 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(target);
     });
 });
+*/
 
+document.addEventListener('DOMContentLoaded', () => {
+    // アニメーションを適用する要素と設定を定義
+    const animations = [
+        {
+            selector: '.anim01',
+            triggerPercent: 10, // 要素の80%が画面に入ったらアニメーション開始
+            speed: '1.0s'      // アニメーション速度 (例: '0.5s', '1.0s', '2s')
+        },
+        {
+            selector: '.anim02',
+            triggerPercent: 20, // 要素の60%が画面に入ったらアニメーション開始
+            speed: '1.0s'
+        },
+        {
+            selector: '.title',
+            triggerPercent: 70, // 要素の70%が画面に入ったらアニメーション開始
+            speed: '1.0s'
+        }
+    ];
+
+    const observerOptions = {
+        root: null, // ビューポートをルートとする
+        rootMargin: '0px',
+        threshold: [] // 各要素のトリガー閾値を個別に設定するため、最初は空にする
+    };
+
+    // 各アニメーション設定に対してIntersection Observerをセットアップ
+    animations.forEach(animation => {
+        const elements = document.querySelectorAll(animation.selector);
+        if (elements.length === 0) return; // 要素が存在しない場合はスキップ
+
+        // 個別の閾値を計算
+        const threshold = animation.triggerPercent / 100;
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transition = `opacity ${animation.speed} ease-in-out`;
+                    observer.unobserve(entry.target); // 一度表示されたら監視を停止
+                }
+            });
+        }, {
+            root: observerOptions.root,
+            rootMargin: observerOptions.rootMargin,
+            threshold: threshold // 個別の閾値を適用
+        });
+
+        elements.forEach(element => {
+            element.style.opacity = 0; // 初期状態では非表示
+            element.style.transition = 'opacity 0s'; // 初期ロード時のトランジションを無効にする
+            observer.observe(element);
+        });
+    });
+});
 
 
 //トップイメージアニメーション
