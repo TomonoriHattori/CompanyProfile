@@ -58,7 +58,8 @@ li {
 }
 
 .wrapper {
-    max-width: 1170px;
+    /*max-width: 1170px;*/
+    width: 950px;
     margin: 0 10%;
     margin: 0 auto;
     font-size: 18px;
@@ -143,12 +144,13 @@ li {
 トップ画像
 -----------------*/
 #TopImg {
+    width: 100%;
     font-size: 65px;
     font-weight: 650;
     letter-spacing: 10px;
+    text-indent: 60px;
     color: #051854;
     text-align: center;
-    transform: translateX(60px);
     padding-top: 60px;
     padding-bottom: 130px;
     opacity: 0; /* 最初は完全に透明 */
@@ -164,10 +166,9 @@ li {
     #TopImg {
         font-size: 6vw;
         letter-spacing: 1.5vw;
-        transform: none;
+        text-indent: 10vw;
         display: flex;
         justify-content: center;
-        margin-left: 8vw;
         padding: auto;
         padding-top: 80px;
         padding-bottom: 50px;
@@ -629,7 +630,7 @@ li {
     #History th {
         border-bottom: none;
         padding: 30px 0 10px 0;
-        font-size: 16px;
+        font-size: 14px;
     }
     #History th::first-line {
         padding: 0 0 10px 0;
@@ -639,29 +640,6 @@ li {
         padding-bottom: 10px;
         line-height: 28px;
         font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    #a04 {
-        padding-top: 80px;
-    }
-    .history-list {
-        width: 100%;
-        margin-top: 20px;
-    }
-    .history-list ul {
-        width: 85%;
-        justify-content: center;
-        margin: 0 auto;
-    }
-    #History .history-list li{
-        width: 85vw;
-        overflow: visible;
-        font-size: 15px;
-        overflow-wrap: break-all;
-        white-space: wrap;
-        line-height: 25px;
     }
 }
 
@@ -677,14 +655,6 @@ AIフレームワークの開発の歴史
     padding: 0 20px;
 }
 
-#History02 .history-list02 {
-    background-color: #ebebeb66;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 60px 60px;
-    border-radius: 24px;
-}
-
 #History02 .history-list02 h3 {
     text-align: center;
     font-size: 24px;
@@ -693,32 +663,89 @@ AIフレームワークの開発の歴史
     margin-top: 0;
 }
 
-#History02 .history-list02 ul {
-    margin: 0 auto;
-    width: 750px;
+#History02 .history-list02 {
+    background-color: #ebebeb66;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 80px;
+    border-radius: 24px;
 }
 
-#History02 .history-list02 li {
+#History02 table {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#History02 tbody {
+    width: 100%;
+    transform: translateY(-20px);
+}
+
+#History02 th,
+#History02 td {
+    text-align: left;
+    border: none;
+    margin: 0 0 -1px;
+    line-height: 28pt;
+    vertical-align: top;
+    appearance: none;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 0px;
     padding-bottom: 50px;
 }
 
-#History02 .history-list02 li:last-child {
+#History02 .history-list02 tr:last-child td,
+#History02 .history-list02 tr:last-child th {
     padding-bottom: 0;
 }
 
-#History02 .space {
-    content: '';
-    padding-left: 60px;
+#History02 th {
+    min-width: 115px;
+}
+
+#History02 td {
+    width: 100%;
+    padding-left: 37px;
 }
 
 @media screen and (max-width: 767px) {
-    .wrapper02 {
-        max-width: 95%;
-        padding: 0;
-        margin: 90px auto 50px auto;
+    #History02 {
+        width: 100%; 
     }
+
     #History02 .history-list02 {
         padding: 35px 20px;
+    }
+    #History02 table {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    #History02 th,
+    #History02 td {
+        min-width: unset;
+        width: 100%;
+        display: block;
+    }
+    #History02 th {
+        border-bottom: none;
+        padding: 30px 0 10px 0;
+        font-size: 14px;
+    }
+    #History02 th::first-line {
+        padding: 0 0 10px 0;
+    }
+    #History02 td {
+        padding-top: 0;
+        padding-bottom: 10px;
+        line-height: 28px;
+        font-size: 14px;
+        padding-left: 0;
     }
     #History02 .history-list02 h3 {
         text-align: center;
@@ -728,15 +755,13 @@ AIフレームワークの開発の歴史
         margin-top: 0;
         padding-top: 20px;
     }
-    #History02 .history-list02 li {
-        font-size: 15px;
-        display: block;
-    }
-    #History02 .history-list02 ul {
-        width: 100%;
-        padding-bottom: 30px;
+    #a04 {
+        padding-top: 80px;
     }
 }
+
+
+
 
 
 /*-----------------
@@ -805,18 +830,3 @@ AIフレームワークの開発の歴史
     }
 }
 
-
-/* アニメーションの初期状態 */
-.anim01,
-.title {
-    opacity: 0; /* 最初は完全に透明 */
-    transform: translateY(5px); /* 少し下にずらしておく */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* 透明度と位置が1秒かけて変化 */
-}
-
-/* 画面に表示されたときに適用するクラス */
-.anim01.is-visible,
-.title.is-visible {
-    opacity: 1; /* 不透明にして表示 */
-    transform: translateY(0); /* 元の位置に戻す */
-}
