@@ -75,40 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-//フェードインアニメーション
-/*
-document.addEventListener('DOMContentLoaded', () => {
-    // アニメーション対象の要素をすべて取得
-    const animTargets = document.querySelectorAll('.anim01, .title');
-
-    // Intersection Observerの設定
-    const options = {
-        root: null, // ビューポートをルート（監視領域）とする
-        rootMargin: '0px', // ビューポートの余白（デフォルト）
-        threshold: 0.2 // 要素の20%が見えたら発火（必要に応じて調整）
-    };
-
-    // Intersection Observerのインスタンスを作成
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            // 要素がビューポートに入ったら
-            if (entry.isIntersecting) {
-                // is-visibleクラスを追加してアニメーションをトリガー
-                entry.target.classList.add('is-visible');
-                // 一度アニメーションしたら、その要素の監視を停止
-                observer.unobserve(entry.target);
-            }
-        });
-    }, options);
-
-    // すべてのアニメーション対象要素を監視
-    animTargets.forEach(target => {
-        observer.observe(target);
-    });
-});
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
     // アニメーションを適用する要素と設定を定義
     const animations = [
@@ -123,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             speed: '1.0s'
         },
         {
-            selector: '.title',
+            selector: '.caption',
             triggerPercent: 70, // 要素の70%が画面に入ったらアニメーション開始
             speed: '1.0s'
         }
@@ -167,6 +133,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //トップイメージアニメーション
+document.addEventListener("DOMContentLoaded", function() {
+  const topImg = document.getElementById("TopImg");
+  if (topImg) {
+    // ページが完全に読み込まれた後に、少し遅れてフェードインを開始
+    setTimeout(() => {
+      topImg.classList.add("fade-in");
+    }, 100); // 100ミリ秒後にフェードイン開始 (任意で調整)
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function() {
   const topImg = document.getElementById("TopImg");
   if (topImg) {
