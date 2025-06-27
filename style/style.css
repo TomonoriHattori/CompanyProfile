@@ -173,6 +173,11 @@ li {
         padding-top: 80px;
         padding-bottom: 50px;
     }
+    #TopImg.TopImgEn {
+        font-size: 4.5vw;
+        letter-spacing: 5px;
+        text-indent: 0;
+    }
 }
 
 /*-----------------
@@ -623,7 +628,7 @@ li {
     }
     .aiApp .inactiveEn {
         position: absolute;
-        transform: translate(33vw, 50px);
+        transform: translate(33vw, 20px);
     }
 }
 
