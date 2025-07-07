@@ -1,0 +1,29 @@
+<section class="feature">
+	<div class="cw">
+		<h1 class="sectionTitle">アイリアの強み</h1>
+		<h2 class="sectionSubtitle">AI&amp;組込み実装に特化した、<br class="mobileOnly">ソフトウェア高速化のエキスパート</h2>
+		<p class="txt">アイリアは、半導体開発の知見を受け継ぐバックグラウンドを強みに、AIと組込み実装の両面から、本質的な最適化と高速化を実現。深い専門知識を持つエンジニアが、お客様の課題に対し、技術的に的確な提案と、高速かつ効率的な実装のためのサービスを提供します。</p>
+
+		<p class="img">
+			<img src="/ai-computing/img/ai-computing/img_feature.webp" alt="Axell 半導体開発 X ailia AI開発">
+		</p>
+
+		<ul class="list">
+			<li>
+				<p class="listTitle diamond">AIと組込み実装の<br>
+両面から最適化</p>
+				<p class="listBody">AIモデルの構造とアルゴリズム、それを動かす組込みハードウェアの制約を熟知しているからこそ、従来の手法では見落とされがちなボトルネックを的確に特定し、最適なかたちで高速化することが可能です。</p>
+			</li>
+			<li>
+				<p class="listTitle diamond">コンピュータサイエンスに<br>
+長けた人材が豊富</p>
+				<p class="listBody">AIと組込みの領域への深い技術理解に加え、お客様の専門領域も的確に理解した上で、最適な技術提案を行うエンジニアが豊富に在籍。案件ごとに適任人材をアサインし、課題に即応できる体制があります。</p>
+			</li>
+			<li>
+				<p class="listTitle diamond">半導体開発の知見を活かした<br>
+本質的なアプローチ</p>
+				<p class="listBody">半導体開発の老舗として培ってきた知見をもとに、AIに特化した組織として進化した組織がアイリアです。半導体開発のノウハウを活かし、ハードウェアの知識を土台としてソフトウェアの問題点に切り込み、限界まで最適化することができます。</p>
+			</li>
+		</ul>
+	</div>
+</section>

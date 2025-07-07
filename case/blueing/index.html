@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="index">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>導入事例｜JFA サッカー文化創造拠点「blue-ing!」｜ailia AI Series</title>
+<meta name="description" content="最新技術を駆使した次世代型体験コンテンツへのAI実装。AIによるFaceSwap、テキストからの動画検索などailia SDKを使用した動画生成システムの事例です。">
+<meta name="keyword" content="AI,ailia,SDK,動画生成,高速推論,LLM,chatGPT,JFA,blue-ing,最新技術,サッカー日本代表">
+<!-- Open Graph protocol metadata start-->
+<meta property="og:site_name" content="導入事例｜JFA サッカー文化創造拠点「blue-ing!」｜ailia AI Series" />
+<meta property="og:title" content="導入事例｜JFA サッカー文化創造拠点「blue-ing!」｜ailia AI Series" />
+<meta property="og:description" content="最新技術を駆使した次世代型体験コンテンツへのAI実装。AIによるFaceSwap、テキストからの動画検索などailia SDKを使用した動画生成システムの事例です。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ailia.ai/case/blue-ing" />
+<meta property="og:image" content="https://www.ailia.ai/case/blue-ing/ogimage.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5Q579RMM');</script>
+<!-- End Google Tag Manager -->
+<!-- Open Graph protocol metadata end-->
+<link rel="shortcut icon" href="https://www.ailia.ai/dx/img/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" property="stylesheet" href="css/common.css" media="all">
+<link rel="stylesheet" property="stylesheet" href="css/insight.css" media="all">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- hubspot form -->
+<script charset=“utf-8” type=“text/javascript” src=“//js.hsforms.net/forms/embed/v2.js”></script>
+<script>
+	document.addEventListener('DOMContentLoaded', (event) => {
+		hbspt.forms.create({
+			region: "na1",
+			portalId: "19700338",
+			formId: "6bfe0d1f-25a5-450a-a6af-ab5ccf893fc5"
+		});
+	});
+</script>
+
+<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script> 
+<script type="text/javascript" src="js/smoothScroll.js"></script> 
+<script type="text/javascript" src="js/sitemapmodal.js"></script> 
+<!-- <script type="text/javascript" src="js/fixnav.js"></script>  -->
+<script type="text/javascript" src="js/dlmodal.js"></script>
+<script type="text/javascript" src="js/chatwindow.js"></script>
+<script type="text/javascript" src="js/ailia_dx_chat.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH48YWQFFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EH48YWQFFH');
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q579RMM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	<div id="hoge"></div>
+<div id="ailia_wrapper" class="insight">
+	<div id="ailia_contents">
+		<div id="header">
+			<nav id="head01">
+				<div class="headinner">
+					<a href="https://www.ailia.ai/"><div class="headlogo"><img src="img/headlogo.png" width="442" height="73" alt="ailia AI Series"/></div></a>
+					<!--<ul class="head01nav">
+						<li><a href="#">About ailia</a></li>
+						<li><a href="#">Lineup</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					<div class="head01btn sp"><a class="navbtn">menu</a></div>--> 
+				</div>
+			</nav>
+		</div>
+		<div id="mv">
+			<div class="box box__mvimg">
+				<h1><p class="heading__1st">ailia SDK 導入事例</p><p class="heading__2nd">JFA サッカー文化創造拠点「blue-ing!」</p></h1>
+				<p class="lead__mv">最新技術を駆使した<br>次世代型体験コンテンツへのAI実装</p>
+			</div>
+
+			<!-- INTRODUCTION -->
+			<div class="box box__contents" id="introduction">
+				<div class="section__inner">
+					<p class="lead">JFAサッカー文化創造拠点
+						blue-ing!は<br>東京ドームシティ内に開設される新たなサッカー体験施設です。<br>ax株式会社は本施設向けのAIの実装を、<br>筑波大学デジタルネイチャーグループと共同で行いました。</p>
+					<div class="box box__t1">
+						<h3 class="heading__t1">導入の目的</h3>
+						<ol class="list__disc">
+							<li>ailia SDKでAIサーバのフレームワークを統一することによる長期運用を実現</li>
+							<li>ailia SDKでGPUを使用した高速推論を行うことで待ち時間の少ない動画生成を実現</li>
+							<li>ailia DXでChatGPTを使用したサッカーに関する専門知識を持ったチャットボットを実現</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- CHAT -->
+		<div id="chatbtn">
+			<div class="chatbtnbox chatopen">
+			<div class="chatbtnwindow">ボク、あいにゃん。ailiaのことならなんでも聞いてくれにゃ。</div>
+			<div class="chara"><img src="img/chara.png" width="205" height="264" alt="あいにゃん" class="pc"/><img src="img/chara_sp.png" width="108" height="109" alt="あいにゃん" class="sp"/></div>
+			</div>
+			<div class="btnclose chatclose pc">閉じる</div>
+		</div>
+		<div id="chatwindow">
+			<div class="aichatinner"> 
+				<!-- チャット部分 -->
+				<div class="logarea">
+					<div class="loghead">
+						<div class="logtitle">あいにゃんチャットBOT（自動応答）</div>
+						<div id="chatclose" class="winclose">閉じる</div>
+					</div>
+					<div class="logbody">
+						<div class="logtext">
+							<div id="chat"></div>
+						<div id="chat_stream"></div>
+						</div>
+					</div>
+				</div>
+				<div class="chatarea">
+					<div class="chatbody">
+						<form name="chat_form" action="javascript:chat_api('https://ailia-llm-insight.uw.r.appspot.com/');">
+							<div class="chatformbox">
+								<input type="text" name="prompt" id="prompt" size="40" placeholder="※ここに質問を入力（例：ailiaについて）">
+							</div>
+							<div class="chatbutton">
+								<button type="button" onclick="chat_api('https://ailia-llm-insight.uw.r.appspot.com/')">送信</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="kv">
+			<div class="box box__kvimg">
+			</div>
+		</div>
+		
+		<!-- MAIN CONTENTS -->
+		<div class="mainbody">
+
+			<!-- CASE STUDIES -->
+			<div class="section" id="casetsudies">
+				<div class="section__inner">
+					<div class="box box__contents bc__1">
+						<h2 class="heading__main">ailia SDKを使用した<br class="spe">動画生成システム</h2>
+						<p class="caption">ailia SDKを使用した、AIによるFaceSwap、テキストからの動画検索、およびそのサーバシステム設計を担当しています。一般的なAIフレームワークは多種多様なOSSと相互依存しているため、あるOSSがバージョンアップした場合に、他のOSSが動かなくなるなど、継続運用に課題があります。ailia SDKは、1つのフレームワークで実行可能であり、複雑な依存関係がなく、長期運用に最適です。</p>
+					</div>
+					<img src="img/new/img_3.jpg" alt="" class="img__1">
+					<div class="box box__contents bc__2">
+						<p class="title en">Dream Theater</p>
+						<p class="caption">生成AIの映像と音楽で自身がフィールドに立つ選手になったようにサッカーへの没入体験を味わえるシアターコンテンツ。夢を見ているような世界観を楽しむことができます。</p>
+					</div>
+					<div class="box box__contents bc__31">
+						<h2 class="heading__main">LLMを使用した対話システム</h2>
+						<p class="caption">サッカーに関する質問ができる対話システムをChatGPTを使用して構築しました。ChatGPTに外部の知識を外挿するRAG、キャラクター設定を付与するプロンプトエンジニアリング、およびそのサーバシステム設計を担当しています。</p>
+					</div>
+					<div class="box box__imgwrapper">
+						<img src="img/new/img_4.jpg" alt="" class="img__2">
+					</div>
+				</div>
+			</div>
+			<!-- CONTACT -->
+			<div class="section" id="contact">
+				<h2 class="heading__contact en">CONTACT</h2>
+				<p class="caption">ソリューションに関するご質問や、<br class="spe">導入のご依頼・ご相談につきましては<br>お気軽にお問い合わせください。</p>
+				<!-- CP BUTTON -->
+				<div class="mvbtn cpbtn">
+					<div class="btnset">
+						<!-- <div class="btnbox btn01"><span class="btntext">30日間無料デモアプリダウンロード</span><a class="btn dllink">ailia SDK
+								無償トライアル</a></div> -->
+						<div class="btnbox btn02"><span class="btntext">無料個別相談にも対応</span><a class="btn hs-cta-trigger-button hs-cta-trigger-button-131331782160" href="#">導入のご相談</a></div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- DEVCO -->
+			<div class="section" id="devco">
+				<div class="devco">
+					<div class="colabel">ailia SDK 採用企業一覧</div>
+					<div class="box box__colist">
+						<ul class="colist">
+							<li class="co co02">
+								<div class="cologo"><img src="img/dev_co_logo02.png" width="276" height="142" alt="ASK Corporation" /></div>
+							</li>
+							<li class="co co03">
+								<div class="cologo"><img src="img/dev_co_logo03.png" width="276" height="142" alt="CELSYS" /></div>
+							</li>
+							<li class="co co04">
+								<div class="cologo"><img src="img/dev_co_logo04.png" width="459" height="142" alt="KONICA MINOLTA" /></div>
+							</li>
+							<li class="co co05">
+								<div class="cologo"><img src="img/dev_co_logo05.png" width="275" height="142" alt="RANDIDO" /></div>
+							</li>
+							<li class="co co06">
+								<div class="cologo"><img src="img/dev_co_logo06.png" width="276" height="142" alt="SEGA" /></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div id="footer">
+			<div class="footinner">
+				<div class="footlogo">
+					<a href="https://www.ailia.ai/"><div class="logoinner"><span class="logo"><img src="img/foot_logo.png" width="441" height="73" alt="ailia AI Series"/></span><span class="sublogo">アイリア AIシリーズ</span></div></a>
+				</div>
+				<div class="footnav01">
+					<!--<ul class="navlist">
+						<li class="footnav0101"><a href="#">About ailia</a></li>
+						<li class="footnav0102"><a href="#">Lineup</a></li>
+						<li class="footnav0103"><a href="#">News</a></li>
+						<li class="footnav0104"><a href="#">Contact</a></li>
+					</ul>-->
+				</div>
+				<div class="footnav02">
+					<ul class="navlist">
+						<li class="footnav0201"><a href="https://www.axell.co.jp/" target="_blank"><img src="img/foot_axell.png" width="137" height="73" alt=""/></a></li>
+						<li class="footnav0202"><a href="https://axinc.jp/" target="_blank"><img src="img/foot_ax.png" width="137" height="73" alt=""/></a></li>
+					</ul>
+				</div>
+				<div class="footnav03">
+					<ul class="navlist">
+						<li class="footnav0301"><a href="https://www.axell.co.jp/browser/">Terms of service</a></li>
+						<li class="footnav0302"><a href="https://www.axell.co.jp/privacy/">Privacy policy</a></li>
+						<li class="copyright">Copyright(c) Axell / 株式会社アクセル</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

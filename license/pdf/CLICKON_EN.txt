@@ -1,0 +1,77 @@
+﻿“ailia” EVALUATION LICENSE AGREEMENT
+PLEASE READ THIS “ailia” EVALUATION LICENSE AGREEMENT (HEREINAFTER REFERRED TO AS THE “AGREEMENT”) CAREFULLY BEFORE INSTALLING OR USING THE SOFTWARE. BY INSTALLING OR USING THE SOFTWARE, YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THE TERMS OF THIS AGREEMENT, DO NOT INSTALL AND/OR USE THE SOFTWARE. 
+
+1. Definitions.
+     The following capitalized terms shall have the meanings ascribed to them in the respective Items below:
+(i) “Software” refers to AX’s deep learning framework “ailia” or “ailia AI showcase”. Software also includes its manuals and other related materials.
+(ii) “Customer Product” refers products (including software, applications, services, hardware products, etc.) developed by the Customer using the Software.
+(iii) “Customer’s Device” refers to hardware (e.g., a personal computer) owned or controlled by Customer.
+(iv) “Purpose of Use” refers to the purpose of using the Software as defined in Article 3.
+(v) “Small business” refers to the use of the Software in a manner where the total economic benefits (such as sales, advertising revenue, or other economic gains) from the Customer Product in the past 12 months is less than US$100,000.
+(vi) “License File” refers to the license certification file to activate a part of the Software.
+(vii) “Individual Customer” refers to a natural person who is not incorporated.
+2. License Grant.
+     2.1	Subject to the terms and conditions of the Agreement, AX hereby grants Customer a limited, non-exclusive, non-sublicensable, and non-transferable license to use the Software for the Purpose of Use.
+     2.2	Customer may use the Software only on the Customer Device.
+     2.3	In the event that the Individual Customer provides a Customer Product to a third party, the Individual Customer shall include both of the following statements as a notation on the startup screen of the Customer Product.
+     「本製品は、エッジAIフレームワーク「ailia SDK」を採用して開発されました。」
+     「This product was developed using the Edge AI framework "ailia SDK".」
+3. Purpose of Use
+     3.1	The use of the Software by the Customer is limited to the purposes set forth in the following items. The details of specific Purpose of Use will be defined on the AX's website.
+(i) "Evaluation Purpose"
+- Limited to the evaluation of the Software for the Customer Product.
+- Limited to use inside the Customer.
+- Distribution of the Customer Product to third parties for the evaluation of business or Proof of Concept (PoC) is excluded from Evaluation Purpose.
+(ii) "Small business Purpose"
+-Only Individual Customer may use the Software for Small business. Use of the Software in contracted development for third parties is excluded from Small business.
+- If AX deems that the use of the Software for the Small business Purpose affects the interests of AX or AX's customers, such use will be excluded from Small business Purpose.
+     3.2	Customer shall conclude separate license agreement with AX to use the Software for purposes other than those specified in preceding paragraphs. 
+4. License Fee.
+     The License shall be granted free of charge.
+5. Ownership.
+     Copyrights, patents, trademarks, know-how, and any and all intellectual property rights in or to the Software (including the rights to obtain the registered protection under those rights, collectively, hereinafter referred to as “Intellectual Property Right”) shall remain the property of AX or other licensor who licensed to AX.  Intellectual Property Right of the Software is not expressly transferred or assigned to Customer or a third party under the Agreement.
+6. Support
+     AX is not obliged to provide support (including response to inquiries) regarding the Software.
+7. Restrictions.
+     Unless otherwise expressly permitted in the Agreement, Customer shall be prohibited to and shall not engage in the activities set forth in the following Items:
+(i) To change, modify or remodel the Software; 
+(ii)	To reverse-engineer, decompile or disassemble the Software or otherwise attempt to create derivative works of or derive the source code from the Software;
+(iii)	To make a number of copies of the Software beyond the necessary number for the Purpose of Use;
+(iv)	To disclose, assign, sell, sublicense, rent, lend, lease or otherwise dispose of the Software, License File to a third party;
+(v)	To remove or delete any copyrights notices or other proprietary rights label of AX included in or on the Software;
+(vi)	To use the Software regarding life sustaining, nuclear, hazardous environments requiring fail-safe performance, or other applications in which failure of the Software could reasonably be expected to result in personal injury, loss of life or catastrophic physical or property damage;
+(vii)	To use the Software regarding violation of law, public policy or property rights of any third party;
+(viii)	To remove or circumvent the activation lock of the Software;
+(ix)	To use the Software in combination with other software which license conflicts with the Agreement; 
+(x)	To engage in other activities which is inappropriate for the proper usage of the Software.
+8. Confidentiality.
+     Customer shall hold the confidential information which is made available and designated to be confidential or proprietary by AX (hereinafter referred to as the “Confidential Information”) in confidence and may disclose such Confidential Information only to its officers and employees who have a need to know the Confidential Information for the Purpose of Use.  Customer shall not disclose or provide the Confidential Information to any third party without prior written approval of AX.
+9. Disclaimer.
+     THE SOFTWARE AND ALL CONFIDENTIAL INFORMATION IS PROVIDED ON AN “AS IS” BASIS AND AX DISCLAIMS ANY AND ALL WARRANTIES AND GUARANTEES, EXPRESS, IMPLIED, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO THE WARRANTY OF MERCHANTABILITY, THE WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE, THE   WARRANTY OF TITLE, SUPPORT OBLIGATION AND ANY WARRANTY OF NON-INFRINGEMENT OF THE INTELLECTUAL PROPERTY RIGHTS OF ANY THIRD PARTY.
+10. Limitations of Liability.
+     10.1	UNLESS OTHERWISE SPECIFICALLY PROVIDED FOR IN THE AGREEMENT, IN NO EVENT WILL AX BE LIABLE FOR DAMAGES, LOSSES OR INJURIES ARISING FROM THE SOFTWARE OR THE AGREEMENT, INCLUDING, BUT NOT LIMITED TO, DIRECT, INDIRECT, EXPECTATION OR RELIANCE DAMAGES AND OTHER DAMAGES WHATSOEVER, SUCH AS ANY DIMINUTION OF GOODWILL, LOSS OF DATA IN COMPUTER SYSTEM, UNDER ANY THEORY OR CAUSE OF ACTION. PROVIDED THAT IN THE CASE THAT THE ABOVE DAMAGES, LOSSES OR INJURIES IS CAUSED INTENTIONALLY OR WITH GROSS NEGLIGENCE BY AX, AX SHALL BE RESPONSIBLE FOR THE LIABILITY TO COMPENSATE THE DIRECT DAMAGE INFLICTED ON CUSTOMER. AND SUCH LIABILITY OF AX SHALL BE LIMITED TO THE TOTAL AMOUNT OF THE LICENSE FEE ACTUALLY PAID BY CUSTOMER TO AX UNDER THIS AGREEMENT. 
+     10.2	CUSTOMER AGREES TO DEFEND, INDEMNIFY AND HOLD AX HARMLESS AGAINST ANY THIRD PARTY CLAIM OR ACTION, LIABILITY OR OBLIGATION ASSERTED TO CUSTOMER ARISING FROM OR RELATING TO THE USE OF THE SOFTWARE OR THE AGREEMENT AND SUCH CLAIM OR ACTION, LIABILITY OR OBLIGATION SHALL BE SETTLED AT THE RESPONSIBILITY AND COST OF CUSTOMER.
+　　10.3	NOTWITHSTANDING ARTICLE 10.1, IN THE CASE THAT THIS AGREEMENT SHALL BE DEEMED TO BE THE CONTRACT BETWEEN CONSUMERS AND BUSINESS ENTITIES STIPULATED IN THE ARTICLE 2.3 OF THE CONSUMER CONTRACT LAW, AX SHALL BE RESPONSIBLE FOR THE LIABILITY TO COMPENSATE THE DIRECT DAMAGE INFLICTED ON CUSTOMER. AND SUCH LIABILITY OF AX SHALL BE LIMITED TO THE TOTAL AMOUNT OF THE LICENSE FEE ACTUALLY PAID BY CUSTOMER TO AX UNDER THIS AGREEMENT. PROVIDED THAT THE SCOPE OF THE LIABILITY OF AX SHALL NOT BE LIMITED TO SUCH DIRECT DAMAGE IN THE CASE THAT AX CAUSED THE DAMAGE ON ITS OWN INTENT OR ON ITS OWN GROSS NEGLIGENCE. 
+11. Term and Termination.
+     11.1	The Agreement will remain in force from the Effective date until the date set in License File or finish of the Purpose of Use, whichever comes earlier (“Term”).
+     11.2	AX may terminate all or any part of the Agreement by giving prior notice to Customer.
+     11.3	If Customer breaches any provision of the Agreement and fails to cure or remedy such breach within a reasonable period of time which AX designates, AX may terminate all or any part of the Agreement.  For the avoidance of doubt, AX reserves the right to demand compensation for damages to Customer notwithstanding the termination of the Agreement under this Paragraph.
+     11.4	Upon the termination of the Agreement, the rights granted to Customer with respect to the Software shall terminate and Customer shall forthwith destroy the License File and Software (including the erasure of the Software or the copy of the Software from the Customer’s Device).  Further, Customer shall otherwise follow the instruction of AX.
+12. Survival.
+     Article 8 (“Confidentiality”), Article 9 (“Disclaimer”), Article 10 (“Limitation of Liability”), Article 11 (“Term and Termination”), Article 12 (“Survival”) and Article 13 (“Others”) of the Agreement shall survive any termination or expiration of the Agreement.
+13. Others.
+     13.1	In the event that any provision of the Agreement is held by a court to be unenforceable or invalid, such provision shall be limited or eliminated to the minimum extent necessary so that the Agreement shall otherwise remain in full force and enforceable.
+     13.2	AX may amend the Agreement in the following case, (1) such amendment to the Agreement conforms to the general interest of the Customer, or (2) such amendment to the Agreement does not run afoul of the purpose of the Agreement, and it is reasonable in light of the circumstances concerning the amendment such as the necessity of the amendment, the appropriateness of the details of the amended conditions, and the details of such provisions.
+     13.3	In the case of amendment according to Article 13.2, AX shall specify the date when the amendment takes effect, and make the intention to amend the Agreement, the details of the amended Agreement, and the date when the amendment takes place known by AX’s webpage or notification to Customer. 
+     13.4	AX may inspect and investigate, upon prior written notice, Customer’s compliance with the Agreement during business hours at Customer’s facility when AX deems it reasonably necessary.
+     13.5	Customer may not assign the Agreement or any of its rights hereunder to any third party without prior written approval of AX.
+     13.6	Customer acknowledges and agrees that AX may seek, in addition to any other right to damages, an injunction from a court of competent jurisdiction.
+     13.7	Any notice to Customer under the Agreement shall be sent at the contact addresses (such as e-mail address) as may be notified to AX by Customer.
+     13.8	The Agreement shall be governed by and construed in accordance with the laws of Japan without conflict of law principles.
+     13.9	The Tokyo District Court shall have exclusive jurisdiction and venue in connection with all disputes pertaining to or arising under the Agreement as a court of first instance.
+     13.10	The Parties further agree to obtain any necessary export license or other documentation prior to the exportation or re-exportation of any product, technical data or Software. Accordingly, neither party shall sell, export, re-export, transfer, divert or otherwise dispose of any such product, technical data or Software directly or indirectly to any person, firm, entity, country or countries prohibited by Japan, U.S. or other applicable laws.
+     13.11	The failure by either party at any time to enforce its rights under the Agreement will not be construed as a waiver of such rights, nor will it in any way affect the validity of the Agreement. No waiver by either party will be valid unless given in an appropriate writing signed by the Party giving such waiver.
+      
+[Revision]
+Ver1.0_2020/4/1
+Ver2.0_2024/7/16

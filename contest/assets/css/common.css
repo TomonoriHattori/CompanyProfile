@@ -1,0 +1,245 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Jost:wght@300;600;700&family=Noto+Sans+JP:wght@100..900&display=swap");
+/*共通部分*/
+.sp_nav_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sp_nav_btn a {
+  color: white;
+}
+
+/**********************************************************************
+	ページヘッダ - className : Header
+***********************************************************************/
+#header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  color: white;
+  margin-bottom: 0;
+  position: relative;
+}
+#header a {
+  color: white;
+  display: inline-block;
+}
+#header a:hover {
+  text-decoration: none;
+}
+#header .headlogo {
+  width: 220px;
+  margin-left: 3vw;
+  padding: 10px 0;
+}
+@media only screen and (max-width: 767px) {
+  #header .headlogo {
+    width: 140px;
+  }
+}
+
+/**********************************************************************
+	ページタイトル - className : Page_title
+***********************************************************************/
+.Page_title {
+  background: #666;
+}
+
+/**********************************************************************
+	SPナビゲーション - className : Page_title
+***********************************************************************/
+.Sp-nav {
+  opacity: 0;
+  height: 0;
+}
+
+/**********************************************************************
+	ページフッタ - className : Footer 既存コンテンツ参照
+***********************************************************************/
+#footer {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  #footer {
+    background: #000;
+    color: #fff;
+    min-width: 1000px;
+    padding: 0;
+    line-height: 1;
+    z-index: 3;
+  }
+  #footer .footinner {
+    min-width: 1000px;
+    padding: 20px;
+    font-size: 12px;
+    position: relative;
+  }
+  #footer .footinner a {
+    color: #A8A8A9;
+  }
+  #footer .footlogo {
+    width: 30%;
+  }
+  #footer .footlogo .logoinner {
+    display: flex;
+  }
+  #footer .footlogo .logo {
+    display: block;
+    width: 180px;
+  }
+  #footer .footlogo .sublogo {
+    display: block;
+    font-size: 12px;
+    padding: 10px 0 0 10px;
+  }
+  #footer .footnav01 {
+    position: absolute;
+    bottom: 30px;
+    left: 340px;
+  }
+  #footer .footnav01 .navlist {
+    display: flex;
+    justify-content: space-between;
+  }
+  #footer .footnav01 .navlist li {
+    padding: 0 15px 0 0;
+    margin: 0 15px 0 0;
+    border-right: 1px solid #A8A8A9;
+  }
+  #footer .footnav01 .navlist li:last-child {
+    border: none;
+  }
+  #footer .footnav02 {
+    position: absolute;
+    bottom: 20px;
+    right: 520px;
+  }
+  #footer .footnav02 .navlist {
+    display: flex;
+    justify-content: space-between;
+  }
+  #footer .footnav02 .navlist li {
+    margin: 0 10px;
+    width: 65px;
+  }
+  #footer .footnav03 {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+  }
+  #footer .footnav03 .navlist {
+    display: flex;
+    justify-content: space-between;
+  }
+  #footer .footnav03 .navlist li {
+    padding: 0 15px 0 0;
+    margin: 0 15px 0 0;
+    border-right: 1px solid #A8A8A9;
+  }
+  #footer .footnav03 .navlist li:last-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  #footer .footnav03 .navlist .footnav0302 {
+    border: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #footer {
+    background: #000;
+    color: #fff;
+    line-height: 1;
+  }
+  #footer .footinner {
+    padding: 5%;
+    font-size: 10px;
+    position: relative;
+  }
+  #footer .footinner a {
+    color: #A8A8A9;
+  }
+  #footer .footlogo {
+    width: 60%;
+    margin: 0 auto 5% auto;
+  }
+  #footer .footlogo .logo {
+    display: block;
+    text-align: center;
+  }
+  #footer .footlogo .sublogo {
+    display: block;
+    font-size: 10px;
+    text-align: center;
+    margin: 10px 0 0 0;
+  }
+  #footer .footnav01 {
+    margin: 0 auto 5% auto;
+  }
+  #footer .footnav01 .navlist {
+    display: flex;
+    justify-content: center;
+  }
+  #footer .footnav01 .navlist li {
+    padding: 0 5% 0 0;
+    margin: 0 5% 0 0;
+    border-right: 1px solid #A8A8A9;
+  }
+  #footer .footnav01 .navlist li:last-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  #footer .footnav02 {
+    margin: 0 auto 3% auto;
+  }
+  #footer .footnav02 .navlist {
+    display: flex;
+    justify-content: center;
+  }
+  #footer .footnav02 .navlist li {
+    margin: 0 5%;
+    width: 50px;
+  }
+  #footer .footnav03 .navlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #footer .footnav03 .navlist li {
+    padding: 0 5% 0 0;
+    margin: 0 5% 0 0;
+    border-right: 1px solid #A8A8A9;
+  }
+  #footer .footnav03 .navlist li.footnav0302 {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  #footer .footnav03 .navlist li.copyright {
+    border: none;
+    margin: 5% 0 0 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+/**********************************************************************
+	ページトップ - className : Pagetop
+***********************************************************************/
+.Pagetop {
+  cursor: pointer;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 80px;
+  height: 80px;
+}
+.Pagetop.fixed {
+  position: absolute;
+  top: -40px;
+}

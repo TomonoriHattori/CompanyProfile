@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="https://ailia.ai/img/favicon.png">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5Q579RMM');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ailia Universe Program｜ailia AI Series</title>
+    <meta name="description" content="ailia Universe ProgramはあなたのAIを事業化し、具現化するための共創パートナーシップ・プログラムです。">
+    <meta name="keywords" content="AI,ailia,SDK,支援,スタートアップ,アクセラレータ,エントリー,開発資金,ディープラーニング">
+    <meta name="author" content="Copyright ©Axell / 株式会社アクセル  All Rights Reserved.">
+    <meta property="og:title" content="ailia Universe Program｜ailia AI Series">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ailia Universe Program｜ailia AI Series">
+    <meta property="og:description" content="ailia Universe ProgramはあなたのAIを事業化し、具現化するための共創パートナーシップ・プログラムです。">
+    <meta property="og:url" content="https://www.ailia.ai/universe/">
+    <meta property="og:image" content="https://www.ailia.ai/universe/img/OGP.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/key_visual.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="./js/main.js"></script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q579RMM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="fix__title">
+      <img src="./img/logo_white.svg" alt="ailia Universe Program">
+    </div>
+    <nav>
+      <div>
+        <div class="nav__title f-ntJP">
+          <span class="f-Ub">ailia Universe Program</span><br />
+          スタートアップ支援プログラム
+        </div>
+        <ul class="nav_menu">
+          <li class="underline"><a href="#message">MESSAGE</a></li>
+          <li class="underline"><a href="#outline">OUTLINE</a></li>
+          <li class="underline"><a href="#about">ABOUT ”ailia SDK”</a></li>
+          <li class="underline"><a href="#case">CASE STUDY</a></li>
+          <li id="dropdownMenu">MENU<img src="./img/arrow.svg" /></li>
+          <li class="entry_btn"><a href="https://share.hsforms.com/1OvDECxiXSauVGbMBJwlLjAbq8vm" target="_blank">ENTRY</a></li>
+        </ul>
+      </div>
+      <ul class="dropdown-content f-ntJP">
+        <div>
+          <li><a href="#message">MESSAGE</a></li>
+          <li><a href="#outline">OUTLINE</a></li>
+          <li><a href="#about">ABOUT ”ailia SDK”</a></li>
+          <li><a href="#case">CASE STUDY</a></li>
+        </div>
+
+      </ul>
+    </nav>
+<!--  -->
+    <div class="rainbow-bar">
+      <img src="./img/scroll.svg" />
+    </div>
+    <section class="top">
+      <div class="butterfly">
+        <div class="butterfly_img">
+          <img  src="img/butterfly/butterfly_top_half.jpg" />
+          <img  src="img/butterfly/butterfly_top_half.jpg" />
+        </div>
+      </div>
+      <div class="butterfly_masked">
+        <img class="butterfly_masked_img" src="img/butterfly/mask-butterfly.png" />
+      </div>
+      <img class="blur" id="circle" src="img/butterfly/circle.png" />
+
+      <img class="top_title" src="img/ailia_logo.svg" alt="ailia Universe Program"/>
+      <img class="desc" src="img/startup.svg" alt="スタートアップ支援プログラム" />
+    </section>
+    <div class="scroll__contents_caption">
+      <div>
+        <img src="img/butterfly/caption0.svg" alt="世界最高レベルのAIで、" />
+        <img src="img/butterfly/caption1.svg" alt="スタートアップの成長を加速させる。" />
+      </div>
+    </div>
+<!--  -->
+    <section class="explanation" >
+      <canvas id="canvas"></canvas>
+      <img class="butterfly_alt" src="img/butterfly/mask-butterfly.png" />
+      <div class="explanation_contents">
+      <h2 id="message">
+        発想を実現させる、<br class="sp middle">圧倒的スピードと柔軟性<br>
+        ailia SDKで、<br class="sp middle">あなたの夢をビジネスに。
+      </h2>
+      <div class="explanation__caption f-ntJP">
+        AIの力で、世の中をもっと良くしたい。<br class="middle">そんな熱い想いを抱くあなたへ──。<br>
+        ailia Universe ProgramはあなたのAI構想を事業化し、<br class="pc">具現化するための共創パートナーシップ・プログラムです。<br><br>
+        
+        今後AIアプリ使用シーンの爆発的増加が見込まれる一方、<br class="pc">
+        AI開発環境はデバイス間での断片化により困難を極めています。<br>
+        いち早いデプロイメント、<br class="middle">そしてプロダクトの市場投入をもたらす鍵は、<br class="pc">世界で最も速く動作し、<br  class="pc">
+        最も容易にAIをエッジデバイスに<br class="middle">実装できることをコンセプトとするailia SDK。<br><br>
+        
+        その多種多様なニーズへ対応できる<br class="middle">開発プラットフォームの特徴を活かし、<br  class="pc">
+        Axellは、B2C向けAIアプリ開発を効率化し、<br class="pc">イノベーションを起こすための支援を行います。<br><br>
+
+        あなたの情熱と技術に、<br class="middle">圧倒的なアクセラレータを組み合わせれば、<br class="pc">実現できないアイデアはない。<br>
+        ailia Universe Programのパートナーとして、<br class="pc">一緒に世界を変える“インパクト”を創り出していきませんか。
+      </div>
+      <div class="explanation__fix_area">
+
+      </div>
+     
+
+      <div id="outline" class="outline">
+        <h2 class="outline__title">
+          OUTLINE
+        </h2>
+        <div class="g-border"></div>
+        <div class="outline__caption">
+          独自開発のエッジ推論向け<br class="sp">ディープラーニング・フレームワーク<br>
+          <span>「ailia SDK」を<br class="sp">初期費用ゼロで利用可能</span>
+        </div>
+
+        <div class="outline__list">
+          <div class="outline__list_inner fadein_outline">
+            <img src="./img/outline-0.svg" alt="コスト　アイコン">
+            <div>
+              「ailia SDK」を成功に応じたフィー体系でリスクフリーに開始
+            </div>
+            <ul>
+              <li><span>開発したアプリケーションの売上高に応じたフィーの設定</span></li>
+              <li><span>開発したアプリが売れなかった場合はコストゼロ</span></li>
+            </ul>
+          </div>
+          <div class="outline__list_inner fadein_outline">
+            <img src="./img/outline-1.svg" alt="ノウハウ　アイコン">
+            <div>
+              AI実装に関するコンサル、ノウハウを無償提供
+            </div>
+            <ul>
+              <li>
+                <span>開発伴走型の支援プログラム</span>
+              </li>              
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="outline__caption">
+          トータルソリューションを展開する<br>
+          <span>Axellならではの全面支援</span>
+        </div>
+
+        <div class="outline__list">
+          <div class="outline__list_inner fadein_outline">
+            <img src="./img/outline-2.svg" alt="援助アイコン">
+            <div>
+              希望者に対し、出資を通じた開発資金の援助も可能
+            </div>
+            <ul>
+              <li><span>J-KISS投資によるシード出資</span></li>
+              <li><span>リードVCが出資済みの場合、種類株若しくは普通株でも出資可能</span></li>
+            </ul>
+          </div>
+          <div class="outline__list_inner fadein_outline">
+            <img src="./img/outline-3.svg" alt="ax inc ロゴ">
+            <div>
+              アプリ開発の実支援として、<br>ax inc（AI開発のグループ会社）の紹介
+            </div>
+            <ul><li><span>開発を委託することで事業への集中をサポート</span></li></ul>
+
+          </div>
+        </div>
+
+        <div class="promise">
+          <h2 class="promise__title">PROMISE</h2>
+          <div class="promise__caption">
+            ailia Universe Programは<br class="sp">以下のような全面的支援をお約束します。
+          </div>
+          <ul class="promise_list_wrapper f-ntJP">
+            <li class="promise_list"><div>AIアプリの開発に最適な<br class="sp">フレームワークのご紹介</div></li>
+            <li class="promise_list"><div>iOS、Androidを含む<br class="sp">AIアプリの開発へのアドバイス</div></li>
+            <li class="promise_list"><div>Pytorchで学習したAIモデルの<br class="sp">エッジデバイスへの変換サポート</div></li>
+            <li class="promise_list"><div>アプリに対するノータリゼーションなど<br class="sp">必要な作業のサポート</div></li>
+            <li class="promise_list"><div>必要に応じたWindowsやmacOS向けの<br class="sp">ライセンス管理ソリューション提供</div></li>
+            <li class="promise_list"><div>AIアプリ開発に必要な<br class="sp">資金を出資サポート</div></li>
+          </ul>
+        </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about__bg"></div>
+        <div class="about__title">
+          <img src="./img/about_ailia_sdk.svg" />
+        </div>
+        <div class="g-border"></div>
+        <div class="about__caption">
+          FEATURE
+        </div>
+        <ul class="about__list">
+          <li class="about__list_inner fadein">
+            <img src="./img/about_1.png" alt="">
+            <div>
+              クロスプラットフォームでCPUとGPUを使用した高速推論を実現
+            </div>
+          </li>
+          <li class="about__list_inner fadein">
+            <img src="./img/about_2.png" alt="">
+            <div>
+              PCでもモバイルでも
+              最先端のモデルが使用可能
+            </div>
+          </li>
+          <li class="about__list_inner fadein">
+            <img src="./img/about_3.png" alt="">
+            <div>
+              様々なプログラミング言語で
+              アプリ開発ができる
+            </div>
+          </li>
+          <li class="about__list_inner fadein">
+            <img src="./img/about_4.png" alt="">
+            <div>
+              特別なドライバの
+              インストールが不要
+            </div>
+          </li>
+          <li class="about__list_inner fadein">
+            <img src="./img/about_5.png" alt="">
+            <div>
+              モデルの圧縮・暗号化で、
+              より軽い容量で、よりセキュアに
+            </div>
+          </li>
+          <li class="about__list_inner pc">
+          </li>
+        </ul>
+        <div  id="case" class="about__more">
+          <a href="https://ailia.ai/sdk/" target="_blank"><img src="./img/view_more.svg" /></a>
+        </div>
+
+        <div class="case__study">
+          <div class="case__study_title">
+            <img src="./img/case_study.svg" alt="CASE STUDY">
+          </div>
+          <div class="g-border"></div>
+
+          <div class="case__study_sample">
+            <div class="thumbnail case_study_child" style="height:auto;">
+              <img src="./img/fpo.jpg" alt="">
+            </div>
+            <div class="description f-ntJP case_study_child">
+              <div class="title">
+                <span>ailia Universal Program</span>世界最速レベルのAIが、あなたのイノベーションをサポート
+              </div>
+              <div class="label">
+                <p>AIの事業構想を広く募集。</p>
+                <p>アイデアを事業化し、具現化するための</p>
+                <p>共創パートナーシップ・プログラムがスタート</p>
+              </div>
+              <div class="caption">ChatGPTの登場以降AIの実用化が急速に進展しており、近い未来、B2Cの領域でAIファーストのAIアプリが登場し、数百万人規模のユーザがAIアプリを使用するようになることが予想されます。これだけの規模のAIを動かす場合、クラウドの費用は数千万円から数億円になり、スタートアップの負担となることから、AIの実用化における障壁になる可能性もあります。<br/><br/>
+                そこで当社は、クラウド費用のかからない“エッジAI”に着目し、エッジAIを推進する当社としてもエッジAIを使用したAIアプリの開発を積極的に支援していきたいと考えています。<br/><br/>
+                エッジデバイスで動くAIアプリを世の中に浸透させることは、結果としてあらゆるアプリケーションにAIが搭載され、みなさんの生活がより便利で楽しい世界にもつながるはずです。また、エッジAIによりAIが民主化されることで、個人開発者でもクラウドの費用を気にせず、AIアプリを作れる環境も作りたいとも考えています。<br/><br/>
+                </div>
+              <div class="more">
+                <a href="https://blog.ailia.ai/archives/933">READ MORE</a>
+              </div> 
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <section class="entry f-ntJP">
+      <div class="entry__fix_area">
+        <div class="scroll__contents_butefly_bottom zoomup">
+          <img src="./img/butterfly.png" alt="butterfly">
+        </div>
+      </div>
+      <div class="entry__wrap fadein">
+        <div class="entry__title f-Ub">
+          ENTRY
+        </div>
+        <div class="g-border"></div>
+
+        <div class="entry__flow">
+          <div class="entry__flow_title">
+            エントリーの流れ
+          </div>
+          <div class="entry__flow_caption">
+            <div>
+              <img src="./img/icon-doc.svg" alt="">
+              <p>応募フォームにて必要事項をご記入・申請していただきます。</p>
+            </div>
+            <div>
+              <img src="./img/icon-mtg.svg" alt="">
+              <p>ご応募いただいた企業様との個別面談を実施します。</p>
+            </div>
+            <div>
+              <img src="./img/icon-mail.svg" alt="">
+              <p>実施可否を判断し、結果をご連絡します。</p>
+            </div>
+          </div>
+        </div>
+        <div class="entry__flow_inquiry">
+          <div class="entry__flow_inquiry_title">ailia Universe Programやailia SDKに関するご質問・ご相談はお気軽にお問い合わせください</div>
+          <div class="entry__flow_inquiry_label">支援プログラムに応募する</div>
+          <a href="https://share.hsforms.com/1OvDECxiXSauVGbMBJwlLjAbq8vm" target="_blank"><div class="entry__flow_inquiry_btn">
+            
+              ENTRY
+        
+          </div>    </a> 
+
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer_wrap">
+        <img class="logo" src="./img/footer_logo.png" alt="ailia sdk">
+        <div class="footer_inner">
+          <div class="btn">
+            <a class="axell_btn" href="https://www.axell.co.jp/" target="_blank">
+              <img src="./img/Axell.png" alt="Axell">
+            </a>
+            <a class="ax_btn" href="https://axinc.jp/" target="_blank">
+              <img src="./img/ax.png" alt="ax">
+            </a>
+          </div>
+          <div class="service-privacy f-inter">
+            <a href="https://www.axell.co.jp/browser/" target="_blank">
+              Terms of service
+            </a>
+            <a href="https://www.axell.co.jp/privacy/" target="_blank">
+              Privacy policy
+            </a>
+          </div>
+          <div class="copy_light f-ntJP">
+            <p>Copyright(c) Axell / 株式会社アクセル</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/fluid.js"></script>
+  </body>
+</html>

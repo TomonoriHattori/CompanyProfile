@@ -1,0 +1,51 @@
+					<p class="img">
+						<picture>
+							<source srcset="/ai-computing/img/ai-computing/img_intro_sp.webp" media="(max-width: 767px)" type="image/webp">
+							<img class="" src="/ai-computing/img/ai-computing/img_intro.webp" alt="">
+						</picture>
+					</p>
+					<ul class="list">
+						<li>
+							<p class="listTitle diamond">コンサルティング</p>
+							<ul class="childList">
+								<li>
+									<span class="icon"></span>
+									<span class="listTxt">性能評価</span>
+								</li>
+								<li>
+									<span class="icon"></span>
+									<span class="listTxt">ボトルネック特定</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p class="listTitle diamond">最適化</p>
+							<ul class="childList">
+								<li>
+									<span class="icon"></span>
+									<span class="listTxt">アルゴリズムの実装</span>
+								</li>
+								<li>
+									<span class="icon"></span>
+									<span class="listTxt">ハードウェアへの最適化</span>
+								</li>
+								<li>
+									<span class="icon"></span>
+									<span class="listTxt">レポート作成</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p class="listTitle diamond">サポート</p>
+							<ul class="childList">
+								<li>
+									<span class="icon"></span>
+									<span class="listTxt">レポートやコードへのQ&amp;A</span>
+								</li>
+								<li>
+									<span class="icon"></span>
+									<span class="listTxt">実製品への組込み支援</span>
+								</li>
+							</ul>
+						</li>
+					</ul>

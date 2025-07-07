@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+	<title>ailia Trial form</title>
+	
+	{% include '/trial/inc/head.shtml' %}
+</head>
+
+<body id="Trial" class="commonPage navPink en">
+
+	{% include '/trial/inc/header.shtml' %}
+
+	<main>
+
+		<div id="contentsLayer">
+
+			<section id="main" class="">
+				<p class="stickyTitle main active">ailia Trial form</p>
+
+				<div class="wrap">
+					<div class="bgArea">
+					</div>
+					<div class="formArea">
+						<h1 class="pageTitle">ailia SDK application </h1>
+						<p class="sub">Application for ailia evaluation licenses</p>
+
+						<form action="./" method="POST">
+
+							<ul class="inputList">
+								<li>
+									<label>Name (of the person using the software)</label>
+									<div class="inputArea">
+										<input class="" type="text" name="name" value="" placeholder="Name">
+									</div>
+								</li>
+								<li>
+									<label>Company and division</label>
+									<div class="inputArea">
+										<input class="" type="text" name="company" value="" placeholder="Company and division">
+									</div>
+								</li>
+								<li>
+									<label>Email address</label>
+									<div class="inputArea">
+										<input class="" type="text" name="mail" value=""
+											placeholder="E-mail_address@sample.com">
+									</div>
+									<p class="note">* After applying with this form, you will receive an email that explains how you can obtain a license.</p>
+								</li>
+								<li class="policy">
+									<label>ailia beta version usage agreement</label>
+									<div><pre>{{terms}}</pre></div>
+								</li>
+								<li class="check">
+									<input type="checkbox" id="check01" name="checkbox01" onchange="document.getElementById('submit').disabled=!this.checked;">
+									<label for="check01" class="checkbox01">I agree to the terms of the license above and of the handling of personal information.</label>
+								</li>
+								<li class="check">
+									<input type="checkbox" id="check02" name="news" checked>
+									<label for="check02" class="checkbox01">Receive AXIP email news</label>
+								</li>
+
+							</ul>
+
+							<style>
+								.formArea input[type="submit"][disabled] {
+									background-color: #ccc !important;
+									border-bottom: 5px solid #919191 !important;
+								}
+							</style>
+
+<div class="submitWrap">
+								<input type="submit" value="Send" class="" id="submit">
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</section>
+
+		</div>
+	</main>
+</body>
+<script src="/js/main.js"></script>
+
+</html>

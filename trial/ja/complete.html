@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+	<title>ailia 評価ライセンス申し込み</title>
+
+	{% include '/trial/inc/head.shtml' %}
+</head>
+
+<body id="Trial" class="complete commonPage navPink">
+
+	{% include '/trial/inc/header.shtml' %}
+
+	<main>
+
+		<div id="contentsLayer">
+
+			<section id="main" class="">
+				<div class="cw">
+
+					<p class="topImg"><img src="/trial/images/trial/img_01.svg" alt="ailia SDK"></p>
+
+					{% if error_message %}
+					<p class="txt">{{error_message}}</p>
+					{% else %}
+					<p class="txt">ailia SDKの評価版をリクエストいただき<br class="mobileOnly">ありがとうございます。<br>
+						{{status_message|safe}}</p>
+					<p class="txt">メールに届いたURLからSDKをダウンロードして<br>
+						インストールしてください。</p>
+					<ul class="list">
+						<li>
+							<a href="https://medium.com/axinc/ailia-sdk-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-python-28379dbc9649" target="_blank">
+								<div class="img"><img class="objectFitContain" src="/trial/images/trial/icon_01.svg"
+										alt="python"></div>
+								<span class="labelArea">
+									<span class="label"><span>
+											Pythonでailia SDKを<br>
+											試してみたい方はこちら
+										</span></span>
+									<span class="icon"><img src="/trial/images/trial/arrow.svg" alt=""></span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://medium.com/axinc/ailia-sdk-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-unity-257fa1e98777" target="_blank">
+								<div class="img"><img class="objectFitContain" src="/trial/images/trial/icon_02.svg"
+										alt="Unity"></div>
+								<span class="labelArea">
+									<span class="label"><span>Unityでailia SDKを<br>
+試してみたい方はこちら</span></span>
+									<span class="icon"><img src="/trial/images/trial/arrow.svg" alt=""></span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://medium.com/axinc/ailia-sdk-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-c-dc949d9dcd28" target="_blank">
+								<div class="img"><img class="objectFitContain" src="/trial/images/trial/icon_03.svg"
+										alt="C++"></div>
+								<span class="labelArea">
+									<span class="label"><span>C++でailia SDKを<br>
+試してみたい方はこちら</span></span>
+									<span class="icon"><img src="/trial/images/trial/arrow.svg" alt=""></span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://medium.com/axinc/ailia-sdk-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-jni-7a11c1da08dc" target="_blank">
+								<div class="img"><img class="objectFitContain" src="/trial/images/trial/icon_04.svg"
+										alt="Java"></div>
+								<span class="labelArea">
+									<span class="label"><span>Javaでailia SDKを<br>
+試してみたい方はこちら</span></span>
+									<span class="icon"><img src="/trial/images/trial/arrow.svg" alt=""></span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://medium.com/axinc" target="_blank">
+								<div class="img"><img class="objectFitContain" src="/trial/images/trial/icon_05.svg"
+										alt="ax Developper’s Blog"></div>
+								<span class="labelArea">
+									<span class="label"><span>ax Developper’s Blogで<br>
+最新のAIの情報を確認する</span></span>
+									<span class="icon"><img src="/trial/images/trial/arrow.svg" alt=""></span>
+								</span>
+							</a>
+						</li>
+						{% endif %}
+
+					</ul>
+
+				</div>
+
+			</section>
+
+		</div>
+	</main>
+</body>
+<script src="/js/main.js"></script>
+
+</html>

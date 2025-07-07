@@ -1,0 +1,35 @@
+<div class="subNav">
+    <div class="inner">
+        <p class="subnavigation_title">AIコンピューティング</p>
+        <div class="linkWrap">
+            <a class="ai-computing_top" href="/ai-computing/">ホーム</a>
+            <a href="javascript:void(0)" class="service">サービス</a>
+        </div>
+    </div>
+    <div class="subNavDetailArea">
+        <div class="inner">
+            <ul>
+                <li>
+                    <a class="btn btnDiamond " href="/ai-computing/ai-deeplearning-acceleration/">
+                        <span class="label">AI・深層学習向け高速化 </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn btnDiamond" href="/ai-computing/embedded-acceleration/">
+                        <span class="label">組込み高速化</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn btnDiamond" href="/ai-computing/image-processing-acceleration/">
+                        <span class="label">画像処理高速化</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn btnDiamond" href="/ai-computing/gpu-acceleration/">
+                        <span class="label">GPU向け高速化</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

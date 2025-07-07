@@ -1,0 +1,203 @@
+body{
+    opacity: 0;
+    user-select: none;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.top{
+    position: relative;
+    margin-top: 132px;
+    width: 100%;
+    /*background-color: #0c0304;*/
+    height: calc(100vh - 132px);
+
+    /*--top:calc( -100vw *0.35 );
+    --batterflyHeight:calc(100vh - var(--top));*/
+}
+
+.top *{
+    pointer-events: none;
+}
+
+.top > .butterfly{
+    
+    position: fixed;
+    /*top: var(--top);*/
+    left: 50%;
+    /*height: var(--batterflyHeight);*/
+    transform: translate(-50%, 0);
+    /*animation: changeBgColor 5s infinite;*/
+    display: flex;
+    justify-content: center; 
+}
+
+
+.top > .butterfly > .butterfly_img{
+    width: 100%;
+    height:100%;
+    transform-origin: 50% 55%;
+    position: relative;
+    backface-visibility: hidden;
+    /*will-change: opacity;*/
+}
+
+.top > .butterfly > .butterfly_img > img{
+    height:100%;
+    display: inline;
+    white-space: nowrap;
+    position: absolute;
+    right:50%;
+}
+
+.top > .butterfly > .butterfly_img > img:nth-child(2){
+    left:50%;
+    transform: scaleX(-1);
+    
+}
+
+
+.top > .butterfly_masked{
+    position: fixed;
+    left: 50%;
+    /*top:50%;*/
+    width:100%;
+    transform: translate(-50%, 0);
+    /*top:calc(var(--batterflyHeight) / 2143 * 432 + var(--top));*/
+    /*height: calc(var(--batterflyHeight) * (1539/2143));*/
+    display: flex;
+    justify-content: center; 
+    overflow: hidden;
+
+}
+
+.top > .butterfly_masked > img{
+    height:100%;
+    /*transform-origin: 50% 55.4775%;*/
+    transform-origin: 50% 50%;
+    opacity: 0;
+    /*will-change: opacity, transform;*/
+}
+
+
+.top > .top_title{
+
+    opacity: 1;
+    position: absolute;
+    z-index:2001;
+    top:2rem;
+    left: 2rem;
+    width:100%;
+    mix-blend-mode: screen; 
+    width:592px;
+    animation: changeImgColor 5s infinite;
+}
+
+@keyframes changeImgColor{
+    from {
+        filter: hue-rotate(0deg);
+      }
+      to {
+        filter: hue-rotate(359deg);
+      }
+}
+
+@keyframes changeBgColor{
+    from {
+        filter: hue-rotate(359deg);
+      }
+      to {
+        filter: hue-rotate(0deg);
+      }
+}
+@media (max-width: 768px) {
+    .top > .top_title {
+        width: 92%;
+        top:calc(100vw * 0.038);
+    }
+
+}
+
+
+.top > .desc{
+    position: absolute;
+    color: #fff !important;
+    width:300px;
+    top:11.5rem;
+    left:30rem;
+}
+@media (max-width: 768px) {
+    .top > .desc {
+        width: 46%;
+        left:auto;
+        right: 4%;
+        top:calc(100vw * 0.18);
+    }
+}
+
+.top .blur{
+    position: absolute;
+    mix-blend-mode:hue;
+    opacity: .8;
+    animation: changeImgColor 5s infinite;
+    display: none;
+}
+
+.top .blur_wrapper{
+    left:50%;
+    transform: translateX(-50%);
+    height:100vh;
+    overflow: hidden;
+    position: absolute;
+}
+
+
+
+/*虹色のバー*/
+@keyframes rainbow-animation {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 0% -200%;
+    }
+  }
+  
+  .rainbow-bar {
+    transition-duration: 0.5s;
+    width: 3px;
+    height: 160px;
+    position: fixed;
+    z-index: 3;
+    left:32px;
+    bottom:100px;
+    background-image: repeating-linear-gradient(
+      to bottom, 
+      red, 
+      orange, 
+      yellow, 
+      green, 
+      blue, 
+      indigo, 
+      violet,
+      red
+    );
+    background-size: 100% 200%; /* 背景のサイズを2倍の高さにする */
+    animation: rainbow-animation 10s linear infinite; /* アニメーションを適用 */
+  }
+
+  .rainbow-bar img{
+    position: absolute;
+    left:10px;
+    width: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .rainbow-bar {
+        bottom:auto;
+        top:calc(100vh - 200px);
+        height: calc(100vw * 0.2);
+    }
+  }
+  

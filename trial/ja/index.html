@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+	<title>ailia 評価ライセンス申し込み</title>
+	
+	{% include '/trial/inc/head.shtml' %}
+</head>
+
+<body id="Trial" class="commonPage navPink">
+
+	{% include '/trial/inc/header.shtml' %}
+
+	<main>
+
+		<div id="contentsLayer">
+
+			<section id="main" class="">
+				<p class="stickyTitle main active">Trial form</p>
+
+				<div class="wrap">
+					<div class="bgArea">
+					</div>
+					<div class="formArea">
+						<h1 class="pageTitle">ailia SDK application </h1>
+						<p class="sub">ailia 評価ライセンス申し込み</p>
+
+						<form action="./" method="POST">
+
+							<ul class="inputList">
+								<li>
+									<label>氏名（ソフトウェア使用者）</label>
+									<div class="inputArea">
+										<input class="" type="text" name="name" value="" placeholder="氏 名">
+									</div>
+								</li>
+								<li>
+									<label>会社名・部署</label>
+									<div class="inputArea">
+										<input class="" type="text" name="company" value="" placeholder="株式会社〇〇〇〇">
+									</div>
+								</li>
+								<li>
+									<label>メールアドレス</label>
+									<div class="inputArea">
+										<input class="" type="text" name="mail" value=""
+											placeholder="E-mail_address@sample.com">
+									</div>
+									<p class="note">※本フォームでお申し込み後に入手方法のメールが送付されます。</p>
+								</li>
+								<li class="policy">
+									<label>ailia評価版使用許諾契約書</label>
+									<div><pre>{{terms}}</pre></div>
+								</li>
+								<li class="check">
+									<input type="checkbox" id="check01" name="checkbox01" onchange="document.getElementById('submit').disabled=!this.checked;">
+									<label for="check01" class="checkbox01">上記ライセンスおよび<a href="../privacy.html" target="_blank">個人情報の取り扱い</a>に同意する</label>
+								</li>
+								<li class="check">
+									<input type="checkbox" id="check02" name="news" checked>
+									<label for="check02" class="checkbox01">AXIPのメールニュースを受け取る</label>
+								</li>
+
+							</ul>
+
+							<style>
+							.formArea input[type="submit"][disabled] {
+								background-color: #ccc !important;
+								border-bottom: 5px solid #919191 !important;
+							}
+							</style>
+
+							<div class="submitWrap">
+								<input type="submit" value="無償評価ライセンス申し込み" class="" id="submit" disabled>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</section>
+
+		</div>
+	</main>
+</body>
+<script src="/js/main.js"></script>
+
+</html>

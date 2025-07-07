@@ -1,0 +1,34 @@
+<nav>
+	<div class="navArea">
+		<div class="inner cw">
+			<h1>
+				<a class="navLogo" href="/"><img class="" src="/ai-computing/img/common/logo.svg" alt="ailia">
+					<span class="siteTitle">アイリア</span>
+				</a>
+			</h1>
+			<ul class="navList">
+				<li>
+					<a href="/" class="">アイリアAIシリーズ</a>
+				</li>
+				<li>
+					<a href="/ai-computing/" class="ai-computing">AIコンピューティング</a>
+				</li>
+				<li>
+					<a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/" target="_blank" class="ai-application">AIアプリケーション</a>
+				</li>
+				<li>
+					<a href="/company/" class="company">会社情報</a>
+				</li>
+				<li class="lang">
+					<a href="/ai-computing/" class="current">JP</a>
+					<a href="/en/">EN</a>
+				</li>
+				<li class="contact">
+					<a class="" href="/ai-computing/contact.html" target="_blank">お問い合わせ</a>
+				</li>
+			</ul>
+		</div>
+		<a href="/ai-computing/contact.html" target="_blank" class="spContact">お問い合わせ</a>
+		<a class="spNavBtn" href="javascript:void(0);"><span></span><span></span><span></span></a>
+	</div>
+</nav>

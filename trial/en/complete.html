@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+	<title>ailia Trial form</title>
+
+	{% include '/trial/inc/head.shtml' %}
+</head>
+
+<body id="Trial" class="complete commonPage navPink">
+
+	{% include '/trial/inc/header.shtml' %}
+
+	<main>
+
+		<div id="contentsLayer">
+
+			<section id="main" class="">
+				<div class="cw">
+
+					<p class="topImg"><img src="/trial/images/trial/img_01.svg" alt="ailia SDK"></p>
+
+					{% if error_message %}
+					<p class="txt">{{error_message}}</p>
+					{% else %}
+					<p class="txt">Thank you for request evaluation version of ailia SDK.<br>
+						{{status_message|safe}}</p>
+					<p class="txt">Please download and install the SDK<br>
+						from the URL you received in the email.</p>
+					<ul class="list">
+						<li>
+							<a href="https://medium.com/axinc-ai/ailia-sdk-tutorial-python-ea29ae990cf6" target="_blank">
+								<div class="img"><img class="objectFitContain" src="/trial/images/trial/icon_01.svg"
+										alt="python"></div>
+								<span class="labelArea">
+									<span class="label"><span>
+											Try ailia SDK<br>
+											on Python
+										</span></span>
+									<span class="icon"><img src="/trial/images/trial/arrow.svg" alt=""></span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://medium.com/axinc-ai/ailia-sdk-tutorial-unity-54f2a8155b8f" target="_blank">
+								<div class="img"><img class="objectFitContain" src="/trial/images/trial/icon_02.svg"
+										alt="Unity"></div>
+								<span class="labelArea">
+									<span class="label"><span>Try ailia SDK<br>
+on Unity</span></span>
+									<span class="icon"><img src="/trial/images/trial/arrow.svg" alt=""></span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://medium.com/axinc-ai/ailia-sdk-tutorial-c-75e59bbefffe" target="_blank">
+								<div class="img"><img class="objectFitContain" src="/trial/images/trial/icon_03.svg"
+										alt="C++"></div>
+								<span class="labelArea">
+									<span class="label"><span>Try  ailia SDK<br>
+on C++</span></span>
+									<span class="icon"><img src="/trial/images/trial/arrow.svg" alt=""></span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://medium.com/axinc-ai/ailia-sdk-tutorial-jni-92b797725e08" target="_blank">
+								<div class="img"><img class="objectFitContain" src="/trial/images/trial/icon_04.svg"
+										alt="Java"></div>
+								<span class="labelArea">
+									<span class="label"><span>Try ailia SDK<br>
+on Java</span></span>
+									<span class="icon"><img src="/trial/images/trial/arrow.svg" alt=""></span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://medium.com/axinc-ai" target="_blank">
+								<div class="img"><img class="objectFitContain" src="/trial/images/trial/icon_05.svg"
+										alt="ax Developper’s Blog"></div>
+								<span class="labelArea">
+									<span class="label"><span>Check the latest AI information<br>
+										on the ax Developper ’s Blog</span></span>
+									<span class="icon"><img src="/trial/images/trial/arrow.svg" alt=""></span>
+								</span>
+							</a>
+						</li>
+						{% endif %}
+
+					</ul>
+
+				</div>
+
+			</section>
+
+		</div>
+	</main>
+	<!--#include virtual="/en/inc/footer.shtml"-->
+</body>
+<script src="/js/main.js"></script>
+
+</html>

@@ -1,0 +1,10 @@
+.contact-header {
+  background-color: #ec3055;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.contact-header .logo {
+  max-width: 400px;
+  height: auto;
+}

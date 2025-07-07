@@ -1,0 +1,83 @@
+<section class="service">
+    <div class="cw">
+        <h1 class="sectionTitle">提供サービス</h1>
+        <ul class="serviceList">
+            <li>
+                <div class="imgArea tabletUpOnly">
+                    <img src="/ai-computing/img/ai-computing/img_service_01.webp" alt="">
+                </div>
+                <div class="txtArea">
+                    <h2 class="title">AI・深層学習向け高速化</h2>
+                    <p class="subtitle">AIモデルを最適化して実装することで高速化を実現</p>
+                    <p class="img mobileOnly"><img src="/ai-computing/img/ai-computing/img_service_01_sp.webp" alt=""></p>
+                    <p class="txt">学習済みAIモデルを、特定のデバイスに対し最適化し効率的に動作させます。モデルの量子化から実装まで、一貫して対応します。</p>
+                    <p class="btnWrap">
+                        <a href="/ai-computing/ai-deeplearning-acceleration/" class="btn btnDiamond">
+                            <span class="triangle_before"></span>
+                            <span class="icon"><img src="/ai-computing/img/ai-computing/arrow_right.svg" alt=""></span>
+                            <span class="label">AI・深層学習向け高速化を詳しく見る </span>
+                            <span class="triangle_after"></span>
+                        </a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="imgArea tabletUpOnly">
+                    <img src="/ai-computing/img/ai-computing/img_service_02.webp" alt="">
+                </div>
+                <div class="txtArea">
+                    <h2 class="title">組込み高速化</h2>
+                    <p class="subtitle">限られた組込み環境での安定動作を実現</p>
+                    <p class="img mobileOnly"><img src="/ai-computing/img/ai-computing/img_service_02_sp.webp" alt=""></p>
+                    <p class="txt">CPU性能やメモリに制約のある組込み機器でも、AIとハードウェアの両視点から最適化し、高速かつ安定した処理を実現します。</p>
+                    <p class="btnWrap">
+                        <a href="/ai-computing/embedded-acceleration/" class="btn btnDiamond">
+                            <span class="triangle_before"></span>
+                            <span class="icon"><img src="/ai-computing/img/ai-computing/arrow_right.svg" alt=""></span>
+                            <span class="label">組込み高速化サービスを詳しく見る </span>
+                            <span class="triangle_after"></span>
+                        </a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="imgArea tabletUpOnly">
+                    <img src="/ai-computing/img/ai-computing/img_service_03.webp" alt="">
+                </div>
+                <div class="txtArea">
+                    <h2 class="title">画像処理高速化</h2>
+                    <p class="subtitle">前後処理を含めた画像処理全体を高速化</p>
+                    <p class="img mobileOnly"><img src="/ai-computing/img/ai-computing/img_service_03_sp.webp" alt=""></p>
+                    <p class="txt">AI以外の画像前処理・後処理も最適化することで、検査や監視など、カメラを使う現場の処理全体をスムーズにします。</p>
+                    <p class="btnWrap">
+                        <a href="/ai-computing/image-processing-acceleration/" class="btn  btnDiamond short">
+                            <span class="triangle_before"></span>
+                            <span class="icon"><img src="/ai-computing/img/ai-computing/arrow_right.svg" alt=""></span>
+                            <span class="label">画像処理高速化を詳しく見る </span>
+                            <span class="triangle_after"></span>
+                        </a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="imgArea tabletUpOnly">
+                    <img src="/ai-computing/img/ai-computing/img_service_04.webp" alt="">
+                </div>
+                <div class="txtArea">
+                    <h2 class="title">GPU向け高速化</h2>
+                    <p class="subtitle">GPUの力で計算処理を飛躍的に高速化</p>
+                    <p class="img mobileOnly"><img src="/ai-computing/img/ai-computing/img_service_04_sp.webp" alt=""></p>
+                    <p class="txt">シミュレーションや解析業務などにおいて、GPUの並列処理性能を最大限活かし、CPUでは実現できない速度を実現します。</p>
+                    <p class="btnWrap">
+                        <a href="/ai-computing/gpu-acceleration/" class="btn  btnDiamond short">
+                            <span class="triangle_before"></span>
+                            <span class="icon"><img src="/ai-computing/img/ai-computing/arrow_right.svg" alt=""></span>
+                            <span class="label">GPU向け高速化を詳しく見る </span>
+                            <span class="triangle_after"></span>
+                        </a>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>

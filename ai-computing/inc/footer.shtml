@@ -1,0 +1,56 @@
+<footer>
+
+	<!-- <a href="#" class="pagetop"><img src="./images/common/pagetop.svg" alt=""></a> -->
+	<div class="cw">
+		<div class="wrap">
+			<div class="left">
+				<div class="col">
+					<a href="/">アイリアAIシリーズ</a>
+					<a href="/dx/">アイリア DX Insight</a>
+					<a href="https://ailia.ai/sdk/">アイリア SDK</a>
+					<a href="https://www.ailia.ai/voice">アイリア AI VOICE</a>
+					<a href="https://www.ailia.ai/speech">アイリア AI SPEECH</a>
+					<a href="/embedded/">アイリア Embedded AI</a>
+				</div>
+				<div class="col">
+					<a href="/ai-computing/">AIコンピューティング</a>
+					<a href="/ai-computing/ai-deeplearning-acceleration/">AI・深層学習向け高速化</a>
+					<a href="/ai-computing/embedded-acceleration/">組込み高速化</a>
+					<a href="/ai-computing/image-processing-acceleration/">画像処理高速化</a>
+					<a href="/ai-computing/gpu-acceleration/">GPU向け高速化</a>
+				</div>
+				<div class="col">
+					<a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/" target="_blank">AIアプリケーション</a>
+					<a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/" target="_blank">AIエージェント</a>
+				</div>
+				<div class="col">
+					<a href="/company/">会社情報</a>
+					<a href="https://www.axell.co.jp/browser/">利用規約</a>
+					<a href="https://www.axell.co.jp/privacy/">プライバシーポリシー</a>
+				</div>
+			</div>
+			<div class="right">
+				<p class="company">アイリア株式会社</p>
+				<p class="address">〒150-0032　東京都渋谷区鶯谷町19-22　塗装会館5F</p>
+				<p class="btnWrap">
+					<a class="btn btnContact" href="/ai-computing/contact.html" target="_blank">
+						<span class="icon"><img src="/ai-computing/img/common/icon_contact.svg" alt=""></span>
+						<span class="label">お問い合わせ</span>
+					</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="bannerArea">
+			<a href="https://blog.ailia.ai/" target="_blank">
+				<img src="/ai-computing/img/common/footer_banner_01.webp" alt="AIでしごとするなら「AI専門メディア」">
+			</a>
+			<a href="https://ailia.ai/sdk/" target="_blank">
+				<img src="/ai-computing/img/common/footer_banner_02.webp" alt="ソフトウェア開発きっとアイリアSDK">
+			</a>
+
+		</div>
+
+	</div>
+	<p class="copyright">Copyright &copy; アイリア株式会社 / 株式会社アクセル</p>
+</footer>
