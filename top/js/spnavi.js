@@ -1,6 +1,6 @@
 
 $(function(){
-	if (window.matchMedia('(max-width: 1649px)').matches) {
+	if (window.matchMedia('(max-width: 900px)').matches) {
 		$(function() {
 			$('.headbtn a').on('click',function(){
 				$('.headnavlayer').slideToggle('fast');
