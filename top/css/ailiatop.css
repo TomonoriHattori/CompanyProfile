@@ -1443,9 +1443,9 @@
  #header .headnav li a:hover {
   color: #fff;
  }
- #header .headnav li.nav03 {
+ /*#header .headnav li.nav03 {
   margin: 0 20px 0 -24px;
- }
+ }*/
  #header .headnav li:last-child {
   margin: 0;
  }
@@ -1573,9 +1573,14 @@
   display: none;
   overflow-y: auto;
   box-sizing: border-box;
+  text-align: right;
  }
+ #header .headnav {
+    display: inline-block;
+    text-align: right;
+  }
  #header .headnav li {
-  margin: 0 0 2% 0;
+  margin: 0 0 8% 0;
  }
  #header .headnav li a {
   display: block;
@@ -1650,7 +1655,7 @@
   background-size: 40px auto;
  }
  #header .headnavlayer .navfoot {
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -1720,9 +1725,14 @@
   display: none;
   overflow-y: auto;
   box-sizing: border-box;
+  text-align: right;
  }
+ #header .headnav {
+    display: inline-block;
+    text-align: right;
+  }
  #header .headnav li {
-  margin: 0 0 2% 0;
+  margin: 0 0 8% 0;
  }
  #header .headnav li a {
   display: block;
@@ -1789,7 +1799,7 @@
   background: url("../img/spnav_close.png") no-repeat center center;
   background-size: 40px auto;
  }
- #header .contactbtn {
+ /*#header .contactbtn {
   position: absolute;
   top: 60px;
   right: 5px;
@@ -1806,7 +1816,7 @@
   background: url("../img/nav_contact.png") no-repeat center bottom;
   background-size: 50px auto;
   padding: 0;
- }
+ }*/
  #header .headnavlayer .navfoot {
   position: absolute;
   bottom: 0;
@@ -2977,3 +2987,11 @@
  }
  /* /日英切り替えSP */
 }
+
+
+@media screen and (min-width: 900px) and (max-width: 1197px) {
+  #header .navlabel {
+    font-size: 18px;
+  }
+}
+

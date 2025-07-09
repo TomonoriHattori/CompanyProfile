@@ -74,6 +74,10 @@ function PositionCheck(){
 function ScrollAnime() {
   var scroll = Math.round($(window).scrollTop());
   var NavElem = $("#scrollnav li");
+
+  console.log("現在のスクロール位置: " + scroll, "各アンカーの位置: ", elemTop);
+  
+
   $("#scrollnav li").removeClass('current');
  if(scroll >= 0 && scroll < elemTop[1]) {
       $("#scrollnav").addClass('hide');
@@ -112,11 +116,12 @@ function ScrollAnime() {
    } 
     else if(scroll >= elemTop[9] && scroll < elemTop[10]) {
       $(NavElem[8]).addClass('current');
-       $("#scrollnav").removeClass('hide');
+      $("#scrollnav").removeClass('hide');
    } 
-    else if(scroll >= elemTop[10]) {
+    var hidePosition = 14600; // ここに非表示にしたいスクロール位置の数値を入力
+    if (scroll >= hidePosition) {
       $("#scrollnav").addClass('hide');
-   } 
+    }
 }
 
 
