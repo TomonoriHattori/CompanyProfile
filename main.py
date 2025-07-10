@@ -340,6 +340,37 @@ def contact_css_static(filename):
 def contact_image_static(filename):
     return send_from_directory(app.root_path + '/contact/img/', filename, conditional=True)
 
+# works
+@app.route("/works", methods=["GET", "POST"])
+def works_redirect_page():
+    return redirect("/works/")
+
+@app.route("/en/works", methods=["GET", "POST"])
+def works_en_redirect_page():
+    return redirect("/en/works/")
+
+@app.route("/works/", methods=["GET", "POST"])
+def works_page():
+    return render_template("/works/index.html")
+
+@app.route("/en/works/", methods=["GET", "POST"])
+def works_en_page():
+    return render_template("/works/index_en.html")
+
+@app.route('/works/css/<path:filename>')
+@app.route('/en/works/css/<path:filename>')
+def works_css_static(filename):
+    return send_from_directory(app.root_path + '/works/css/', filename, conditional=True)
+
+@app.route('/works/img/<path:filename>')
+@app.route('/en/works/img/<path:filename>')
+def works_image_static(filename):
+    return send_from_directory(app.root_path + '/works/img/', filename, conditional=True)
+
+@app.route('/works/js/<path:filename>')
+@app.route('/en/works/js/<path:filename>')
+def works_js_static(filename):
+    return send_from_directory(app.root_path + '/works/js/', filename, conditional=True)
 
 import re
 import urllib.request
