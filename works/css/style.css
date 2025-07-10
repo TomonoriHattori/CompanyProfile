@@ -981,28 +981,20 @@ input[type="checkbox"]:checked + .checkbox01::after {
   .navArea .navList > li .navDetailList li a .icon svg .cls-1 {
     stroke: #ffcfcf;
   }
-  .navArea .navList .lang {
-    flex-direction: row;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    margin-top: 50px;
-    position: fixed;
-    right: 50px;
-    top: 0;
-    margin-top: 0;
-    width: 60px;
-    height: 60px;
+  .navArea .navList li.lang {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .navArea .navList .lang a {
-    width: 100%;
-    padding-top: 0;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    display: flex;
-    align-items: center;
-    font-size: 1.4rem;
+  .navArea .navList li.lang::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: calc(100% - 40px);
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    left: 20px;
+    background: #A5A5A5;
   }
   .navArea .navBtn {
     position: absolute;

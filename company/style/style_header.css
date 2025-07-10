@@ -1285,29 +1285,6 @@ footer .copyright {
   }
 }
 
-footer .btn {
-    display: flex;
-    background: #EB3155;
-    color: #fff;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    height: 40px;
-    position: relative;
-  }
-
-  footer .btn::after {
-    content: "";
-    height: 100%;
-    width: 0;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #005CD9;
-    transition: all ease 0.2s;
-  }
-
 /* =========================================================
  common style
 ========================================================= */
