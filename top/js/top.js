@@ -117,8 +117,9 @@ function ScrollAnime() {
     else if(scroll >= elemTop[9] && scroll < elemTop[10]) {
       $(NavElem[8]).addClass('current');
       $("#scrollnav").removeClass('hide');
-   } 
-    var hidePosition = 14600; // ここに非表示にしたいスクロール位置の数値を入力
+   }
+    
+    var hidePosition = elemTop[10]; // ここに非表示にしたいスクロール位置の数値を入力
     if (scroll >= hidePosition) {
       $("#scrollnav").addClass('hide');
     }
