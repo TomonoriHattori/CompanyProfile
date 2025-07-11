@@ -1310,3 +1310,15 @@ main {
     margin-top: 48px;
   }
 }
+
+
+/* =========================================================
+ フッターのボタン装飾用css付け足し
+========================================================= */
+.btn {
+  display: flex;
+  background: #EB3155;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
