@@ -135,3 +135,24 @@ $(window).scroll(function () {
 $(window).resize(function() {
   PositionCheck()
 });
+
+
+//スクロールでヘッダーに背景色追加
+
+// ウィンドウのスクロールイベントを監視
+  window.addEventListener('scroll', function() {
+    // 対象のID要素を取得
+    const targetElement = document.getElementById('headnavlayer_BG');
+
+    // 現在の垂直方向のスクロール量を取得
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    // スクロール量が100pxを超えたかどうかを判定
+    if (scrollPosition > 100) {
+      // 100pxを超えていたら 'scrolled' クラスを追加
+      targetElement.classList.add('scrolled');
+    } else {
+      // 100px以下の場合は 'scrolled' クラスを削除
+      targetElement.classList.remove('scrolled');
+    }
+  });

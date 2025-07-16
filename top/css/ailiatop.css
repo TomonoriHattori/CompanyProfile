@@ -1423,7 +1423,16 @@
 }
 /* /日英切り替えPC */
 @media screen and (min-width:901px) {
- #header .headnavlayer {
+ #headnavlayer_BG {
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  transition: background-color 0.5s ease;
+ }
+ .scrolled {
+  background-color: #ffffffCC;
+ }
+  #header .headnavlayer {
   position: fixed;
   top: 30px;
   right: 20px;
@@ -2998,3 +3007,4 @@
 #header {
   z-index: 40;
 }
+
