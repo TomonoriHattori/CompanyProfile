@@ -1426,7 +1426,7 @@
  #headnavlayer_BG {
   position: fixed;
   width: 100%;
-  height: 90px;
+  height: 80px;
   transition: background-color 0.5s ease;
  }
  .scrolled {
