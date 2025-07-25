@@ -1435,23 +1435,57 @@
   #header .headnavlayer {
   position: fixed;
   top: 30px;
-  right: 20px;
+  right: 40px;
  }
  #header .headnav {
   display: flex;
   justify-content: space-between;
+  transform: translate(-180px);
  }
  #header .headnav li {
-  margin: 0 15px 0 0;
+  margin: 0 25px 0 0;
  }
  #header .headnav li a {
   display: block;
   padding: 0 0 0 15px;
   transition: 0.2s;
  }
- #header .headnav li a:hover {
-  color: #fff;
+
+ /*ヘッダーホバーアニメーション*/
+ #header .headnav .current:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: calc(100% - 10px);
+  position: relative;
+  bottom: 1px;
+  left: 12px;
+  background: #EB3155;
+  transition: 0s;
  }
+ #header .headnav .current:hover::after {
+  background: #005CD9;
+  transition: 0.2s;
+ }
+
+ #header .headnav .passive:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: calc(100% - 10px);
+  position: relative;
+  bottom: 1px;
+  left: 12px;
+  background: #005CD9;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0s;
+ }
+ #header .headnav .passive:hover::after {
+  transform: scale(1, 1);
+  transition: 0.3s;
+ }
+ 
  /*#header .headnav li.nav03 {
   margin: 0 20px 0 -24px;
  }*/
@@ -1517,8 +1551,8 @@
  }
 */
  #header .navlabel {
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: bold;
   line-height: 1.6;
   letter-spacing: 0.05em;
  }
@@ -1526,6 +1560,24 @@
   font-size: 12px;
   line-height: 1.6;
   letter-spacing: 0.1em;
+ }
+
+/*ヘッダーお問い合わせボタン*/
+ #header .nav_contact a {
+  text-align: center;
+  width: 160px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #171C61;
+  color: #fff;
+  padding: 15px 20px 15px 20px;
+  border-radius: 50px;
+  margin-left: 30px;
+  line-height: 1;
+  letter-spacing: 0em;
+  position: fixed;
+  right: 30px;
+  top: 20px;
  }
  /*#header .headnav li.nav_contact a {
   padding: 6px 0 0 0;
@@ -1569,6 +1621,7 @@
   left: 15px;
   width: 120px;
   height: 24px;
+  z-index: 60;
  }
  #header .headnavlayer {
   width: 100%;
@@ -1576,9 +1629,9 @@
   max-height: 100vh;
   background: #F8F8FA;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
-  padding: 5% 5% 5% 5%;
+  padding: 10% 5% 5% 5%;
   display: none;
   overflow-y: auto;
   box-sizing: border-box;
@@ -1592,9 +1645,107 @@
   margin: 0 0 8% 0;
  }
  #header .headnav li a {
-  display: block;
+  display: inline-block;
   padding: 5px 5px 5px 80px;
  }
+
+ 
+ /*ヘッダーお問い合わせボタン*/
+ #header .nav_contact a {
+  text-align: center;
+  width: 140px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #171C61;
+  color: #fff;
+  padding: 12px 15px 12px 15px;
+  border-radius: 50px;
+  margin-left: 20px;
+  line-height: 1;
+  letter-spacing: 0em;
+  position: absolute;
+  right: 70px;
+  top: 20px;
+ }
+
+ /*ヘッダーホバーアニメーションSP*/
+ #header .headnav .current a::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  bottom: 1px;
+  background: #EB3155;
+  transition: 0s;
+ }
+ #header .headnav .current a:hover::after {
+  background: #005CD9;
+  transition: 0.2s;
+ }
+
+ #header .headnav .passive a::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  bottom: 1px;
+  background: #005CD9;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0s;
+ }
+ #header .headnav .passive a:hover::after {
+  transform: scale(1, 1);
+  transition: 0.3s;
+ }
+ .translation_sp a {
+  display: inline-block;
+  margin-right: 5px;
+ }
+ .translation_sp .active::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  bottom: -3px;
+  background: #EB3155;
+  transition: 0s;
+ }
+ .translation_sp .active:hover::after {
+  background: #005CD9;
+  transition: 0.2s;
+ }
+ .translation_sp .passive::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  bottom: -3px;
+  background: #005CD9;
+  transition: 0s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0s;
+ }
+ .translation_sp .passive:hover::after {
+  transform: scale(1, 1);
+  transition: 0.3s;
+ }
+
+  .headnavlayer .translation_sp {
+    display: block;
+    margin-top: 10px; /* メニューの他の項目との間隔を調整 */
+    padding-right: 5px; /* 右端の余白を調整 */
+  }
+
+  .headnavlayer .translation_sp a {
+    font-weight: bold;
+    font-size: 18px;
+  }
  /*#header .headnav li.nav01 a {
   background: url("../img/navicon01.png") no-repeat 5px 8px;
   background-size: 70px auto;
@@ -1628,8 +1779,8 @@
   background-size: 70px auto;
  }*/
  #header .navlabel {
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: bold;
   line-height: 1.6;
   letter-spacing: 0.05em;
  }
@@ -1721,6 +1872,7 @@
   left: 15px;
   width: 130px;
   height: 24px;
+  z-index: 60;
  }
  #header .headnavlayer {
   width: 100%;
@@ -1730,7 +1882,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 15% 8% 8% 8%;
+  padding: 80px 8% 8% 8%;
   display: none;
   overflow-y: auto;
   box-sizing: border-box;
@@ -1744,8 +1896,95 @@
   margin: 0 0 8% 0;
  }
  #header .headnav li a {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px 5px 5px 5px;
+ }
+
+/*ヘッダーお問い合わせボタン*/
+ #header .nav_contact a {
+  text-align: center;
+  width: 140px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #171C61;
+  color: #fff;
+  padding: 12px 15px 12px 15px;
+  border-radius: 50px;
+  margin-left: 30px;
+  line-height: 1;
+  letter-spacing: 0em;
+  position: absolute;
+  right: 65px;
+  top: 10px;
+ }
+
+ /*ヘッダーホバーアニメーションSP*/
+ #header .headnav .current a::after {
+  content: "";
   display: block;
-  padding: 5px 5px 5px 80px;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  bottom: 1px;
+  background: #EB3155;
+  transition: 0s;
+ }
+ #header .headnav .current a:hover::after {
+  background: #005CD9;
+  transition: 0.2s;
+ }
+
+ #header .headnav .passive a::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  bottom: 1px;
+  background: #005CD9;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0s;
+ }
+ #header .headnav .passive a:hover::after {
+  transform: scale(1, 1);
+  transition: 0.3s;
+ }
+ .translation_sp a {
+  display: inline-block;
+  margin-right: 5px;
+ }
+ .translation_sp .active::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  bottom: -3px;
+  background: #EB3155;
+  transition: 0s;
+ }
+ .translation_sp .active:hover::after {
+  background: #005CD9;
+  transition: 0.2s;
+ }
+ .translation_sp .passive::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  bottom: -3px;
+  background: #005CD9;
+  transition: 0s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0s;
+ }
+ .translation_sp .passive:hover::after {
+  transform: scale(1, 1);
+  transition: 0.3s;
  }
  /*#header .headnav li.nav01 a {
   background: url("../img/navicon01.png") no-repeat 5px 4px;
@@ -1776,8 +2015,8 @@
   background-size: 60px auto;
  }*/
  #header .navlabel {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: bold;
   line-height: 1.6;
   letter-spacing: 0.05em;
  }
@@ -2955,7 +3194,7 @@
   text-align: center;
   color: #808080;
  }
- /* 日英切り替えSP */
+ /* 日英切り替えSP
  .headnavlayer .translation_sp {
   position: absolute;
   top: 14px;
@@ -2994,15 +3233,50 @@
  .headnavlayer .translation_sp a.active::after {
   background: #000;
  }
- /* /日英切り替えSP */
-}
-
-
-@media screen and (min-width: 900px) and (max-width: 1197px) {
-  #header .navlabel {
+日英切り替えSP */
+  .headnavlayer .translation_sp a{
+    font-weight: bold;
     font-size: 18px;
   }
 }
+
+
+@media screen and (min-width: 1025px) and (max-width: 1197px) {
+  #header .navlabel {
+    font-size: 16px;
+  }
+  #header .headnav li {
+    margin: 0 15px 0 0;
+  }
+  #header .headnavlayer {
+  right: 20px;
+ }
+  #header .nav_contact a {
+    font-size: 16px;
+    width: 130px;
+    padding: 10px 8px 10px 8px;
+    top: 23px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+  #header .navlabel {
+    font-size: 14px;
+  }
+  #header .headnav li {
+    margin: 0 8px 0 0;
+  }
+  #header .headnavlayer {
+  right: 8px;
+ }
+  #header .nav_contact a {
+    font-size: 14px;
+    width: 130px;
+    padding: 10px 8px 10px 8px;
+    top: 22px;
+  }
+}
+
 
 #header {
   z-index: 40;
