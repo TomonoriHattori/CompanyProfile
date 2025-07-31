@@ -1,0 +1,87 @@
+main {
+    width: 100%;
+}
+@media screen and (min-width:768px) {
+    .subNav-inner {
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        background-color: #ffffffd4;
+        z-index: 40;
+    }
+    .subNav-inner .subNavTitle {
+        display: block;
+        width: 170px;
+        margin-left: 20px;
+    }
+    .site-menu ul {
+        display: flex;
+    }
+    .site-menu ul li {
+        margin: auto 20px;
+    }
+    .mv-area {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        top: 70px;
+        background-color: rgba(195, 255, 0, 0.417);
+        margin-bottom: 70px;
+    }
+    #mv img {
+        position: absolute;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+    .mv-text {
+        position: relative;
+        top: 60px;
+        left: 60px;
+        width: 80%;
+    }
+    .mv-text h1 {
+        font-size: 35px;
+    }
+    .mv-text p {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .catArea {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        top: 150px;
+    }
+    .catArea ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .catArea li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+        background-color: blue;
+        width: 180px;
+        height: 40px;
+        padding-top: 8px;
+        margin-right: 20px;
+    }
+    .collaboration {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .collaboration-logos img{
+        margin: 0 30px;
+    }
+}
