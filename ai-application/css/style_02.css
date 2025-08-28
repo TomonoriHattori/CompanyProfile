@@ -1,0 +1,122 @@
+main {
+    width: 100%;
+}
+@media screen and (min-width:768px) {
+    .siteMap {
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        background-color: #ffffffd4;
+        z-index: 40;
+    }
+    .siteMapTitle {
+        width: 180px;
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .siteMap-inner {
+        display: flex;
+        align-items: flex-end;
+    }
+    .siteMap-menu ul {
+        display: flex;
+        align-items: center;
+        margin: auto 40px;
+    } 
+    .siteMap-menu li {
+        margin: auto 30px;
+        font-weight: bold;
+    }
+    .mv-area {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        top: 70px;
+        background-color: rgba(195, 255, 0, 0.417);
+        margin-bottom: 70px;
+    }
+    #mv img {
+        position: absolute;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+    .mv-text {
+        position: relative;
+        top: 60px;
+        left: 70px;
+        width: 80%;
+    }
+    .mv-text h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .mv-text p {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .catArea {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        top: 150px;
+    }
+    .catArea ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 70px;
+    }
+    
+    .catArea li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+        background-color: #EB3155;
+        width: 180px;
+        height: 40px;
+        padding-top: 8px;
+        margin-right: 20px;
+        border-radius: 20px;
+    }
+    .catArea a {
+        color: white;
+        font-size: 10px;
+    }
+    .cat-btn::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-top: solid 2px white;
+        border-right: solid 2px white;
+        position: absolute;
+        transform: translate(-42px, 15px) rotate(135deg);
+    }
+    .collaboration {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .collaboration-logos img{
+        margin: 0 30px;
+    }
+
+    .overview {
+        display: flex;
+        align-items: center;
+    }
+    .ov01 {
+        font-size: 30px;
+        width: 500px;
+    }
+    .ov02 {
+        width: 400px;
+    }
+}
