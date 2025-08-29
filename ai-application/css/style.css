@@ -2,27 +2,30 @@ main {
     width: 100%;
 }
 @media screen and (min-width:768px) {
-    .subNav-inner {
+    .subNavArea {
         width: 100%;
         height: 70px;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
+        display: flex;  
         align-items: center;
         position: fixed;
         background-color: #ffffffd4;
         z-index: 40;
     }
-    .subNav-inner .subNavTitle {
+    .subNavArea .subNavTitle {
         display: block;
-        width: 170px;
-        margin-left: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        width: 200px;
+        margin-left: 50px;
     }
     .site-menu ul {
         display: flex;
     }
     .site-menu ul li {
         margin: auto 20px;
+        font-size: 11px;
+        font-weight: bold;
     }
     .mv-area {
         width: 100%;
@@ -61,18 +64,24 @@ main {
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        position: relative;
+        left: 60px;
     }
     
     .catArea li {
         display: inline-block;
         vertical-align: middle;
-        margin-right: 20px;
-        background-color: blue;
+        margin-right: 15px;
+        background-color: #EB3155;
         width: 180px;
         height: 40px;
         padding-top: 8px;
         margin-right: 20px;
+        border-radius: 20px;
+    }
+    .catArea a {
+        font-size: 10px;
+        color: white;
     }
     .collaboration {
         width: 100%;
