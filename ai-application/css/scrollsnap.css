@@ -1,0 +1,51 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+.container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+.area {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+/* General Styling */
+body {
+  font-size: 4rem;
+  text-align: center;
+  color: black;
+}
+.area:nth-child(even) {
+  background-color: none;
+}
+.area:nth-child(odd) {
+  background-color: none;
+}
+.fade-in-target {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    border-radius: 20px;
+    transform: translateY(90vh); /* 少し下に移動させておく */
+    transition: transform 1s; /* 0.8秒かけて変化させる */
+    transition-delay: 20ms;
+}
+.fade-in-target02 {
+    content: '';
+    width: 100%;
+    height: 150vh;
+    background-color: rgb(0, 47, 255);
+    border-radius: 20px;
+    
+    transform: translateY(100vh); /* 少し下に移動させておく */
+    transition: transform 4s; /* 0.8秒かけて変化させる */
+}
+.is-visible {
+    transform: translateY(20px);
+}

@@ -1,0 +1,46 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 50px;
+    margin: 0;
+}
+.scroller {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.scroller section {
+  scroll-snap-align: start;
+}
+section {
+    text-align: center;
+    /* scroll-margin-top: 50px; */
+    height: 100vh;
+    width: 800px;
+    overflow-y: scroll;
+    padding: 0;
+}
+.Area01 {
+    background-color: none;
+}
+.Area02 {
+    color: white;
+    background-color: rgb(255, 255, 255);
+}
+.Area02-inner {
+    background-color: rgb(131, 168, 201);
+    border-radius: 40px 40px 0px 0px;
+}
+.Area03 {
+    color: white;
+    background-color: rgb(118, 172, 142);
+}
+
+
+body::-webkit-scrollbar {  
+  display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
+}
+section::-webkit-scrollbar {  
+  display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scrollsnap.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section class="area">1
+            
+        </section>
+        <section class="area">
+            <div class="fade-in-target">box</div>
+        </section>
+        <section class="area">
+            <div class="fade-in-target02">box02</div>
+        </section>
+        
+        <section class="area">4</section>
+        <section class="area">5</section>
+    </div>
+
+    
+    <script>
+        // 監視対象の要素をすべて取得
+        const targets = document.querySelectorAll('.fade-in-target, .fade-in-target02');
+
+        // Intersection Observerのコールバック関数
+        const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            // isIntersectingプロパティで、要素がビューポート内にあるか判定
+            if (entry.isIntersecting) {
+            // 画面内に入ったら is-visible クラスを付与
+            entry.target.classList.add('is-visible');
+            }
+            else {
+            // 画面外に出たら is-visible クラスを削除
+            entry.target.classList.remove('is-visible');
+            }
+        });
+        };
+
+        // Intersection Observerのオプション
+        const observerOptions = {
+        root: null, // ビューポートをルートとする
+        rootMargin: '0px',
+        threshold: 0.08 // 要素が10%見えたらトリガー
+        };
+
+        // Intersection Observerのインスタンスを作成
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        // 各ターゲット要素の監視を開始
+        targets.forEach(target => {
+        observer.observe(target);
+        });
+    </script>
+    
+</body>
+</html>
