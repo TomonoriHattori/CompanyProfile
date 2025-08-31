@@ -6,6 +6,7 @@ body {
     margin: 0;
 }
 .scroller {
+  width: 100%;
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -14,33 +15,164 @@ body {
   scroll-snap-align: start;
 }
 section {
-    text-align: center;
-    /* scroll-margin-top: 50px; */
-    height: 100vh;
-    width: 800px;
-    overflow-y: scroll;
-    padding: 0;
+  text-align: center;
+  /* scroll-margin-top: 50px; */
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  padding: 0;
+}
+section p {
+  width: 800px;
+  display: flex;
+  margin: 0 auto;
 }
 .Area01 {
-    background-color: none;
+  background-color: none;
 }
 .Area02 {
-    color: white;
-    background-color: rgb(255, 255, 255);
+  color: white;
+  background-color: rgb(255, 255, 255);
 }
 .Area02-inner {
-    background-color: rgb(131, 168, 201);
-    border-radius: 40px 40px 0px 0px;
+  background-color: rgb(131, 168, 201);
+  border-radius: 40px 40px 0px 0px;
+  transform: translateY(90vh);
+  transition: transform 1s;
+  transition-delay: 20ms;
 }
 .Area03 {
-    color: white;
-    background-color: rgb(118, 172, 142);
+  color: white;
+  background-color: rgb(131, 168, 201);
+}
+.Area03-inner {
+  background-color: rgb(134, 134, 134);
+  border-radius: 40px 40px 0px 0px;
+  transform: translateY(90vh);
+  transition: transform 1s;
+  transition-delay: 20ms;
 }
 
 
-body::-webkit-scrollbar {  
-  display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
-}
+
 section::-webkit-scrollbar {  
   display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
+}
+
+.is-animated {
+  transform: translateY(0);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+.scroll_down{
+  position:absolute;
+  bottom: 0px;
+  left: 95%;
+}
+
+.scroll_down a{
+  position: absolute;
+  left: 10px;
+  bottom: 87px;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: .2em;
+  writing-mode: vertical-lr;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.scroll_down:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background:#fff;
+  animation:
+    circlemove 1.6s ease-in-out infinite,
+    cirlemovehide 1.6s ease-out infinite;
+}
+
+@keyframes circlemove{
+  0%{bottom:160px;}
+  100%{bottom:0px;}
+}
+
+@keyframes cirlemovehide{
+  0%{opacity:0}
+  50%{opacity:1;}
+  80%{opacity:0.9;}
+  100%{opacity:0;}
+}
+
+.scroll_down:after{
+  content:"";
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:2px;
+  height: 160px;
+  background:#fff;
+}
+
+
+.scroll_down_black{
+  position:relative;
+  bottom: 0px;
+  left: 95%;
+}
+
+.scroll_down_black a{
+  position: absolute;
+  left: 10px;
+  bottom: 87px;
+  color: #000;
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: .2em;
+  writing-mode: vertical-lr;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.scroll_down_black:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background:#000;
+  animation:
+    circlemove 1.6s ease-in-out infinite,
+    cirlemovehide 1.6s ease-out infinite;
+}
+
+@keyframes circlemove{
+  0%{bottom:160px;}
+  100%{bottom:0px;}
+}
+
+@keyframes cirlemovehide{
+  0%{opacity:0}
+  50%{opacity:1;}
+  80%{opacity:0.9;}
+  100%{opacity:0;}
+}
+
+.scroll_down_black:after{
+  content:"";
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:2px;
+  height: 160px;
+  background:#000;
 }

@@ -7,25 +7,96 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <section class="area">1
-            
+    <article class="scroller">
+        <section class="Area01">
+            <div class="Area01-inner">
+                <h2>第 1 章</h2>
+                <p>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                </p>
+                <div class="scroll_down_black" id="type02">
+                    <a href="#">Scroll</a>
+                </div>
+            </div>
         </section>
-        <section class="area">
-            <div class="fade-in-target">box</div>
+        <section class="Area02">
+            <div class="Area02-inner">
+                <h2>第 2 章</h2>
+                <p>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                </p>
+                <div class="scroll_down" id="type02">
+                    <a href="#">Scroll</a>
+                </div>
+            </div>
         </section>
-        <section class="area">
-            <div class="fade-in-target02">box02</div>
+        <section class="Area03">
+            <div class="Area03-inner">
+                <h2>第 3 章</h2>
+                <p>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                </p>
+            </div>
         </section>
-        
-        <section class="area">4</section>
-        <section class="area">5</section>
-    </div>
+    </article>
 
     
     <script>
         // 監視対象の要素をすべて取得
-        const targets = document.querySelectorAll('.fade-in-target, .fade-in-target02');
+        const targets = document.querySelectorAll('.Area02-inner, .Area03-inner');
 
         // Intersection Observerのコールバック関数
         const observerCallback = (entries, observer) => {
@@ -33,11 +104,9 @@
             // isIntersectingプロパティで、要素がビューポート内にあるか判定
             if (entry.isIntersecting) {
             // 画面内に入ったら is-visible クラスを付与
-            entry.target.classList.add('is-visible');
-            }
-            else {
-            // 画面外に出たら is-visible クラスを削除
-            entry.target.classList.remove('is-visible');
+            entry.target.classList.add('is-animated');
+            // 一度表示されたら、その要素の監視を停止する
+            observer.unobserve(entry.target);
             }
         });
         };
@@ -46,7 +115,7 @@
         const observerOptions = {
         root: null, // ビューポートをルートとする
         rootMargin: '0px',
-        threshold: 0.08 // 要素が10%見えたらトリガー
+        threshold: 0.001 // 要素が10%見えたらトリガー
         };
 
         // Intersection Observerのインスタンスを作成
