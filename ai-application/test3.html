@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scrollsnap03.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="section1">
+        <div class="section-inner1">
+            <h2>第 1 章</h2>
+            <p>
+            Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+            kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+            winter purslane kale. Celery potato scallion desert raisin horseradish
+            spinach carrot soko.<br>
+            
+            </p>
+            <div class="scroll_down">
+                <a href="#">Scroll</a>
+            </div>
+        </div>
+    </section>
+    <section id="section2">
+        <div class="section-inner2">
+            <h2>第 2 章</h2>
+            <p>
+            Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+            </p>
+            <img src="img/img_temp.png" alt="" width="400px" height="200px">
+            <div class="back_color"></div>
+            <div class="scroll_down">
+                <a href="#">Scroll</a>
+            </div>
+        </div>
+    </section>
+    <section id="section3">
+        <div class="section-inner3">
+            <img src="img/img_temp.png" alt="" width="400px" height="200px">
+            <img src="img/img_temp.png" alt="" width="400px" height="200px">
+            <img src="img/img_temp.png" alt="" width="400px" height="200px">
+            <img src="img/img_temp.png" alt="" width="400px" height="200px">
+            
+        </div>
+        <div class="scroll_down">
+                <a href="#">Scroll</a>
+            </div>
+    </section>
+    <section id="section4">
+        <div class="section-inner4">
+            <p>セクション４</p>
+            <p>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+                winter purslane kale. Celery potato scallion desert raisin horseradish
+                spinach carrot soko.<br>
+            </p>
+        </div>
+    </section>
+    
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        let currentSectionIndex = 0;
+        let isScrolling = false;
+        const lastSectionIndex = sections.length - 1;
+
+        function scrollToSection(index) {
+        if (index >= 0 && index < sections.length) {
+            // 最後のセクションに移動する場合
+            if (index === lastSectionIndex) {
+            document.body.style.overflow = 'auto'; // 通常のスクロールを許可
+            }
+
+            sections[index].scrollIntoView({ behavior: 'smooth' });
+            currentSectionIndex = index;
+        }
+        }
+
+        window.addEventListener('wheel', event => {
+        const delta = event.deltaY;
+
+        // 通常スクロール中の処理
+        if (currentSectionIndex === lastSectionIndex) {
+            // 最後のセクションのてっぺんで、さらに上にスクロールした場合
+            if (window.scrollY <= sections[lastSectionIndex].offsetTop && delta < 0) {
+            if (isScrolling) return;
+
+            document.body.style.overflow = 'hidden'; // スナップモードに戻す
+            scrollToSection(currentSectionIndex - 1);
+            
+            isScrolling = true;
+            setTimeout(() => { isScrolling = false; }, 1000);
+            }
+            return; // スナップモードでない場合は以降の処理を中断
+        }
+
+        // スナップモード中の処理
+        if (isScrolling) return;
+
+        if (delta > 0) {
+            scrollToSection(currentSectionIndex + 1);
+        } else {
+            scrollToSection(currentSectionIndex - 1);
+        }
+
+        isScrolling = true;
+        setTimeout(() => { isScrolling = false; }, 1000);
+        });
+    </script>
+</body>
+</html>
