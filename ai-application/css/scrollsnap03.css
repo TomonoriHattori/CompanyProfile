@@ -3,7 +3,7 @@ body {
     overflow: hidden; /* JavaScriptでスクロールを制御するため */
   }
   section {
-    position: relative;
+    
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -16,24 +16,58 @@ body {
     text-align: center;
     display: flex;
   }
-  #section1 { background-color: #ff6347; }
-  #section2 { background-color: #4682b4; }
-  #section3 { background-color: #32cd32; }
+  #section1 { background-color: #fff; }
+  #section2 { background-color: #fff; }
+  #section3 { background-color: #b3b3b3; }
   #section4 {
-    background-color: #697c69;
+    background-color: #b3b3b3;
     height: auto;
     min-height: 100vh;
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.inner-space {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .section-inner1 {
-    background-color: #00000096;
     height: 100vh;
     padding: 0 auto;
+    color: black;
 }
 .section-inner2 {
-    background-color: #00000096;
+    background-color: #b3b3b3;
+    bottom: 0;
     height: 100vh;
+    width: 100%;
+    padding: 0 ;
+    border-radius: 80px 80px 0 0;
+    z-index: 15;
+}
+.section-inner3 {
+    background-color: #b3b3b3;
+    height: 100vh;
+    width: 100%;
     padding: 0 auto;
+    padding-top: 150px;
+}
+.section-inner4 {
+  background-color: #94bbc7;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 auto;
+  border-radius: 80px 80px 0 0;
+}
+
+.hoge {
+  content: "";
+  height: 500px;
+  width: 90px;
 }
 
 
@@ -41,22 +75,24 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
 .scroll_down{
-  position:absolute;
-  bottom: 0px;
-  left: 10px;
+  position:fixed;
+  bottom: 40vh;
+  right: 5vw;
+  z-index: 40;
 }
 
 .scroll_down a{
   position: absolute;
   left: 10px;
   bottom: 87px;
-  color: #fff;
+  color: black;
   font-size: 14px;
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: .2em;
   writing-mode: vertical-lr;
   text-decoration: none;
   text-transform: uppercase;
+  z-index: 40;
 }
 
 .scroll_down:before {
@@ -67,7 +103,7 @@ body {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background:#fff;
+  background:black;
   animation:
     circlemove 1.6s ease-in-out infinite,
     cirlemovehide 1.6s ease-out infinite;
@@ -92,5 +128,56 @@ body {
   left:0;
   width:2px;
   height: 160px;
-  background:#fff;
+  background:black;
+}
+
+/* ★追加: 2ページ目以降で色を白にするためのスタイル */
+.scroll_down.is-scrolled a {
+  color: white;
+}
+.scroll_down.is-scrolled:before {
+  background: white;
+}
+.scroll_down.is-scrolled:after {
+  background: white;
+}
+
+/* ★追加: ページ最下部で非表示にするためのスタイル */
+.scroll_down.is-hidden {
+  opacity: 0;
+  pointer-events: none; /* 要素をクリックできなくする */
+  transition: opacity 0.4s ease; /* スムーズにフェードアウトさせる */
+}
+
+
+/*スライドインアニメーション*/
+.section-inner2, .section-inner3, .section-inner4 {
+  transform: translateY(-40px);
+  transition: 0.5s;
+  transition-delay: 0.7s;
+}
+
+.is-animated {
+  transform: translateY(15px);
+}
+
+.hero1, .hero2, .hero3, .hero4 {
+  transform: translateY(20vh);
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+.hero2 {
+  transition-delay: 0.4s;
+}
+.hero3 {
+  transition-delay: 0.6s;
+}
+.hero4 {
+  transition-delay: 0.8s;
+}
+
+.is-visible {
+  transform: translateY(0);
+  opacity: 1;
 }
