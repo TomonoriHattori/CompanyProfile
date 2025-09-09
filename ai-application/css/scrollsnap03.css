@@ -663,7 +663,7 @@ to {
 .contact-area {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
+  gap: 80px;
   margin-top: 40px;
   padding-bottom: 50px;
 }
@@ -676,12 +676,13 @@ to {
   text-align: left;
 }
 input {
-  width: 100%;
+  width: 500px;
+  height: 40px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .question {
-  height: 100px;
+  height: 150px;
 }
 button {
   background-color: transparent;
@@ -701,12 +702,13 @@ button {
   justify-content: center;
   height: 40px;
   border-radius: 20px;
+  width: 500px;
 }
 
 
 
 footer {
-  margin-top: 100px;
+  margin-top: 120px;
   display: block;
   background-color: #fff;
   width: 100%;
