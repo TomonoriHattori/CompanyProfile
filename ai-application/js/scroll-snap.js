@@ -14,6 +14,23 @@ const lastSectionIndex = sections.length - 1;
 const animationDuration = 1; // アニメーションの時間（秒）
 const scrollCooldown = 500; // ★追加: スクロール後の待機時間（ミリ秒）。500 = 0.5秒
 
+/**
+ * リサイズイベントのハンドラ
+ * ウィンドウのリサイズが終わったら現在のセクションに再スナップする
+ */
+function handleResize() {
+  // アニメーションはさせずに瞬時に位置を調整
+  scrollToSection(currentSectionIndex, 0); 
+}
+
+// リサイズイベントの登録（debounce処理付き）
+// 頻繁なイベント発生を防ぎ、リサイズ終了後に一度だけ実行する
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(handleResize, 150); // 150ms後に実行
+});
+
 
 /**
  * 指定されたインデックスのセクションへスクロールする関数
@@ -26,8 +43,8 @@ if (index < 0 || index >= sections.length) {
     return;
 }
 
-// ★変更点: .scroll_downの色を制御
-if (index > 1) {
+// ★変更点: スクロールダウン.scroll_downの色を制御
+if (index > 6) {
     // 2ページ目以降は 'is-scrolled' クラスを追加して白にする
     scrollDownElement.classList.add('is-scrolled');
 } else {
@@ -66,12 +83,9 @@ gsap.to(window, {
  * マウスホイールイベントの処理
  */
 window.addEventListener('wheel', (event) => {
-  // ★★★ 修正点 ★★★
-  // ブラウザのデフォルトのスクロール動作をキャンセル
-  event.preventDefault();
-
-  // アニメーション中は処理を中断
+  // アニメーション中は処理を中断し、デフォルトのスクロールもキャンセル
   if (isScrolling) {
+    event.preventDefault();
     return;
   }
 
@@ -81,14 +95,18 @@ window.addEventListener('wheel', (event) => {
   if (currentSectionIndex === lastSectionIndex) {
     // 最後のセクションの最上部で、さらに上にスクロールしようとした時
     if (window.scrollY <= sections[lastSectionIndex].offsetTop && delta < 0) {
+      event.preventDefault(); // スナップスクロールに戻るので、デフォルト動作をキャンセル
       isScrolling = true;
       scrollToSection(currentSectionIndex - 1); // 一つ前のセクションへ
     }
-    // それ以外の通常スクロール中はなにもしない
+    // それ以外の通常スクロール中は event.preventDefault() を呼ばず、ブラウザのデフォルトスクロールに任せる
     return;
   }
 
-  // スナップモード中の処理
+  // --- これ以降はスナップモード中の処理 ---
+  // デフォルトのスクロール動作をキャンセル
+  event.preventDefault();
+  
   isScrolling = true; // アニメーション開始フラグを立てる
 
   if (delta > 0) {
@@ -98,7 +116,7 @@ window.addEventListener('wheel', (event) => {
     // 上にスクロール
     scrollToSection(currentSectionIndex - 1);
   }
-}, { passive: false }); // ★補足: preventDefaultを確実に機能させるためpassive: falseを指定
+}, { passive: false }); // preventDefaultを確実に機能させるためpassive: falseを指定
 
 // ページ読み込み完了時に最初のセクションへ移動（任意）
 window.addEventListener('load', () => {
@@ -109,7 +127,7 @@ window.addEventListener('load', () => {
 //innerとヒーローのアニメーション
 
 // 監視対象の要素をすべて取得
-const targets = document.querySelectorAll('.section-inner2, .section-inner3, .section-inner4, .hero1, .hero2, .hero3, .hero4');
+const targets = document.querySelectorAll('.section-inner2, .section-inner2_2, .section-inner2_3, .section-inner2_4, .section-inner3, .section-inner4, .slideIn1, .slideIn2, .slideIn3, .slideIn4');
 
 // Intersection Observerのコールバック関数
 const observerCallback = (entries, observer) => {
@@ -121,8 +139,8 @@ const observerCallback = (entries, observer) => {
       // is-animated クラスを付け外しする
       entry.target.classList.toggle('is-animated', entry.isIntersecting);
     
-    // もし hero1, hero2... いずれかのクラスを持っていたら
-    } else if (entry.target.matches('[class*="hero"]')) {
+    // もし slideIn1, slideIn2... いずれかのクラスを持っていたら
+    } else if (entry.target.matches('[class*="slideIn"]')) {
       // is-visible クラスを付け外しする
       entry.target.classList.toggle('is-visible', entry.isIntersecting);
     }
@@ -162,3 +180,43 @@ if (sentinel) {
     const bottomObserver = new IntersectionObserver(bottomObserverCallback, bottomObserverOptions);
     bottomObserver.observe(sentinel);
 }
+
+/**
+ * ナビゲーションリンクのクリックイベント処理
+ * ページ内リンクがクリックされた際に、スムーズスクロールを実行する
+ */
+// DOMの読み込みが完了したら実行
+document.addEventListener('DOMContentLoaded', () => {
+  // ナビゲーションメニュー内のaタグをすべて取得
+  const navLinks = document.querySelectorAll('.site-menu a');
+  // ページ内の全<section>要素のリスト（既存のものを再利用）
+  const sectionsArray = Array.from(sections);
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      const href = link.getAttribute('href');
+
+      // リンクがページ内リンク（#で始まる）かチェック
+      if (href && href.startsWith('#')) {
+        // デフォルトのアンカーリンクの挙動（瞬間移動）をキャンセル
+        event.preventDefault();
+
+        // ターゲットとなる要素のIDを取得 (例: '#section2' -> 'section2')
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          // ターゲット要素が何番目のセクションかを検索
+          const targetIndex = sectionsArray.indexOf(targetElement);
+          
+          // 対応するセクションが見つかった場合
+          if (targetIndex !== -1 && !isScrolling) {
+            isScrolling = true; // アニメーション開始フラグを立てる
+            scrollToSection(targetIndex); // スムーズスクロールを実行
+          }
+        }
+      }
+      // #で始まらない通常のリンクは、このif文を無視して通常通りに動作します。
+    });
+  });
+});
