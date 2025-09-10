@@ -311,6 +311,11 @@ def application_image_static(filename):
 def application_js_static(filename):
     return send_from_directory(app.root_path + '/application/js/', filename, conditional=True)
 
+@app.route('/application/video/<path:filename>')
+@app.route('/en/application/video/<path:filename>')
+def application_video_static(filename):
+    return send_from_directory(app.root_path + '/application/video/', filename, conditional=True)
+
 # contest
 @app.route("/contest", methods=["GET", "POST"])
 def contest_redirect_page():
