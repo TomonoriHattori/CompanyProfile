@@ -424,13 +424,36 @@ to {
   position: relative;
   display: inline-block;
 }
-.slideIn-wrap::before {
-  background: none;
-  animation-delay: 0.5s;
-}
 .slideIn1.is-visible .slideIn-wrap::before {
-  animation: slideIn 8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  background: none;
+  animation-delay: 2s;
+}
+
+.slideIn1.is-visible .slideIn-wrap:first-child::before {
+  animation: slideIn 8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s both;
   background: linear-gradient(90deg, #eb3056, #6b38a6 50%, #172059);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+}
+.slideIn1.is-visible .slideIn-wrap:nth-child(2)::before {
+  animation: slideIn 8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s both;
+  background: linear-gradient(90deg, #eb3056, #853695);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+}
+.slideIn1.is-visible .slideIn-wrap:last-child::before {
+  animation: slideIn 8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s both;
+  background: linear-gradient(90deg, #eb3056, #843696 50%, #19215e);
   content: "";
   position: absolute;
   top: 0;
