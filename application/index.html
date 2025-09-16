@@ -136,7 +136,7 @@
                         </div>
                         <div class="imgBox unprepared">
                             <a><img src="img/img_DX_enterprise.png" alt=""></a>
-                            <span class="CommingSoon">Comming Soon</span>
+                            <span class="ComingSoon">Coming Soon</span>
                         </div>
                         
                     </div>
@@ -447,19 +447,28 @@
                     </div>
                     <div class="contact-area">
                         <div class="contact-left">
-                            <p>AIアプリケーションに関する質問、プロダクト導入検討、アイリアSDK活用相談など、お気軽にお問合せください。</p>
-                            <div class="contact-img"></div>
+                            <div class="contact-text">
+                                <p>AIアプリケーションに関する質問、プロダクト<br>導入検討、アイリアSDK活用相談など、お気軽<br>にお問合せください。</p>
+                            </div>
+                            <div class="contact-img">
+                                <img src="img/img_contact.png" alt="">
+                            </div>
                         </div>
                         <div class="contact-right">
                             <form action="#" method="post">
                                 <p>会社名<span class="required">必須</span><br>
-                                <input type="text" name="company"></p>
+                                <input type="text" name="company" placeholder="会社名・組織"></p>
                                 <p>お名前<span class="required">必須</span><br>
-                                <input type="text" name="name"></p>
+                                <input type="text" name="name" placeholder="姓名"></p>
                                 <p>メールアドレス<span class="required">必須</span><br>
-                                <input type="text" name="mail"></p>
+                                <input type="text" name="mail" placeholder="メールアドレス"></p>
                                 <p>お問い合わせ項目<span class="required">必須</span><br>
-                                <input type="text" name="tag"></p>
+                                <select name="tag">
+                                    <option value=""></option>
+                                    <option value="hoge">DX向けAIアプリケーション</option>
+                                    <option value="hoge">クリエイティブ業界向けAIアプリケーション</option>
+                                    <option value="hoge">イベント、小売店向けAIエージェント</option>
+                                </select></p>
                                 <p>お問い合わせ内容<span class="required">必須</span><br>
                                 <input type="text" name="question" class="question"></p>
                                 <div class="sent">
