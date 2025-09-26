@@ -320,6 +320,9 @@ body::-webkit-scrollbar{
 .site-menu a:hover {
   color: #5e5e5e;
 }
+.subNavTitle:hover {
+  color: #5e5e5e;
+}
 
 /*　MVエリア　*/
 
@@ -774,7 +777,7 @@ to {
 .container {
   display: flex;
 }
-.animations {
+.products {
   width: 100%;
   position: relative;
   z-index: 45;
@@ -829,11 +832,11 @@ to {
 }
 
 
-.section-inner2_2 .animations,
-.section-inner2_4 .animations {
+.section-inner2_2 .products,
+.section-inner2_4 .products {
   margin-top: 40px;
 }
-.section-inner2_3 .animations {
+.section-inner2_3 .products {
   margin-top: 10px;
 }
 @media (max-width: 767px) {
@@ -842,7 +845,7 @@ to {
     justify-content: none;
     align-items: center;
   }
-  .animations {
+  .products {
     width: 100%;
     position: relative;
     z-index: 45;
@@ -856,14 +859,14 @@ to {
     width: 100%;
     aspect-ratio: 1.5 / 0.9;
   }
-  .section-inner2 .animations,
-  .section-inner2_2 .animations,
-  .section-inner2_3 .animations,
-  .section-inner2_4 .animations {
+  .section-inner2 .products,
+  .section-inner2_2 .products,
+  .section-inner2_3 .products,
+  .section-inner2_4 .products {
     margin-top: 40px;
     margin-bottom: 60px;
   }
-  .section-inner2_3 .animations {
+  .section-inner2_3 .products {
     margin-top: 0px;
   }
 }
