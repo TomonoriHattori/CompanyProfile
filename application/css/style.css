@@ -1112,8 +1112,8 @@ to {
 
 .view-more-link {
   position: absolute;
-  bottom: -40%;
-  right: 60px;
+  bottom: -20%;
+  left: 60px;
   z-index: 20; /* スクロールする実績より手前に表示 */
   color: #eb3056;
   font-weight: 500;
@@ -1135,7 +1135,7 @@ to {
 .arrow-side::after {
   content: "";
   position: absolute;
-  top: calc(50% - 0.6px);
+  top: calc(50% - 0.2px);
   right: 0;
   width: 4px;
   height: 1px;

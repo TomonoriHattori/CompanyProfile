@@ -2,7 +2,7 @@
 /*--------------------------------------
   0.Reset
 --------------------------------------*/
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -295,7 +295,7 @@ a.movielink {
 	}
 	#profmodal .profwindow {
 		position: fixed;
-		top: 50%;
+		top: 55%;
 		left: 50%;
 		width: 580px;
 		margin: -290px 0 0 -290px;
@@ -320,8 +320,15 @@ a.movielink {
 		cursor: pointer;
 	}
 	#profmodal .pic {
-		width: 220px;
+		display: flex;
+		justify-content: center;
+		/* width: 220px; */
+		height: 30vh;
 		margin: 0 auto 10px auto;
+	}
+	#profmodal .pic img {
+		height: 100%;
+		width: auto;
 	}
 	#profmodal .label {
 		text-align: center;
@@ -416,7 +423,7 @@ a.movielink {
 		position: fixed;
 		bottom: 30px;
 		right: 5%;
-		z-index: 30;
+		z-index: 60;
 		width: 85%;
 		height: 65px;
 		background: #fff;
@@ -608,8 +615,15 @@ a.movielink {
 		cursor: pointer;
 	}
 	#profmodal .pic {
-		width: 60%;
+		display: flex;
+		justify-content: center;
+		height: 30vh;
+		/* width: 60%; */
 		margin: 0 auto 5% auto;
+	}
+	#profmodal .pic img {
+		height: 100%;
+		width: auto;
 	}
 	#profmodal .label {
 		text-align: center;
