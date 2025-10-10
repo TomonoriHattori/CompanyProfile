@@ -147,8 +147,8 @@ body::-webkit-scrollbar{
 
 .scroll_down{
   position:fixed;
-  bottom: 20vh;
-  right: 28px;
+  bottom: 40vh;
+  right: 50px;
   z-index: 40;
 }
 
@@ -327,23 +327,42 @@ body::-webkit-scrollbar{
 
 /*　MVエリア　*/
 
-.mv-area {
+/* .mv-area {
   position: absolute;
   justify-content: center;
   display: flex;
   top: 14vh;
   height: 77%;
   min-height: 300px;
-  /* top: 15%;
-  width: 100vw;
-  min-width: 900px;
-  max-height: 77%;
-  min-height: 300px; */
   left: 50%;
   transform: translateX(-50%);
   aspect-ratio: 16 / 9;
+} */
+.mv-area {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  top: 14vh;
+  height: 75%;
+  min-height: 300px;
+  top: 15%;
+  width: 100vw;
+  min-width: 900px;
+  max-height: 77%;
+  min-height: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  aspect-ratio: 16 / 9;
+  background-color: #eb3056;
 }
 .mv-area video {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 110%;
+  object-fit: cover;
+}
+.mv-area .mv_pc {
   display: flex;
   position: relative;
   height: 100%;
@@ -354,18 +373,27 @@ body::-webkit-scrollbar{
   position: absolute;
   display: flex;
   text-align: start;
-  left: 90px;
+  left: 60px;
   top: 10%;
 }
 .mv-area-text h2 {
-  font-size: clamp(90px, 8vw, 95px);
+  font-size: clamp(70px, 8vh, 95px);
   font-weight: bold;
-  line-height: clamp(120px, 12vw, 125px);
+  line-height: clamp(100px, 12vh, 125px);
 }
+
+/* .ctaArea {
+  width: 100vw;
+  max-width: 1080px;
+  height: 20%;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  display: flex;
+} */
 
 .ctaArea {
   width: 100vw;
-  max-width: 1080px;
   height: 20%;
   bottom: 0;
   position: absolute;
@@ -377,7 +405,7 @@ body::-webkit-scrollbar{
   display: flex;
   align-items: center;
   position: absolute;
-  padding: 40px 40px;
+  padding: 40px 60px;
   bottom: 0;
 }
 
@@ -480,8 +508,20 @@ to {
     height: auto;
     min-height: none;
   }
+  .mv-area-text {
+    position: absolute;
+    display: flex;
+    text-align: start;
+    left: 20vw;
+    top: 10%;
+  }
+  .mv-area-text h2 {
+    font-size: clamp(70px, 8vw, 95px);
+    font-weight: bold;
+    line-height: clamp(100px, 12vw, 125px);
+  }
   .ctaArea {
-    width: 100%;
+    width: 100vw;
     height: 20%;
     bottom: 0;
     position: absolute;
@@ -497,7 +537,6 @@ to {
     padding: 10px 10px;
     bottom: 0;
   }
-  
   .ctaArea li {
     display: inline-block;
     vertical-align: middle;
