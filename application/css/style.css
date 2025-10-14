@@ -372,13 +372,14 @@ body::-webkit-scrollbar{
 .mv-text-wrap {
   position: absolute;
   width: 100vw;
+  top: 10vh;
 }
 .mv-text {
   position: absolute;
   display: flex;
   text-align: start;
   left: 60px;
-  top: 10%;
+  top: 30%;
 }
 .mv-text h2 {
   font-size: clamp(70px, 8vh, 95px);
