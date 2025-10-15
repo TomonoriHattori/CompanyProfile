@@ -590,7 +590,7 @@ to {
   justify-content: space-between;
 }
 .taglineTitle {
-  width: clamp(380px, 49vw, 422px);
+  width: clamp(441px, 49vw, 525px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -599,7 +599,7 @@ to {
 .taglineArea h1 {
   display: inline-block;
   /* font-size: 3vw; */
-  font-size: clamp(10px, 2.5vw, 25px);
+  font-size: clamp(24px, 2.5vw, 29px);
   font-weight: bold;
   color: #fff;
   margin-bottom: 5px;
