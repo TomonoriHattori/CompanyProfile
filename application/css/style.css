@@ -55,7 +55,7 @@ body::-webkit-scrollbar{
 .inner-space {
   width: 80vw;
   /* min-width: 700px; */
-  max-width: 1080px;
+  max-width: 880px;
   height: 100%;
   margin: 0 auto;
   justify-content: center;
@@ -875,7 +875,7 @@ to {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(24px, 3vw, 40px);
+  font-size: clamp(24px, 2.5vw, 30px);
   opacity: 0;
   transition: 0.4s;
   font-weight: 100;
