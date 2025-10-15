@@ -56,6 +56,7 @@ body::-webkit-scrollbar{
   width: 80vw;
   /* min-width: 700px; */
   max-width: 880px;
+  min-width: 720px;
   height: 100%;
   margin: 0 auto;
   justify-content: center;
@@ -589,7 +590,7 @@ to {
   justify-content: space-between;
 }
 .taglineTitle {
-  width: clamp(380px, 49vw, 700px);
+  width: clamp(380px, 49vw, 422px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -598,7 +599,7 @@ to {
 .taglineArea h1 {
   display: inline-block;
   /* font-size: 3vw; */
-  font-size: clamp(24px, 3vw, 39px);
+  font-size: clamp(10px, 2.5vw, 25px);
   font-weight: bold;
   color: #fff;
   margin-bottom: 5px;
@@ -606,14 +607,16 @@ to {
 }
 
 .taglineText {
-  width: clamp(280px, 36vw,480px);
+  width: clamp(320px, 37.7vw, 371px);
+  
   text-align: start;
   transform: translateY(-1vh);
 }
 .taglineText p {
-  font-size: clamp(11px, 1.2vw, 15px);
+  font-size: clamp(5px, 1.3vw, 13px);
+  
   font-weight: bold;
-  line-height: clamp(27px, 3vw, 36px);
+  line-height: clamp(27px, 3vw, 34px);
   color: #141e53;
 }
 
@@ -745,7 +748,7 @@ to {
 .sectionTitle {
   color: #141e53;
   display: flex;
-  padding-top: 3vh;
+  padding-top: 4vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
