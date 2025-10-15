@@ -53,7 +53,7 @@ body::-webkit-scrollbar{
 }
 
 .inner-space {
-  width: 90vw;
+  width: 80vw;
   /* min-width: 700px; */
   max-width: 1080px;
   height: 100%;
@@ -353,7 +353,6 @@ body::-webkit-scrollbar{
   left: 50%;
   transform: translateX(-50%);
   aspect-ratio: 16 / 9;
-  background-color: #eb3056;
 }
 .mv-area video {
   display: flex;
@@ -746,7 +745,7 @@ to {
 .sectionTitle {
   color: #141e53;
   display: flex;
-  padding-top: 5vh;
+  padding-top: 3vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -795,7 +794,7 @@ to {
   font-weight: bold;
 }
 .section-inner2 .category {
-  margin: 4vh 0;
+  margin: 3vh 0;
 }
 
 @media (max-width: 767px) {
@@ -839,11 +838,11 @@ to {
   display: block;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .imgBox {
-  width: 42vw;
-  max-width: 512px;
+  width: 38vw;
+  max-width: 416px;
   min-width: 330px;
   border-radius: 2vw;
   overflow: hidden;
@@ -939,7 +938,7 @@ to {
   flex-direction: column; /* 中の要素を縦積みにする */
   align-items: flex-start; /* 要素を左揃えにする */
   width: 42vw;
-  max-width: 512px;
+  max-width: 416px;
   min-width: 330px;
 }
 .imgTag {
@@ -1166,7 +1165,7 @@ to {
 
 .view-more-link {
   position: absolute;
-  bottom: -20%;
+  bottom: -30%;
   left: 60px;
   z-index: 20; /* スクロールする実績より手前に表示 */
   color: #eb3056;
