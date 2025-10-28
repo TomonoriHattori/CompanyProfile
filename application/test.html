@@ -1,97 +1,43 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/scrollsnap.css">
     <title>Document</title>
+    <link rel="stylesheet" href="css/contactform.css">
 </head>
 <body>
-    <article class="scroller">
-        <section class="Area01">
-            <div class="Area01-inner">
-                <h2>第 1 章</h2>
-                <p>
-                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
-                winter purslane kale. Celery potato scallion desert raisin horseradish
-                spinach carrot soko.<br>
-                
-                </p>
-                <div class="scroll_down_black" id="type02">
-                    <a href="#">Scroll</a>
+    <section id="section4">
+            <div class="section-inner4">
+                <div class="inner-space">
+                    <div class="sectionTitle">
+                        <h2 class="rubby">AI導入のご相談・お問い合わせ</h2>
+                        <h2>CONTACT US</h2>
+                    </div>
+                    <div class="contact-area">
+                        <div class="contact-left">
+                            <div class="contact-text">
+                                <p>AIアプリケーションに関する質問、プロダクト<br>導入検討、アイリアSDK活用相談など、お気軽<br>にお問合せください。</p>
+                            </div>
+                            <div class="contact-img">
+                                <!-- <img src="img/img_contact.png" alt=""> -->
+                            </div>
+                        </div>
+                        <div class="contact-right">
+                            <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+                            <script>
+                            hbspt.forms.create({
+                                portalId: "19700338",
+                                formId: "43006080-09e2-4c52-9fb0-181e2225b100",
+                                region: "na2"
+                            });
+                            </script>
+                        </div>
+                    </div>
+                    <div id="page-bottom-sentinel"></div>
                 </div>
             </div>
+            
         </section>
-        <section class="Area02">
-            <div class="Area02-inner">
-                <h2>第 2 章</h2>
-                <p>
-                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-                </p>
-                <img src="img/img_temp.png" alt="" width="400px" height="200px">
-                <div class="back_color"></div>
-                <img src="img/img_temp.png" alt="" width="400px" height="200px">
-                <div class="scroll_down" id="type02">
-                    <a href="#">Scroll</a>
-                </div>
-            </div>
-        </section>
-        <section class="Area02_02">
-            <div class="Area02_02-inner">
-                <img src="img/img_temp.png" alt="" width="400px" height="200px">
-                <img src="img/img_temp.png" alt="" width="400px" height="200px">
-                <img src="img/img_temp.png" alt="" width="400px" height="200px">
-                <img src="img/img_temp.png" alt="" width="400px" height="200px">
-                <div class="scroll_down" id="type02">
-                    <a href="#">Scroll</a>
-                </div>
-            </div>
-        </section>
-        <section class="Area03">
-            <div class="Area03-inner">
-                <h2>第 3 章</h2>
-                <p>
-                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-                kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
-                winter purslane kale. Celery potato scallion desert raisin horseradish
-                spinach carrot soko.<br>
-                </p>
-            </div>
-        </section>
-    </article>
-
-    <script>
-        // 監視対象の要素をすべて取得
-        const targets = document.querySelectorAll('.Area02-inner, .Area03-inner');
-
-        // Intersection Observerのコールバック関数
-        const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            // isIntersectingプロパティで、要素がビューポート内にあるか判定
-            if (entry.isIntersecting) {
-            // 画面内に入ったら is-visible クラスを付与
-            entry.target.classList.add('is-animated');
-            // 一度表示されたら、その要素の監視を停止する
-            observer.unobserve(entry.target);
-            }
-        });
-        };
-
-        // Intersection Observerのオプション
-        const observerOptions = {
-        root: null, // ビューポートをルートとする
-        rootMargin: '0px',
-        threshold: 0.001 // 要素が10%見えたらトリガー
-        };
-
-        // Intersection Observerのインスタンスを作成
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-        // 各ターゲット要素の監視を開始
-        targets.forEach(target => {
-        observer.observe(target);
-        });
-    </script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+.section-inner4 {
+  color: #fff;
+  background-color: #141e53;
+}
+.section-inner4 .sectionTitle h2 {
+  color: #fff;
+}
+.contact-area {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30px;
+  gap: 80px;
+  margin-top: 40px;
+  padding-bottom: 50px;
+  min-width: 700px;
+}
+.contact-left {
+  width: 40%;
+  text-align: left;
+}
+.contact-left p {
+  margin-top: 20px;
+  margin-bottom: 70px;
+  font-size: 1.5vw;
+  font-size: clamp(11px, 1.5vw, 18px);
+}
+.contact-right {
+  width: 50%;
+  text-align: left;
+  min-width: 250px;
+}
+
+.contact-img {
+  content: "";
+  width: 100%;
+  height: 600px;
+  background-image: url(../img/img_contact.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.contact-right .input {
+    margin: 0;
+    width: 100%;
+}
+
+.contact-right .form-columns-1 input{
+    width: 100%;
+    max-width: none;
+}
+
+.contact-right .form-columns-2 input {
+    width: 90%;
+}
+.contact-right .form-columns-2 .input {
+    margin-right: none !important;
+}
+.contact-right .form-columns-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hs-form-43006080-09e2-4c52-9fb0-181e2225b100_fec1ad1a-c314-49a9-9fbc-263d33da5ed7 fieldset.form-columns-1 .hs-input {
+    width: 100%;
+}
