@@ -5,7 +5,6 @@ body {
 }
 section {
   width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -16,7 +15,7 @@ section {
     width: 100%;
   }
   #section1 {
-      min-height: calc(100vh - 48px); /* ヘッダーの高さを考慮して画面いっぱいに */
+    height: 1200px;
   }
   #section1_1{
     padding: 50px auto;
@@ -24,9 +23,6 @@ section {
   }
   /* コンテンツを持つセクションに適切な余白を設定 */
   #section2,
-  #section2_2,
-  #section2_3,
-  #section2_4,
   #section3,
   #section4 {
     padding: 0 auto; /* 上下に余白を追加 */
@@ -40,12 +36,10 @@ section {
 #section1 { background-color: #fff; }
 #section1_1 { background-color: #fff; }
 #section2 { background-color: #fff; }
-#section2_2, #section2_3, #section2_4 { background-color: #eceef4; }
 #section3 { background-color: #eceef4; }
 #section4 {
   background-color: #fff;
   height: auto;
-  min-height: 100vh;
 }
 
 body::-webkit-scrollbar{
@@ -246,37 +240,6 @@ body::-webkit-scrollbar{
   }
 }
 
-
-/* .slideIn1, .slideIn2, .slideIn3, .slideIn4 {
-  opacity: 0;
-  transform: translateY(10vh);
-  transition: opacity 0.5s, transform 1s;
-}
-
-.slideIn1 {
-  transition-delay: 0.6s;
-}
-.slideIn2 {
-  transition-delay: 0.8s;
-}
-.slideIn3 {
-  transition-delay: 1s;
-}
-.slideIn4 {
-  transition-delay: 1.2s;
-} */
-
-
-
-/* 表示された時のスタイル（アニメーションの「最終地点」） */
-/* .slideIn1.is-visible,
-.slideIn2.is-visible,
-.slideIn3.is-visible,
-.slideIn4.is-visible {
-  transform: translateY(0); 
-  opacity: 1; 
-}*/
-
 /*ナビゲーションエリア*/
 
 .subNavArea {
@@ -349,16 +312,14 @@ body::-webkit-scrollbar{
   position: absolute;
   justify-content: center;
   display: flex;
-  top: 14vh;
+  top: 500px;
   height: 75%;
   min-height: 300px;
-  top: 15%;
   width: 100vw;
   min-width: 900px;
   max-height: 77%;
   min-height: 300px;
   left: 50%;
-  transform: translateX(-50%);
   aspect-ratio: 16 / 9;
 }
 .mv-area video {
@@ -473,7 +434,7 @@ body::-webkit-scrollbar{
 }
 
 .logo-area {
-  position: absolute;
+  position: relative;
   bottom: 2vh;
   /* position: relative;
   top: 80%; */

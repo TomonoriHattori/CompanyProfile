@@ -39,16 +39,32 @@
   background-size: 100% auto;
 }
 
-.contact-right .input {
-    margin: 0;
-    width: 100%;
-}
-
+/* 会社名、名前、Eメール */
 .contact-right .form-columns-1 input{
-    width: 100%;
-    max-width: none;
+  margin: 0;
+  width: 550px;
+  max-width: none;
+  height: 30px;
+  border-radius: 3px;
+}
+.hs-form-43006080-09e2-4c52-9fb0-181e2225b100_1b8173a4-0fac-460f-86eb-9e9a76b17875 fieldset .form-columns-1{
+  max-width: 800px;
+}
+/*送信ボタン*/
+.contact-right .actions input {
+  margin: 0;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+}
+/*問い合わせボタン*/
+.contact-right textarea {
+  border-radius: 5px;
+  height: 100px;
 }
 
+
+/* 名前入力欄 */
 .contact-right .form-columns-2 input {
     width: 90%;
 }

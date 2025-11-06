@@ -1,122 +1,126 @@
-main {
-    width: 100%;
+body {
+  margin: 0;
+  overflow-x: hidden;
 }
-@media screen and (min-width:768px) {
-    .siteMap {
-        width: 100%;
-        height: 70px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        position: fixed;
-        background-color: #ffffffd4;
-        z-index: 40;
-    }
-    .siteMapTitle {
-        width: 180px;
-        margin-left: 20px;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .siteMap-inner {
-        display: flex;
-        align-items: flex-end;
-    }
-    .siteMap-menu ul {
-        display: flex;
-        align-items: center;
-        margin: auto 40px;
-    } 
-    .siteMap-menu li {
-        margin: auto 30px;
-        font-weight: bold;
-    }
-    .mv-area {
-        width: 100%;
-        height: 600px;
-        position: relative;
-        top: 70px;
-        background-color: rgba(195, 255, 0, 0.417);
-        margin-bottom: 70px;
-    }
-    #mv img {
-        position: absolute;
-        width: 100%;
-        height: 600px;
-        object-fit: cover;
-    }
-    .mv-text {
-        position: relative;
-        top: 60px;
-        left: 70px;
-        width: 80%;
-    }
-    .mv-text h1 {
-        font-size: 40px;
-        font-weight: bold;
-    }
-    .mv-text p {
-        margin-top: 20px;
-        font-size: 18px;
-    }
-    .catArea {
-        width: 100%;
-        position: relative;
-        text-align: center;
-        top: 150px;
-    }
-    .catArea ul {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        position: relative;
-        left: 70px;
-    }
-    
-    .catArea li {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 20px;
-        background-color: #EB3155;
-        width: 180px;
-        height: 40px;
-        padding-top: 8px;
-        margin-right: 20px;
-        border-radius: 20px;
-    }
-    .catArea a {
-        color: white;
-        font-size: 10px;
-    }
-    .cat-btn::after {
-        content: '';
-        width: 8px;
-        height: 8px;
-        border-top: solid 2px white;
-        border-right: solid 2px white;
-        position: absolute;
-        transform: translate(-42px, 15px) rotate(135deg);
-    }
-    .collaboration {
-        width: 100%;
-        height: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .collaboration-logos img{
-        margin: 0 30px;
-    }
 
-    .overview {
-        display: flex;
-        align-items: center;
-    }
-    .ov01 {
-        font-size: 30px;
-        width: 500px;
-    }
-    .ov02 {
-        width: 400px;
-    }
+section {
+    width: 100vw;
+    height: auto;
+}
+
+.inner-space {
+    width: 80%;
+}
+
+/*ナビゲーションエリア*/
+
+.subNavArea {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;  
+  align-items: center;
+  position: fixed;
+  background-color: #ffffffd4;
+  z-index: 65;
+  top: 60px;
+}
+.subNavArea .subNavTitle {
+  display: block;
+  font-size: 21px;
+  font-weight: bold;
+  width: 300px;
+  margin-left: 80px;
+}
+.site-menu ul {
+  display: flex;
+}
+.site-menu ul li {
+  margin: auto 20px;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+@media (max-width: 1023px) {
+  .subNavArea {
+    top: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .subNavArea {
+    height: 40px;
+    height: 50pt;
+  }
+  .subNavArea .subNavTitle {
+    font-size: 15px;
+    margin-left: 20px;
+  }
+  .site-menu ul li {
+    margin: auto 10px;
+    font-size: 10px;
+  }
+}
+.site-menu a:hover {
+  color: #5e5e5e;
+}
+.subNavTitle:hover {
+  color: #5e5e5e;
+}
+
+/* セクション背景 */
+
+.section1 {
+    background-color: #D5E1EF;
+}
+
+.section2 {
+    background-color: #D5E1EF;
+}
+.section-inner2 {
+    background-color: #FFFFFF;
+    border-radius: 90px, 90px, 0px, 0px;
+}
+
+.section3 {
+    background-color: #FFFFFF;
+}
+.section-inner3 {
+    background-color: #ECEEF4;
+    border-radius: 90px, 90px, 0px, 0px;
+}
+
+.section4 {
+    background-color: #ECEEF4;
+}
+.section-inner4 {
+    background-color: #FFFFFF;
+    border-radius: 90px, 90px, 0px, 0px;
+}
+
+.section5 {
+    background-color: #FFFFFF;
+}
+.section-inner5 {
+    background-color: #141E53;
+    border-radius: 90px, 90px, 0px, 0px;
+}
+
+
+/* MVエリア */
+
+.mv_mobile {
+    display: none;
+}
+
+.mv-area {
+    width: 100vx;
+    min-height: 797px;
+    background-color: #141E53;
+    margin-top: 140px;
+}
+
+.mv-area img {
+    width: 100%;
+    min-height: 797px;
+    object-fit: cover;
 }
