@@ -536,8 +536,7 @@ section {
 
 .lineupslide-area {
   position: relative;
-  top: 30px;
-  height: 550px;
+  height: 450px;
   width: 100%;
   overflow: visible;
   left: 0;
@@ -567,7 +566,7 @@ to {
   animation: logoScroll2 50s infinite linear 0.5s both;
   flex-shrink: 0;
   display: flex;
-  align-items: center;
+  align-items: start;
   animation-direction: reverse;
 }
 .lineupslide li {
@@ -985,10 +984,55 @@ to {
   font-size: 1.5vw;
   font-size: clamp(11px, 1.5vw, 18px);
 }
+
+/* フォーム */
 .contact-right {
-  width: 50%;
+  width: 483px;
   text-align: left;
-  min-width: 250px;
+}
+.contact-img {
+  content: "";
+  width: 100%;
+  height: 600px;
+  background-image: url(../img/img_contact.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+/* 会社名、名前、Eメール */
+.contact-right .form-columns-1 input{
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  height: 40px;
+  border-radius: 3px;
+}
+
+/*送信ボタン*/
+.contact-right .actions input {
+  margin: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 26px;
+}
+/*お問い合わせ内容*/
+.contact-right textarea {
+  border-radius: 3px;
+  height: 100px;
+}
+
+
+/* 名前入力欄 */
+.contact-right .form-columns-2 input {
+  width: 90%;
+  height: 40px;
+}
+.contact-right .form-columns-2 .input {
+  margin-right: none !important;
+}
+.contact-right .form-columns-2 {
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact-img {
