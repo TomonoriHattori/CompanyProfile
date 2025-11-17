@@ -357,15 +357,6 @@ body::-webkit-scrollbar{
   line-height: 80px;
 }
 
-/* .ctaArea {
-  width: 100vw;
-  max-width: 1080px;
-  height: 20%;
-  bottom: 0;
-  position: absolute;
-  text-align: center;
-  display: flex;
-} */
 
 .ctaArea {
   width: 100vw;
