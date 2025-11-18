@@ -17,6 +17,10 @@ section {
 @media(max-width:767px) {
   .inner-space {
     width: 90%;
+    padding-bottom: 20px;
+  }
+  #section3 .inner-space {
+    padding-bottom: 60px;
   }
 }
 
@@ -139,8 +143,6 @@ section {
   .section-inner4,
   .section-inner5 {
     border-radius: 50px 50px 0 0;
-  }
-  .section-inner2 {
     position: relative;
     z-index: 1;
   }
@@ -177,7 +179,7 @@ section {
     padding-top: 40px;
   }
   .sectionTitle h2 {
-    font-size: 8vw;
+    font-size: 10vw;
     line-height: 4vh;
   }
 }
@@ -591,15 +593,25 @@ section {
 @media (max-width: 767px) {
   .category {
     margin-top: 37px;
-    margin-bottom: 69px;
-    font-size: 3.5vw;
+    margin-bottom: 74px;
+    font-size: 3.7vw;
     display: inline-block;
   }
   .category h3 {
-    padding: 7px 10px;
+    display: inline-block;
+    padding: 7px 12px;
     text-align: center;
     margin-bottom: 11px;
   }
+  #section2 .inner-space:nth-of-type(2) .category h3 {
+    padding: 7px 23px;
+  }
+  #section2 .inner-space:nth-of-type(3) .category h3 {
+    padding: 7px 13px;
+  }
+  #section3 .category h3 { 
+    padding: 7px 19px;
+  } 
   .category p {
     padding: 0;
   }
@@ -677,6 +689,9 @@ section {
     justify-content: none;
     align-items: center;
   }
+  .container + .container {
+    margin-top: 0;
+  }
   .products {
     width: 100%;
     position: relative;
@@ -689,17 +704,11 @@ section {
   }
   .imgBox {
     width: 100%;
-    aspect-ratio: 1.5 / 0.9;
+    aspect-ratio: 1.48 / 1;
   }
   .section-inner2 .products,
-  .section-inner2_2 .products,
-  .section-inner2_3 .products,
-  .section-inner2_4 .products {
-    margin-top: 40px;
-    margin-bottom: 60px;
-  }
-  .section-inner2_3 .products {
-    margin-top: 0px;
+  .section-inner3 .products {
+    margin-bottom: 56px;
   }
 }
 
@@ -755,20 +764,23 @@ section {
 @media (max-width: 767px) {
   .imgTitle h4 {
     margin-top: 15px;
-    font-size: 18px;
+    font-size: 23px;
   }
   .imgTitle p {
-    font-size: 16px;
-    margin-top: 8px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 21px;
 
   }
   .imgTitle {
     width: 100%;
   }
   .imgTag {
-    margin-top: 5px;
+    margin-top: 0;
     gap: 4px 5px;
+  }
+  .imgTag a {
+    font-size: 11px;
   }
 }
 
@@ -866,7 +878,7 @@ to {
 .load-more-btn {
   display: none; /* デフォルトでは非表示 */
   margin: 20px auto 0;
-  padding: 10px 40px;
+  padding: 7px 35px;
   background-color: #141e53;
   color: #fff;
   font-weight: bold;
@@ -1370,7 +1382,7 @@ footer {
   width: 100%;
 }
 
-  /*コンタクトエリア モバイル*/
+/*コンタクトエリア モバイル*/
 @media(max-width: 767px) {
   .contact-left {
     width: 100%;
@@ -1378,13 +1390,12 @@ footer {
   }
   .contact-img {
     content: "";
-    width: 80vw;
-    height: 50px;
+    width: 100%;
+    height: 80px;
     background-image: url(../img/img_contact_mini.jpg);
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
-
   .contact-area {
     display: flex;
     flex-direction: column; /* 左右のセクションを縦に並べる */
@@ -1405,12 +1416,62 @@ footer {
     font-size: 14px;
   }
 
-  input, select {
-    margin-bottom: 20px; /* フォーム要素のマージンを縮小 */
+  .contact-right input {
+    height: 40px;
+  }
+  .contact-right .form-columns-1 input {
+    aspect-ratio: auto !important;
+  }
+  .contact-right fieldset {
+    margin-bottom: 40px;
+  }
+
+  .contact-right .form-columns-1 label,
+  .contact-right .form-columns-2 label {
+    margin-bottom: 17px;
   }
   
+
+  /* 姓と名を囲む親コンテナ(.form-columns-2)をFlexboxにする */
+  .contact-right .form-columns-2 {
+    display: flex;
+    flex-wrap: wrap; /* 画面が狭すぎる場合に備えて折り返す */
+    gap: 10px;      /* 姓と名の間の隙間を指定 */
+  }
+
+  /* 姓(.hs_firstname)と名(.hs_lastname)のコンテナ設定 */
+  .contact-right .form-columns-2 .hs_firstname,
+  .contact-right .form-columns-2 .hs_lastname {
+    flex: 1;          /* 2つの要素で利用可能な幅を均等に分け合う */
+    min-width: 120px; /* 幅が狭くなりすぎないよう最小幅を指定 */
+  }
+
+  /* PC用に設定された input のスタイルを上書き（リセット）する */
+  .contact-right .form-columns-2 input {
+    width: 100% !important;         /* 親コンテナの幅いっぱいに広げる */
+    max-width: 100% !important;     /* max-width もリセット */
+  }
+
+  /* PC用に設定されたラベルのpaddingをリセット */
+  .contact-right .form-columns-2 .hs_firstname label {
+    padding-left: 0;
+  }
+
+  /*送信ボタン*/
+  .contact-right .hs_recaptcha {
+    margin-bottom: 60px;
+  }
+  .contact-right .actions {
+    text-align: center;
+  }
+  .contact-right .actions input {
+    width: 85% !important;
+    max-width: 85% !important;
+  }
+  
+
   footer {
-    margin-top: 120px;
+    margin-top: 50px;
     display: block;
     background-color: #fff;
     width: 100%;
