@@ -164,7 +164,7 @@
                                 <h1 class="slideIn-wrap"><span class="inn">AIアプリケーション事業</span></h1>
                             </div>
                             <div class="taglineText">
-                                <p>私たちは、最先端のAI技術を駆使し、様々な業界の課題を解決するアプリケーションを提供しています。長年の研究開発と多様な導入実績により培われた知見を活かし、お客様のビジネスに最適なAIソリューションを提案します。既成のプロダクトを通じて、AI導入のハードルを下げ、迅速なビジネス変革を支援します。</p>
+                                <p>私たちは、最先端のAI技術を駆使し、様々な業界の課題を解決するアプリケーションを提供しています。長年の研究開発と多様な導入実績により培われた知見を活かし、お客様のビジネスに最適なAIソリューションを提案します。自社プロダクトを通じて、AI導入のハードルを下げ迅速なビジネス変革を支援します。</p>
                             </div>
                         </div>
 
@@ -662,6 +662,46 @@
                     loadLessBtn.addEventListener('click', function(event) {
                         event.preventDefault();
                         slideWrap.classList.remove('is-expanded');
+                    });
+                }
+
+
+                // スクロールダウンの色変更
+
+                const scrollDownElement = document.querySelector('.scroll_down');
+                // 監視対象となる全てのセクションを取得
+                const sections = document.querySelectorAll('main > section');
+
+                if (scrollDownElement && sections.length > 0) {
+                    const observerOptions = {
+                        root: null, // ビューポートを基準にする
+                        // .scroll_down は bottom: 40vh; なので、画面の上から60%の位置にあります。
+                        // このマージン設定で、画面の上から60%の位置を「監視ライン」にします。
+                        rootMargin: '-60% 0px -40% 0px',
+                        threshold: 0 // 監視ラインを少しでも横切ったら発火
+                    };
+
+                    const observerCallback = (entries) => {
+                        entries.forEach(entry => {
+                            // entry.isIntersecting が true の場合、そのセクションが監視ラインを通過したことを意味します
+                            if (entry.isIntersecting) {
+                                // 監視ラインを通過したセクションが #section4 なら色を変える
+                                if (entry.target.id === 'section5') {
+                                    scrollDownElement.classList.add('invert-color');
+                                } else {
+                                    // それ以外のセクションなら色を戻す
+                                    scrollDownElement.classList.remove('invert-color');
+                                }
+                            }
+                        });
+                    };
+
+                    // オブザーバーを作成
+                    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+                    // 全てのセクションを監視対象に追加
+                    sections.forEach(section => {
+                        observer.observe(section);
                     });
                 }
             });

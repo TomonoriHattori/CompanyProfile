@@ -6,6 +6,11 @@ body {
 section {
   width: 100vw;
   height: auto;
+  
+}
+#section2,
+#section3 {
+  scroll-margin-top: 110px;
 }
 
 .inner-space {
@@ -180,7 +185,7 @@ section {
   }
   .sectionTitle h2 {
     font-size: 10vw;
-    line-height: 4vh;
+    line-height: 8vw;
   }
 }
 
@@ -325,7 +330,7 @@ section {
   font-size: 33px;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
   padding: 0 25px 0 15px;
 }
 
@@ -655,31 +660,33 @@ section {
   transition: 0.4s
 }
 
-.imgBox:hover a {
-  img{transform: scale(1.06);
-  transition: 0.4s;
-  animation-delay: 0;}
-}
-.imgBox:hover a {
-  opacity: 0.7;
-}
-.imgBox.unprepared:hover a {
-  opacity: 0.1;
-}
-.ComingSoon {
-  position: absolute;
-  color: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(24px, 2.5vw, 30px);
-  opacity: 0;
-  transition: 0.4s;
-  font-weight: 100;
-}
-.imgBox.unprepared:hover .ComingSoon {
-  opacity: 1;
-  transition: 0.4s;
+@media (hover: hover) {
+  .imgBox:hover a {
+    img{transform: scale(1.06);
+    transition: 0.4s;
+    animation-delay: 0;}
+  }
+  .imgBox:hover a {
+    opacity: 0.7;
+  }
+  .imgBox.unprepared:hover a {
+    opacity: 0.1;
+  }
+  .ComingSoon {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(24px, 2.5vw, 30px);
+    opacity: 0;
+    transition: 0.4s;
+    font-weight: 100;
+  }
+  .imgBox.unprepared:hover .ComingSoon {
+    opacity: 1;
+    transition: 0.4s;
+  }
 }
 
 /* モバイル画像 */
@@ -710,6 +717,21 @@ section {
   .section-inner3 .products {
     margin-bottom: 56px;
   }
+  
+  .ComingSoon {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(24px, 2.5vw, 30px);
+    opacity: 1;
+    transition: 0.4s;
+    font-weight: 100;
+  }
+  .imgBox.unprepared a {
+  opacity: 0.1;
+}
 }
 
 /* 画像タグエリア */
@@ -730,7 +752,7 @@ section {
   display: flex;         /* Gridの代わりにFlexboxを使用 */
   flex-wrap: wrap;       /* 要素がコンテナの幅を超えたら折り返す */
   gap: 8px 12px;         /* タグ間の隙間を指定 */
-  margin-top: 10px;      /* 上の要素との間に余白を追加 */
+  margin-top: 24   px;      /* 上の要素との間に余白を追加 */
   width: 100%;
 }
 
@@ -760,6 +782,7 @@ section {
   font-size: 18px;
   font-weight: 350;
   color: #272727;
+  margin-bottom: 25px;
 }
 @media (max-width: 767px) {
   .imgTitle h4 {
@@ -770,7 +793,6 @@ section {
     font-size: 15px;
     margin-top: 0;
     margin-bottom: 21px;
-
   }
   .imgTitle {
     width: 100%;
@@ -963,6 +985,7 @@ to {
   padding: 12px 35px;
   text-decoration: none;
 }
+
 .arrow-side {
   position: relative;
   display: inline-block;
@@ -1422,9 +1445,11 @@ footer {
   .contact-right .form-columns-1 input {
     aspect-ratio: auto !important;
   }
-  .contact-right fieldset {
+  .contact-right .form-columns-1 input,
+  .contact-right .form-columns-2 input {
     margin-bottom: 40px;
   }
+
 
   .contact-right .form-columns-1 label,
   .contact-right .form-columns-2 label {
@@ -1529,6 +1554,7 @@ footer {
   100%{opacity:0;}
 }
 
+/* 色変更 */
 .scroll_down:after{
   content:"";
   position: absolute;
@@ -1537,4 +1563,19 @@ footer {
   width:2px;
   height: 80px;
   background:#141e53;
+}
+
+.scroll_down.invert-color a {
+  color: #ffffff;
+}
+
+.scroll_down.invert-color:before {
+  background: #ffffff;
+  opacity: 1;
+  bottom: 0;
+  height: 11px;
+}
+
+.scroll_down.invert-color:after {
+  background: #ffffff;
 }
