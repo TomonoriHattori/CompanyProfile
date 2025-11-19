@@ -5,12 +5,7 @@ body {
 
 section {
   width: 100vw;
-  height: auto;
-  
-}
-#section2,
-#section3 {
-  scroll-margin-top: 110px;
+  height: auto; 
 }
 
 .inner-space {
