@@ -279,47 +279,43 @@ def sdk_image_static(filename):
 def sdk_js_static(filename):
     return send_from_directory(app.root_path + '/sdk/js/', filename, conditional=True)
 
-# application
-@app.route("/application", methods=["GET", "POST"])
-def application_redirect_page():
-    return redirect("/application/")
+# ai-application
+@app.route("/ai-application/", defaults={"foldername": "", "filename": "index.html"}, methods=["GET"])
+@app.route("/en/ai-application/", defaults={"foldername": "", "filename": "index_en.html"}, methods=["GET"])
+@app.route("/ai-application/<path:filename>", defaults={"foldername": ""}, methods=["GET"])
+@app.route("/ai-application/<path:foldername>/<path:filename>", methods=["GET"])
+def application_page(foldername, filename):
+    if not (".html" in filename):
+        foldername = filename
+        filename = "index.html"
+    if foldername != "":
+        foldername = foldername + "/"
+    return render_template("/ai-application/"+foldername+filename)
 
-@app.route("/en/application", methods=["GET", "POST"])
-def application_en_redirect_page():
-    return redirect("/en/application/")
-
-@app.route("/application/", methods=["GET", "POST"])
-def application_page():
-    return render_template("/application/index.html")
-
-@app.route("/en/application/", methods=["GET", "POST"])
-def application_en_page():
-    return render_template("/application/index_en.html")
-
-@app.route('/application/css/<path:filename>')
-@app.route('/en/application/css/<path:filename>')
-def application_css_static(filename):
-    return send_from_directory(app.root_path + '/application/css/', filename, conditional=True)
-
-@app.route('/application/img/<path:filename>')
-@app.route('/en/application/img/<path:filename>')
+@app.route('/ai-application/img/<path:filename>')
+@app.route('/en/ai-application/img/<path:filename>')
 def application_image_static(filename):
-    return send_from_directory(app.root_path + '/application/img/', filename, conditional=True)
+    return send_from_directory(app.root_path + '/ai-application/img/', filename, conditional=True)
 
-@app.route('/application/js/<path:filename>')
-@app.route('/en/application/js/<path:filename>')
+@app.route('/ai-application/css/<path:filename>')
+@app.route('/en/ai-application/css/<path:filename>')
+def application_css_static(filename):
+    return send_from_directory(app.root_path + '/ai-application/css/', filename, conditional=True)
+
+@app.route('/ai-application/js/<path:filename>')
+@app.route('/en/ai-application/js/<path:filename>')
 def application_js_static(filename):
-    return send_from_directory(app.root_path + '/application/js/', filename, conditional=True)
+    return send_from_directory(app.root_path + '/ai-application/js/', filename, conditional=True)
 
-@app.route('/application/video/<path:filename>')
-@app.route('/en/application/video/<path:filename>')
-def application_video_static(filename):
-    return send_from_directory(app.root_path + '/application/video/', filename, conditional=True)
-
-@app.route('/application/items/<path:filename>')
-@app.route('/en/application/items/<path:filename>')
+@app.route('/ai-application/items/<path:filename>')
+@app.route('/en/ai-application/items/<path:filename>')
 def application_items_static(filename):
-    return send_from_directory(app.root_path + '/application/items/', filename, conditional=True)
+    return send_from_directory(app.root_path + '/ai-application/items/', filename, conditional=True)
+
+
+
+
+
 
 # contest
 @app.route("/contest", methods=["GET", "POST"])
