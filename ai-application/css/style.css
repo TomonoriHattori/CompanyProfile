@@ -873,6 +873,7 @@ section {
   }
   .imgTag p {
     font-size: 11px;
+    margin-bottom: 0;
   }
 }
 
@@ -1403,6 +1404,11 @@ to {
   padding-left: 2%;
 }
 
+.contact-right-en .form-columns-2 .hs_firstname input {
+  display: block;
+  margin: 0 auto 0 0;
+}
+
 
 /*お問い合わせ内容*/
 .contact-right textarea {
@@ -1454,6 +1460,13 @@ to {
   border-radius: 26px;
   background-color: #FFFFFF;
   border: none;
+  transition: .3s;
+}
+.contact-right .actions input:hover {
+  background-color: #00000029;
+  border: 1px solid;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 /* 画像 */
