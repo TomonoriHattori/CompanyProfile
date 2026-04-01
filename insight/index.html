@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_header.css">
+    
+
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="img/favicon.png" sizes="180x180">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="navArea">
+                <div class="inner cw">
+                    <h1>
+                        <a class="navLogo" href="/"><img class="" src="img/common/logo.svg" alt="ailia">
+                            <span class="siteTitle">アイリア</span>
+                        </a>
+                    </h1>
+                    <ul class="navList">
+                        <li>
+                            <a href="/" class="">アイリアAIシリーズ</a>
+                        </li>
+                        <li>
+                            <a href="/ai-computing/" class="ai-computing">AIコンピューティング</a>
+                        </li>
+                        <li>
+                            <a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/" target="_blank" class="ai-application">AIアプリケーション</a>
+                        </li>
+                        <li>
+                            <a href="/ailia.ai/company/" class="company current">会社情報</a>
+                        </li>
+                        <li class="lang">
+                            <a href="/company/" class="current" lang="jp">JP</a>
+                            <a href="/en/company/" lang="en">EN</a>
+                        </li>
+                        <li class="contact">
+                            <a class="" href="https://ailia.ai/contact/" target="_blank">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="https://ailia.ai/contact/" target="_blank" class="spContact">お問い合わせ</a>
+                <a class="spNavBtn" href="javascript:void(0);"><span></span><span></span><span></span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+    <div id="tsparticles"></div>
+
+    <div class="mv-container">
+        <div class="text-area">
+            <h1><span class="highlight">知性</span>が導く、<br>新しいワークフロー。</h1>
+            <p>
+                複雑なデータ処理も、日々のルーチンワークも。<br>
+                あなたの手のひらで、シンプルに完結します。<br>
+                企業レベルのDXを、個人のデバイスへ。
+            </p>
+            <a href="#" class="btn-modern">無料で始める</a>
+        </div>
+
+        <div class="slider-area">
+            <div class="accent-box"></div>
+            
+            <div class="swiper-container-box">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260" alt="Slide 1"></div>
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260" alt="Slide 2"></div>
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260" alt="Slide 3"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
+    <script>
+        // Swiper 設定
+        var swiper = new Swiper(".mySwiper", {
+            effect: "slide",
+            loop: true,
+            speed: 800,
+            
+            // --- 重要：自動再生の設定 ---
+            autoplay: {
+                delay: 4000, // 4秒ごとに切り替え
+                disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
+            },
+
+            // ナビゲーション（矢印）
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            // ページネーション（下の点々）
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true, // 点をクリックして移動できるようにする
+            },
+        });
+
+        // tsParticles 設定（前回と同じ幾何学デザイン）
+        tsParticles.load("tsparticles", {
+            background: { color: "#f5f9fa" },
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: "#cccccc" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5 },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00bbe0",
+                    opacity: 0.3,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.5,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" }
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 1 } }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
+    </main>
+
+</body>
+</html>

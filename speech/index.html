@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8"/>
+  <title>AI Speech ｜ailia AI Series</title>
+  <link href="https://www.ailia.ai/hubfs/favicon_b.png" rel="shortcut icon"/>
+  <meta content="オフラインでも動く！どんなプラットフォームにも対応する、リアルタイム音声認識機能「AI Speech」です。" name="description"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="オフラインでも動く！どんなプラットフォームにも対応する、リアルタイム音声認識機能「AI Speech」です。" property="og:description"/>
+  <meta content="AI Speech ｜ailia AI Series" property="og:title"/>
+  <meta content="オフラインでも動く！どんなプラットフォームにも対応する、リアルタイム音声認識機能「AI Speech」です。" name="twitter:description"/>
+  <meta content="AI Speech ｜ailia AI Series" name="twitter:title"/>
+  <link href="main.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://7052064.fs1.hubspotusercontent-na1.net/hubfs/7052064/hub_generated/module_assets/1/-47160432286/1774642469493/module_website-header.min.css" rel="stylesheet"/>
+  <link href="../../../ai/ailia/www/speech.html" rel="canonical"/>
+  <meta content="https://www.ailia.ai/hubfs/230816_ailia_AIS_library_OGP_2.jpg" property="og:image"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+  <meta content="https://www.ailia.ai/hubfs/230816_ailia_AIS_library_OGP_2.jpg" name="twitter:image"/>
+  <meta content="https://www.ailia.ai/speech" property="og:url"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="ja" http-equiv="content-language"/>
+  <link href="../../../ai/ailia/www/en/speech.html" hreflang="en" rel="alternate"/>
+  <link href="../../../ai/ailia/www/speech.html" hreflang="ja" rel="alternate"/>
+  <link href="https://www.ailia.ai/hubfs/hub_generated/template_assets/1/127967495060/1736394423302/template_ailia_pc.min.css" rel="stylesheet"/>
+  <link href="https://www.ailia.ai/hubfs/hub_generated/template_assets/1/127967347312/1736397402156/template_ailia_sp.min.css" rel="stylesheet"/>
+  <link href="https://www.ailia.ai/hubfs/hub_generated/template_assets/1/125130836153/1736344161056/template_ailia.min.css" rel="stylesheet"/>
+  <link href="https://www.ailia.ai/hubfs/hub_generated/template_assets/1/157662905764/1742452685118/template_ailia_test.min.css" rel="stylesheet"/>
+  <link href="https://www.ailia.ai/hubfs/hub_generated/template_assets/1/184659964572/1761882743562/template_ailia_pc_add.min.css" rel="stylesheet"/>
+  <script src="https://www.ailia.ai/hubfs/aillia_js/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="https://www.ailia.ai/hubfs/aillia_js/fixnav.js" type="text/javascript"></script>
+  <script src="https://www.ailia.ai/hubfs/aillia_js/sitemapmodal.js" type="text/javascript"></script>
+  <script src="https://www.ailia.ai/hubfs/aillia_js/dlmodal.js" type="text/javascript"></script>
+  <script src="https://www.ailia.ai/hubfs/aillia_js/smoothScroll.js" type="text/javascript"></script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5Q579RMM');</script>
+ </head>
+ <body>
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5Q579RMM" style="display:none;visibility:hidden" width="0"></iframe>
+  </noscript>
+  <div class="body-wrapper hs-content-id-124718437709 hs-landing-page hs-page">
+   <div>
+    <header class="header">
+     <a class="header__skip" href="../../../ai/ailia/www/index.html">コンテンツまでスキップ</a>
+     <div class="container-fluid">
+      <div class="row-fluid-wrapper">
+       <div class="row-fluid">
+        <div class="span12 widget-span widget-type-cell">
+         <!-- ① 非表示の重複ヘッダー(dnd_area-row-0-hidden)を削除 -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-2 dnd_area-row-1-padding dnd_area-row-1-vertical-alignment dnd-section dnd_area-row-1-force-full-width-section">
+          <div class="row-fluid">
+           <div class="span6 widget-span widget-type-cell cell_1689863095810-vertical-alignment cell_1689863095810-padding dnd-column">
+            <div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-custom_widget dnd-module">
+               <div class="widget-type-simple_menu">
+                <div aria-label="Navigation Menu" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation">
+                 <ul role="menu">
+                  <li class="hs-menu-item hs-menu-depth-1" role="none">
+                   <a href="../../../ai/ailia/www/index.html" role="menuitem" target="_self">AI活用のお役立ちヒント</a>
+                  </li>
+                 </ul>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="span6 widget-span widget-type-cell cell_16897706538182-padding cell_16897706538182-vertical-alignment dnd-column">
+            <div class="row-fluid-wrapper row-depth-1 row-number-4 cell_16897706538182-row-0-vertical-alignment dnd-row">
+             <div class="row-fluid">
+              <div class="span4 widget-span widget-type-cell cell_16897708452832-vertical-alignment dnd-column">
+               <div class="row-fluid-wrapper row-depth-1 row-number-5 dnd-row">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-custom_widget dnd-module">
+                  <div class="widget-type-text">無料デモアプリダウンロード</div>
+                 </div>
+                </div>
+               </div>
+               <div class="row-fluid-wrapper row-depth-1 row-number-6 dnd-row">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-custom_widget dnd-module">
+                  <div class="button-wrapper">
+                   <a class="button" href="" rel="noopener" target="_blank">AIを使ってみる</a>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <!-- cell_16897708690243(hidden=flex) と cell_1689863085492(hidden=flex) は表示対象のため保持 -->
+              <div class="span4 widget-span widget-type-cell cell_16897708690243-hidden dnd-column cell_16897708690243-vertical-alignment">
+               <div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-row">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-custom_widget dnd-module">
+                  <div class="widget-type-text">無料個別相談にも対応</div>
+                 </div>
+                </div>
+               </div>
+               <div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-row">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-custom_widget dnd-module">
+                  <div class="button-wrapper">
+                   <a class="button" href="../../../ai/ailia/www/index.html">導入のご相談</a>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="span4 widget-span widget-type-cell cell_1689863085492-padding cell_1689863085492-vertical-alignment cell_1689863085492-hidden dnd-column">
+               <div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-row">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-custom_widget dnd-module">
+                  <div class="button-wrapper">
+                   <a class="button" href="" rel="nofollow">
+                    <span class="button__icon">
+                     <svg aria-hidden="true" version="1.0" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><g id="bars7_layer"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></g></svg>
+                    </span>
+                    Site map
+                   </a>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+   </div>
+
+   <main id="main-content">
+    <div class="container-fluid">
+     <div class="row-fluid-wrapper">
+      <div class="row-fluid">
+       <div class="span12 widget-span widget-type-cell">
+
+        <!-- メインビジュアル(dnd_area-row-2) ※hidden=blockのため表示 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-10 dnd_area-row-2-force-full-width-section dnd_area-row-2-padding dnd_area-row-2-hidden dnd-section dnd_area-row-2-vertical-alignment">
+         <div class="row-fluid">
+          <div class="span6 widget-span widget-type-cell cell_16898625078972-vertical-alignment cell_16898625078972-padding dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-11 dnd-row">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-custom_widget dnd-module">
+              <div class="kl-hero-03">
+               <div class="kl-hero-03__content">
+                <div class="kl-rich-text">
+                 <span class="kl-rich-text__preheader">AI Speech</span>
+                 <div>
+                  <div class="label">＼オフラインでも動く！／</div>
+                  <h1 class="lead">どんなプラットフォーム<br/>にも対応する、<br/>リアルタイム音声認識機能</h1>
+                  <p class="text">あなたのサービスやプロダクトに、<br/>Open AI社の「Whisper」を活用した<br class="sp"/>超高精度な<br class="pc"/>音声認識機能をプラス。<br/>オフラインでも動くので、<br/>セキュアな環境でも安心して<br class="sp"/>お使いいただけます。</p>
+                  <div class="note">※Word Error Rate</div>
+                 </div>
+                </div>
+                <div class="kl-hero-03__image">
+                 <img alt="main_img" loading="" src="https://www.ailia.ai/hubfs/ailia_img/main_img.png" style="max-width: 100%; height: auto;"/>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- ② 中身が空のwidget_1690184560334(hidden=flex)は表示されるが画像src無しのため削除 -->
+         </div>
+        </div>
+
+        <!-- CTAボタン行(dnd_area-row-3) -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-13 dnd-section dnd_area-row-3-padding dnd_area-row-3-force-full-width-section dnd_area-row-3-vertical-alignment">
+         <div class="row-fluid">
+          <!-- cell_16898628620322(hidden=flex)は表示対象のため保持 -->
+          <div class="span6 widget-span widget-type-cell cell_16898628620322-vertical-alignment dnd-column cell_16898628620322-hidden">
+           <div class="row-fluid-wrapper row-depth-1 row-number-14 dnd-row">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-custom_widget dnd-module">
+              <div class="widget-type-text">30日間無料デモアプリダウンロード</div>
+             </div>
+            </div>
+           </div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-15 dnd-row">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-custom_widget dnd-module">
+              <div class="button-wrapper">
+               <a class="button" href="" rel="noopener" target="_blank">
+                <span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right8_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>
+                AIを使ってみる
+               </a>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="span6 widget-span widget-type-cell cell_16898629390302-vertical-alignment dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-16 dnd-row">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-custom_widget dnd-module">
+              <div class="widget-type-text">無料個別相談にも対応</div>
+             </div>
+            </div>
+           </div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-17 dnd-row">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-custom_widget dnd-module">
+              <div class="button-wrapper">
+               <a class="button" href="../../../ai/ailia/www/index.html">
+                <span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right9_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>
+                導入のご相談
+               </a>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        <!-- ご利用シーン見出し -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-18 dnd-section dnd_area-row-4-force-full-width-section dnd_area-row-4-padding">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-19 dnd-row">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-custom_widget dnd-module">
+              <div class="widget-type-rich_text"><a class="anchor" data-hs-anchor="true" id="scene"></a></div>
+             </div>
+            </div>
+           </div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-20 dnd-row">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-custom_widget dnd-module">
+              <div class="widget-type-header"><h2>ご利用シーン</h2></div>
+             </div>
+            </div>
+           </div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-21 dnd-row">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-custom_widget dnd-module">
+              <div class="widget-type-rich_text"><p>音声認識AIはさまざまなシーンで活用でき、<br class="sp"/>ビジネスの効率化や拡張を実現します。</p></div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        <!-- ご利用シーン ケース一覧 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-22 dnd-section dnd_area-row-5-padding dnd_area-row-5-vertical-alignment dnd_area-row-5-force-full-width-section">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell cell_16898636073292-vertical-alignment dnd-column cell_16898636073292-padding">
+           <div class="row-fluid-wrapper row-depth-1 row-number-23 dnd-row cell_16898636073292-row-0-vertical-alignment">
+            <div class="row-fluid">
+             <div class="span3 widget-span widget-type-cell cell_1690878860354-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-24 dnd-row">
+               <div class="row-fluid">
+                <div class="span12 widget-span widget-type-custom_widget widget_1689863606462-flexbox-positioning dnd-module">
+                 <div class="widget-type-linked_image"><img alt="sean0101" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/sean0101.png" style="max-width: 100%; height: auto;" title="sean0101"/></div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="span3 widget-span widget-type-cell cell_1690878860358-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-25 dnd-row">
+               <div class="row-fluid">
+                <div class="span12 widget-span widget-type-custom_widget dnd-module">
+                 <div class="widget-type-rich_text">
+                  <h2 style="font-size: 14px;"><span style="font-family: Helvetica, Arial, sans-serif;">Case_01</span></h2>
+                  <p style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;">経営会議の議事録作成は<br/>毎回人手がかかる・・・</span></p>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="span3 widget-span widget-type-cell cell_1690878868164-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-26 dnd-row">
+               <div class="row-fluid">
+                <div class="span12 widget-span widget-type-custom_widget dnd-module">
+                 <div class="widget-type-rich_text">
+                  <p style="font-size: 16px;">
+                   <span style="font-family: Helvetica, Arial, sans-serif;">機密性の高い会議でも<br/></span>
+                   <span style="font-family: Helvetica, Arial, sans-serif;"><strong>オフライン</strong>で<br/></span>
+                   <span style="font-family: Helvetica, Arial, sans-serif;"><strong>自動議事録</strong>作成！</span>
+                  </p>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="span3 widget-span widget-type-cell cell_1690878407881-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-27 dnd-row">
+               <div class="row-fluid">
+                <div class="span12 widget-span widget-type-custom_widget module_16898637229403-flexbox-positioning dnd-module">
+                 <div class="widget-type-linked_image"><img alt="sean0102" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/sean0102.png" style="max-width: 100%; height: auto;" title="sean0102"/></div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-28 dnd-row cell_16898636073292-row-1-vertical-alignment">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-cell cell_1690878886633-vertical-alignment dnd-column">
+              <!-- Case02 -->
+              <div class="row-fluid-wrapper row-depth-1 row-number-29 cell_1690878886633-row-0-vertical-alignment dnd-row">
+               <div class="row-fluid">
+                <div class="span3 widget-span widget-type-cell dnd-column cell_1690878999303-vertical-alignment">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-1 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16898646826954-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="sean0201" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/sean0201.png" style="max-width: 100%; height: auto;" title="sean0201"/></div></div></div></div>
+                </div>
+                <div class="span3 widget-span widget-type-cell cell_1690878886635-vertical-alignment dnd-column">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-2 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h2 style="font-size: 14px;"><span style="font-family: Helvetica, Arial, sans-serif;">Case_02</span></h2><p style="font-size: 16px;">国際会議は<br/>毎回通訳の手配が大変・・・</p></div></div></div></div>
+                </div>
+                <div class="span3 widget-span widget-type-cell cell_16898639150792-padding cell_16898639150792-vertical-alignment dnd-column">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-3 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;"><strong>リアルタイム翻訳</strong>で</span><br/><span style="font-family: Helvetica, Arial, sans-serif;">人件費を削減。</span><br/><span style="font-family: Helvetica, Arial, sans-serif;"><strong>99言語</strong>に対応</span></p></div></div></div></div>
+                </div>
+                <div class="span3 widget-span widget-type-cell cell_1690879023862-vertical-alignment dnd-column">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-4 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module module_16898639150797-flexbox-positioning"><div class="widget-type-linked_image"><img alt="sean0202" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/sean0202.png" style="max-width: 100%; height: auto;" title="sean0202"/></div></div></div></div>
+                </div>
+               </div>
+              </div>
+              <!-- Case03 -->
+              <div class="row-fluid-wrapper row-depth-1 row-number-1 cell_1690878886633-row-1-vertical-alignment dnd-row">
+               <div class="row-fluid">
+                <div class="span3 widget-span widget-type-cell dnd-column cell_1690878995095-vertical-alignment">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-1 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16898639065054-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="sean0301" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/sean0301.png" style="max-width: 100%; height: auto;" title="sean0301"/></div></div></div></div>
+                </div>
+                <div class="span3 widget-span widget-type-cell cell_1690878995098-vertical-alignment dnd-column">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-2 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h2 style="font-size: 14px;"><span style="font-family: Helvetica, Arial, sans-serif;">Case_03</span></h2><p style="font-size: 16px;">製造現場での<br/>生産性を上げたい・・・</p></div></div></div></div>
+                </div>
+                <div class="span3 widget-span widget-type-cell cell_16898647252162-vertical-alignment dnd-column cell_16898647252162-padding">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-3 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;"><strong>機械に音声で指示</strong>を<br/>出せるようにして、<br/>製造工程をスリム化！</span></p></div></div></div></div>
+                </div>
+                <div class="span3 widget-span widget-type-cell cell_1690879056933-vertical-alignment dnd-column">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-4 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16898647252173-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="sean0302" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/sean0302.png" style="max-width: 100%; height: auto;" title="sean0302"/></div></div></div></div>
+                </div>
+               </div>
+              </div>
+              <!-- Case04 -->
+              <div class="row-fluid-wrapper row-depth-1 row-number-1 cell_1690878886633-row-2-vertical-alignment dnd-row">
+               <div class="row-fluid">
+                <div class="span3 widget-span widget-type-cell cell_1690879133683-vertical-alignment dnd-column">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-1 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16898652440815-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="sean0401" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/sean0401.png" style="max-width: 100%; height: auto;" title="sean0401"/></div></div></div></div>
+                </div>
+                <div class="span3 widget-span widget-type-cell cell_1690879096715-vertical-alignment dnd-column">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-2 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h2 style="font-size: 14px;"><span style="font-family: Helvetica, Arial, sans-serif;">Case_04</span></h2><p style="font-size: 16px;">手が使えない環境で<br/>メモをしたい・・・</p></div></div></div></div>
+                </div>
+                <div class="span3 widget-span widget-type-cell cell_16898653935672-padding cell_16898653935672-vertical-alignment dnd-column">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-3 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;"><strong>声<span class="stxt">（音声）</span>入力</strong>すれば、</span><br/><span style="font-family: Helvetica, Arial, sans-serif;">AIが精度高く</span><br class="sp"/><strong>スマートフォン</strong>で<br class="pc"/><span style="font-family: Helvetica, Arial, sans-serif;"><strong>文字を<br class="sp"/>起こし</strong>て記録が可能！</span></p></div></div></div></div>
+                </div>
+                <div class="span3 widget-span widget-type-cell cell_1690879144128-vertical-alignment dnd-column">
+                 <div class="row-fluid-wrapper row-depth-2 row-number-4 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16898653935677-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="sean0402" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/sean0402.png" style="max-width: 100%; height: auto;" title="sean0402"/></div></div></div></div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        <!-- 特徴と機能 見出し -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-1 dnd_area-row-6-padding dnd-section dnd_area-row-6-force-full-width-section">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><a class="anchor" data-hs-anchor="true" id="feature"></a></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>特徴と機能</h2></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p>アイリア AI Speechならではの導入メリットや<br class="sp"/>充実の機能をご紹介します。</p></div></div></div></div>
+          </div>
+         </div>
+        </div>
+
+        <!-- 特徴と機能 1〜4 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-5 dnd_area-row-7-vertical-alignment dnd-section dnd_area-row-7-force-full-width-section dnd_area-row-7-padding">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell cell_16898657365842-padding cell_16898657365842-vertical-alignment dnd-column">
+           <!-- 特徴1 -->
+           <div class="row-fluid-wrapper row-depth-1 row-number-6 cell_16898657365842-row-0-vertical-alignment dnd-row">
+            <div class="row-fluid">
+             <div class="span4 widget-span widget-type-cell cell_1690899819374-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>1</h2></div></div></div></div></div>
+             <div class="span4 widget-span widget-type-cell dnd-column cell_1690899819376-vertical-alignment"><div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3><span style="font-family: Helvetica, Arial, sans-serif;">AIを活用した超高精度な音声認識</span></h3><p style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;">ChatGPTを開発したOpen AI社のAIモデルを採用し、高精度な音声認識を実現しました。文字起こしはもちろん、その後の手直しの手間が大幅に軽減され、生産性アップにつながります。</span></p></div></div></div></div></div>
+             <div class="span4 widget-span widget-type-cell cell_1689865813873-vertical-alignment cell_1689865813873-padding dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module widget_1689865813625-flexbox-positioning"><div class="widget-type-linked_image"><img alt="function01" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/function01.png" style="max-width: 100%; height: auto;" title="function01"/></div></div></div></div></div>
+            </div>
+           </div>
+           <!-- 特徴2 -->
+           <div class="row-fluid-wrapper row-depth-1 row-number-10 cell_16898657365842-row-1-vertical-alignment dnd-row">
+            <div class="row-fluid">
+             <div class="span3 widget-span widget-type-cell cell_1690978580201-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-11 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16898659734215-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="function02" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/function02.png" style="max-width: 100%; height: auto;" title="function02"/></div></div></div></div></div>
+             <div class="span3 widget-span widget-type-cell dnd-column cell_16909785000102-vertical-alignment"><div class="row-fluid-wrapper row-depth-1 row-number-12 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>2</h2></div></div></div></div></div>
+             <div class="span3 widget-span widget-type-cell cell_16909785000103-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-13 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3>オフラインで動くので安全・安心</h3><p style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;">クラウドを使用せずにオフラインで動作するため、機密度の高い内容でも情報漏洩のリスクを抑え、安全に記録できます。また、通信環境にも左右されないので、どこでも安心です。作成時間に制限もないため、長時間の議事録作成も可能です。</span></p></div></div></div></div></div>
+             <!-- ③ 同一画像の重複表示(module_16902208041603)を削除 -->
+            </div>
+           </div>
+           <!-- 特徴3 -->
+           <div class="row-fluid-wrapper row-depth-1 row-number-15 cell_16898657365842-row-2-vertical-alignment dnd-row">
+            <div class="row-fluid">
+             <div class="span4 widget-span widget-type-cell cell_16909785050192-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-16 cell_16909785050192-row-0-vertical-alignment dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-cell cell_16909773021803-vertical-alignment cell_16909773021803-padding dnd-column"><div class="row-fluid-wrapper row-depth-2 row-number-1 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>3</h2></div></div></div></div></div></div></div></div>
+             <div class="span4 widget-span widget-type-cell cell_16909785050193-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-1 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3>汎用性の高い開発環境・動作環境</h3><p style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;">既存のシステムやアプリケーションへの実装も可能なライブラリ版をご用意。C APIに加えて、Unity Plugin を提供しているため、Unityを使用したアプリケーションに簡単に音声認識機能を追加できます。</span></p></div></div></div></div></div>
+             <div class="span4 widget-span widget-type-cell cell_16909785050194-padding dnd-column cell_16909785050194-vertical-alignment"><div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_168986608186510-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="function03" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/function03.png" style="max-width: 100%; height: auto;" title="function03"/></div></div></div></div></div>
+            </div>
+           </div>
+           <!-- 特徴4 -->
+           <div class="row-fluid-wrapper row-depth-1 row-number-3 cell_16898657365842-row-3-vertical-alignment dnd-row">
+            <div class="row-fluid">
+             <div class="span3 widget-span widget-type-cell cell_1690978669875-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_168986612525210-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="function04" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/function04.png" style="max-width: 100%; height: auto;" title="function04"/></div></div></div></div></div>
+             <div class="span3 widget-span widget-type-cell dnd-column cell_16909785108412-vertical-alignment"><div class="row-fluid-wrapper row-depth-1 row-number-5 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>4</h2></div></div></div></div></div>
+             <div class="span3 widget-span widget-type-cell cell_16909785108413-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-6 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3>定額制なので導入がしやすい</h3><p style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;">サーバーを利用しないため、どれだけ使っても、ユーザー数が増えても、従量課金にならずに定額でご利用いただけます。</span></p></div></div></div></div></div>
+             <!-- ③ 同一画像の重複(module_16902210523783)を削除 -->
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        <!-- 特徴5 豊富な機能アイコン -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-section dnd_area-row-8-force-full-width-section dnd_area-row-8-padding dnd_area-row-8-vertical-alignment">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell cell_16898662071962-vertical-alignment dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-9 cell_16898662071962-row-0-vertical-alignment dnd-row">
+            <div class="row-fluid">
+             <div class="span6 widget-span widget-type-cell dnd-column cell_1690900651983-vertical-alignment"><div class="row-fluid-wrapper row-depth-1 row-number-10 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>5</h2></div></div></div></div></div>
+             <div class="span6 widget-span widget-type-cell cell_16898662071963-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-11 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3>実用的かつ豊富な機能</h3></div></div></div></div></div>
+            </div>
+           </div>
+           <!-- アイコン行1 -->
+           <div class="row-fluid-wrapper row-depth-1 row-number-12 cell_16898662071962-row-1-vertical-alignment dnd-row">
+            <div class="row-fluid">
+             <div class="span2 widget-span widget-type-cell dnd-column cell_16898663456372-vertical-alignment">
+              <div class="row-fluid-wrapper row-depth-1 row-number-13 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget widget_1689866345366-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="funcicon01" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/funcicon01.png" style="max-width: 100%; height: auto;" title="funcicon01"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-14 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3>99言語対応</h3><p><span style="font-family: Helvetica, Arial, sans-serif;">マルチリンガルのAIモデルを使用しており、日本語・中国語・英語を含む99言語の認識が可能です。</span></p></div></div></div></div>
+             </div>
+             <div class="span2 widget-span widget-type-cell cell_16898664362812-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-15 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16898664362815-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="funcicon02" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/funcicon02.png" style="max-width: 100%; height: auto;" title="funcicon02"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-16 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3>オフライン</h3><p>クラウド不要で端末だけで音声認識を実行可能です。機密度の高い内容でも安全に実行可能です。</p></div></div></div></div>
+             </div>
+             <div class="span2 widget-span widget-type-cell cell_1689866479346-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-17 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16898664793464-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="funcicon03" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/funcicon03.png" style="max-width: 100%; height: auto;" title="funcicon03"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-18 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3>翻 訳</h3><p>中国語や日本語を含む99言語を英語へ翻訳できます。</p></div></div></div></div>
+             </div>
+             <div class="span3 widget-span widget-type-cell cell_1689866501948-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-19 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16898665019484-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="funcicon04" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/funcicon04.png" style="max-width: 100%; height: auto;" title="funcicon04"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-20 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3>マルチデバイス対応</h3><p>Windows PCだけでなく、mac OSやiOS、Android、Linuxでも動作します。</p></div></div></div></div>
+             </div>
+             <div class="span3 widget-span widget-type-cell dnd-column cell_1689866526010-vertical-alignment">
+              <div class="row-fluid-wrapper row-depth-1 row-number-21 cell_1689866526010-row-0-vertical-alignment dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-cell cell_1765271751670-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-2 row-number-1 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16898665260104-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="funcicon05" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/funcicon05.png" style="max-width: 100%; height: auto;" title="funcicon05"/></div></div></div></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-1 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3>辞書登録</h3><p>CSVの辞書を読み込んで、音声認識誤りを置換します。</p></div></div></div></div>
+             </div>
+            </div>
+           </div>
+           <!-- アイコン行2（話者識別・無音検知） -->
+           <div class="row-fluid-wrapper row-depth-1 row-number-2 cell_16898662071962-row-2-vertical-alignment dnd-row">
+            <div class="row-fluid">
+             <div class="span2 widget-span widget-type-cell cell_17653671508132-vertical-alignment cell_17653671508132-padding dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module module_17653671508139-flexbox-positioning"><div class="widget-type-linked_image"><img alt="funcicon06" class="hs-image-widget" height="375" loading="lazy" sizes="(max-width: 376px) 100vw, 376px" src="https://www.ailia.ai/hs-fs/hubfs/funcicon06.png?width=376&amp;height=375&amp;name=funcicon06.png" srcset="https://www.ailia.ai/hs-fs/hubfs/funcicon06.png?width=188&amp;height=188&amp;name=funcicon06.png 188w, https://www.ailia.ai/hs-fs/hubfs/funcicon06.png?width=376&amp;height=375&amp;name=funcicon06.png 376w, https://www.ailia.ai/hs-fs/hubfs/funcicon06.png?width=564&amp;height=563&amp;name=funcicon06.png 564w, https://www.ailia.ai/hs-fs/hubfs/funcicon06.png?width=752&amp;height=750&amp;name=funcicon06.png 752w" style="max-width: 100%; height: auto;" title="funcicon06" width="376"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3 style="font-size: 18px;">話者識別</h3><p style="font-size: 14px; line-height: 1.75; text-align: left;"><span>誰が話しているかを自動で見分け、複数話者の会話も正確に整理。</span><br aria-hidden="true"/><span>会議記録や対話ログの精度を高めます。</span></p></div></div></div></div>
+             </div>
+             <div class="span2 widget-span widget-type-cell cell_1765367380925-vertical-alignment dnd-column cell_1765367380925-padding">
+              <div class="row-fluid-wrapper row-depth-1 row-number-5 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_17653673809254-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="funcicon07" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/funcicon07.png" style="max-width: 100%; height: auto;" title="funcicon07"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-6 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3 style="font-size: 18px; line-height: 1.75; font-weight: bold;">無音検知</h3><p style="font-size: 14px; text-align: left; line-height: 1.75;"><span>音声中の無音区間を自動検出し、不要な部分をスキップ。</span><br aria-hidden="true"/><span>録音・解析の効率を大幅に改善します。</span></p></div></div></div></div>
+             </div>
+             <!-- ④ 空のspan2/span3/span3コンテナ3つを削除 -->
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        <!-- 追加実装予定 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-section dnd_area-row-9-padding dnd_area-row-9-force-full-width-section">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h3>＼ 追加実装予定 ／</h3></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p><span>今後も、さまざまなAIモデルを組み込み、<br class="sp"/>便利な機能を追加していきます。</span></p></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-5 cell_1689866677681-row-2-vertical-alignment cell_1689866677681-row-2-padding dnd-row">
+            <div class="row-fluid">
+             <!-- ④ 空のspan2コンテナ(cell_16899089579053)を削除 -->
+             <div class="span2 widget-span widget-type-cell cell_1765418807998-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_17654188079993-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="funcadd02" class="hs-image-widget" sizes="(max-width: 360px) 100vw, 360px" src="https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd02.png?width=360&amp;name=funcadd02.png" srcset="https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd02.png?width=180&amp;name=funcadd02.png 180w, https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd02.png?width=360&amp;name=funcadd02.png 360w" style="width:360px;border-width:0px;border:0px;" title="funcadd02" width="360"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">要 約</div></div></div></div>
+             </div>
+             <div class="span2 widget-span widget-type-cell cell_16899089579054-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-10 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_168990895790517-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="funcadd03" class="hs-image-widget" sizes="(max-width: 361px) 100vw, 361px" src="https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd03.png?width=361&amp;name=funcadd03.png" srcset="https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd03.png?width=181&amp;name=funcadd03.png 181w, https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd03.png?width=361&amp;name=funcadd03.png 361w" style="width:361px;border-width:0px;border:0px;" title="funcadd03" width="361"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-11 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">句読点追加</div></div></div></div>
+             </div>
+             <div class="span2 widget-span widget-type-cell cell_16899089579056-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-12 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_168990895790525-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="funcadd05" class="hs-image-widget" sizes="(max-width: 361px) 100vw, 361px" src="https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd05.png?width=361&amp;name=funcadd05.png" srcset="https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd05.png?width=181&amp;name=funcadd05.png 181w, https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd05.png?width=361&amp;name=funcadd05.png 361w" style="width:361px;border-width:0px;border:0px;" title="funcadd05" width="361"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-13 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">音声コマンド</div></div></div></div>
+             </div>
+             <div class="span2 widget-span widget-type-cell cell_1689909320728-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-14 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16899093207293-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="funcadd06" class="hs-image-widget" sizes="(max-width: 361px) 100vw, 361px" src="https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd06.png?width=361&amp;name=funcadd06.png" srcset="https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd06.png?width=181&amp;name=funcadd06.png 181w, https://www.ailia.ai/hs-fs/hubfs/ailia_img/funcadd06.png?width=361&amp;name=funcadd06.png 361w" style="width:361px;border-width:0px;border:0px;" title="funcadd06" width="361"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-15 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">数値入力</div></div></div></div>
+             </div>
+             <!-- ④ 空のspan2コンテナ(cell_1765418813148)を削除 -->
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        <!-- 導入フロー -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-18 dnd-section dnd_area-row-10-padding dnd_area-row-10-force-full-width-section">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell cell_16899093406442-padding dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-19 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><a class="anchor" data-hs-anchor="true" id="flow"></a></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-20 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>導入フロー</h2></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-21 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p>導入までの流れとサポート体制のご案内です。<br class="sp"/>お気軽に試していただくことも可能です。</p></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-22 dnd-row">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-cell dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-23 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget widget_1689910381732-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="flow" class="hs-image-widget" height="624" loading="lazy" sizes="(max-width: 2000px) 100vw, 2000px" src="https://www.ailia.ai/hs-fs/hubfs/ailia_img/flow.png?width=2000&amp;height=624&amp;name=flow.png" srcset="https://www.ailia.ai/hs-fs/hubfs/ailia_img/flow.png?width=1000&amp;height=312&amp;name=flow.png 1000w, https://www.ailia.ai/hs-fs/hubfs/ailia_img/flow.png?width=2000&amp;height=624&amp;name=flow.png 2000w" style="max-width: 100%; height: auto;" title="flow" width="2000"/></div></div></div></div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        <!-- サポート文言 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-24 dnd-section dnd_area-row-11-force-full-width-section dnd_area-row-11-padding">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-25 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h3><span style="font-family: Helvetica, Arial, sans-serif;">専門のスタッフが一環して<br class="sp"/>サポートします。</span></h3><p style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;">導入〜開発〜使用中のサポートは、メール・お電話・MTGいずれも対応可能です。<br class="pc"/>開発拠点・本社機能ともに国内のため、迅速かつ手厚くフォローアップさせていただきます。</span></p></div></div></div></div>
+          </div>
+         </div>
+        </div>
+
+        <!-- CTAボタン行2 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-26 dnd_area-row-12-vertical-alignment dnd_area-row-12-padding dnd-section dnd_area-row-12-force-full-width-section">
+         <div class="row-fluid">
+          <div class="span6 widget-span widget-type-cell cell_16899105322222-vertical-alignment dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-27 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">30日間無料デモアプリダウンロード</div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-28 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href="" rel="noopener" target="_blank"><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right10_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>AIを使ってみる</a></div></div></div></div>
+          </div>
+          <div class="span6 widget-span widget-type-cell cell_16899105322223-vertical-alignment dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-29 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">無料個別相談にも対応</div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-30 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href="../../../ai/ailia/www/index.html"><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right11_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>導入のご相談</a></div></div></div></div>
+          </div>
+         </div>
+        </div>
+
+        <!-- AI活用ヒント -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-31 dnd_area-row-13-padding dnd_area-row-13-vertical-alignment dnd-section dnd_area-row-13-force-full-width-section">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell cell_16899106059452-vertical-alignment dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-32 cell_16899106059452-row-0-vertical-alignment dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-cell cell_1690987388590-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-33 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><a class="anchor" data-hs-anchor="true" id="hint"></a></div></div></div></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-34 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>AI活用のお役立ちヒント</h2></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-35 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><div class="sptitle">AI活用の<br class="sp"/>お役立ちヒント</div><p><span style="font-family: Helvetica, Arial, sans-serif;">音声認識機能は、仕事にどう役立つ？<br/>ビジネスに役立つ活用のヒントを<br class="sp"/>わかりやすくご紹介します。</span></p></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-36 dnd-row cell_16899106059452-row-3-vertical-alignment">
+            <div class="row-fluid">
+             <!-- ④ 非表示(display:none)の cell_1689915238186 を削除 -->
+             <div class="span5 widget-span widget-type-cell cell_16899150463592-vertical-alignment cell_16899150463592-padding dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-41 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget widget_1689915046083-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="ax_WP01" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ax_WP01.jpg" style="max-width: 100%; height: auto;" title="ax_WP01"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-42 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><div class="date">2023.07.13</div><div class="label">ホワイトペーパー</div><div class="title">Whisperを使いこなす！<br class="sp"/>エッジで使える<br class="pc"/>安心・安全な<br class="sp"/>音声認識AIの条件とは？</div><p><span style="font-family: Helvetica, Arial, sans-serif;">「AI音声認識って？」「Whisperってなにがすごい？」。音声認識AIの基礎知識と、エッジで使える安心・安全な音声認識AIの条件についてご紹介。</span></p></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-43 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">PDF資料</div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-44 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href="../../../ai/ailia/www/index.html"><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right13_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>無料ダウンロード</a></div></div></div></div>
+             </div>
+             <!-- ④ display:none の cell_1689915244460 / cell_1689915248162 を削除 -->
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-53 dnd-section dnd_area-row-14-force-full-width-section dnd_area-row-14-padding">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-54 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><a class="anchor" data-hs-anchor="true" id="faq"></a></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-55 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>FAQ よくあるご質問</h2></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-56 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p>お問い合わせの多いご質問について、<br class="sp"/>回答を掲載させていただきます。</p></div></div></div></div>
+          </div>
+         </div>
+        </div>
+        <div class="row-fluid-wrapper row-depth-1 row-number-57 dnd-section dnd_area-row-15-force-full-width-section dnd_area-row-15-padding">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-58 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h2 class="qtext"><span style="font-family: Helvetica, Arial, sans-serif;">利用可能なパソコン・スマートフォンのスペックを教えてください。</span></h2><p class="atext" style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;">WindowsとLinux環境ではCore i7以上のCPUと、8GB以上のメモリが必要です。<br/>macOS環境ではM1以上のCPUと、8GB以上のメモリが必要です。 iOS環境ではA15以上のCPUと、4GB以上のメモリが必要です。<br/>Android環境ではSnapdragon888以上のCPUと、4GB以上のメモリが必要です。</span></p></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-59 cell_16899158390792-row-1-vertical-alignment dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-cell cell_1690900204186-vertical-alignment cell_1690900204186-padding dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-60 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h2 class="qtext">GPUは使用できますか？</h2><p class="atext" style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;">macOSおよびiOSではMetalを、WindowsとLinuxではCUDAを使用することが可能です。 GPUを使用することで、CPUよりも高速に音声認識を実行可能です。</span></p></div></div></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-61 dnd-row cell_16899158390792-row-2-vertical-alignment"><div class="row-fluid"><div class="span12 widget-span widget-type-cell cell_1690900204183-padding cell_1690900204183-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-62 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h2 class="qtext">音声認識の精度を上げる方法を教えてください。</h2><p class="atext" style="font-size: 16px;">音声認識では、マイクの性能が非常に重要です。<br/>音声認識の精度が不足している場合は、ピンマイクや、指向性の強いマイクの利用を検討ください。</p></div></div></div></div></div></div>
+          </div>
+         </div>
+        </div>
+
+        <!-- ⑤ 導入事例(dnd_area-row-16,17,18)・ウェビナー(row-19,20,21,22) を削除 [display:none] -->
+
+        <!-- サポート -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-90 dnd-section dnd_area-row-23-force-full-width-section dnd_area-row-23-padding dnd_area-row-23-vertical-alignment">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell cell_16899175334932-vertical-alignment dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-91 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><a class="anchor" data-hs-anchor="true" id="support"></a></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-92 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>サポート</h2></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-93 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p>ドキュメントやサンプルプログラム等もご用意しております。</p></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-94 cell_16899175334932-row-3-vertical-alignment dnd-row">
+            <div class="row-fluid">
+             <div class="span3 widget-span widget-type-cell dnd-column cell_16899189677482-vertical-alignment">
+              <div class="row-fluid-wrapper row-depth-1 row-number-95 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget widget_1689918967430-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="support_doc" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/support_doc.png" style="max-width: 100%; height: auto;" title="support_doc"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-96 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href="https://axinc-ai.github.io/ailia-sdk/supplemental/speech/cpp/jp/" rel="noopener" target="_blank"><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right18_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>ドキュメント</a></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-97 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p><span style="font-family: Helvetica, Arial, sans-serif;">導入方法やAPIの詳細を紹介します。</span></p></div></div></div></div>
+             </div>
+             <div class="span2 widget-span widget-type-cell cell_1689919096608-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-98 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16899190966085-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="support_sample" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/support_sample.png" style="max-width: 100%; height: auto;" title="support_sample"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-99 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href="https://medium.com/axinc/ailia-speech-unity%E3%82%84c-%E3%81%8B%E3%82%89%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%82%8Bai%E9%9F%B3%E5%A3%B0%E8%AA%8D%E8%AD%98%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA-16a05b5280d2" rel="noopener" target="_blank"><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right19_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>サンプルプログラム</a></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-100 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p><span>APIの使用例を紹介します。</span></p></div></div></div></div>
+             </div>
+             <div class="span3 widget-span widget-type-cell dnd-column cell_1689919099579-vertical-alignment">
+              <div class="row-fluid-wrapper row-depth-1 row-number-101 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16899190995804-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="support_slack" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/support_slack.png" style="max-width: 100%; height: auto;" title="support_slack"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-102 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href="https://join.slack.com/t/axinc-ailia/shared_invite/zt-f5hboxhj-kZ~APYIHTHeSopL5NWqGtA" rel="noopener" target="_blank"><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right20_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>サポートSlack</a></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-103 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p><span>チャットベースで質問が可能です。</span></p></div></div></div></div>
+             </div>
+             <div class="span2 widget-span widget-type-cell cell_1690900963779-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-104 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16899191048485-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="support_pc" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/support_pc.png" style="max-width: 100%; height: auto;" title="support_pc"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-105 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-cell cell_1689919104848-padding dnd-column"><div class="row-fluid-wrapper row-depth-2 row-number-1 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">30日間無料デモアプリダウンロード</div></div></div></div><div class="row-fluid-wrapper row-depth-2 row-number-2 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href="" rel="noopener" target="_blank"><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right21_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>AIを使ってみる</a></div></div></div></div><div class="row-fluid-wrapper row-depth-2 row-number-3 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p>音声認識は精度が肝心。<br/>ぜひお試しください。</p></div></div></div></div></div></div></div>
+             </div>
+             <div class="span2 widget-span widget-type-cell cell_1690901017529-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-1 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16899192584406-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="support_chat" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/support_chat.png" style="max-width: 100%; height: auto;" title="support_chat"/></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">無料個別相談にも対応</div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href="../../../ai/ailia/www/index.html"><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right22_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>導入のご相談</a></div></div></div></div>
+              <div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p>サービスについての不明点や導入に向けた<br/>ご相談などお気軽にお問合せください。</p></div></div></div></div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        <!-- 開発・実装支援 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-5 dnd_area-row-24-padding dnd-section dnd_area-row-24-force-full-width-section">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-6 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><a class="anchor" data-hs-anchor="true" id="develop"></a></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h2>開発・実装支援</h2></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p>ライブラリのご提供だけでなく、<br class="sp"/>コンサルティング・開発・実装も対応可能です。</p></div></div></div></div>
+          </div>
+         </div>
+        </div>
+
+        <!-- ailia WORKS -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-9 dnd_area-row-25-force-full-width-section dnd-section dnd_area-row-25-background-layers dnd_area-row-25-background-image dnd_area-row-25-padding">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-10 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget widget_1689919716688-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="logo_ailiaworks" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/logo_ailiaworks.png" style="max-width: 100%; height: auto;" title="logo_ailiaworks"/></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-11 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h3>AI開発支援サービス「アイリア WORKS」</h3></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-12 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><div class="sptitle">AI開発支援サービス<br/>「ailia WORKS」</div><p style="font-size: 16px;"><span style="font-family: Helvetica, Arial, sans-serif;">AI技術の提供だけでなく、様々なAI開発支援を通してお客様に最適な課題解決をご提案。<br/>議事録機能の実装や音声操作機能の開発など、<br/>お客様のあらゆるニーズにお応えします。</span></p></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-13 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href="https://www.axinc.jp/solutions/ailia_works.html" rel="noopener" target="_blank"><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right23_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>詳しくはこちら</a></div></div></div></div>
+          </div>
+         </div>
+        </div>
+
+        <!-- WORKS画像4枚 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-14 dnd-section dnd_area-row-26-padding dnd_area-row-26-force-full-width-section">
+         <div class="row-fluid">
+          <div class="span3 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-15 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">AIアプリケーションの開発</div></div></div></div><div class="row-fluid-wrapper row-depth-1 row-number-16 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget widget_1689920051121-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="works_pic01" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/works_pic01.webp" style="max-width: 100%; height: auto;" title="works_pic01"/></div></div></div></div></div>
+          <div class="span3 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-17 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">クラウドを使用したサーバシステムの開発</div></div></div></div><div class="row-fluid-wrapper row-depth-1 row-number-18 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module module_16899200936435-flexbox-positioning"><div class="widget-type-linked_image"><img alt="works_pic02" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/works_pic02.webp" style="max-width: 100%; height: auto;" title="works_pic02"/></div></div></div></div></div>
+          <div class="span3 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-19 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">AIモデルのアルゴリズム開発</div></div></div></div><div class="row-fluid-wrapper row-depth-1 row-number-20 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module module_16899201772425-flexbox-positioning"><div class="widget-type-linked_image"><img alt="works_pic03" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/works_pic03.png" style="max-width: 100%; height: auto;" title="works_pic03"/></div></div></div></div></div>
+          <div class="span3 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-21 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">組み込み機器へのポーティング</div></div></div></div><div class="row-fluid-wrapper row-depth-1 row-number-22 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16899201818325-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="works_pic04" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/works_pic04.webp" style="max-width: 100%; height: auto;" title="works_pic04"/></div></div></div></div></div>
+         </div>
+        </div>
+
+        <!-- 採用企業 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-23 dnd_area-row-27-force-full-width-section dnd-section dnd_area-row-27-padding">
+         <div class="row-fluid"><div class="span12 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-24 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-header"><h3>アイリア SDK 採用企業一覧</h3></div></div></div></div></div></div>
+        </div>
+        <div class="row-fluid-wrapper row-depth-1 row-number-25 dnd_area-row-28-force-full-width-section dnd-section dnd_area-row-28-padding">
+         <div class="row-fluid">
+          <div class="span3 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-26 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16899203947123-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="company_ask" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/company_ask.png" style="max-width: 100%; height: auto;" title="company_ask"/></div></div></div></div></div>
+          <div class="span3 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-27 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16899204064003-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="company_celsys" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/company_celsys.png" style="max-width: 100%; height: auto;" title="company_celsys"/></div></div></div></div></div>
+          <div class="span2 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-28 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16899204174193-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="company_konica" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/company_konica.png" style="max-width: 100%; height: auto;" title="company_konica"/></div></div></div></div></div>
+          <div class="span2 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-29 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16899204266013-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="company_randido" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/company_randido.png" style="max-width: 100%; height: auto;" title="company_randido"/></div></div></div></div></div>
+          <div class="span2 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-30 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget module_16909443381503-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="company_sega" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/company_sega.png" style="max-width: 100%; height: auto;" title="company_sega"/></div></div></div></div></div>
+         </div>
+        </div>
+
+        <!-- フッターナビ・フッター情報 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-31 dnd_area-row-29-padding dnd_area-row-29-background-color dnd_area-row-29-vertical-alignment dnd-section dnd_area-row-29-force-full-width-section dnd_area-row-29-background-layers">
+         <div class="row-fluid">
+          <div class="span2 widget-span widget-type-cell cell_16899205266622-vertical-alignment cell_16899205266622-padding dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-32 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module widget_1689920526405-flexbox-positioning"><div class="widget-type-linked_image"><img alt="footlogo_ailia" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/footlogo_ailia.png" style="max-width: 100%; height: auto;" title="footlogo_ailia"/></div></div></div></div></div>
+          <div class="span1 widget-span widget-type-cell cell_1692321942539-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-33 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="logosub">アイリア AIシリーズ</p></div></div></div></div></div>
+          <div class="span3 widget-span widget-type-cell cell_1689920585503-padding cell_1689920585503-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-34 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-simple_menu"><div aria-label="Navigation Menu" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation"><ul role="menu"><li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../../ai/ailia/www/index.html" role="menuitem" target="_self">About ailia</a></li><li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../../ai/ailia/www/index.html" role="menuitem" target="_self">Lineup</a></li><li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../../ai/ailia/www/index.html" role="menuitem" target="_self">Pickup</a></li><li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../../ai/ailia/www/index.html" role="menuitem" target="_self">White Paper</a></li><li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../../ai/ailia/www/index.html" role="menuitem" target="_self">Blog</a></li><li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../../ai/ailia/www/index.html" role="menuitem" target="_self">Support</a></li></ul></div></div></div></div></div></div>
+          <div class="span1 widget-span widget-type-cell cell_1689920690040-padding cell_1689920690040-vertical-alignment cell_1689920690040-margin dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-35 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget widget_1689920689800-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><a href="https://ailia.ai" rel="noopener" style="border-width:0px;border:0px;" target="_blank"><img alt="footlogo_ax" class="hs-image-widget" height="44" loading="lazy" sizes="(max-width: 124px) 100vw, 124px" src="https://www.ailia.ai/hs-fs/hubfs/footlogo_ax.png?width=124&amp;height=44&amp;name=footlogo_ax.png" style="max-width: 100%; height: auto;" title="footlogo_ax" width="124"/></a></div></div></div></div></div>
+          <div class="span1 widget-span widget-type-cell cell_1689920708578-padding cell_1689920708578-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-36 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget widget_1689920708320-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><a href="https://www.axell.co.jp/" rel="noopener" style="border-width:0px;border:0px;" target="_blank"><img alt="footlogo_axell" class="hs-image-widget" height="44" loading="lazy" sizes="(max-width: 124px) 100vw, 124px" src="https://www.ailia.ai/hs-fs/hubfs/ailia_img/footlogo_axell.png?width=124&amp;height=44&amp;name=footlogo_axell.png" style="max-width: 100%; height: auto;" title="footlogo_axell" width="124"/></a></div></div></div></div></div>
+          <div class="span2 widget-span widget-type-cell cell_1689920736795-padding dnd-column cell_1689920736795-vertical-alignment"><div class="row-fluid-wrapper row-depth-1 row-number-37 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-simple_menu"><div aria-label="Navigation Menu" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation"><ul role="menu"><li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.axell.co.jp/browser/" role="menuitem" target="_self">Terms of service</a></li><li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.axell.co.jp/privacy/" role="menuitem" target="_self">Privacy policy</a></li></ul></div></div></div></div></div></div>
+          <div class="span2 widget-span widget-type-cell cell_1689920800756-padding cell_1689920800756-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-38 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">Copyright(c)アイリア株式会社 / Axell</div></div></div></div></div>
+         </div>
+        </div>
+
+        <!-- サイトマップモーダル・ダウンロードモーダル・お問合せモーダル・言語切替 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-39 dnd_area-row-30-padding dnd-section dnd_area-row-30-vertical-alignment dnd_area-row-30-force-full-width-section">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell cell_16909420332902-vertical-alignment cell_16909420332902-padding dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-40 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><a class="modal-close closebtn">CLOSE</a></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-41 cell_16909420332902-row-1-vertical-alignment dnd-row">
+            <div class="row-fluid">
+             <div class="span1 widget-span widget-type-cell cell_1690943392670-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-42 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module module_16909433926704-hidden"><div class="widget-type-rich_text"><p class="label">さまざまなシーンでビジネスの効率化や拡張を実現</p><div class="linkbtn"><a class="modal-close" href="../../../ai/ailia/www/index.html">ご利用シーン</a></div></div></div></div></div></div>
+             <div class="span1 widget-span widget-type-cell cell_1690944141623-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-43 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">導入メリットや充実の機能をご紹介</p><div class="linkbtn"><a class="modal-close" href="../../../ai/ailia/www/index.html">特徴と機能</a></div></div></div></div></div></div>
+             <div class="span1 widget-span widget-type-cell cell_1690944130170-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-44 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">導入までの流れとサポート体制のご案内</p><div class="linkbtn"><a class="modal-close" href="../../../ai/ailia/www/index.html">導入フロー</a></div></div></div></div></div></div>
+             <div class="span1 widget-span widget-type-cell dnd-column cell_1690944107316-vertical-alignment"><div class="row-fluid-wrapper row-depth-1 row-number-45 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">ビジネスにどう役立つ？</p><div class="linkbtn"><a class="modal-close" href="../../../ai/ailia/www/index.html">AI活用のお役立ちヒント</a></div></div></div></div></div></div>
+             <div class="span2 widget-span widget-type-cell cell_1690943867759-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-46 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">お問い合わせの多いご質問と回答を掲載</p><div class="linkbtn"><a class="modal-close" href="../../../ai/ailia/www/index.html">FAQ よくあるご質問</a></div></div></div></div></div></div>
+             <div class="span2 widget-span widget-type-cell cell_1690943926356-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-47 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">さまざまな業界・企業でご利用いただいています</p><div class="linkbtn"><a class="modal-close" href="../../../ai/ailia/www/index.html">導入事例</a></div></div></div></div></div></div>
+             <div class="span2 widget-span widget-type-cell cell_1690943930988-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-48 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">サービスについてより詳しく聞きたい方は</p><div class="linkbtn"><a class="modal-close" href="../../../ai/ailia/www/index.html">ウェビナー情報</a></div></div></div></div></div></div>
+             <div class="span1 widget-span widget-type-cell cell_1690944098407-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-49 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">ドキュメントやサンプルプログラム等もご用意</p><div class="linkbtn"><a class="modal-close" href="../../../ai/ailia/www/index.html">サポート</a></div></div></div></div></div></div>
+             <div class="span1 widget-span widget-type-cell cell_1690944117301-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-50 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">コンサルティング・開発・実装も対応可能</p><div class="linkbtn"><a class="modal-close" href="../../../ai/ailia/www/index.html">開発・実装支援</a></div></div></div></div></div></div>
+            </div>
+           </div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-51 dnd-row cell_16909420332902-row-2-vertical-alignment">
+            <div class="row-fluid">
+             <div class="span12 widget-span widget-type-cell cell_1690943020555-vertical-alignment dnd-column">
+              <div class="row-fluid-wrapper row-depth-1 row-number-52 cell_1690943020555-row-0-vertical-alignment dnd-row">
+               <div class="row-fluid">
+                <div class="span7 widget-span widget-type-cell dnd-column cell_1690943243266-vertical-alignment"><div class="row-fluid-wrapper row-depth-2 row-number-1 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">30日間無料デモアプリダウンロード</div></div></div></div><div class="row-fluid-wrapper row-depth-2 row-number-2 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href="" rel="noopener" target="_blank"><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right24_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>AIを使ってみる</a></div></div></div></div></div>
+                <div class="span5 widget-span widget-type-cell cell_1690943126177-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-2 row-number-3 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-text">無料個別相談にも対応</div></div></div></div><div class="row-fluid-wrapper row-depth-2 row-number-4 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="button-wrapper"><a class="button" href=""><span class="button__icon"><svg aria-hidden="true" version="1.0" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="arrow-circle-right25_layer"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></g></svg></span>導入のご相談</a></div></div></div></div></div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-1 cell_16909420332902-row-3-vertical-alignment dnd-row">
+            <div class="row-fluid">
+             <div class="span4 widget-span widget-type-cell cell_16909420332903-padding cell_16909420332903-vertical-alignment dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget widget_1690943094736-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="sitemap_ailia" class="hs-image-widget" height="30" loading="lazy" sizes="(max-width: 85px) 100vw, 85px" src="https://www.ailia.ai/hs-fs/hubfs/sitemap_ailia.png?width=85&amp;height=30&amp;name=sitemap_ailia.png" title="sitemap_ailia" width="85"/></div></div></div></div></div>
+             <div class="span4 widget-span widget-type-cell cell_1690943157617-vertical-alignment cell_1690943157617-padding dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget widget_1690943157387-flexbox-positioning dnd-module"><div class="widget-type-linked_image"><img alt="sitemap_axell" class="hs-image-widget" loading="lazy" src="https://www.ailia.ai/hubfs/ailia_img/sitemap_axell.png" style="max-width: 100%; height: auto;" title="sitemap_axell"/></div></div></div></div></div>
+             <div class="span4 widget-span widget-type-cell cell_1690943182096-vertical-alignment cell_1690943182096-padding dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><div class="modallink"><a href="https://www.axell.co.jp/browser/">Terms of service</a><a href="https://www.axell.co.jp/privacy/">Privacy policy</a></div></div></div></div></div></div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        <!-- ダウンロードモーダル -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-5 dnd_area-row-31-padding dnd-section dnd_area-row-31-force-full-width-section">
+         <div class="row-fluid">
+          <div class="span12 widget-span widget-type-cell dnd-column">
+           <div class="row-fluid-wrapper row-depth-1 row-number-6 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h2>無料デモアプリを<br class="sp"/>ダウンロード</h2><div class="closebtn modal2-close">CLOSE</div></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-row">
+            <div class="row-fluid">
+             <div class="span6 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">Windows版</p><div class="btn btn01"><a href="https://axip-console.appspot.com/trial/terms/AILIA-SPEECH-WIN" rel="noopener" target="_blank">ダウンロード</a></div></div></div>
+             <div class="span6 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">Mac OS版</p><div class="btn btn02"><a href="https://axip-console.appspot.com/trial/terms/AILIA-SPEECH-MAC" rel="noopener" target="_blank">ダウンロード</a></div></div></div>
+            </div>
+           </div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-row">
+            <div class="row-fluid">
+             <div class="span6 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">Android版</p><div class="btn btn03"><a href="https://play.google.com/store/apps/details?id=jp.axinc.ailia_ai_showcase" rel="noopener" target="_blank">ダウンロード</a></div></div></div>
+             <div class="span6 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="label">iOS版</p><div class="btn btn04"><a href="https://apps.apple.com/jp/app/ailia-ai-showcase/id1522828798" rel="noopener" target="_blank">ダウンロード</a></div></div></div>
+            </div>
+           </div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="note">※ailia AI showcaseをダウンロードします。</p></div></div></div></div>
+           <div class="row-fluid-wrapper row-depth-1 row-number-10 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><p class="footlabel">＼30日間トライアル無料／</p><div class="footbtn"><a href="https://axip-console.appspot.com/trial/terms/AILIA-SPEECH" rel="noopener" target="_blank">AI Speechライブラリ</a></div></div></div></div></div>
+          </div>
+         </div>
+        </div>
+
+        <!-- お問合せモーダル -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-11 dnd_area-row-32-force-full-width-section dnd_area-row-32-padding dnd-section">
+         <div class="row-fluid"><div class="span12 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-12 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><h2>お問い合わせ</h2><div class="closebtn modal3-close">CLOSE</div></div></div></div></div></div></div>
+        </div>
+
+        <!-- 言語切替 -->
+        <div class="row-fluid-wrapper row-depth-1 row-number-13 dnd-section dnd_area-row-33-force-full-width-section dnd_area-row-33-padding">
+         <div class="row-fluid"><div class="span12 widget-span widget-type-cell dnd-column"><div class="row-fluid-wrapper row-depth-1 row-number-14 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><div class="translation_btn"><a class="lang_jp active">JP</a><a class="lang_en" href="../../../ai/ailia/www/en/speech.html">EN</a></div></div></div></div></div></div></div>
+        </div>
+
+       </div>
+      </div>
+     </div>
+    </div>
+   </main>
+
+   <div>
+    <footer class="footer">
+     <div class="container-fluid">
+      <div class="row-fluid-wrapper">
+       <div class="row-fluid">
+        <div class="span12 widget-span widget-type-cell">
+         <div class="row-fluid-wrapper row-depth-1 row-number-1 dnd-section footer-row-0-padding footer-row-0-margin">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell dnd-column">
+            <div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row"><div class="row-fluid"><div class="span12 widget-span widget-type-custom_widget dnd-module"><div class="widget-type-rich_text"><span style="color: #ffffff;">Copyright © アイリア株式会社 / 株式会社アクセル</span></div></div></div></div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+
+  </div>
+ </body>
+</html>
