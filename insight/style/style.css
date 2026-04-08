@@ -74,12 +74,12 @@ body, html {
 /* アクセントボックスとスライダー本体 */
 .hero-wrapper .accent-box {
     position: absolute;
-    width: 100%; 
-    height: 100%;
+    width: 110%; 
+    height: 90%;
     background-color: #00bbe0; /* 指定カラー */
-    top: 20px; 
-    right: -20px;
-    border-radius: 20px;
+    top: 50px; 
+    right: -40px;
+    border-radius: 10px;
     z-index: 0;
 }
 
@@ -88,7 +88,7 @@ body, html {
     max-width: 600px;
     aspect-ratio: 16 / 10;
     background: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
@@ -160,12 +160,14 @@ body, html {
 
 /* --- 5. テキストスタイル --- */
 .hero-wrapper h1 { 
-    font-size: 3.2rem; 
+    font-size: 4.5rem; 
     color: #222; 
-    margin-bottom: 25px; 
+    margin-bottom: 40px; 
     line-height: 1.2; 
     letter-spacing: 0.05em; 
     margin-top: 0;
+    line-height: 8rem;
+    transform: translateX(10px);
 }
 
 .highlight { 
@@ -174,28 +176,39 @@ body, html {
 }
 
 .hero-wrapper p { 
-    font-size: 1.1rem; 
+    font-size: 1.8rem; 
     color: #555; 
-    line-height: 1.8; 
-    margin-bottom: 40px; 
+    line-height: 1rem; 
+    margin-bottom: 15px; 
     margin-top: 0;
+}
+
+.hero-wrapper h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
 .btn-modern { 
     display: inline-block; 
-    background: #222; 
-    color: #fff; 
-    padding: 16px 50px; 
-    border-radius: 8px; 
     text-decoration: none; 
-    font-weight: bold; 
-    transition: all 0.3s; 
+    transition: all 0.2s; 
     align-self: flex-start; /* ボタンを左寄せに */
+
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #00bbe0;
+    background-color: #fff;
+    border-width: 0.2rem;
+    border-color: #00bbe0;
+    box-shadow: 0 5px 0 #00bbe0;
 }
 
 .btn-modern:hover { 
-    background: #00bbe0; 
-    transform: translateY(-2px); 
+    background-color: #00bbe0;
+    color: #fff;
+    box-shadow: none;
+    transform: translateY(5px);
 }
 
 /* --- スマホ対応 --- */
@@ -222,7 +235,10 @@ body, html {
 }
 
 
-/* --- セクション共通設定 --- */
+
+
+/* -------------- セクション共通設定 ---------------- */
+
 section {
     width: 100%;
     overflow: hidden;
@@ -235,7 +251,13 @@ section {
     margin: 0 auto;
     text-align: center;
 }
-.section-wrapper.bg-blue {
+.section-top {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding-top: 70px;
+}
+.section-wrapper.bg-lightblue {
     background-color: #a8e2ed;
 }
 .section-inner.bg-white {
@@ -262,6 +284,29 @@ section {
     box-shadow: none;
     transform: translateY(5px);
 }
+
+/* セクションtop */
+.section-title:only-child{
+    text-shadow: 2px 2px #fff;
+}
+.section-title h2 {
+    font-size: 2.6rem;
+    color: #00bbe0;
+    text-shadow: 2px 2px #fff;
+}
+.section-title h1{
+    font-size: 5.2rem;
+    margin: 40px 0 70px;
+    color: #2d2d2d;
+    text-shadow: 2px 2px #fff;
+}
+.section-desc {
+    font-size: 2.2rem;
+    color: #2d2d2d;
+}
+
+
+/* -------------- コンテンツ別設定 ---------------- */
 
 /* youtubeリンク */
 /* 親要素を基準位置にする */
@@ -316,4 +361,345 @@ section {
     height: 94%;
     background-color: #00bbe0;
     border-radius: 20px;
+}
+
+
+
+/* FUNCTIONエリア */
+.section-wrapper.function {
+    background-color: #f0f3f5;
+}
+.function-top-img {
+    position: absolute;
+    height: 650px;
+    overflow: hidden;
+    z-index: 1;
+}
+.function-top-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.function-top {
+    height: 650px;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding-top: 70px;
+}
+.function-tag {
+    display: flex;
+    flex-direction: column; /* ul を縦に並べる */
+    align-items: center;    /* 子要素(ul)を水平方向の中央に */
+    justify-content: center;
+    width: 100%;
+    margin-top: 60px;       /* タイトルとの間の余白（任意） */
+}
+.function-tag svg {
+    height: 26px;
+    margin-right: 8px;
+    fill: #fff;
+}
+.function-tag ul{
+    display: flex;          /* li を横に並べる */
+    justify-content: center; /* li を中央に寄せる */
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;         /* 行間の余白 */
+    gap: 20px;              /* アイコン同士の間隔 */
+}
+.function-tag li {
+    display: flex;
+    align-items: center;    /* アイコンと文字の上下中央を合わせる */
+    justify-content: center;
+
+    width: 175px;
+    height: 48px;
+    border-radius: 6.5px;
+
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00bbe0;
+}
+
+/* FUNCTIONメインエリア */
+.function-main {
+    position: relative;
+    margin-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.function-main-container {
+    position: relative;
+    display: flex;
+    margin-top: 60px;
+    width: 80%;
+    margin-bottom: 200px;
+}
+.function-main-container.rev {
+    flex-direction: row-reverse;
+}
+.function-main-container .accent-box {
+    position: absolute; /* 絶対配置に切り替え */
+    z-index: 1;
+    /* ここで位置を px 指定 */
+    top: -5%;
+    /* iframeと同じサイズにする、または個別に指定 */
+    width: 100%; 
+    height: 50px;
+    background-color: #00bbe0;
+    border-radius: 10px;
+}
+.function-main-img {
+    position: relative;
+    width: 45%;
+    max-width: 510px;
+    min-width: 100px;
+}
+.function-main-img img {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    flex-shrink: 0;
+}
+.function-main-img .accent-box {
+    position: absolute; /* 絶対配置に切り替え */
+    z-index: 1;
+    /* ここで位置を px 指定 */
+    top: 20%; 
+    left: 2%;
+    /* iframeと同じサイズにする、または個別に指定 */
+    width: 110%; 
+    height: 90%;
+    background-color: #a8e2ed;
+    border-radius: 10px;
+}
+.rev .function-main-img .accent-box {
+    left: -12%;
+}
+.function-main-text {
+    z-index: 2;
+    margin-left: 80px;
+    flex: 1; /* 追加：残りのスペースを均等に使う */
+    min-width: 0; /* 追加：Flexアイテム内のテキスト溢れを防ぐためのおまじない */
+}
+.function-main-container.rev .function-main-text {
+    margin-left: 0;
+    margin-right: 80px;
+}
+.function-main-text-title {
+    /* 元の transform: translateY(-40%) や font-size 指定は残しつつ以下を追加 */
+    font-size: 3.4rem;
+    color: #fff;
+    
+    /* 高さ、位置の調整 */
+    height: 50px;       /* 直下の accent-box (50px) と高さを合わせる */
+    display: flex;      /* 中の h1 を制御 */
+    align-items: center; /* 上下中央揃え */
+    
+    /* 位置の微調整 */
+    position: absolute; /* 親の container を基準にする */
+    top: -5%;           /* accent-box の top と同じ値にする */
+    left: 45%;          /* 画像の width (45%) 分ずらして横位置を合わせる */
+    margin-left: 80px;  /* 元の text にあった margin-left を継承 */
+    transform: none;    /* translateY は不要になるので解除 */
+}
+.function-main-container.rev .function-main-text-title {
+    left: 0;
+    margin-left: 30px;
+}
+.function-main-text-point h2 {
+    display: flex;
+    align-items: center;
+    font-size: 2.4rem;
+    color: #00bbe0;
+    font-weight: bold;
+}
+.function-main-text-point h2::before {
+    content: "";            /* 疑似要素に必須 */
+    display: inline-block;
+    width: 0.8em;           /* 文字より少し小さめの 0.8倍サイズ（お好みで 1em に） */
+    height: 0.8em;
+    background-color: #00bbe0; /* 文字と同じ色 */
+    margin-right: 0.5em;    /* 文字との間の余白 */
+    flex-shrink: 0;         /* 改行時に図形が潰れないように固定 */
+    transform: translateY(0.1em);
+}
+.function-main-text-desc {
+    margin-top: 50px;
+}
+.function-main-container.rev .function-main-text-desc {
+    margin-left: 30px;
+}
+.function-main-text-desc h3 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.function-main-text-desc p {
+    margin-top: 20px;
+}
+
+
+/* FEATURES */
+.section-inner.feature-main {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 84px;
+    padding: 0;
+    padding-bottom: 170px;
+}
+.section-wrapper.features {
+    background-color: #f0f3f5;
+}
+.feature-container-box {
+    background-color: #fff;
+    width: 240px;
+    aspect-ratio: 4/3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border-width: 5pt;
+}
+.feature-container-box h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.feature-container-box.red {
+    border-color: #f34769;
+}
+.feature-container-box.red svg {
+    fill: #f34769;
+}
+.feature-container-box.green {
+    border-color: #61b07b;
+}
+.feature-container-box.green svg {
+    fill: #61b07b;
+}
+.feature-container-box.purple {
+    border-color: #b061a3;
+}
+.feature-container-box.purple {
+    fill: #b061a3;
+}
+.feature-container-desc {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+
+/* SECURITY */
+
+.medal {
+    width: 146px;
+    
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+.security .section-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.security-container-box {
+    width: 200px;
+    height: 140px;
+    border-width: 2px;
+    border-color: #0099b8;
+    border-radius: 5px;
+}
+.security-container-box h1 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 20px 0;
+}
+.security-container-box p {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.arrow-triangle {
+    width: 0;
+    height: 0;
+    border-left: 30px solid black;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+
+    transform: translateY(-3px);
+}
+
+
+/* WHITE PAPER */
+.section-wrapper.white-paper {
+    background-color: #f0f3f5;
+}
+.wp-main {
+    display: flex;
+    padding-top: 120px;
+    padding-bottom: 160px;
+    width: 80%;
+    min-width: 800px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.wp-main-container {
+    width: 437px;
+    height: 694px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.wp-img {
+    width: 238px;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.451);
+    margin-top: 40px;
+}
+.wp-main-container {
+    position: relative;
+    width: 45%;
+}
+
+.wp-text {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.wp-text h1 {
+    text-align: left;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.wp-text p {
+    margin-top: 20px;
+    text-align: left;
+}
+.wp-date {
+    position: absolute;
+    background-color: #00bbe0;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 12px;
+    transform: translateY(-10px);
+}
+.wp-link-area {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.wp-link-area p {
+    color: #00bbe0;
+}
+.wp-link-area .link-btn {
+    margin-top: 0;
 }
