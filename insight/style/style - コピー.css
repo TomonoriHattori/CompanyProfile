@@ -4,8 +4,6 @@ body, html {
     height: 100%; 
     font-family: "Helvetica Neue", Arial, sans-serif; 
     background-color: #ffffff;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 450;
 }
 
 /* --- 1. 全体を包む大枠 --- */
@@ -23,7 +21,7 @@ body, html {
 .hero-wrapper-inner {
     position: relative;
     width: 80%;
-    min-width: auto;
+    min-width: 900px;
     max-width: 1800px;
     display: flex;
     flex-direction: column;
@@ -45,13 +43,14 @@ body, html {
     position: relative;
     z-index: 10;
     width: 100%;
-    min-width: 1080px;
+    max-width: 1200px;
     /* height: 100%;  */
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0; /* 左右の余白 */
     box-sizing: border-box;
+    max-width: 1200px;
     margin: 0;
 }
 
@@ -61,7 +60,7 @@ body, html {
 .myTextSwiper {
     position: absolute;
     /* ヘッダー高さ(60px)と固定テキスト分を考慮して縦位置を調整 */
-    top: 45%;
+    top: 25%;
     left: 3%;                /* mv-container の padding と合わせる */
     transform: translateY(-10%);
     width: calc(50% - 80px);  /* 左半分から gap 分を引いた幅 */
@@ -100,10 +99,11 @@ body, html {
 }
 
 .slider-area { 
-    width: 60%;
+    flex: 1;
     position: relative;
     display: flex;
     justify-content: flex-end;
+    transform: translateX(200px);
 }
 
 /* アクセントボックスとスライダー本体 */
@@ -120,7 +120,8 @@ body, html {
 
 .swiper-container-box {
     width: 100%;
-    aspect-ratio: 9.9 / 5.76;
+    max-width: 950px;
+    aspect-ratio: 16 / 10;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.37);
@@ -135,6 +136,23 @@ body, html {
     object-fit: cover; 
 }
 
+@media screen and (max-width: 1850px) {
+    .swiper-container-box {
+        max-width: 850px;
+    }
+    .slider-area { 
+        transform: translateX(100px);
+    }
+}
+@media screen and (max-width: 1650px) {
+    .swiper-container-box {
+        max-width: 700px;
+    }
+    .slider-area { 
+        max-width: 700px;
+        transform: translateX(30px);
+    }
+}
 
 /* --- 4. Swiperコントロール --- */
 /* 左右の矢印 */
@@ -195,8 +213,7 @@ body, html {
 
 /* --- 5. テキストスタイル --- */
 .hero-wrapper h1 { 
-    font-size: 4.5rem;
-    font-weight: bold;
+    font-size: 4.5rem; 
     color: #222; 
     margin-bottom: 40px; 
     line-height: 1.2; 
@@ -212,8 +229,7 @@ body, html {
 }
 
 .hero-wrapper p { 
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.8rem; 
     color: #555; 
     line-height: 1rem; 
     margin-bottom: 15px; 
@@ -231,9 +247,7 @@ body, html {
     transition: all 0.2s; 
     align-self: flex-start; /* ボタンを左寄せに */
 
-    font-size: 1.6rem;
-    font-weight: 700;
-    width: 280px;
+    width: fit-content;
     padding: 10px 20px;
     border-radius: 50px;
     color: #00bbe0;
@@ -242,8 +256,6 @@ body, html {
     border-color: #00bbe0;
     box-shadow: 0 5px 0 #00bbe0;
     margin-bottom: 10px;
-    text-align: center;
-    transform: translateX(1px);
 }
 
 .btn-modern:hover { 
@@ -305,19 +317,13 @@ section {
 }
 .section-inner.bg-white {
     background-color: #fff;
-    padding-top: 180px;
-    padding-bottom: 180px;
 }
-.section-inner.bg-white.youtube-link {
-    padding-top: 120px;
-}
-
 /* リンクボタン */
 .link-btn {
     display: inline-block;
     color: #00bbe0;
     width: fit-content;
-    padding: 10px 40px;
+    padding: 10px 20px;
     border-radius: 50px;
     background-color: #fff;
     margin: 15px auto 0;
@@ -325,23 +331,13 @@ section {
     border-color: #00bbe0;
     box-shadow: 0 5px 0 #00bbe0;
     transition: 0.2s;
-    font-weight: 800;
-    font-size: 2.2rem;
 }
+
 .link-btn:hover{
     background-color: #00bbe0;
     color: #fff;
     box-shadow: none;
     transform: translateY(5px);
-}
-.link-btn-desc {
-    font-size: 2.4rem;
-    font-weight: 600;
-}
-.link-btn-desc-under {
-    margin-top: 20px;
-    font-size: 1.8rem;
-    font-weight: 600;
 }
 
 /* セクションtop */
@@ -349,27 +345,20 @@ section {
     text-shadow: 2px 2px #fff;
 }
 .section-title h2 {
-    font-size: 3.6rem;
+    font-size: 2.6rem;
     color: #00bbe0;
     text-shadow: 2px 2px #fff;
-
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
 }
 .section-title h1{
     font-size: 5.2rem;
-    font-weight: bold;
-    margin: 20px 0 40px;
+    margin: 40px 0 70px;
     color: #2d2d2d;
     text-shadow: 2px 2px #fff;
 }
 .section-desc {
     font-size: 2.2rem;
-    font-weight: 600;
     color: #2d2d2d;
-    text-shadow: 2px 2px #fff;
 }
-
 
 
 /* -------------- コンテンツ別設定 ---------------- */
@@ -380,7 +369,7 @@ section {
     position: relative; 
     width: 70%;
     max-width: 800px;
-    margin: 160px auto 0; /* 上に余白を作る */
+    margin: 100px auto 0; /* 上に余白を作る */
 }
 .iframe-container {
     width: 100%;
@@ -437,20 +426,9 @@ section {
 }
 .function-top-img {
     position: absolute;
-    width: 100%;
-    height: 690px;
+    height: 650px;
     overflow: hidden;
     z-index: 1;
-}
-.function-top-img::before {
-  content: "";         /* 疑似要素に必須 */
-  width: 100%;         /* 幅いっぱい */
-  height: 20%;        /* 高さいっぱい */
-  display: block;      /* 高さを指定するためにブロック要素にする */
-  background: linear-gradient(rgba(255,255,255,0) 0, #f0f3f5 80%); /* 徐々に透明にする */
-  position: absolute;  /*  */
-  bottom: 0;
-  left: 0;
 }
 .function-top-img img{
     width: 100%;
@@ -504,7 +482,7 @@ section {
 /* FUNCTIONメインエリア */
 .function-main {
     position: relative;
-    margin-bottom: 0;
+    margin-bottom: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -512,10 +490,8 @@ section {
 .function-main-container {
     position: relative;
     display: flex;
-    margin-top: 120px;
+    margin-top: 60px;
     width: 80%;
-    min-width: 900px;
-    max-width: 1800px;
     margin-bottom: 200px;
 }
 .function-main-container.rev {
@@ -535,7 +511,7 @@ section {
 .function-main-img {
     position: relative;
     width: 45%;
-    max-width: 880px;
+    max-width: 510px;
     min-width: 100px;
 }
 .function-main-img img {
@@ -544,22 +520,21 @@ section {
     border-radius: 10px;
     z-index: 2;
     flex-shrink: 0;
-    box-shadow: 0 0 10px rgba(128, 128, 128, 0.514);
 }
 .function-main-img .accent-box {
     position: absolute; /* 絶対配置に切り替え */
     z-index: 1;
     /* ここで位置を px 指定 */
     top: 20%; 
-    left: 5%;
+    left: 2%;
     /* iframeと同じサイズにする、または個別に指定 */
-    width: 100%; 
+    width: 110%; 
     height: 90%;
     background-color: #a8e2ed;
     border-radius: 10px;
 }
 .rev .function-main-img .accent-box {
-    left: -5%;
+    left: -12%;
 }
 .function-main-text {
     z-index: 2;
@@ -592,25 +567,12 @@ section {
     left: 0;
     margin-left: 30px;
 }
-.function-main-text-point {
-    margin-top: 4rem;
-    display: flex;
-    flex-wrap: wrap;
-}
 .function-main-text-point h2 {
-    flex: 1 0 50%;
     display: flex;
     align-items: center;
     font-size: 2.4rem;
     color: #00bbe0;
     font-weight: bold;
-}
-.function-main-text-point h2:first-child:nth-last-child(2),
-.function-main-text-point h2:first-child:nth-last-child(2) ~ h2 {
-    flex: 1 0 100%;
-}
-.function-main-text-point.non-stack h2 {
-    flex: 1 0 50% !important;
 }
 .function-main-text-point h2::before {
     content: "";            /* 疑似要素に必須 */
@@ -624,32 +586,17 @@ section {
 }
 .function-main-text-desc {
     margin-top: 50px;
-    
-    /* 位置の微調整 */
-    position: absolute; /* 親の container を基準にする */
-    left: 45%;          /* 画像の width (45%) 分ずらして横位置を合わせる */
-    margin-left: 80px;  /* 元の text にあった margin-left を継承 */
-    transform: none;    /* translateY は不要になるので解除 */
 }
 .function-main-container.rev .function-main-text-desc {
-    left: 0;
     margin-left: 30px;
 }
 .function-main-text-desc h3 {
-    margin-top: 2rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: bold;
 }
-.rev .function-main-text-desc h3 {
-    width: 50%;
-}
+
 .function-main-text-desc p {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    width: 100%;
-}
-.rev .function-main-text-desc p {
-    max-width: 50%;
+    margin-top: 20px;
 }
 
 
@@ -659,18 +606,15 @@ section {
     justify-content: space-between;
 
     margin-top: 84px;
-    padding: 0 5%;
+    padding: 0;
     padding-bottom: 170px;
 }
 .section-wrapper.features {
     background-color: #f0f3f5;
 }
-.feature-container {
-    width: 30%;
-}
 .feature-container-box {
     background-color: #fff;
-    width: 100%;
+    width: 240px;
     aspect-ratio: 4/3;
     display:flex;
     flex-direction: column;
@@ -680,12 +624,9 @@ section {
     border-width: 5pt;
 }
 .feature-container-box h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    margin-top: 10%;
-}
-.feature-container-box svg {
-    height: 35%;
+    margin-top: 20px;
 }
 .feature-container-box.red {
     border-color: #f34769;
@@ -718,50 +659,34 @@ section {
     width: 146px;
     
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(calc(-50% + 50rem));
-    z-index: 1;
+    top: 50px;
+    right: 0;
 }
-.security .section-title {
-    position: relative; /* 子要素（.medal）の基準点になる */
-    display: inline-block; /* タイトルの幅に合わせる場合（必要に応じて） */
-    width: 100%; /* 中央揃えを維持する場合 */
-}
-.security-main {
+.security .section-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 120px;
 }
 .security-container-box {
-    width: 22%;
-    aspect-ratio: 8/5;
-    border-width: 4px 4px 4px 18px;
-    border-color: #00bbe0;
+    width: 200px;
+    height: 140px;
+    border-width: 2px;
+    border-color: #0099b8;
     border-radius: 5px;
-}
-.security-container-box:last-child {
-    background-color: #00bbe0;
-    border-width: 0;
-    border-left: 18px solid #a8e2ed;
-    color: #fff;
 }
 .security-container-box h1 {
     font-weight: bold;
-    font-size: clamp(15px, 1.3vw, 30px);
-    margin: 8% 0 3%;
+    font-size: 1.8rem;
+    margin: 20px 0;
 }
 .security-container-box p {
-    font-size: clamp(10px, 1vw, 20px);
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 .arrow-triangle {
     width: 0;
     height: 0;
-    border-left: 25px solid #0099b8;
+    border-left: 30px solid black;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
 

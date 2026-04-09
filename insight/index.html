@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style_header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -48,54 +53,58 @@
     </header>
 
     <div class="hero-wrapper">
-        
-        <div id="tsparticles"></div>
 
-        <div class="mv-container">
-            
-            <div class="text-area">
-                <div class="text-content-static">
-                    <p>&#92; 文章検索、翻訳、議事録、画像生成も！ &#47;</p>
-                    <h1>起動した瞬間、<br><span class="highlight">AIがそばに。</span></h1>
+        <div class="hero-wrapper-inner">
 
-                    <div class="swiper myTextSwiper">
+            <div id="tsparticles"></div>
+
+            <div class="mv-container">
+                <!-- 固定テキスト（スライドしない部分） -->
+                <div class="text-area">
+                    <div class="text-content-static">
+                        <p>&#92; 文章検索、翻訳、議事録、画像生成も！ &#47;</p>
+                        <h1>起動した瞬間、<br><span class="highlight">AIがそばに。</span></h1>
+                    </div>
+                </div>
+
+                <!-- 右側の画像スライダー -->
+                <div class="slider-area">
+                    <div class="accent-box"></div>
+                    <div class="swiper myImageSwiper swiper-container-box">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide text-content">
-                                
-                                <h2>文書から<br>瞬時に回答</h2>
-                                <a href="link2.html" class="btn-modern">RAGについて詳しく見る</a>
-                            </div>
-                            <div class="swiper-slide text-content">
-                                
-                                <h2>プロンプトから<br>画像生成</h2>
-                                <a href="link2.html" class="btn-modern">画像生成について詳しく見る</a>
-                            </div>
-                            <div class="swiper-slide text-content">
-                                
-                                <h2>会議録を自動作成<br>音声で対話</h2>
-                                <a href="link2.html" class="btn-modern">音声認識について詳しく見る</a>
-                            </div>
-                            <div class="swiper-slide text-content">
-                                
-                                <h2>最高レベルの<br>セキュリティ</h2>
-                                <a href="link2.html" class="btn-modern">ローカルLLMについて詳しく見る</a>
-                            </div>
+                            <div class="swiper-slide"><img src="img/mv_01.png" alt="Slide 1"></div>
+                            <div class="swiper-slide"><img src="img/mv_02.png" alt="Slide 2"></div>
+                            <div class="swiper-slide"><img src="img/mv_03.png" alt="Slide 3"></div>
+                            <div class="swiper-slide"><img src="img/mv_04.png" alt="Slide 4"></div>
                         </div>
                     </div>
                 </div>
+
+                
             </div>
 
-            <div class="slider-area">
-                <div class="accent-box"></div>
-                <div class="swiper myImageSwiper swiper-container-box">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/img_tmp01.png" alt="Slide 1"></div>
-                        <div class="swiper-slide"><img src="img/img_tmp01.png" alt="Slide 2"></div>
-                        <div class="swiper-slide"><img src="img/img_tmp01.png" alt="Slide 3"></div>
-                        <div class="swiper-slide"><img src="img/img_tmp01.png" alt="Slide 4"></div>
+            <!-- テキストスライダーを hero-wrapper 直下に置き、絶対配置で左側に重ねる -->
+            <div class="swiper myTextSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text-content">
+                        <h2>文書から<br>瞬時に回答</h2>
+                        <a href="link2.html" class="btn-modern">RAGについて詳しく見る</a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>プロンプトから<br>画像生成</h2>
+                        <a href="link2.html" class="btn-modern">画像生成について詳しく見る</a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>会議録を自動作成<br>音声で対話</h2>
+                        <a href="link2.html" class="btn-modern">音声認識について詳しく見る</a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>最高レベルの<br>セキュリティ</h2>
+                        <a href="link2.html" class="btn-modern">ローカルLLMについて詳しく見る</a>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="swiper-pagination"></div>
@@ -110,9 +119,10 @@
 
 
     <section class="section-wrapper bg-lightblue">
-        <div class="section-inner bg-white">
-            <p>無料ダウンロード</p>
+        <div class="section-inner bg-white youtube-link">
+            <div class="link-btn-desc"><p>無料ダウンロード</p></div>
             <a href="" class="link-btn">アイリア DX Insightを使ってみる</a>
+            <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div>
             <div class="video-wrapper">
                 <div class="iframe-container">
                     <iframe src="https://www.youtube.com/embed/jGhKwrF3by8" title="ailia DX Insight Promotion Video (Japanese)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -125,7 +135,7 @@
 
     <section class="section-wrapper function">
         <div class="function-top-img">
-            <img src="img/function_top.png" alt="img/function_top.png" height="650px">
+            <img src="img/function_top.png" alt="img/function_top.png">
         </div>
         <div class="function-top">
             <div class="section-title">
@@ -155,7 +165,7 @@
             <div class="function-main-container">
                 <div class="accent-box"></div>
                 <div class="function-main-img">
-                    <img src="img/img_tmp01.png" alt="">
+                    <img src="img/ai_chat.png" alt="">
                     <div class="accent-box"></div>
                 </div>
                 <div class="function-main-text">
@@ -164,7 +174,7 @@
                     </div>
                     <div class="function-main-text-desc">
                         <h3>クラウドで動作: ChatGPT、 Azure OpenAI、 Gemini、 Claude<br>端末上で動作: ailia SDK(インデックス作成、ベクトル検索、Re-Rank機能)、カスタムLLM</h3>
-                        <p>アイリア DX Insightは、ファイルや画像を活用して素早く質問に答える<br>AIアシスタントです。作業効率を大幅に向上させ、メール作成や繰り返し作業<br>の自動化など、特定のスタイルで応答するカスタムプロンプトも作成可能です。</p>
+                        <p>アイリア DX Insightは、ファイルや画像を活用して素早く質問に答えるAIアシスタントです。<br>作業効率を大幅に向上させ、メール作成や繰り返し作業の自動化など、特定のスタイルで応答するカスタムプロンプトも作成可能です。</p>
                         <div class="function-main-text-point">
                             <h2>文章検索</h2>
                             <h2>アイデア出し</h2>
@@ -175,7 +185,7 @@
             <div class="function-main-container rev">
                 <div class="accent-box"></div>
                 <div class="function-main-img">
-                    <img src="img/img_tmp01.png" alt="">
+                    <img src="img/ai_search.png" alt="">
                     <div class="accent-box"></div>
                 </div>
                 <div class="function-main-text">
@@ -195,7 +205,7 @@
             <div class="function-main-container">
                 <div class="accent-box"></div>
                 <div class="function-main-img">
-                    <img src="img/img_tmp01.png" alt="">
+                    <img src="img/ai_document.png" alt="">
                     <div class="accent-box"></div>
                 </div>
                 <div class="function-main-text">
@@ -217,7 +227,7 @@
             <div class="function-main-container rev">
                 <div class="accent-box"></div>
                 <div class="function-main-img">
-                    <img src="img/img_tmp01.png" alt="">
+                    <img src="img/ai_office.png" alt="">
                     <div class="accent-box"></div>
                 </div>
                 <div class="function-main-text">
@@ -236,7 +246,7 @@
             <div class="function-main-container">
                 <div class="accent-box"></div>
                 <div class="function-main-img">
-                    <img src="img/img_tmp01.png" alt="">
+                    <img src="img/ai_creative.png" alt="">
                     <div class="accent-box"></div>
                 </div>
                 <div class="function-main-text">
@@ -246,7 +256,7 @@
                     <div class="function-main-text-desc">
                         <h3>クラウドで動作: DALL-E<br>端末上で動作: StableDifusion(*準備中)</h3>
                         <p>AIクリエイティブは、テキスト入力だけで誰でも簡単に画像を生成できるツールです。また、生成された画像を編集し、より望むものに近づけることができる他、著作権保護や改ざん防止の為にウォーターマークを埋め込んで画像を生成させることができます。また、日本語にも対応する、リアルタイム音声合成機能で簡単にAIに喋らせることが可能です。</p>
-                        <div class="function-main-text-point">
+                        <div class="function-main-text-point non-stack">
                             <h2>画像生成</h2>
                             <h2>音声合成</h2>
                         </div>
@@ -259,8 +269,9 @@
 
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white">
-            <p>無料ダウンロード</p>
+            <div class="link-btn-desc"><p>無料ダウンロード</p></div>
             <a href="" class="link-btn">アイリア DX Insightを使ってみる</a>
+            <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div>
         </div>
     </section>
 
@@ -274,7 +285,7 @@
         <div class="section-inner feature-main">
             <div class="feature-container">
                 <div class="feature-container-box red">
-                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.83 13.85"  height="48px">
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.83 13.85">
                         <path d="M.99.49c0-.27-.22-.49-.49-.49s-.49.23-.49.49v10.89c0,1.37,1.11,2.47,2.47,2.47h12.87c.27,0,.49-.23.49-.5s-.22-.49-.49-.49H2.47c-.82,0-1.48-.67-1.48-1.48V.49h0ZM5.94,4.7c.1,0,.19-.02.29-.06.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29s-.02-.19-.06-.29c-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24s-.06.19-.06.29.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06ZM9.65,6.93c0-.1-.02-.19-.06-.29-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.18-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06s.19-.02.29-.06c.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29ZM11.87,9.65c.1,0,.19-.02.29-.06.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29s-.02-.19-.06-.29c-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.19-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06ZM13.61,2.97c0-.1-.02-.19-.06-.29-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.19-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06s.19-.02.29-.06c.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29ZM4.95,9.65c.1,0,.19-.02.29-.06.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29s-.02-.19-.06-.29c-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.19-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06"/>
                     </svg>
                     <h1>高速・軽量</h1>
@@ -310,35 +321,38 @@
     </section>
 
     <section class="section-wrapper security">
-        <div class="section-top">
-            <div class="section-title">
-                <h2>SECURITY</h2>
-                <h1>ローカルLLMでセキュアな環境構築</h1>
-                <img src="img/medal.png" alt="特許出願中" class="medal">
-            </div>
-            <div class="section-desc">
-                <p>APIキーがなくてもローカルLLMを使用可能。<br>社外に出せない機密情報でも、インターネット接続不要でAIが活用可能です。</p>
-            </div>
-        </div>
         <div class="section-inner">
-            <div class="security-container-box">
-                <h1>企業ドキュメント</h1>
-                <p>社内の重要な<br>情報源となる文書類</p>
+            <div class="section-top">
+                <div class="section-title">
+                    <h2>SECURITY</h2>
+                    <h1>ローカルLLMでセキュアな環境構築</h1>
+                    <img src="img/medal.png" alt="特許出願中" class="medal">
+                </div>
+                <div class="section-desc">
+                    <p>APIキーがなくてもローカルLLMを使用可能。<br>社外に出せない機密情報でも、インターネット接続不要でAIが活用可能です。</p>
+                </div>
             </div>
-            <span class="arrow-triangle"></span>
-            <div class="security-container-box">
-                <h1>AIインデックス作成</h1>
-                <p>オフラインで<br>ドキュメントを<br>分析・整理</p>
-            </div>
-            <span class="arrow-triangle"></span>
-            <div class="security-container-box">
-                <h1>AI検索</h1>
-                <p>オフラインで<br>関連情報を抽出</p>
-            </div>
-            <span class="arrow-triangle"></span>
-            <div class="security-container-box">
-                <h1>回答生成</h1>
-                <p>約8KBの検索結果のみ<br>をオンラインに送信</p>
+        
+            <div class="security-main">
+                <div class="security-container-box">
+                    <h1>企業ドキュメント</h1>
+                    <p>社内の重要な<br>情報源となる文書類</p>
+                </div>
+                <span class="arrow-triangle"></span>
+                <div class="security-container-box">
+                    <h1>AIインデックス作成</h1>
+                    <p>オフラインで<br>ドキュメントを<br>分析・整理</p>
+                </div>
+                <span class="arrow-triangle"></span>
+                <div class="security-container-box">
+                    <h1>AI検索</h1>
+                    <p>オフラインで<br>関連情報を抽出</p>
+                </div>
+                <span class="arrow-triangle"></span>
+                <div class="security-container-box">
+                    <h1>回答生成</h1>
+                    <p>約8KBの検索結果のみ<br>をオンラインに送信</p>
+                </div>
             </div>
         </div>
     </section>
@@ -381,44 +395,71 @@
         </div>
     </section>
 
-    <section class="section-wrapper link">
+    <section class="section-wrapper p-internal">
         <div class="section-top">
             <div class="section-title">
                 <h1>AI開発をさらに広げる、アイリアのAI事業</h1>
             </div>
         </div>
-        <div class="link-container">
-            <h1>アイリアSDK</h1>
-            <p>軽量・高性能なAI推論SDK</p>
-            <a href="" class="link-btn">アイリアSDKを使ってみる</a>
-        </div>
-        <div class="link-container">
-            <h1>AIコンピューティング</h1>
-            <p>AIソフトウェア高速化サービス</p>
-            <a href="" class="link-btn">AIコンピューティングを見る</a>
+        <div class="section-inner p-internal-main">
+            <div class="p-internal-container">
+                <h1>アイリアSDK</h1>
+                <p>軽量・高性能なAI推論SDK</p>
+                <div class="p-internal-btn">
+                    <a href="" class="link-btn">アイリアSDKを使ってみる</a>
+                </div>
+            </div>
+            <div class="p-internal-container">
+                <h1>AIコンピューティング</h1>
+                <p>AIソフトウェア高速化サービス</p>
+                <div class="p-internal-btn">
+                    <a href="" class="link-btn">AIコンピューティングを見る</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white">
-            <p>無料ダウンロード</p>
+            <div class="link-btn-desc"><p>無料ダウンロード</p></div>
             <a href="" class="link-btn">アイリア DX Insightを使ってみる</a>
+            <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div>
         </div>
     </section>
 
     <section class="section-wrapper faq">
-        <div class="section-top">
-            <div class="section-title">
-                <h2>FAQ</h2>
-                <h1>よくあるご質問</h1>
+        <div class="section-inner">
+            <div class="section-top">
+                <div class="section-title">
+                    <h2>FAQ</h2>
+                    <h1>よくあるご質問</h1>
+                </div>
+                <div class="section-desc">
+                    <p>お問い合わせの多いご質問について、回答を掲載させていただきます。</p>
+                </div>
             </div>
-            <div class="section-desc">
-                <p>お問い合わせの多いご質問について、回答を掲載させていただきます。</p>
+            <div class="faq-main">
+                <dvi class="faq-text">
+                    <h1>利用可能なパソコンのスペックを教えてください。</h1>
+                    <p>windows環境ではCore i7以上のCPUと、8GB以上のメモリが必要です。<br>macOS環境ではM1以上のCPUと、8GB以上のメモリが必要です。</p>
+                    <h1>GPUは必要ですか？</h1>
+                    <p>アイリア DX InsightはCPUのみでも実行可能です。<br>対応するGPU（Intel® Core™ Ultra シリーズの内蔵GPU、Intel® Arc™ GPU など）を使用した場合、ドキュメントの登録や議事録作成などで高速処理が可能です</p>
+                    <h1>共有フォルダは使用できますか？</h1>
+                    <p>アイリア DX Insightはマウントされたファイルを扱うことができるため、ネットワーク経由の共有フォルダも使用可能です。</p>
+                    <h1>対応しているファイルフォーマットを教えてください。</h1>
+                    <p>下記のドキュメントフォーマットに対応しています。<br>'c', 'cpp', 'csv', 'json', 'java', 'md', 'py', 'rb', 'tex', 'txt', 'css', 'php', 'pdf', 'docx', 'xlsx'<br>
+                    下記の画像フォーマットに対応しています。<br>
+                    'png', 'jpg', 'jpeg'<br>
+                    下記の音声フォーマットに対応しています。<br>
+                    'wav'</p>
+                    <h1>ChatGPT のAPI KEY がなくても使用できますか？</h1>
+                    <p>アイリア DX Insightは、ChatGPT、Gemini、Azure、OpenAI互換サーバ、ローカルLLMに対応しています。<br>
+                    ローカルLLMを使用する場合、ChatGPTのAPI KEY がなくても使用可能です。<br>
+                    また、議事録と画像検索、OCRについては常にローカルで処理されるため、ChatGPTのAPI KEY がなくても使用可能です。</p>
+                    <h1>価格を教えてください。</h1>
+                    <p>アイリアDX Insightは完全無償でご利用いただくことが出来ます。アカウント作成やメールアドレス登録も必要なく、無料で商用利用可能です</p>
+                </dvi>
             </div>
-        </div>
-        <div class="faq-main">
-            <h1>利用可能なパソコンのスペックを教えてください。</h1>
-            <h2>windows環境ではCore i7以上のCPUと、8GB以上のメモリが必要です。<br>macOS環境ではM1以上のCPUと、8GB以上のメモリが必要です。</h2>
         </div>
     </section>
 
@@ -453,12 +494,20 @@
 
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white">
-            <p>無料ダウンロード</p>
+            <div class="link-btn-desc"><p>無料ダウンロード</p></div>
             <a href="" class="link-btn">アイリア DX Insightを使ってみる</a>
+            <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div>
         </div>
     </section>
     
-    <section></section>
+    <section class="section-wrapper client-list">
+        <div class="client-list-title">
+            <h1>アイリアSDK採用企業一覧</h1>
+        </div>
+        <div class="client-logo">
+            <img src="" alt="">
+        </div>
+    </section>
 
 </body>
 </html>
