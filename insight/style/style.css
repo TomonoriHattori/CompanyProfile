@@ -8,11 +8,12 @@ body, html {
     font-weight: 450;
 }
 
+
 /* --- 1. 全体を包む大枠 --- */
 .hero-wrapper {
     position: relative;
     width: 100%;
-    height: 1000px; /* 画面全体の高さ */
+    aspect-ratio: 16/9;
     background-color: #f5f9fa;
     overflow: hidden; 
     display: flex;
@@ -45,12 +46,12 @@ body, html {
     position: relative;
     z-index: 10;
     width: 100%;
-    min-width: 1080px;
+    /* min-width: 1080px; */
     /* height: 100%;  */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0; /* 左右の余白 */
+    gap: 20px; /* 左右の余白 */
     box-sizing: border-box;
     margin: 0;
 }
@@ -62,11 +63,12 @@ body, html {
     position: absolute;
     /* ヘッダー高さ(60px)と固定テキスト分を考慮して縦位置を調整 */
     top: 45%;
-    left: 3%;                /* mv-container の padding と合わせる */
+    left: 0;                /* mv-container の padding と合わせる */
     transform: translateY(-10%);
     width: calc(50% - 80px);  /* 左半分から gap 分を引いた幅 */
     z-index: 15;              /* mv-container(z-index:10)より前面 */
     pointer-events: none;     /* スライダー自体はクリック不可 */
+    overflow: visible;
 }
 
 /* 各テキストスライドはフェードに任せる（独自のopacity指定なし） */
@@ -87,33 +89,33 @@ body, html {
 
 /* 固定テキスト（h1, p）はそのままtext-areaに残す */
 .text-area .text-content-static {
-    width: 40rem;
-    flex: 0 0 50%;
+    width: 100%;
+    flex: 0 1 45%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     align-items: center;
     overflow: visible;
     /* テキストSwiperが重なるので padding-bottom で h2 分のスペースを確保 */
-    padding-bottom: 180px;
+    padding-bottom: 120px;
 }
 
 .slider-area { 
     width: 60%;
+    flex: 0 1 50%;
     position: relative;
-    display: flex;
-    justify-content: flex-end;
+    /* display: flex;
+    justify-content: flex-end; */
 }
 
 /* アクセントボックスとスライダー本体 */
-.hero-wrapper .accent-box {
+.slider-contents-wrapper .accent-box {
     position: absolute;
     width: 106%; 
-    height: 90%;
-    background-color: #00bbe0; /* 指定カラー */
-    top: 80px; 
-    right: -40px;
+    height: 98%;
+    background-color: #00bbe0;
+    top: 3vw; 
+    right: -1.8vw;
     border-radius: 10px;
     z-index: 0;
 }
@@ -195,15 +197,14 @@ body, html {
 
 /* --- 5. テキストスタイル --- */
 .hero-wrapper h1 { 
-    font-size: 4.5rem;
+    font-size: 3.2vw;
     font-weight: bold;
     color: #222; 
-    margin-bottom: 40px; 
-    line-height: 1.2; 
+    margin-bottom: 4vw; 
+    line-height: 1.8; 
     letter-spacing: 0.05em; 
     margin-top: 0;
-    line-height: 8rem;
-    transform: translateX(10px);
+    transform: none;
 }
 
 .highlight { 
@@ -212,17 +213,19 @@ body, html {
 }
 
 .hero-wrapper p { 
-    font-size: 1.8rem;
+    font-size: 1.2vw;
     font-weight: 600;
     color: #555; 
-    line-height: 1rem; 
-    margin-bottom: 15px; 
+    line-height: 1; 
+    margin-bottom: 1.2vw; 
     margin-top: 0;
+    transform: translateX(-1vw);
 }
 
 .hero-wrapper h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     margin-bottom: 15px;
+    transform: translateX(1vw);
 }
 
 .btn-modern { 
@@ -231,10 +234,10 @@ body, html {
     transition: all 0.2s; 
     align-self: flex-start; /* ボタンを左寄せに */
 
-    font-size: 1.6rem;
+    font-size: 1.2vw;
     font-weight: 700;
-    width: 280px;
-    padding: 10px 20px;
+    width: 22vw;
+    padding: 10px 0;
     border-radius: 50px;
     color: #00bbe0;
     background-color: #fff;
@@ -255,12 +258,12 @@ body, html {
 
 /* --- スマホ対応 --- */
 @media (max-width: 900px) {
-    .mv-container { 
+    /* .mv-container { 
         flex-direction: column-reverse; 
         padding: 20px; 
         text-align: center; 
         gap: 40px; 
-        justify-content: flex-start; /* 上寄せに */
+        justify-content: flex-start;
         padding-top: 60px;
     }
     .text-area {
@@ -268,12 +271,12 @@ body, html {
         height: auto;
     }
     .text-content {
-        align-items: center; /* 中央揃え */
+        align-items: center;
     }
     .hero-wrapper h1 { font-size: 2rem; }
     .btn-modern { align-self: center; }
     .swiper-button-next, .swiper-button-prev { display: none; } 
-    .swiper-container-box { aspect-ratio: 16 / 11; }
+    .swiper-container-box { aspect-ratio: 16 / 11; } */
 }
 
 
@@ -290,7 +293,7 @@ section {
     padding-bottom: 160px;
     width: 80%;
     min-width: 900px;
-    max-width: 1800px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
@@ -357,7 +360,7 @@ section {
     font-family: "Poppins", sans-serif;
 }
 .section-title h1{
-    font-size: 5.2rem;
+    font-size: 4.8rem;
     font-weight: bold;
     margin: 20px 0 40px;
     color: #2d2d2d;
@@ -515,7 +518,7 @@ section {
     margin-top: 120px;
     width: 80%;
     min-width: 900px;
-    max-width: 1800px;
+    max-width: 1200px;
     margin-bottom: 200px;
 }
 .function-main-container.rev {
@@ -637,16 +640,18 @@ section {
 }
 .function-main-text-desc h3 {
     margin-top: 2rem;
-    font-size: 1.4rem;
+    font-size: clamp(9px, 0.8vw, 12px);
     font-weight: bold;
+    white-space: nowrap;
 }
 .rev .function-main-text-desc h3 {
     width: 50%;
 }
 .function-main-text-desc p {
-    font-size: 1.8rem;
     margin-top: 2rem;
     width: 100%;
+    font-size: clamp(11px, 1vw, 15px);
+    font-weight: 400;
 }
 .rev .function-main-text-desc p {
     max-width: 50%;
@@ -654,13 +659,15 @@ section {
 
 
 /* FEATURES */
-.section-inner.feature-main {
+.feature-main {
     display: flex;
     justify-content: space-between;
 
-    margin-top: 84px;
-    padding: 0 5%;
+    margin: 84px auto 0;
+    padding-top: 60px;
     padding-bottom: 170px;
+    width: 40%;
+    min-width: 800px;
 }
 .section-wrapper.features {
     background-color: #f0f3f5;
@@ -680,7 +687,7 @@ section {
     border-width: 5pt;
 }
 .feature-container-box h1 {
-    font-size: 2rem;
+    font-size: clamp(16px, 1.2vw, 17px);
     font-weight: bold;
     margin-top: 10%;
 }
@@ -707,13 +714,15 @@ section {
 }
 .feature-container-desc {
     margin-top: 20px;
-    font-size: 1.4rem;
+    font-size: clamp(10px, 1vw, 12px);
     font-weight: 800;
 }
 
 
 /* SECURITY */
-
+.section-wrapper.security .section-inner {
+    padding-top: 0;
+}
 .medal {
     width: 146px;
     
@@ -732,7 +741,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 120px;
 }
@@ -755,15 +764,15 @@ section {
     margin: 8% 0 3%;
 }
 .security-container-box p {
-    font-size: clamp(10px, 1vw, 20px);
+    font-size: clamp(10px, 1vw, 15px);
     font-weight: 600;
 }
 .arrow-triangle {
     width: 0;
     height: 0;
-    border-left: 25px solid #0099b8;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
+    border-left: 1.4em solid #0099b8;
+    border-top: 2em solid transparent;
+    border-bottom: 2em solid transparent;
 
     transform: translateY(-3px);
 }
@@ -772,26 +781,29 @@ section {
 /* WHITE PAPER */
 .section-wrapper.white-paper {
     background-color: #f0f3f5;
+    padding-bottom: 180px;
 }
 .wp-main {
     display: flex;
     padding-top: 120px;
-    padding-bottom: 160px;
-    width: 80%;
+    padding-bottom: 0;
+    width: 75%;
     min-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
 }
+
 .wp-main-container {
-    width: 437px;
-    height: 694px;
+    max-width: 60%;
+    aspect-ratio: 9/16;
     border-radius: 10px;
     background-color: #fff;
 }
 .wp-img {
-    width: 238px;
+    width: 60%;
     box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.451);
-    margin-top: 40px;
+    margin-top: 12%;
 }
 .wp-main-container {
     position: relative;
@@ -801,16 +813,18 @@ section {
 .wp-text {
     width: 80%;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 8%;
 }
 .wp-text h1 {
     text-align: left;
-    font-size: 1.8rem;
+    font-size: clamp(13px, 1.3vw, 23px);
     font-weight: bold;
 }
 .wp-text p {
-    margin-top: 20px;
+    margin-top: 5%;
     text-align: left;
+    font-size: clamp(11px, 1.1vw, 20px);
+    font-weight: 500;
 }
 .wp-date {
     position: absolute;
@@ -829,16 +843,85 @@ section {
 }
 .wp-link-area p {
     color: #00bbe0;
+    font-size: clamp(10px, 1vw, 16px);
+    font-weight: 600;
 }
 .wp-link-area .link-btn {
-    margin-top: 0;
+    margin: 1% 0 2%;
+    font-size: clamp(10px, 1vw, 16px);
+    font-weight: 600;
+}
+/* --- WHITE PAPER アコーディオン設定 --- */
+
+/* 初期状態：高さを0にして隠す */
+.wp-main.hide {
+    display: flex; /* Flexは維持 */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.6s ease-in-out; /* アニメーション速度 */
+    pointer-events: none; /* 閉じている時はクリック不可 */
 }
 
+/* 開いた状態 */
+.wp-main.hide.open {
+    max-height: 1600px; /* コンテンツが収まる十分な高さ */
+    opacity: 1;
+    padding-top: 60px;
+    padding-bottom: 0;
+    pointer-events: auto;
+}
+/* アコーディオン操作ボタンのスタイル */
+.link-btn.fold {
+    position: relative;
+    cursor: pointer;
+    display: flex;         /* 中身を中央に寄せるため */
+    align-items: center;
+    justify-content: center;
+    width: 230px;          /* 横幅を固定 */
+    margin: 40px auto 0;   /* 中央配置 */
+    padding-right: 50px;   /* 矢印のスペース分、右に余白 */
+    transition: all 0.3s ease;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* 矢印（逆三角形）の作成 */
+.link-btn.fold::after {
+    content: "";
+    position: absolute;
+    right: 25px;          /* 右端からの位置 */
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 7px solid currentColor; /* 文字色と同じ色の三角形 */
+    transition: transform 0.3s ease;    /* 回転のアニメーション */
+}
+
+/* 展開時（隠す）のスタイル */
+/* JSでボタン自体に .is-open クラスを付与するようにします */
+.link-btn.fold.is-open::after {
+    transform: rotate(180deg); /* 矢印を逆さにする */
+}
+
+
+
 /* p-internal */
+
 .section-wrapper.p-internal {
     background-color: #00bbe0;
     position: relative;
     z-index: 1;
+}
+.p-internal-main {
+    width: 60%;
+    min-width: 900px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px;
 }
 .p-internal .section-title h1 {
     color: #fff;
@@ -874,24 +957,27 @@ section {
     /* 本体より背面に配置 */
     z-index: -1;
 }
-.p-internal-container h1 {
-    font-size: 3.2rem;
+.p-internal .p-internal-container h1 {
+    font-size: clamp(30px, 1.8vw, 36px);
     font-weight: bold;
-    margin-top: 25px;
+    margin-top: 10%;
 }
 .p-internal p {
-    font-size: 1.6rem;
+    font-size: clamp(17px, 1.2vw, 25px);
     font-weight: 400;
-    margin-top: 15px;
+    margin-top: 2%;
 }
 .p-internal-btn {
     position: absolute;
-    bottom: 25px;  /* 下から25pxの位置に固定 */
+    bottom: 10%;  /* 下から25pxの位置に固定 */
     left: 50%;     /* 中央寄せの起点 */
     transform: translateX(-50%); /* 自身の幅の半分戻して完全中央へ */
     
     width: 100%;   /* ボタンの親として幅を確保 */
     text-align: center;
+}
+.p-internal-btn .link-btn {
+    font-size: clamp(13px, 1vw, 18px);
 }
 
 
@@ -912,6 +998,7 @@ section {
     
     font-size: 2.2rem;
     line-height: 5.4rem;
+    font-weight: bold;
 }
 .faq-main h1::before {
     content: "Q";
@@ -929,6 +1016,7 @@ section {
     display: flex;
     align-items: flex-start;
     font-size: 1.8rem;
+    font-weight: 600;
 }
 .faq-main p::before {
     content: "A";
@@ -965,4 +1053,43 @@ section {
 .support-container p {
     margin-top: 5rem;
     font-size: 1.4rem;
+}
+
+
+
+/* アイリアSDK採用企業一覧 */
+.section-wrapper.client-list {
+    margin-bottom: 80px;
+}
+.client-list .section-inner {
+    width: 100%;
+    max-width: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.client-list-title h1{
+    background-color: #00bbe0;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+    color: #fff;
+}
+.client-logo {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-logo-inner {
+    width: 90%;
+    max-width: 1200px;
+    aspect-ratio: 12/1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.client-logo img {
+    height: 70%;
 }

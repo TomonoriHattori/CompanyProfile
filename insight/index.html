@@ -12,6 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="img/favicon.png" sizes="180x180">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="/ai-computing/js/main.js"></script>
 </head>
 <body>
 
@@ -69,14 +75,16 @@
 
                 <!-- 右側の画像スライダー -->
                 <div class="slider-area">
-                    <div class="accent-box"></div>
-                    <div class="swiper myImageSwiper swiper-container-box">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="img/mv_01.png" alt="Slide 1"></div>
-                            <div class="swiper-slide"><img src="img/mv_02.png" alt="Slide 2"></div>
-                            <div class="swiper-slide"><img src="img/mv_03.png" alt="Slide 3"></div>
-                            <div class="swiper-slide"><img src="img/mv_04.png" alt="Slide 4"></div>
+                    <div class="slider-contents-wrapper">
+                        <div class="swiper myImageSwiper swiper-container-box">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/mv_01.png" alt="Slide 1"></div>
+                                <div class="swiper-slide"><img src="img/mv_02.png" alt="Slide 2"></div>
+                                <div class="swiper-slide"><img src="img/mv_03.png" alt="Slide 3"></div>
+                                <div class="swiper-slide"><img src="img/mv_04.png" alt="Slide 4"></div>
+                            </div>
                         </div>
+                        <div class="accent-box"></div>
                     </div>
                 </div>
 
@@ -256,7 +264,7 @@
                     <div class="function-main-text-desc">
                         <h3>クラウドで動作: DALL-E<br>端末上で動作: StableDifusion(*準備中)</h3>
                         <p>AIクリエイティブは、テキスト入力だけで誰でも簡単に画像を生成できるツールです。また、生成された画像を編集し、より望むものに近づけることができる他、著作権保護や改ざん防止の為にウォーターマークを埋め込んで画像を生成させることができます。また、日本語にも対応する、リアルタイム音声合成機能で簡単にAIに喋らせることが可能です。</p>
-                        <div class="function-main-text-point non-stack">
+                        <div class="function-main-text-point">
                             <h2>画像生成</h2>
                             <h2>音声合成</h2>
                         </div>
@@ -392,6 +400,33 @@
                     </div>
                 </div>
             </div>
+            <div class="wp-main hide">
+                <div class="wp-main-container">
+                    <div class="wp-date">2023.09.13</div>
+                    <img src="img/wp02.jpg" alt="" class="wp-img">
+                    <div class="wp-text">
+                        <h1>なかの人が徹底解説<br>ゼロから知る6つの『アイリア』とは?</h1>
+                        <p>AI開発におけるさまざまな領域で、幅広いソリューション＆サービスを展開している「アイリア」。その特性やラインナップについて、分かりやすくご紹介します。</p>
+                    </div>
+                    <div class="wp-link-area">
+                        <p>PDF資料</p>
+                        <a href="" class="link-btn">無料ダウンロード</a>
+                    </div>
+                </div>
+                <div class="wp-main-container">
+                    <div class="wp-date">2023.07.13</div>
+                    <img src="img/wp03.jpg" alt="" class="wp-img">
+                    <div class="wp-text">
+                        <h1>Whisperを使いこなす！ エッジで使える<br>安心・安全な音声認識AIの条件とは？</h1>
+                        <p>「AI音声認識って？」「Whisperってなにがすごい？」。音声認識AIの基礎知識と、エッジで使える安心・安全な音声認識AIの条件についてご紹介。</p>
+                    </div>
+                    <div class="wp-link-area">
+                        <p>PDF資料</p>
+                        <a href="" class="link-btn">無料ダウンロード</a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="link-btn fold">一部表示</a>
         </div>
     </section>
 
@@ -501,13 +536,79 @@
     </section>
     
     <section class="section-wrapper client-list">
-        <div class="client-list-title">
-            <h1>アイリアSDK採用企業一覧</h1>
-        </div>
-        <div class="client-logo">
-            <img src="" alt="">
+        <div class="section-inner">
+            <div class="client-list-title">
+                <h1>アイリアSDK採用企業一覧</h1>
+            </div>
+            <div class="client-logo">
+                <div class="client-logo-inner">
+                    <img src="img/dev_co_logo02.png" alt="">
+                    <img src="img/dev_co_logo03.png" alt="">
+                    <img src="img/dev_co_logo04.png" alt="">
+                    <img src="img/dev_co_logo05.png" alt="">
+                    <img src="img/dev_co_logo06.png" alt="">
+                </div>
+            </div>
         </div>
     </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="cw">
+            <div class="wrap">
+                <div class="left">
+                    <div class="col">
+                        <a href="/">アイリアAIシリーズ</a>
+                        <a href="/dx/">アイリア DX Insight</a>
+                        <a href="/sdk/">アイリア SDK</a>
+                        <a href="https://www.ailia.ai/voice">アイリア AI VOICE</a>
+                        <a href="https://www.ailia.ai/speech">アイリア AI SPEECH</a>
+                        <a href="/embedded/">アイリア Embedded AI</a>
+                    </div>
+                    <div class="col">
+                        <a href="/ai-computing/">AIコンピューティング</a>
+                        <a href="/ai-computing/ai-deeplearning-acceleration/">AI・深層学習向け高速化</a>
+                        <a href="/ai-computing/embedded-acceleration/">組込み高速化</a>
+                        <a href="/ai-computing/image-processing-acceleration/">画像処理高速化</a>
+                        <a href="/ai-computing/gpu-acceleration/">GPU向け高速化</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/">AIアプリケーション</a>
+                        <a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/">AIエージェント</a>
+                    </div>
+                    <div class="col">
+                        <a href="/company/">会社情報</a>
+                        <a href="https://www.axell.co.jp/browser/">利用規約</a>
+                        <a href="https://www.axell.co.jp/privacy/">プライバシーポリシー</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <p class="company">アイリア株式会社</p>
+                    <p class="address">〒150-0032　東京都渋谷区鶯谷町19-22　塗装会館5F</p>
+                    <p class="btnWrap">
+                        <a class="btn btnContact" href="https://ailia.ai/contact/" target="_blank">
+                            <span class="icon"><img src="img/common/icon_contact.svg" alt=""></span>
+                            <span class="label">お問い合わせ</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bannerArea">
+                <a href="https://blog.ailia.ai/" target="_blank">
+                    <img src="img/common/footer_banner_01.webp" alt="AIでしごとするなら「AI専門メディア」">
+                </a>
+                <a href="https://ailia.ai/sdk/" target="_blank">
+                    <img src="img/common/footer_banner_02.webp" alt="ソフトウェア開発きっとアイリアSDK">
+                </a>
+
+            </div>
+
+        </div>
+        <p class="copyright">Copyright &copy; アイリア株式会社 / 株式会社アクセル</p>
+    </footer>
 
 </body>
 </html>

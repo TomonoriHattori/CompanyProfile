@@ -57,4 +57,34 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         retina_detect: true,
     });
+
+    // --- ホワイトペーパーのアコーディオン機能 ---
+    const foldBtn = document.querySelector('.link-btn.fold');
+    const hideSection = document.querySelector('.wp-main.hide');
+
+    if (foldBtn && hideSection) {
+        // 初期状態のテキストを設定
+        foldBtn.textContent = "全て見る"; 
+
+        foldBtn.addEventListener('click', function (e) {
+            e.preventDefault(); // aタグのデフォルト動作（遷移）を防止
+
+            // クラス「open」の付け外し
+            hideSection.classList.toggle('open');
+            // ボタンの矢印向き・状態管理用のクラスを切り替え
+            foldBtn.classList.toggle('is-open');
+
+            // ボタンテキストの切り替え
+            if (hideSection.classList.contains('open')) {
+                foldBtn.textContent = "一部表示にする";
+            } else {
+                foldBtn.textContent = "全て見る";
+                
+                // 閉じた時に少し上にスクロールさせる（親切設計）
+                // 不要な場合は削除してください
+                const topPos = document.querySelector('.white-paper').offsetTop;
+                window.scrollTo({ top: topPos, behavior: 'smooth' });
+            }
+        });
+    }
 });
