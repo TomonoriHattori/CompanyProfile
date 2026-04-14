@@ -87,4 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // head02 の制御は style_header.js に統合済み
 });

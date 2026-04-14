@@ -17,7 +17,7 @@ template {
 }
 
 details,
-main,
+/* main, */
 summary {
   display: block;
 }
@@ -325,7 +325,7 @@ body {
   margin-right: auto;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 70;
 }
 .navArea a {
   color: #000;
@@ -1302,14 +1302,14 @@ a {
   color: #000;
 }
 
-main {
+/* main {
   margin-top: 60px;
-}
-@media (max-width: 1023px) {
+} */
+/* @media (max-width: 1023px) {
   main {
     margin-top: 48px;
   }
-}
+} */
 
 
 /* =========================================================
