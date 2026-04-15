@@ -1,0 +1,787 @@
+/* ==========================================================================
+   responsive.css
+   900px 以下タブレット対応 / 600px 以下スマホ対応
+   ========================================================================== */
+
+/* sp-br: 600px以下でのみ改行させる専用クラス */
+br.sp-br {
+    display: none;
+}
+
+/* =========================================================
+   ■ 900px 以下（タブレット）
+   ========================================================= */
+@media (max-width: 980px) {
+
+    /* --- ヒーロー / MV --- */
+    .hero-wrapper {
+        aspect-ratio: auto;
+        min-height: 520px;
+        padding: 160px 0 60px;
+    }
+    .hero-wrapper-inner {
+        width: 90%;
+    }
+    .mv-container {
+        flex-direction: column-reverse;
+        gap: 12px;
+        align-items: center;
+    }
+    .text-area {
+        width: 100%;
+        order: 2;
+    }
+    .text-area .text-content-static {
+        padding-bottom: 10px;
+        align-items: flex-start;
+    }
+    .slider-area {
+        width: 90%;
+        flex: none;
+        order: 1;
+    }
+    .myTextSwiper {
+        position: static;
+        transform: none;
+        width: 100%;
+        pointer-events: auto;
+        margin-top: 60px;
+        order: 3;
+    }
+    .text-content {
+        pointer-events: auto;
+    }
+    /* h1：全幅で改行させない */
+    .hero-wrapper h1 {
+        font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+        margin-bottom: 2rem;
+        white-space: nowrap;
+    }
+    /* 900px以下ではh1内・h2内の<br>を非表示にして1行にまとめる */
+    .text-content-static h1 br,
+    .myTextSwiper h2 br {
+        display: none;
+    }
+    .hero-wrapper p {
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        margin-bottom: 1rem;
+        transform: none;
+    }
+    .hero-wrapper h2 {
+        font-size: clamp(2rem, 3.8vw, 3.2rem);
+        white-space: nowrap;
+    }
+    /* a要素：全幅で改行させない */
+    .btn-modern {
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        width: auto;
+        white-space: nowrap;
+        padding: 10px 2.4em;
+        margin-bottom: 40px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+    .swiper-pagination {
+        bottom: 12px !important;
+    }
+
+    /* --- head02 サブナビ --- */
+    #head02 {
+        height: 52px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .headinner {
+        min-width: max-content;
+        gap: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .headinner .logo img {
+        height: 30px;
+    }
+    .head02nav {
+        gap: 8px;
+        white-space: nowrap;
+    }
+    .head02nav li a {
+        font-size: clamp(9px, 1.2vw, 12px);
+        white-space: nowrap;
+    }
+    .head02nav .btn {
+        font-size: clamp(9px, 1.2vw, 12px);
+        padding: 5px 10px;
+        white-space: nowrap;
+    }
+    .navbtn0201 .btn,
+    .navbtn0202 .btn {
+        padding: 5px 10px;
+        font-size: clamp(9px, 1.2vw, 12px);
+    }
+
+    /* --- セクション共通 --- */
+    .section-inner {
+        min-width: unset;
+        width: 90%;
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+    .section-title h2 {
+        font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+    }
+    .section-title h1 {
+        font-size: clamp(2rem, 4vw, 3.6rem);
+    }
+    .section-desc {
+        font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+    }
+
+    /* --- YouTube動画 --- */
+    .video-wrapper {
+        width: 90%;
+        margin-top: 80px;
+    }
+    .video-wrapper .accent-box {
+        right: -40px;
+        right: -20px;
+        width: 105%;
+    }
+
+    /* --- FUNCTION タグ --- */
+    .function-top {
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .function-top-img {
+        height: 45vw;
+    }
+    /* ul を透過させ function-tag 自体を4列グリッドにして全liを同一gap管理 */
+    .function-tag {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: 100%;
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .function-tag ul {
+        display: contents;
+    }
+    .function-tag li {
+        width: auto;
+        height: 42px;
+        font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+        margin: 0;
+    }
+
+    /* --- FUNCTION メイン（横並び→縦積み） --- */
+    .function-main-container {
+        flex-direction: column !important;
+        min-width: unset;
+        width: 90%;
+        margin-bottom: 80px;
+        margin-top: 60px;
+    }
+    .function-main-container .accent-box {
+        display: none; /* 縦積みではタイトル帯は非表示 */
+    }
+    .function-main-container > .accent-box {
+        order: 0;
+    }
+    .function-main-text-title {
+        position: static;
+        height: auto;
+        font-size: 2.8rem;
+        color: #2d2d2d;
+        background: none;
+        left: auto;
+        margin-left: 0;
+        display: block;
+        order: 1;
+        margin-bottom: 40px;
+    }
+    .function-main-img {
+        width: 80vw;
+        max-width: 100%;
+        align-self: center;
+        order: 2;
+    }
+    .function-main-img .accent-box {
+        display: block;
+        width: 106%;
+        height: 98%;
+        top: auto;
+        bottom: -4%;
+        left: -3%;
+    }
+    .function-main-text {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 40px;
+        order: 3;
+    }
+    .function-main-text-title h1 {
+        background-color: #00bbe0;
+        color: #fff;
+        padding: 6px 20px;
+        border-radius: 6px;
+        display: block;
+        width: 100%;
+        font-size: 2.8rem;
+    }
+    .function-main-text-desc {
+        position: static;
+        left: auto;
+        margin-left: 0;
+        margin-top: 24px;
+    }
+    .function-main-text-desc h3 {
+        font-size: 1.2rem;
+        white-space: normal;
+    }
+    .function-main-text-desc p {
+        font-size: 1.4rem;
+        max-width: 100% !important;
+    }
+    /* rev による左右差を全て打ち消す */
+    .function-main-container.rev {
+        flex-direction: column !important;
+    }
+    .function-main-container.rev .function-main-text-title {
+        order: 1;
+    }
+    .function-main-container.rev .function-main-img {
+        order: 2;
+    }
+    .function-main-container.rev .function-main-text {
+        order: 3;
+    }
+    .rev .function-main-img .accent-box {
+        left: auto;
+        right: -3%;
+    }
+    .function-main-container.rev .function-main-text-title {
+        left: auto;
+        margin-left: 0;
+    }
+    .function-main-container.rev .function-main-text-desc {
+        left: auto;
+        margin-left: 0;
+    }
+    .rev .function-main-text-desc h3,
+    .rev .function-main-text-desc p {
+        width: 100%;
+        max-width: 100%;
+    }
+    .function-main-text-point {
+        margin-top: 24px;
+    }
+    .function-main-text-point h2 {
+        font-size: 2rem;
+        flex: 1 0 50%;
+    }
+
+    /* --- FEATURES --- */
+    .feature-main {
+        min-width: unset;
+        width: 90%;
+        padding-top: 40px;
+        padding-bottom: 80px;
+        margin-top: 0px;
+    }
+    .feature-container-box h1 {
+        font-size: 1.4rem;
+    }
+
+    /* --- SECURITY --- */
+    .security-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 60px;
+    }
+    .security-container-box {
+        width: 80%;
+        max-width: 400px;
+        aspect-ratio: auto;
+        padding: 16px 20px;
+    }
+    .security-container-box h1 {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+    .security-container-box p {
+        font-size: 1.2rem;
+    }
+    /* 縦向きの下向き三角矢印に変更して再表示 */
+    .arrow-triangle {
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 2em solid transparent;
+        border-right: 2em solid transparent;
+        border-top: 1.4em solid #0099b8;
+        transform: none;
+        margin-top: 1rem;
+    }
+    .medal {
+        position: absolute;
+        transform: none;
+        margin: 0;
+        width: 100px;
+        transform: translateX(35vw);
+    }
+
+    /* --- WHITE PAPER --- */
+    .wp-link-area {
+        position: static;
+        margin-top: 3rem;
+    }
+    .wp-main {
+        flex-direction: column;
+        align-items: center;
+        min-width: unset;
+        width: 90%;
+        padding-top: 60px;
+        gap: 40px;
+    }
+    .wp-main-container {
+        width: 90%;
+        max-width: 480px;
+        aspect-ratio: auto;
+        padding-bottom: 5rem;
+    }
+    .wp-main.hide.open {
+        max-height: 3000px; /* 縦積み後の高さに余裕を持たせた値 */
+    }
+
+    /* --- p-internal --- */
+    .p-internal-main {
+        min-width: unset;
+        width: 90%;
+        flex-direction: column;
+        gap: 60px;
+        padding-top: 40px;
+    }
+    .p-internal-container {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        aspect-ratio: auto;
+        padding-bottom: 60px;
+    }
+    .p-internal .p-internal-container h1 {
+        margin-top: 2.4rem;
+    }
+    .p-internal p {
+        margin-bottom: 4rem;
+    }
+
+    /* --- FAQ --- */
+    .faq-main {
+        margin-top: 60px;
+    }
+    .faq-main h1 {
+        font-size: 1.8rem;
+        line-height: 2;
+        padding: 12px 6%;
+    }
+    .faq-main p {
+        font-size: 1.6rem;
+        padding: 8px 6%;
+        margin-bottom: 40px;
+    }
+
+    /* --- SUPPORT --- */
+    .support-main {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .support-container {
+        width: 45%;
+    }
+
+    /* --- クライアントリスト --- */
+    .client-logo-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        height: auto;
+        aspect-ratio: auto;
+    }
+    .client-logo {
+        height: auto;
+        padding: 20px 0;
+    }
+    .client-logo img {
+        height: 40px;
+    }
+}
+
+
+/* =========================================================
+   ■ 600px 以下（スマホ）
+   ========================================================= */
+@media (max-width: 600px) {
+
+    /* sp-br を有効化 */
+    br.sp-br {
+        display: inline;
+    }
+
+    /* --- ヒーロー / MV --- */
+    .hero-wrapper {
+        min-height: unset;
+        padding: 140px 0 40px;
+    }
+    .hero-wrapper-inner {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .slider-area {
+        width: 100%;
+    }
+    .slider-contents-wrapper .accent-box {
+        top: 2vw;
+        right: -3vw;
+        width: 108%;
+    }
+    .text-area .text-content-static {
+        padding-bottom: 0;
+    }
+    .hero-wrapper h1 {
+        font-size: 5.5vw;
+        white-space: nowrap;
+    }
+    .hero-wrapper p {
+        font-size: 3.2vw;
+    }
+    .text-content h2 {
+        font-size: 5.5vw;
+        white-space: nowrap;
+    }
+    .btn-modern {
+        font-size: 3.2vw;
+        padding: 8px 1.8em;
+        white-space: nowrap;
+        width: auto;
+        margin-bottom: 40px;
+    }
+    .swiper-pagination {
+        bottom: 8px !important;
+    }
+    .myTextSwiper {
+        margin-top: 40px;
+    }
+
+    /* --- head02 サブナビ --- */
+    #head02 {
+        height: 44px;
+    }
+    .head02nav {
+        gap: 8px;
+    }
+    .head02nav .nav0201 {
+        display: none; /* スマホではテキストリンクを非表示、ボタンのみ残す */
+    }
+    .navbtn0201 .btn,
+    .navbtn0202 .btn {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+    .headinner .logo img {
+        height: 28px;
+    }
+
+    /* --- セクション共通 --- */
+    .section-inner {
+        width: 100%;
+        padding: 50px 20px 70px;
+    }
+    /* bg-white：左右に bg-lightblue が見えるよう幅を絞る */
+    .section-inner.bg-white {
+        width: 88%;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .section-top {
+        padding-top: 40px;
+    }
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+    .section-title h1 {
+        font-size: 2.8rem;
+        margin: 12px 0 24px;
+    }
+    .section-desc {
+        font-size: 1rem;
+    }
+    /* link-btn-desc・link-btn・link-btn-desc-under：改行なしで収まるサイズに */
+    .link-btn-desc {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+        white-space: nowrap;
+    }
+    .link-btn {
+        font-size: clamp(1.1rem, 3.6vw, 1.6rem);
+        padding: 10px 1.8em;
+        white-space: nowrap;
+    }
+    .link-btn-desc-under {
+        font-size: clamp(0.9rem, 2.8vw, 1.4rem);
+        white-space: nowrap;
+    }
+
+    /* --- YouTube動画 --- */
+    .video-wrapper {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .video-wrapper .accent-box {
+        right: -20px;
+        top: -20px;
+        width: 110%;
+        height: 90%;
+    }
+
+    /* --- FUNCTION タグ --- */
+    .function-top {
+        padding-bottom: 20px;
+    }
+    .function-top-img {
+        height: 25rem;
+    }
+    .function-tag {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-bottom: 3rem;
+    }
+    .function-tag ul {
+        display: contents;
+    }
+    .function-tag li {
+        width: auto;
+        height: 38px;
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
+    }
+    .function-tag svg {
+        height: 18px;
+        margin-right: 4px;
+    }
+
+    /* --- FUNCTION メイン --- */
+    .function-main-container {
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+    }
+    .function-main-img .accent-box {
+        display: none; /* スマホでは装飾ボックス省略 */
+    }
+    .function-main-img {
+        width: 100%;
+        max-width: 100%;
+        align-self: auto;
+    }
+    .function-main-text-title h1 {
+        font-size: 2rem;
+    }
+    .function-main-text-desc h3 {
+        font-size: 1.1rem;
+    }
+    .function-main-text-desc p {
+        font-size: 1.3rem;
+    }
+    .function-main-text-point h2 {
+        font-size: 1.6rem;
+        flex: 1 0 100%;
+    }
+
+    /* --- FEATURES --- */
+    .feature-main {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px 60px;
+        gap: 30px;
+    }
+    .feature-container {
+        width: 80%;
+        max-width: 320px;
+    }
+    .feature-container-box {
+        aspect-ratio: 3/2;
+    }
+    .feature-container-box h1 {
+        font-size: 1.6rem;
+    }
+    .feature-container-desc {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    /* --- SECURITY --- */
+    .security-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 40px;
+    }
+    .security-container-box {
+        width: 90%;
+        max-width: 400px;
+        padding: 16px 16px 20px;
+    }
+    .security-container-box h1 {
+        font-size: 1.8rem;
+        margin: 0 0 8px;
+    }
+    .security-container-box p {
+        font-size: 1.3rem;
+    }
+    .medal {
+        width: 80px;
+        transform: translate(30vw, 3.5rem);
+    }
+
+    /* --- WHITE PAPER --- */
+    
+    .section-wrapper.white-paper {
+        padding-bottom: 80px;
+    }
+    .wp-main {
+        width: 100%;
+        padding: 40px 20px 0;
+    }
+    .wp-main-container {
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: 4rem;
+    }
+    .wp-img {
+        width: 80%;
+        margin-top: 8%;
+    }
+    .wp-text h1 {
+        font-size: 1.6rem;
+    }
+    .wp-text p {
+        font-size: 1.3rem;
+    }
+    .wp-date {
+        font-size: 1.2rem;
+    }
+    .link-btn.fold {
+        width: 200px;
+        font-size: 1.6rem;
+    }
+    
+
+    /* --- p-internal --- */
+    .p-internal-main {
+        width: 100%;
+        padding: 30px 20px 80px;
+    }
+    .p-internal-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 20px 70px;
+    }
+    .p-internal-container::before {
+        display: none;
+    }
+    .p-internal .p-internal-container h1 {
+        font-size: 2.4rem;
+        margin-top: 5%;
+    }
+    .p-internal p {
+        font-size: 1.5rem;
+    }
+    .p-internal-btn .link-btn {
+        font-size: 1.4rem;
+    }
+
+    /* --- FAQ --- */
+    .faq-main {
+        margin-top: 40px;
+    }
+    .faq-main h1 {
+        font-size: 1.5rem;
+        line-height: 1.8;
+        padding: 12px 5%;
+    }
+    .faq-main h1::before {
+        font-size: 2.2rem;
+        margin-right: 1rem;
+    }
+    .faq-main p {
+        font-size: 1.4rem;
+        padding: 8px 5%;
+        margin-bottom: 28px;
+    }
+    .faq-main p::before {
+        font-size: 2.2rem;
+        margin-right: 1rem;
+    }
+
+    /* --- SUPPORT --- */
+    .support-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin: 40px 0;
+    }
+    .support-container {
+        width: 90%;
+    }
+    .support-container img {
+        width: 160px;
+    }
+    .support-container .link-btn {
+        width: 260px;
+    }
+    .support-container p {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+
+    /* --- クライアントリスト --- */
+    .client-logo-inner {
+        gap: 16px;
+        padding: 0 20px;
+    }
+    .client-logo img {
+        height: 30px;
+    }
+    .client-list-title h1 {
+        font-size: 2rem;
+    }
+
+    /* --- フッター --- */
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* --- チャットボタン (common.css 補完) --- */
+    #chatbtn {
+        width: 80%;
+        height: 56px;
+        border-radius: 28px;
+        bottom: 20px;
+        right: 10%;
+    }
+    #chatbtn .chatbtnwindow {
+        font-size: 1.1rem;
+        padding: 8px 60px 8px 16px;
+    }
+    #chatwindow {
+        width: 95%;
+        right: 2.5%;
+    }
+}

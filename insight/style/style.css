@@ -19,6 +19,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 60px;
 }
 
 .hero-wrapper-inner {
@@ -285,34 +286,54 @@ body, html {
 
 #head02 {
     width: 100%;
-    position: fixed; /* 画面上部に固定 */
-    top: 60px;       /* メインヘッダーの高さ分（PC: 60px）下に配置 */
+    position: fixed;
+    top: 60px;
     left: 0;
-    z-index: 99;    /* メインヘッダー(z-index:100想定)のすぐ背面に */
+    z-index: 99;
     background-color: #ffffffc9;
     border-bottom: 1px solid #eee;
-    height: 70px;    /* head02自体の高さ */
-    display: flex;
-    align-items: center;
+    height: 70px;
+    /* display:flex を外す → .inner.cw と同じ構造にする */
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: none; /* ヘッダーと同じく即時切替 */
+    transition: none;
 }
 
-/* モバイル・タブレット時は navArea が 48px になるので top を合わせる */
 @media (max-width: 1023px) {
     #head02 {
         top: 48px;
     }
 }
 
-/* ヘッダー内側のレイアウトをメインヘッダーと合わせる */
+/* .headinner を .inner.cw と完全に同じ構造で定義 */
 .headinner {
-    width: 90%;      /* メインヘッダーの.inner cwに合わせる */
-    max-width: 1200px;
-    margin: 0 auto;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+    .headinner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .headinner {
+        padding-left: 50px;
+        padding-right: 50px;
+        max-width: 1820px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .headinner {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .headinner .logo img {
@@ -320,11 +341,12 @@ body, html {
     width: auto;
 }
 
-/* ナビゲーションリスト */
+/* ナビゲーションリスト — margin-left:auto で右端に寄せる */
 .head02nav {
     display: flex;
     list-style: none;
     margin: 0;
+    margin-left: auto;
     padding: 0;
     align-items: center;
     gap: 20px;
@@ -685,6 +707,7 @@ section {
     left: 45%;          /* 画像の width (45%) 分ずらして横位置を合わせる */
     margin-left: 80px;  /* 元の text にあった margin-left を継承 */
     transform: none;    /* translateY は不要になるので解除 */
+    z-index: 2;         /* accent-box(z-index:1)より前面に */
 }
 .function-main-container.rev .function-main-text-title {
     left: 0;
@@ -1077,6 +1100,9 @@ section {
 
 
 /* FAQ */
+.section-wrapper.faq .section-inner {
+    padding-top: 0; 
+}
 .section-wrapper.faq {
     background-color: #f9f9f9;
 }
