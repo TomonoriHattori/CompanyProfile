@@ -114,19 +114,18 @@ function onScroll() {
 
 /* ============================================================
    syncHead02 — #head02 を .navArea の hide 状態に追従させる
+   ============================================================
+   ヘッダーは transition なしで即時切替のため、head02 も同様に top を即時変更
    ============================================================ */
 function syncHead02() {
   var head02 = document.getElementById('head02');
   if (!head02) return;
 
   var navAreaEl = document.querySelector('.navArea');
-  /* navArea の実際の高さを取得（PC: 60px / SP: 48px 自動対応） */
   var navH = navAreaEl ? navAreaEl.offsetHeight : 60;
   var isHidden = navAreaEl ? navAreaEl.classList.contains('hide') : false;
 
-  head02.style.transform = isHidden
-    ? 'translateY(-' + navH + 'px)'
-    : 'translateY(0)';
+  head02.style.top = isHidden ? '0px' : navH + 'px';
 }
 
 /* ============================================================
