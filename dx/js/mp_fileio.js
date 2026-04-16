@@ -2,7 +2,7 @@ var MpFS = {
     prepareResource: (function (dir) {
         FS.createFolder(
             '/',
-            '/temp',
+            'temp',
             true,
             true
         );
@@ -15,7 +15,7 @@ var MpFS = {
         FS.createPreloadedFile(
             '/items',
             "ainyan.bin",
-            MpConfig["documentPath"] + '/items/ainyan.bin',
+            MpConfig["documentPath"] + 'items/ainyan.bin',
             true,
             false
         );

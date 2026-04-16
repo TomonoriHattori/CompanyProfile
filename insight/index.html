@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>アイリア DX Insight</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/dlmodal.css">
     <link rel="stylesheet" href="style/common.css">
     <link rel="stylesheet" href="style/style_header.css">
     <link rel="stylesheet" href="style/style.css">
@@ -35,6 +36,16 @@
 	<script type="text/javascript" src="js/jquery-modal-video.min.js"></script>
     <script type="text/javascript" src="js/top_blog.js"></script>
     <script type="text/javascript" src="js/ailia_dx_chat.js"></script>
+    <script type="text/javascript" src="js/dlmodal.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5Q579RMM');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
 
@@ -77,14 +88,14 @@
 
     <nav id="head02">
         <div class="headinner">
-            <div class="logo"><img src="img/mv_logo.png" alt=""></div>
+            <div class="logo"><a href="#" class="logo-top-link"><img src="img/mv_logo.png" alt="ページトップへ戻る"></a></div>
             <ul class="head02nav">
-                <li class="nav0201"><a href="#hint">機能紹介</a></li>
-                <li class="nav0201"><a href="#hint">特徴</a></li>
-                <li class="nav0201"><a href="#hint">AI活用のお役立ちヒント</a></li>
-                <li class="nav0201"><a href="#hint">FAQ</a></li>
-                <li class="navbtn0201"><span class="btntext">評価用アプリダウンロード</span><a class="btn dllink">アプリを使ってみる</a></li>
-                <li class="navbtn0202"><span class="btntext">資料ダウンロード</span><a href="#" target="_blank" class="btn hs-cta-trigger-button hs-cta-trigger-button-186855482027">資料ダウンロード</a></li>
+                <li class="nav0201"><a href="#sec-function">機能紹介</a></li>
+                <li class="nav0201"><a href="#sec-features">特徴</a></li>
+                <li class="nav0201"><a href="#sec-whitepaper">AI活用のお役立ちヒント</a></li>
+                <li class="nav0201"><a href="#sec-faq">FAQ</a></li>
+                <li class="navbtn0201"><a class="btn dllink">アプリを使ってみる</a></li>
+                <li class="navbtn0202"><a href="#" target="_blank" class="btn hs-cta-trigger-button hs-cta-trigger-button-186855482027">資料ダウンロード</a></li>
             </ul>
         </div>
     </nav>
@@ -242,9 +253,9 @@
     </section>
 
 
-    <section class="section-wrapper function">
+    <section id="sec-function" class="section-wrapper function">
         <div class="function-top-img">
-            <img src="img/function_top.png" alt="img/function_top.png">
+            <img src="img/function_top.jpg" alt="function_top.jpg">
         </div>
         <div class="function-top">
             <div class="section-title">
@@ -384,7 +395,7 @@
         </div>
     </section>
 
-    <section class="section-wrapper features">
+    <section id="sec-features" class="section-wrapper features">
         <div class="section-top">
             <div class="section-title">
                 <h2>FEATURES</h2>
@@ -466,7 +477,7 @@
         </div>
     </section>
 
-    <section class="section-wrapper white-paper">
+    <section id="sec-whitepaper" class="section-wrapper white-paper">
         <div class="section-top">
             <div class="section-title">
                 <h2>WHITE PAPER</h2>
@@ -485,7 +496,7 @@
                     </div>
                     <div class="wp-link-area">
                         <p>PDF資料</p>
-                        <a href="" class="link-btn">無料ダウンロード</a>
+                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-157750252952" href="#">無料ダウンロード</a>
                     </div>
                 </div>
                 <div class="wp-main-container">
@@ -497,7 +508,7 @@
                     </div>
                     <div class="wp-link-area">
                         <p>PDF資料</p>
-                        <a href="" class="link-btn">無料ダウンロード</a>
+                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-157651965349" href="#">無料ダウンロード</a>
                     </div>
                 </div>
             </div>
@@ -511,7 +522,7 @@
                     </div>
                     <div class="wp-link-area">
                         <p>PDF資料</p>
-                        <a href="" class="link-btn">無料ダウンロード</a>
+                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-136070509938" href="#">無料ダウンロード</a>
                     </div>
                 </div>
                 <div class="wp-main-container">
@@ -523,7 +534,7 @@
                     </div>
                     <div class="wp-link-area">
                         <p>PDF資料</p>
-                        <a href="" class="link-btn">無料ダウンロード</a>
+                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-131341753962" href="#">無料ダウンロード</a>
                     </div>
                 </div>
             </div>
@@ -542,14 +553,14 @@
                 <h1>アイリアSDK</h1>
                 <p>軽量・高性能なAI推論SDK</p>
                 <div class="p-internal-btn">
-                    <a href="" class="link-btn">アイリアSDKを使ってみる</a>
+                    <a href="/sdk/" class="link-btn">アイリアSDKを使ってみる</a>
                 </div>
             </div>
             <div class="p-internal-container">
                 <h1>AIコンピューティング</h1>
                 <p>AIソフトウェア高速化サービス</p>
                 <div class="p-internal-btn">
-                    <a href="" class="link-btn">AIコンピューティングを見る</a>
+                    <a href="/ai-computing/" class="link-btn">AIコンピューティングを見る</a>
                 </div>
             </div>
         </div>
@@ -563,7 +574,7 @@
         </div>
     </section>
 
-    <section class="section-wrapper faq">
+    <section id="sec-faq" class="section-wrapper faq">
         <div class="section-inner">
             <div class="section-top">
                 <div class="section-title">
@@ -712,5 +723,88 @@
         <p class="copyright">Copyright &copy; アイリア株式会社 / 株式会社アクセル</p>
     </footer>
 
+
+    <!-- MODAL -->
+	<div id="sitemap">
+		<div class="sitemapinner">
+			<div class="btn_close"><a class="btn modalclose">CLOSE</a></div>
+			<div class="sitemapbody">
+				<ul class="sitemaplist">
+					<li class="sitemapbtn sitemap01">
+						<div class="sitemapbox"><span class="btntext">INTRODUCTION</span><a class="btn modalclose" href="#introduction">アイリア DXとは</a></div>
+					</li>
+					<li class="sitemapbtn sitemap02">
+						<div class="sitemapbox"><span class="btntext">CASE STUDY</span><a class="btn modalclose" href="#casestudy">ご活用例</a></div>
+					</li>
+					<li class="sitemapbtn sitemap03">
+						<div class="sitemapbox"><span class="btntext">FOLLOW UP</span><a class="btn modalclose" href="#followup">フォローアップ</a></div>
+					</li>
+					<li class="sitemapbtn sitemap04">
+						<div class="sitemapbox"><span class="btntext">FEATURE</span><a class="btn modalclose" href="#feature">特徴</a></div>
+					</li>
+					<li class="sitemapbtn sitemap05">
+						<div class="sitemapbox"><span class="btntext">WHITE PAPER</span><a class="btn modalclose" href="#hint">AI活用のお役立ちヒント</a></div>
+					</li>
+					<li class="sitemapbtn sitemap06">
+						<div class="sitemapbox"><span class="btntext">FAQ</span><a class="btn modalclose" href="#faq">よくあるご質問</a></div>
+					</li>
+					<li class="sitemapbtn sitemap07">
+						<div class="sitemapbox"><span class="btntext">SUPPORT</span><a class="btn modalclose" href="#support">サポート</a></div>
+					</li>
+					<li class="sitemapbtn sitemap08">
+						<div class="sitemapbox"><span class="btntext">DEVELOP &amp; IMPLEMENT</span><a class="btn modalclose" href="#development">開発・実装支援</a></div>
+					</li>
+				</ul>
+			</div>
+			<div class="sitemapfoot">
+				<div class="sitemapbtn cpbtn">
+					<div class="btnset">
+						<div class="btnbox btn01"><span class="btntext">30日間無料デモアプリダウンロード</span><a class="btn dllink modalclose">DX Insightを使ってみる</a></div>
+						<div class="btnbox btn02"><span class="btntext">資料ダウンロード</span><a class="btn hs-cta-trigger-button hs-cta-trigger-button-186855482027" href="#" target="_blank">資料ダウンロード</a></div>
+					</div>
+				</div>
+				<div class="sitemapfootnav">
+					<div class="footnavset">
+						<ul class="navlist list01">
+							<li class="nav0101"><a href="https://axinc.jp/" target="_blank"><img src="img/sitemap_ax.png" width="94" height="45" alt="ax"/></a></li>
+							<li class="nav0102"><a href="https://www.axell.co.jp/" target="_blank"><img src="img/sitemap_axell.png" width="124" height="45" alt="Axell"/></a></li>
+						</ul>
+						<ul class="navlist list02">
+							<li class="nav0201"><a href="https://www.axell.co.jp/browser/">Terms of service</a></li>
+							<li class="nav0201"><a href="https://www.axell.co.jp/privacy/">Privacy policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="download">
+		<div class="downloadbox">
+			<div class="downloadinner">
+				<div class="btn_close"><a class="btn modalclose2">CLOSE</a></div>
+				<div class="downloadbody">
+					<h2>アイリアDX Insightを無料ダウンロード</h2>
+					<div class="dlbtn01" style="display:none;">
+						<div class="btnset">
+							<div class="btnbox btn01"><span class="btntext">Windows版</span><a class="btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT"">ダウンロード</a></div>
+							<div class="btnbox btn02"><span class="btntext">Mac版</span><a class="btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT"">ダウンロード</a></div>
+						</div>
+					</div>
+					<div class="dlbtn02" style="display:none;">
+						<div class="btnset">
+							<div class="btnbox btn01"><span class="btntext">Android版</span><a class="btn" href="#"><img src="img/btn_appstore.png" width="328" height="121" alt="App Store"/></a></div>
+							<div class="btnbox btn02"><span class="btntext">iOS版</span><a class="btn" href="#"><img src="img/btn_googleplay.png" width="406" height="121" alt="Google Play"/></a></div>
+						</div>
+					</div>
+				</div>
+				<div class="downloadfoot">
+					<div class="label">アカウント不要・クレジットカード不要・商用利用無料</div>
+					<a class="link-btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT">アプリをダウンロード</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /MODAL -->
+    
 </body>
 </html>

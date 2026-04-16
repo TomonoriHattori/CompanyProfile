@@ -30,9 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // --- 同期: 画像が動いたらテキストも動かす ---
-    // loop時は slideTo() ではなく slideToLoop() で realIndex を使う
     imageSwiper.on("slideChange", function () {
-        textSwiper.slideToLoop(imageSwiper.realIndex, 0); // 第2引数0でテキストは瞬時に切替え、フェードはSwiperに任せる
+        textSwiper.slideToLoop(imageSwiper.realIndex, 0);
     });
 
     // --- tsParticles ---
@@ -62,26 +61,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const foldBtn = document.querySelector('.link-btn.fold');
     const hideSection = document.querySelector('.wp-main.hide');
 
+    // ページの言語を判定 (html要素のlang属性)
+    const isEnglish = document.documentElement.lang === 'en';
+
     if (foldBtn && hideSection) {
-        // 初期状態のテキストを設定
-        foldBtn.textContent = "全て見る"; 
+        // 初期状態のテキストを言語に応じて設定
+        foldBtn.textContent = isEnglish ? "Show All" : "全て見る";
 
         foldBtn.addEventListener('click', function (e) {
-            e.preventDefault(); // aタグのデフォルト動作（遷移）を防止
+            e.preventDefault();
 
-            // クラス「open」の付け外し
             hideSection.classList.toggle('open');
-            // ボタンの矢印向き・状態管理用のクラスを切り替え
             foldBtn.classList.toggle('is-open');
 
-            // ボタンテキストの切り替え
             if (hideSection.classList.contains('open')) {
-                foldBtn.textContent = "一部表示にする";
+                foldBtn.textContent = isEnglish ? "Show Less" : "一部表示にする";
             } else {
-                foldBtn.textContent = "全て見る";
-                
-                // 閉じた時に少し上にスクロールさせる（親切設計）
-                // 不要な場合は削除してください
+                foldBtn.textContent = isEnglish ? "Show All" : "全て見る";
+
                 const topPos = document.querySelector('.white-paper').offsetTop;
                 window.scrollTo({ top: topPos, behavior: 'smooth' });
             }

@@ -4,7 +4,7 @@ $(function(){
 		chatclose = $('.chatclose'),
 		chatbtnwindow = $('.chatbtnwindow'),
 		container = $('#chatwindow'),
-		icon = $('#chatbtn');
+		icon = $('#chatbtn')
 		chara = $('.chara');
 
 	openbtn.on('click',function(){	

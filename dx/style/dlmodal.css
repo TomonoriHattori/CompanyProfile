@@ -1,0 +1,281 @@
+/* ============================================
+   Download Modal CSS
+   insight.css より抽出
+   ============================================ */
+#download,
+#sitemap {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+}
+/* PC */
+@media screen and (min-width:768px) {
+	#download {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: 99;
+		background-color: transparent;
+		display: none;
+	}
+	#download .downloadbox {
+		position: absolute;
+		top: 5vh;
+		left: 50%;
+		width: 700px;
+		margin: 0 0 0 -350px;
+		padding: 70px 0 0 0;
+		background: #fff;
+		border: 3px solid #00BBE0;
+		box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+	}
+	#download .btn_close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 60px;
+		height: 60px;
+	}
+	#download .btn_close a {
+		width: 60px;
+		height: 0;
+		font-size: 9px;
+		display: block;
+		text-align: center;
+		padding: 60px 0 0 0;
+		overflow: hidden;
+		cursor: pointer;
+		background: url("../img/navbtn_close_b.png") no-repeat 0 0;
+		background-size: contain;
+		z-index: 10;
+	}
+	#download h2 {
+		font-weight: bold;
+		text-align: center;
+		font-size: 24px;
+		color: #00BBE0;
+		margin: 0 0 60px 0;
+		padding: 0;
+	}
+	#download .dlbtn01 {
+		width: 500px;
+		margin: 0 auto 40px auto;
+		padding: 0 0 40px 0;
+		border-bottom: 1px solid #00BBE0;
+	}
+	#download .btnset {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+	#download .dlbtn01 .btnbox {
+		width: 210px;
+		text-align: center;
+	}
+	#download .btnbox .btntext {
+		margin: 0 0 15px 0;
+		font-size: 12px;
+		font-weight: bold;
+	}
+	#download .dlbtn01 .btnbox a {
+		display: block;
+		background: #00BBE0;
+		color: #fff;
+		letter-spacing: 0.1em;
+		font-size: 16px;
+		padding: 15px 40px 15px 30px;
+		text-decoration: none;
+		position: relative;
+	}
+	#download .dlbtn01 .btnbox a::after {
+		content: '';
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 6px;
+		right: 8%;
+		background: url("../img/icon_download.png") no-repeat center center;
+		background-size: contain;
+	}
+	#download .dlbtn02 {
+		width: 480px;
+		margin: 0 auto 20px auto;
+	}
+	#download .dlbtn02 .btn01 {
+		width: 164px;
+		text-align: center;
+	}
+	#download .dlbtn02 .btn02 {
+		width: 208px;
+		text-align: center;
+	}
+	#download .dlbtn02 .note {
+		font-size: 12px;
+	}
+	#download .downloadfoot {
+		background: #F0F3F5;
+		padding: 35px 40px 40px 40px;
+		text-align: center;
+		border-radius: 0 0 10px 10px;
+	}
+	#download .downloadfoot .label {
+		font-size: 16px;
+		font-weight: bold;
+		color: #00BBE0;
+		margin: 0 0 10px 0;
+	}
+	#download .downloadfoot .btnbox {
+		width: 280px;
+		margin: 0 auto;
+	}
+	#download .downloadfoot .btnbox a {
+		display: block;
+		background: #00BBE0;
+		letter-spacing: 0.1em;
+		color: #fff;
+		font-size: 16px;
+		padding: 10px 40px;
+		border-radius: 25px;
+	}
+}
+
+/* SP */
+@media screen and (max-width:767px) {
+	#download {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: 99;
+		background-color: transparent;
+		display: none;
+	}
+	#download .downloadbox {
+		position: absolute;
+		top: 15%;
+		left: 5%;
+		width: 90%;
+		margin: 0;
+		padding: 60px 0 0 0;
+		background: #fff;
+		border: 3px solid #00BBE0;
+		box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+	}
+	#download .btn_close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 50px;
+		height: 50px;
+	}
+	#download .btn_close a {
+		width: 50px;
+		height: 0;
+		font-size: 9px;
+		display: block;
+		text-align: center;
+		padding: 50px 0 0 0;
+		overflow: hidden;
+		cursor: pointer;
+		background: url("../img/navbtn_close_b.png") no-repeat 0 0;
+		background-size: contain;
+		z-index: 10;
+	}
+	#download h2 {
+		font-weight: bold;
+		text-align: center;
+		font-size: 18px;
+		color: #00BBE0;
+		margin: 0 0 8% 0;
+		padding: 0;
+	}
+	#download .dlbtn01 {
+		width: 90%;
+		margin: 0 auto 8% auto;
+		padding: 0 0 8% 0;
+		border-bottom: 1px solid #00BBE0;
+	}
+	#download .btnset {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+	#download .dlbtn01 .btnbox {
+		width: 46%;
+		text-align: center;
+	}
+	#download .btnbox .btntext {
+		margin: 0 0 15px 0;
+		font-size: 12px;
+		font-weight: bold;
+	}
+	#download .dlbtn01 .btnbox a {
+		display: block;
+		background: #00BBE0;
+		color: #fff;
+		font-size: 12px;
+		padding: 10px 30px 10px 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#download .dlbtn01 .btnbox a::after {
+		content: '';
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 2px;
+		right: 5%;
+		background: url("../img/icon_download.png") no-repeat center center;
+		background-size: contain;
+	}
+	#download .dlbtn02 {
+		width: 90%;
+		margin: 0 auto 8% auto;
+	}
+	#download .dlbtn02 .btn01 {
+		width: 40%;
+		text-align: center;
+	}
+	#download .dlbtn02 .btn02 {
+		width: 50%;
+		text-align: center;
+	}
+	#download .dlbtn02 .note {
+		font-size: 12px;
+	}
+	#download .downloadfoot {
+		background: #F0F3F5;
+		padding: 8% 5% 8% 5%;
+		text-align: center;
+		border-radius: 0 0 10px 10px;
+	}
+	#download .downloadfoot .label {
+		font-size: 16px;
+		font-weight: bold;
+		color: #00BBE0;
+		margin: 0 0 5% 0;
+	}
+	#download .downloadfoot .btnbox {
+		width: 90%;
+		margin: 0 auto;
+	}
+	#download .downloadfoot .btnbox a {
+		display: block;
+		background: #00BBE0;
+		color: #fff;
+		font-size: 14px;
+		padding: 10px 20px;
+		border-radius: 25px;
+	}
+}
