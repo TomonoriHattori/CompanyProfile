@@ -34,6 +34,17 @@
     <script type="text/javascript" src="js/ailia_dx_chat.js"></script>
     <script type="text/javascript" src="js/dlmodal.js"></script>
 
+    <meta name="description"
+		content="ailia DX Insight is a DX app that combines multiple AIs for office work into one.With patent-pending local LLM support, it delivers top-level security.DX in various business operations is supported from multiple angles" />
+	<meta charset="utf-8" />
+	<meta property="og:title" content="ailia DX Insight｜ailia">
+	<meta property="og:description"
+		content="ailia DX Insight is a DX app that combines multiple AIs for office work into one.With patent-pending local LLM support, it delivers top-level security.DX in various business operations is supported from multiple angles">
+	<meta property="og:image"
+		content="https://ailia.ai/dx/img/dx-insight-ogp_en.png">
+	<meta property="og:url" content="https://ailia.ai/en/dx/">
+	<meta property="og:site_name" content="ailia">
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -62,21 +73,21 @@
                             <a href="/ai-computing/" class="ai-computing">AI Computing</a>
                         </li>
                         <li>
-                            <a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/" target="_blank" class="ai-application">AI Application</a>
+                            <a href="/en/ai-application/" class="ai-application">AI Application</a>
                         </li>
                         <li>
-                            <a href="/ailia.ai/company/" class="company">Company Profile</a>
+                            <a href="/en/company/" class="company">Company Profile</a>
                         </li>
                         <li class="lang">
                             <a href="/dx/" lang="jp">JP</a>
                             <a href="/en/dx/" class="current" lang="en">EN</a>
                         </li>
                         <li class="contact">
-                            <a class="" href="https://ailia.ai/contact/" target="_blank">Contact</a>
+                            <a class="" href="https://ailia.ai/en/contact/" target="_blank">Contact</a>
                         </li>
                     </ul>
                 </div>
-                <a href="https://ailia.ai/contact/" target="_blank" class="spContact">Contact</a>
+                <a href="https://ailia.ai/en/contact/" target="_blank" class="spContact">Contact</a>
                 <a class="spNavBtn" href="javascript:void(0);"><span></span><span></span><span></span></a>
             </div>
         </nav>
@@ -134,19 +145,19 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide text-content">
                         <h2>Instant answers<br>from your documents</h2>
-                        <a href="link2.html" class="btn-modern">Learn more about RAG</a>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/en/RAG.html" target="_blank" class="btn-modern">Learn more about RAG</a>
                     </div>
                     <div class="swiper-slide text-content">
                         <h2>Generate images<br>from prompts</h2>
-                        <a href="link2.html" class="btn-modern">Learn more about Image Generation</a>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/en/GenerateImage.html" target="_blank" class="btn-modern">Learn more about Image Generation</a>
                     </div>
                     <div class="swiper-slide text-content">
                         <h2>Auto-generate meeting notes<br>with voice interaction</h2>
-                        <a href="link2.html" class="btn-modern">Learn more about Speech Recognition</a>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/en/Recording.html" target="_blank" class="btn-modern">Learn more about Speech Recognition</a>
                     </div>
                     <div class="swiper-slide text-content">
                         <h2>Top-level<br>security</h2>
-                        <a href="link2.html" class="btn-modern">Learn more about Local LLM</a>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/en/Security.html" target="_blank" class="btn-modern">Learn more about Local LLM</a>
                     </div>
                 </div>
             </div>
@@ -167,10 +178,10 @@
     <!-- AI Chatbot -->
     <div id="chatbtn">
         <div class="chatbtnbox chatopen">
-            <div class="chatbtnwindow">I'll answer any question about ai-nyan ailia.</div>
+            <div class="chatbtnwindow">I'll answer anything about ainyan ailia.</div>
             <div class="chara">
                 <canvas id="avatar" width="256" height="256"></canvas>
-                <img src="img/chara_sp.png" width="108" height="109" alt="Ai-nyan" class="sp" />
+                <img src="img/chara_sp.png" width="108" height="109" alt="あいにゃん" class="sp">
             </div>
         </div>
         <div class="btnclose chatclose">Close</div>
@@ -178,11 +189,11 @@
     </div>
     <div id="chatwindow">
         <div class="aichatinner">
-            <!-- Chat area -->
+            <!-- チャット部分 -->
             <div class="logarea">
                 <div class="loghead">
-                    <div class="logtitle">Ai-nyan Chat BOT (automatic response)</div>
-                    <div id="chatclose" class="winclose">Close.</div>
+                    <div class="logtitle">Ainyan Chat BOT (automatic response)</div>
+                    <div id="chatclose" class="winclose">Close</div>
                 </div>
                 <div class="logbody" id="logbody">
                     <div class="logtext">
@@ -192,34 +203,14 @@
             </div>
             <div class="chatarea">
                 <div class="chatbody">
-                    <form name="chat_form"
-                        action="javascript:chat_api('https://ailia-llm-insight.uw.r.appspot.com/');">
+                    <form name="chat_form" action="javascript:chat_api('https://ailia-llm-insight.uw.r.appspot.com/');">
                         <div class="chatformbox">
-                            <input type="text" name="prompt" id="prompt" size="40"
-                                placeholder="Please enter your question here (e.g., what is ailia)">
+                            <input type="text" name="prompt" id="prompt" size="40" placeholder="Please enter your question here (e.g., what is ailia)">
                         </div>
                         <div class="chatbutton">
-                            <button type="button"
-                                onclick="chat_api('https://ailia-llm-insight.uw.r.appspot.com/')">Send</button>
+                            <button type="button" onclick="chat_api('https://ailia-llm-insight.uw.r.appspot.com/')">Send</button>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Character profile -->
-    <div id="profmodal">
-        <div class="profbg"></div>
-        <div class="profwindow">
-            <div class="profinner">
-                <div class="profclose">Close</div>
-                <div class="pic"><img src="img/chara_detail_pic.png" width="447" height="574" alt="" /></div>
-                <div class="textarea">
-                    <div class="label">Official ailia brand character</div>
-                    <div class="name">Ai-nyan</div>
-                    <div class="text">
-                        A mysterious AI-savvy creature from the future. Speaks in a quirky way but claims not to be a cat. Provides information about ailia brand products and services.
-                        <br>[Favorite food] Cat food</div>
                 </div>
             </div>
         </div>
@@ -229,7 +220,7 @@
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white youtube-link">
             <div class="link-btn-desc"><p>Free download.</p></div>
-            <a href="" class="link-btn">Try using ailia DX Insight.</a>
+            <a class="btn dllink link-btn">Try using ailia DX Insight.</a>
             <div class="link-btn-desc-under"><p>No account required / No credit card required / Free for commercial use</p></div>
             <div class="video-wrapper">
                 <div class="iframe-container">
@@ -378,7 +369,7 @@
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white">
             <div class="link-btn-desc"><p>Free download.</p></div>
-            <a href="" class="link-btn">Try using ailia DX Insight.</a>
+            <a class="btn dllink link-btn">Try using ailia DX Insight.</a>
             <div class="link-btn-desc-under"><p>No account required / No credit card required / Free for commercial use</p></div>
         </div>
     </section>
@@ -433,8 +424,8 @@
             <div class="section-top">
                 <div class="section-title">
                     <h2>SECURITY</h2>
-                    <h1>Building a secure environment<br class="sp-br">with local LLM</h1>
-                    <img src="img/medal.png" alt="Patent pending" class="medal">
+                    <h1>Building a secure environment <br>with local LLM</h1>
+                    <img src="img/medal_en.png" alt="Patent pending" class="medal">
                 </div>
                 <div class="section-desc">
                     <p>Local LLM can be used without an API key.<br>Even confidential information that cannot be shared outside the company can be utilized with AI without requiring an internet connection.</p>
@@ -541,7 +532,7 @@
                 <h1>ailia SDK</h1>
                 <p>Lightweight, high-performance AI inference SDK</p>
                 <div class="p-internal-btn">
-                    <a href="/sdk/" class="link-btn">Try using ailia SDK.</a>
+                    <a href="/en/sdk/" class="link-btn">Try using ailia SDK.</a>
                 </div>
             </div>
             <div class="p-internal-container">
@@ -557,7 +548,7 @@
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white">
             <div class="link-btn-desc"><p>Free download.</p></div>
-            <a href="" class="link-btn">Try using ailia DX Insight.</a>
+            <a class="btn dllink link-btn">Try using ailia DX Insight.</a>
             <div class="link-btn-desc-under"><p>No account required / No credit card required / Free for commercial use</p></div>
         </div>
     </section>
@@ -611,17 +602,17 @@
         <div class="support-main">
             <div class="support-container">
                 <img src="img/support_pic01.png" alt="" width="240px">
-                <a href="" class="link-btn">Document</a>
+                <a href="https://ailia-ai.github.io/ailia-dx-insight/en/" target="_blank" class="link-btn">Document</a>
                 <p>I will introduce the details of the introduction method and how to use it.</p>
             </div>
             <div class="support-container">
                 <img src="img/support_pic02.png" alt="" width="240px">
-                <a href="" class="link-btn">Support Slack</a>
+                <a href="https://join.slack.com/t/axinc-ailia/shared_invite/zt-f5hboxhj-kZ~APYIHTHeSopL5NWqGtA" target="_blank" class="link-btn">Support Slack</a>
                 <p>It is possible to ask questions via chat.</p>
             </div>
             <div class="support-container">
                 <img src="img/support_pic03.png" alt="" width="240px">
-                <a href="" class="link-btn">Contact</a>
+                <a href="https://share.hsforms.com/1Dgb6tZ96TLSkcK7TIau1tgbq8vm" target="_blank" class="link-btn">Contact</a>
                 <p>Please feel free to inquire about unclear points<br>regarding the service or consultations toward introduction.</p>
             </div>
         </div>
@@ -630,7 +621,7 @@
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white">
             <div class="link-btn-desc"><p>Free download.</p></div>
-            <a href="" class="link-btn">Try using ailia DX Insight.</a>
+            <a class="btn dllink link-btn">Try using ailia DX Insight.</a>
             <div class="link-btn-desc-under"><p>No account required / No credit card required / Free for commercial use</p></div>
         </div>
     </section>
@@ -661,12 +652,12 @@
             <div class="wrap">
                 <div class="left">
                     <div class="col">
-                        <a href="/">ailia AI series</a>
-                        <a href="/dx/">ailia DX Insight</a>
-                        <a href="/sdk/">ailia SDK</a>
+                        <a href="/en/">ailia AI series</a>
+                        <a href="/en/dx/">ailia DX Insight</a>
+                        <a href="/en/sdk/">ailia SDK</a>
                         <a href="https://www.ailia.ai/voice">ailia AI VOICE</a>
                         <a href="https://www.ailia.ai/speech">ailia AI SPEECH</a>
-                        <a href="/embedded/">ailia Embedded AI</a>
+                        <a href="/en/embedded/">ailia Embedded AI</a>
                     </div>
                     <div class="col">
                         <a href="/ai-computing/">AI Computing</a>
@@ -680,16 +671,16 @@
                         <a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/">AI Agent</a>
                     </div>
                     <div class="col">
-                        <a href="/company/">Company Profile</a>
-                        <a href="https://www.axell.co.jp/browser/">Terms of service</a>
-                        <a href="https://www.axell.co.jp/privacy/">Privacy policy</a>
+                        <a href="/en/company/">Company Profile</a>
+                        <a href="https://www.axell.co.jp/browser/">Terms of Service</a>
+                        <a href="https://www.axell.co.jp/privacy/">Privacy Policy</a>
                     </div>
                 </div>
                 <div class="right">
                     <p class="company">ailia Inc.</p>
                     <p class="address">5F Tosokaikan, 19-22 Uguisudanicho, Shibuya-ku, Tokyo 150-0032 Japan</p>
                     <p class="btnWrap">
-                        <a class="btn btnContact" href="https://ailia.ai/contact/" target="_blank">
+                        <a class="btn btnContact" href="https://ailia.ai/en/contact/" target="_blank">
                             <span class="icon"><img src="img/common/icon_contact.svg" alt=""></span>
                             <span class="label">Contact</span>
                         </a>
@@ -699,11 +690,12 @@
 
             <div class="bannerArea">
                 <a href="https://blog.ailia.ai/" target="_blank">
-                    <img src="img/common/footer_banner_01.webp" alt="AI specialist media">
+                    <img src="img/common/footer_banner_01.webp" alt="AIでしごとするなら「AI専門メディア」">
                 </a>
-                <a href="https://ailia.ai/sdk/" target="_blank">
-                    <img src="img/common/footer_banner_02.webp" alt="Software development kit ailia SDK">
+                <a href="https://ailia.ai/en/sdk/" target="_blank">
+                    <img src="img/common/footer_banner_02.webp" alt="ソフトウェア開発きっとアイリアSDK">
                 </a>
+
             </div>
 
         </div>
@@ -770,7 +762,7 @@
             <div class="downloadinner">
                 <div class="btn_close"><a class="btn modalclose2">CLOSE</a></div>
                 <div class="downloadbody">
-                    <h2>Download the evaluation app</h2>
+                    <h2>Download ailia DX Insight for free</h2>
                     <div class="dlbtn01" style="display:none;">
                         <div class="btnset">
                             <div class="btnbox btn01"><span class="btntext">Windows version</span><a class="btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT">Download</a></div>
@@ -785,8 +777,8 @@
                     </div>
                 </div>
                 <div class="downloadfoot">
-                    <div class="label">\30 days available/</div>
-                    <div class="btnbox"><a class="link-btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT">Download the app</a></div>
+                    <div class="label">No account required / No credit card required / Free for commercial use</div>
+                    <a class="link-btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT?lang=en">Download the app</a>
                 </div>
             </div>
         </div>

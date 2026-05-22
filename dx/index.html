@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アイリア DX Insight</title>
+    <title>DX Insight</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style/dlmodal.css">
     <link rel="stylesheet" href="style/common.css">
@@ -40,11 +40,11 @@
 
     <!-- OGP画像 -->
     <meta name="description"
-		content="「アイリア DX Insight」は、オフィスワークのためのAIがひとつになったDXアプリ。特許出願中のローカルLLM対応で、最高レベルのセキュリティを実現。さまざまな業務におけるDXを、多角的にサポートします。" />
+		content="「DX Insight」は、機密度に応じてAIを使い分ける統合AIアプリ。社外秘データはローカルLLMですべて端末内で処理、一般業務はChatGPT・Claude・Geminiから最適なモデルを選択できます。" />
 	<meta charset="utf-8" />
-	<meta property="og:title" content="アイリア DX Insight｜アイリア">
+	<meta property="og:title" content="DX Insight｜アイリア">
 	<meta property="og:description"
-		content="「アイリア DX Insight」は、オフィスワークのためのAIがひとつになったDXアプリ。特許出願中のローカルLLM対応で、最高レベルのセキュリティを実現。さまざまな業務におけるDXを、多角的にサポートします。">
+		content="「DX Insight」は、機密度に応じてAIを使い分ける統合AIアプリ。社外秘データはローカルLLMですべて端末内で処理、一般業務はChatGPT・Claude・Geminiから最適なモデルを選択できます。">
 	<meta property="og:image"
 		content="https://ailia.ai/dx/img/dx-insight-ogp.png">
 	<meta property="og:url" content="https://ailia.ai/dx/">
@@ -104,7 +104,6 @@
             <ul class="head02nav">
                 <li class="nav0201"><a href="#sec-function">機能紹介</a></li>
                 <li class="nav0201"><a href="#sec-features">特徴</a></li>
-                <li class="nav0201"><a href="#sec-whitepaper">AI活用のお役立ちヒント</a></li>
                 <li class="nav0201"><a href="#sec-faq">FAQ</a></li>
                 <li class="navbtn0201"><a class="btn dllink">アプリを使ってみる</a></li>
                 <li class="navbtn0202"><a href="#" target="_blank" class="btn hs-cta-trigger-button hs-cta-trigger-button-186855482027">資料ダウンロード</a></li>
@@ -126,8 +125,8 @@
                 <!-- 固定テキスト（スライドしない部分） -->
                 <div class="text-area">
                     <div class="text-content-static">
-                        <p>&#92; 文章検索、翻訳、議事録、画像生成も！ &#47;</p>
-                        <h1>起動した瞬間、<br><span class="highlight">AIがそばに。</span></h1>
+                        <p>&#92; 機密文書も、一般業務も、ひとつのAIアプリで &#47;</p>
+                        <h1>ローカルで<span class="highlight">守る</span><br>クラウドで<span class="highlight">広げる</span></h1>
                     </div>
                 </div>
 
@@ -137,9 +136,9 @@
                         <div class="swiper myImageSwiper swiper-container-box">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img src="img/mv_01.png" alt="Slide 1"></div>
-                                <div class="swiper-slide"><img src="img/mv_02.png" alt="Slide 2"></div>
                                 <div class="swiper-slide"><img src="img/mv_03.png" alt="Slide 3"></div>
                                 <div class="swiper-slide"><img src="img/mv_04.png" alt="Slide 4"></div>
+                                <div class="swiper-slide"><img src="img/mv_02.png" alt="Slide 2"></div>
                             </div>
                         </div>
                         <div class="accent-box"></div>
@@ -153,20 +152,20 @@
             <div class="swiper myTextSwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide text-content">
-                        <h2>文書から<br>瞬時に回答</h2>
+                        <h2>機密文書を<br>社外に出さずRAG</h2>
                         <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/RAG.html" class="btn-modern" target="_blank">RAGについて詳しく見る</a>
                     </div>
                     <div class="swiper-slide text-content">
-                        <h2>プロンプトから<br>画像生成</h2>
+                        <h2>機密会議の議事録を<br>完全ローカルで</h2>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/Recording.html" class="btn-modern" target="_blank">議事録について詳しく見る</a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>画像・音声を<br>端末内で検索</h2>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/SearchImage.html" class="btn-modern" target="_blank">画像・音声検索について詳しく見る</a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>資料に使う<br>画像を生成</h2>
                         <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/GenerateImage.html" class="btn-modern" target="_blank">画像生成について詳しく見る</a>
-                    </div>
-                    <div class="swiper-slide text-content">
-                        <h2>会議録を自動作成<br>音声で対話</h2>
-                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/Recording.html" class="btn-modern" target="_blank">音声認識について詳しく見る</a>
-                    </div>
-                    <div class="swiper-slide text-content">
-                        <h2>最高レベルの<br>セキュリティ</h2>
-                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/Security.html" class="btn-modern" target="_blank">ローカルLLMについて詳しく見る</a>
                     </div>
                 </div>
             </div>
@@ -252,9 +251,13 @@
 
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white youtube-link">
-            <div class="link-btn-desc"><p>無料ダウンロード</p></div>
-            <a class="btn dllink link-btn">アイリア DX Insightを使ってみる</a>
-            <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div>
+            <div class="link-btn-desc"><p>評価版を無料ダウンロード</p></div>
+            <a class="btn dllink link-btn">DX Insightを使ってみる</a>
+            <div class="trust-strip" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8em 1.8em; margin: 1.2em auto 0; max-width: 780px; padding: 0 1em; font-size: 0.95em; color: #444;">
+                <span style="display: inline-flex; align-items: center; gap: 0.4em;"><span style="color: #00a878; font-weight: bold;">✓</span> 1年間 無償評価ライセンス</span>
+                <span style="display: inline-flex; align-items: center; gap: 0.4em;"><span style="color: #00a878; font-weight: bold;">✓</span> Windows / macOS対応</span>
+                <span style="display: inline-flex; align-items: center; gap: 0.4em;"><span style="color: #00a878; font-weight: bold;">✓</span> GPU不要・8GB RAM〜</span>
+            </div>
             <div class="video-wrapper">
                 <div class="iframe-container">
                     <iframe src="https://www.youtube.com/embed/jGhKwrF3by8" title="ailia DX Insight Promotion Video (Japanese)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -272,24 +275,22 @@
         <div class="function-top">
             <div class="section-title">
                 <h2>FUNCTION</h2>
-                <h1>複数のAIを一つに統合した<br class="sp-br">スーパーアプリ</h1>
+                <h1>機密業務はローカルLLMで、<br class="sp-br">一般業務はクラウドLLMで。</h1>
             </div>
             <div class="section-desc">
-                <p>「アイリア DX Insight」は、オフィスワークのためのAIがひとつになったDXアプリ。<br>特許出願中のローカルLLM対応で、最高レベルのセキュリティを実現。<br>さまざまな業務におけるDXを、多角的にサポートします。</p>
+                <p>「DX Insight」は、社外秘データはローカルLLMですべて端末内で処理、<br>一般業務はChatGPT・Claude・Geminiから最適なモデルを選択——<br>機密度に応じてAIを使い分けられる統合AIアプリです。</p>
+                <p style="margin-top: 1em;">金融・医療・法務・研究開発の機密業務から、日々のドキュメント作成まで。<br>機密会議の議事録、社外秘文書の翻訳、画像検索もひとつの画面で完結します。</p>
             </div>
             <div class="function-tag">
                 <ul>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-800v241-1 400-640 200-200Zm0 720q-33 0-56.5-23.5T120-160v-640q0-33 23.5-56.5T200-880h320l240 240v100q-19-8-39-12.5t-41-6.5v-41H480v-200H200v640h241q16 24 36 44.5T521-80H200Zm531-149q29-29 29-71t-29-71q-29-29-71-29t-71 29q-29 29-29 71t29 71q29 29 71 29t71-29ZM864-40 756-148q-21 14-45.5 21t-50.5 7q-75 0-127.5-52.5T480-300q0-75 52.5-127.5T660-480q75 0 127.5 52.5T840-300q0 26-7 50.5T812-204L920-96l-56 56Z"/></svg>文章検索</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M400-240q-33 0-56.5-23.5T320-320v-50q-57-39-88.5-100T200-600q0-117 81.5-198.5T480-880q117 0 198.5 81.5T760-600q0 69-31.5 129.5T640-370v50q0 33-23.5 56.5T560-240H400Zm0-80h160v-92l34-24q41-28 63.5-71.5T680-600q0-83-58.5-141.5T480-800q-83 0-141.5 58.5T280-600q0 49 22.5 92.5T366-436l34 24v92Zm0 240q-17 0-28.5-11.5T360-120v-40h240v40q0 17-11.5 28.5T560-80H400Zm80-520Z"/></svg>アイデア出し</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M400-40v-80H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h200v-80h80v880h-80ZM200-200h200v-80H280v-80h120v-80H280v-80h120v-80H280v-80h120v-80H200v560Zm360-560v-80h200q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H560v-80h200v-560H560Zm0 320v-80h120v80H560Zm0-160v-80h120v80H560ZM400-480Z"/></svg>テキスト要約</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>テキスト校正</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>チャット</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-800v241-1 400-640 200-200Zm0 720q-33 0-56.5-23.5T120-160v-640q0-33 23.5-56.5T200-880h320l240 240v100q-19-8-39-12.5t-41-6.5v-41H480v-200H200v640h241q16 24 36 44.5T521-80H200Zm531-149q29-29 29-71t-29-71q-29-29-71-29t-71 29q-29 29-29 71t29 71q29 29 71 29t71-29ZM864-40 756-148q-21 14-45.5 21t-50.5 7q-75 0-127.5-52.5T480-300q0-75 52.5-127.5T660-480q75 0 127.5 52.5T840-300q0 26-7 50.5T812-204L920-96l-56 56Z"/></svg>RAG</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z"/></svg>翻訳</li>
                 </ul>
                 <ul>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z"/></svg>テキスト翻訳</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m798-322-62-62q44-41 69-97t25-119q0-63-25-118t-69-96l62-64q56 53 89 125t33 153q0 81-33 153t-89 125ZM670-450l-64-64q18-17 29-38.5t11-47.5q0-26-11-47.5T606-686l64-64q32 29 50 67.5t18 82.5q0 44-18 82.5T670-450Zm-310 10q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-120v-112q0-33 17-62t47-44q51-26 115-44t141-18q77 0 141 18t115 44q30 15 47 44t17 62v112H40Zm80-80h480v-32q0-11-5.5-20T580-266q-36-18-92.5-36T360-320q-71 0-127.5 18T140-266q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q440-567 440-600t-23.5-56.5Q393-680 360-680t-56.5 23.5Q280-633 280-600t23.5 56.5Q327-520 360-520t56.5-23.5ZM360-600Zm0 400Z"/></svg>議事録作成</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>画像/音声検索</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Zm182.5-377.5Q400-595 400-620t-17.5-42.5Q365-680 340-680t-42.5 17.5Q280-645 280-620t17.5 42.5Q315-560 340-560t42.5-17.5Z"/></svg>画像生成</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M80-720v-200h200v80H160v120H80Zm720 0v-120H680v-80h200v200h-80ZM80-40v-200h80v120h120v80H80Zm600 0v-80h120v-120h80v200H680ZM280-240h400v-480H280v480Zm0 80q-33 0-56.5-23.5T200-240v-480q0-33 23.5-56.5T280-800h400q33 0 56.5 23.5T760-720v480q0 33-23.5 56.5T680-160H280Zm80-400h240v-80H360v80Zm0 120h240v-80H360v80Zm0 120h240v-80H360v80Zm-80 80v-480 480Z"/></svg>書類 OCR</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z"/></svg>音声合成</li>
                 </ul>
             </div>
         </div>
@@ -297,7 +298,7 @@
             <div class="function-main-container">
                 <div class="accent-box"></div>
                 <div class="function-main-text-title">
-                        <h1>AIアシスタントチャット</h1>
+                        <h1>AIチャット</h1>
                     </div>
                 <div class="function-main-img">
                     <img src="img/ai_chat.png" alt="">
@@ -305,11 +306,11 @@
                 </div>
                 <div class="function-main-text">
                     <div class="function-main-text-desc">
-                        <h3>クラウドで動作: ChatGPT、 Azure OpenAI、 Gemini、 Claude<br>端末上で動作: ailia SDK(インデックス作成、ベクトル検索、Re-Rank機能)、カスタムLLM</h3>
-                        <p>アイリア DX Insightは、ファイルや画像を活用して素早く質問に答えるAIアシスタントです。<br>作業効率を大幅に向上させ、メール作成や繰り返し作業の自動化など、特定のスタイルで応答するカスタムプロンプトも作成可能です。</p>
+                        <h3>ローカルLLM: Gemma3、Gemma3N<br>クラウドLLM: ChatGPT、Claude、Gemini、Azure OpenAI</h3>
+                        <p>メールのドラフト、契約書の確認、技術仕様書の検索——<br>ファイルや画像を読み込んでの対話や、フォルダ単位のRAGで日常業務がスムーズに。<br>機密度に応じてローカルLLMとクラウドLLMを使い分けられます。</p>
                         <div class="function-main-text-point">
-                            <h2>文章検索</h2>
-                            <h2>アイデア出し</h2>
+                            <h2>チャット</h2>
+                            <h2>RAG</h2>
                         </div>
                     </div>
                 </div>
@@ -325,8 +326,8 @@
                 </div>
                 <div class="function-main-text">
                     <div class="function-main-text-desc">
-                        <h3>クラウドで動作: ChatGPT、 Azure OpenAI、 Gemini、 Claude<br>端末上で動作: ailia SDK(インデックス作成、ベクトル検索、Re-Rank機能)、カスタムLLM</h3>
-                        <p>テキスト、画像、音声データから関連する要素を迅速に検出・抽出します。必要な要素をハイライトし、その場に素早くアクセスできるようにサポートします。</p>
+                        <h3>ローカルLLM: Gemma3、Gemma3N<br>クラウドLLM: ChatGPT、Claude、Gemini、Azure OpenAI</h3>
+                        <p>画像や音声は、ファイル名やタグがなければ検索できない——そんな課題を解決。キーワードを入力すれば、AIが画像の内容や音声の特徴を理解して該当するファイルを見つけ出します。機密性の高い画像と音声もローカルで安全に扱えます。</p>
                         <div class="function-main-text-point">
                             <h2>画像検索</h2>
                             <h2>音声検索</h2>
@@ -345,11 +346,10 @@
                 </div>
                 <div class="function-main-text">
                     <div class="function-main-text-desc">
-                        <h3>クラウドで動作: ChatGPT、 Azure OpenAI、 Gemini、 Claude<br>端末上で動作: ailia SDK(インデックス作成、ベクトル検索、Re-Rank機能)、カスタムLLM</h3>
-                        <p>AIドキュメントは長文要約、多言語翻訳、文章改善、文字認識（OCR）によるテキスト抽出の４つの機能を備えたAIツールです。</p>
+                        <h3>ローカルLLM: Gemma3、Gemma3N<br>クラウドLLM: ChatGPT、Claude、Gemini、Azure OpenAI</h3>
+                        <p>長文要約、翻訳、文章校正、OCRによるテキスト抽出をひとつのツールで完結。翻訳はPDF2PDFに対応し、レイアウトを保持したまま多言語化できます。ローカルLLM対応で、社外秘の文書も外部送信なしに処理可能です。</p>
                         <div class="function-main-text-point">
                             <h2>テキスト要約</h2>
-                            <h2>テキスト校正</h2>
                             <h2>テキスト翻訳</h2>
                             <h2>書類 OCR</h2>
                         </div>
@@ -367,10 +367,11 @@
                 </div>
                 <div class="function-main-text">
                     <div class="function-main-text-desc">
-                        <h3>クラウドで動作: Whisper Large V3 Turbo<br>端末上で動作: ailia SDK</h3>
-                        <p>AIオフィスは、自動で会議を記録・整理し、英語翻訳にも対応した議事録作成ツールです。会話に集中でき、終了後すぐに記録した議事録を確認できます。</p>
+                        <h3>ローカルで動作: Whisper Large V3 Turbo、SenseVoice</h3>
+                        <p>会議中の発言を話者ごとに分離して自動で書き起こし、終了と同時に議事録が完成。既存の録音ファイルからの議事録作成にも対応し、英語翻訳も可能です。音声認識はローカルで動作するため、機密性の高い会議でも安心です。</p>
                         <div class="function-main-text-point">
                             <h2>議事録作成</h2>
+                            <h2>話者分離</h2>
                         </div>
                     </div>
                 </div>
@@ -386,8 +387,8 @@
                 </div>
                 <div class="function-main-text">
                     <div class="function-main-text-desc">
-                        <h3>クラウドで動作: DALL-E<br>端末上で動作: Stable Diffusion(*準備中)</h3>
-                        <p>AIクリエイティブは、テキスト入力だけで誰でも簡単に画像を生成できるツールです。また、生成された画像を編集し、より望むものに近づけることができる他、著作権保護や改ざん防止の為にウォーターマークを埋め込んで画像を生成させることができます。また、日本語にも対応する、リアルタイム音声合成機能で簡単にAIに喋らせることが可能です。</p>
+                        <h3>クラウドで動作: OpenAI dall-e-3、OpenAI gpt-image-1、Google Gemini 2.5 Flash</h3>
+                        <p>テキスト入力から画像を生成し、編集で思い通りに仕上げます。dall-e-3、gpt-image-1、Gemini 2.5 Flashから用途に合わせてモデルを選べます。日本語対応のリアルタイム音声合成も搭載し、ナレーション制作まで一気通貫です。</p>
                         <div class="function-main-text-point">
                             <h2>画像生成</h2>
                             <h2>音声合成</h2>
@@ -401,9 +402,9 @@
 
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white">
-            <div class="link-btn-desc"><p>無料ダウンロード</p></div>
-            <a class="btn dllink link-btn">アイリア DX Insightを使ってみる</a>
-            <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div>
+            <div class="link-btn-desc"><p>評価版を無料ダウンロード</p></div>
+            <a class="btn dllink link-btn">DX Insightを使ってみる</a>
+            <!-- <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div> -->
         </div>
     </section>
 
@@ -417,36 +418,35 @@
         <div class="section-inner feature-main">
             <div class="feature-container">
                 <div class="feature-container-box red">
-                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.83 13.85">
-                        <path d="M.99.49c0-.27-.22-.49-.49-.49s-.49.23-.49.49v10.89c0,1.37,1.11,2.47,2.47,2.47h12.87c.27,0,.49-.23.49-.5s-.22-.49-.49-.49H2.47c-.82,0-1.48-.67-1.48-1.48V.49h0ZM5.94,4.7c.1,0,.19-.02.29-.06.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29s-.02-.19-.06-.29c-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24s-.06.19-.06.29.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06ZM9.65,6.93c0-.1-.02-.19-.06-.29-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.18-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06s.19-.02.29-.06c.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29ZM11.87,9.65c.1,0,.19-.02.29-.06.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29s-.02-.19-.06-.29c-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.19-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06ZM13.61,2.97c0-.1-.02-.19-.06-.29-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.19-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06s.19-.02.29-.06c.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29ZM4.95,9.65c.1,0,.19-.02.29-.06.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29s-.02-.19-.06-.29c-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.19-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06"/>
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="48px" height="48px" fill="currentColor">
+                        <path d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-156q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T520-440q0-17-11.5-28.5T480-480q-17 0-28.5 11.5T440-440q0 17 11.5 28.5T480-400Zm0-80Z"/>
                     </svg>
-                    <h1>高速・軽量</h1>
+                    <h1>機密も扱える</h1>
                 </div>
                 <div class="feature-container-desc">
-                    <p>ブラウザアプリではなく<br>ネイティブアプリならではの高速さ。</p>
+                    <p>社外秘データもローカルLLMなら<br>端末内で完結して処理。クラウドに<br>出せない情報もAIで扱える。</p>
                 </div>
             </div>
             <div class="feature-container">
                 <div class="feature-container-box green">
-                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.16 12.11"  height="48px">
-                        <path d="M15.13,1.01c0,1.11.9,2.02,2.02,2.02v-1.01c0-.56-.45-1.01-1.01-1.01h-1.01,0ZM14.12,1.01H4.04c0,1.67-1.36,3.02-3.02,3.02v4.04c1.67,0,3.02,1.36,3.02,3.02h10.09c0-1.67,1.36-3.02,3.02-3.02v-4.04c-1.67,0-3.02-1.36-3.02-3.02ZM1.01,10.09c0,.56.45,1.01,1.01,1.01h1.01c0-1.11-.9-2.02-2.02-2.02v1.01h0ZM17.15,9.08c-1.11,0-2.02.9-2.02,2.02h1.01c.56,0,1.01-.45,1.01-1.01v-1.01h0ZM2.02,1.01c-.56,0-1.01.45-1.01,1.01v1.01c1.11,0,2.02-.9,2.02-2.02h-1.01,0ZM0,2.02C0,.9.9,0,2.02,0h14.12c1.11,0,2.02.9,2.02,2.02v8.07c0,1.11-.9,2.02-2.02,2.02H2.02c-1.11,0-2.02-.9-2.02-2.02V2.02ZM11.1,6.05c0-.27-.05-.53-.16-.78-.1-.25-.25-.46-.44-.66-.19-.19-.41-.33-.66-.44-.25-.1-.51-.15-.77-.15s-.53.05-.77.15c-.25.1-.46.25-.66.44-.19.19-.33.41-.44.66-.1.25-.16.51-.16.78s.05.53.16.77c.1.25.25.47.44.66.19.19.41.33.66.44.25.1.51.16.77.16s.53-.05.77-.16c.25-.1.46-.25.66-.44.19-.19.33-.41.44-.66.1-.25.16-.51.16-.77ZM6.05,6.05c0-.2.02-.4.06-.59s.1-.38.17-.57c.08-.18.17-.36.28-.52.11-.17.24-.32.38-.46.14-.14.29-.26.46-.38.17-.11.34-.2.52-.28.18-.08.37-.13.57-.17.19-.04.39-.06.59-.06s.4.02.59.06c.19.04.38.1.57.17.18.08.36.17.52.28.17.11.32.24.46.38.14.14.26.3.38.46.11.17.2.34.28.52.08.18.13.37.17.57.04.19.06.39.06.59s-.02.39-.06.59c-.04.2-.1.38-.17.57-.08.18-.17.36-.28.52-.11.17-.24.32-.38.46-.14.14-.3.26-.46.38-.17.11-.34.2-.52.28-.18.08-.37.13-.57.17-.19.04-.39.06-.59.06s-.4-.02-.59-.06c-.19-.04-.38-.1-.57-.17-.18-.08-.36-.17-.52-.28-.17-.11-.32-.24-.46-.38-.14-.14-.26-.29-.38-.46-.11-.17-.2-.34-.28-.52-.08-.18-.13-.37-.17-.57-.04-.19-.06-.39-.06-.59"/>
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="48px" height="48px" fill="currentColor">
+                        <path d="M280-240q-33 0-56.5-23.5T200-320v-80h80v80h400v-400h-80v-80h80q33 0 56.5 23.5T760-720v400q0 33-23.5 56.5T680-240H280Zm-120-80v-80h80v80h-80Zm0-160v-80h80v80h-80Zm0-160v-80h80v80h-80Zm160 320v-80h80v80h-80Zm0-320v-80h80v80h-80ZM240-480h280L400-600h-40l-80 80-40-40-80 80Zm280-160q25 0 42.5-17.5T580-700q0-25-17.5-42.5T520-760q-25 0-42.5 17.5T460-700q0 25 17.5 42.5T520-640ZM240-160v-80q0-33 23.5-56.5T320-320h240q33 0 56.5 23.5T640-240v80q0 33-23.5 56.5T560-80H320q-33 0-56.5-23.5T240-160Zm80 0h240v-80H320v80Zm120-40Z"/>
                     </svg>
-                    <h1>コスト削減</h1>
+                    <h1>業務で選べる</h1>
                 </div>
                 <div class="feature-container-desc">
-                    <p>APIキーで使えるので使った分<br>だけの利用料でコスト削減可能。</p>
+                    <p>ChatGPT、Claude、Gemini、<br>ローカルLLM。タスクや機密度に<br>応じて最適なAIを使い分け。</p>
                 </div>
             </div>
             <div class="feature-container">
                 <div class="feature-container-box purple">
-                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.71 17.71" height="52px">
-                        <path d="M8.86,0C3.97,0,0,3.97,0,8.86s3.97,8.86,8.86,8.86,8.86-3.97,8.86-8.86S13.74,0,8.86,0ZM8.86,16.53c-4.23,0-7.68-3.44-7.68-7.68S4.62,1.18,8.86,1.18s7.68,3.44,7.68,7.68-3.44,7.68-7.68,7.68Z"/>
-                        <path d="M13.12,6.07c-.26-.19-.63-.13-.82.13l-3.89,5.41-3.07-2.73c-.24-.22-.62-.19-.83.05-.22.24-.19.62.05.83l3.56,3.17c.11.1.25.15.39.15.02,0,.04,0,.06,0,.17-.02.32-.11.41-.24l4.27-5.94c.19-.26.13-.63-.13-.82Z"/>
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="48px" height="48px" fill="currentColor">
+                        <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm-43-183 226-227-56-56-170 170-85-85-57 57 142 141Zm43-137Z"/>
                     </svg>
-                    <h1>複数のサービスとの連携</h1>
+                    <h1>導入しやすい</h1>
                 </div>
                 <div class="feature-container-desc">
-                    <p>OpenAI、Gemini、Claudeなどの<br>AIを切り替えて使える。</p>
+                    <p>1年間無料で利用できる<br>評価ライセンス付き。<br>ローカルLLMはAPI料金も不要。</p>
                 </div>
             </div>
         </div>
@@ -458,7 +458,6 @@
                 <div class="section-title">
                     <h2>SECURITY</h2>
                     <h1>ローカルLLMで<br class="sp-br">セキュアな環境構築</h1>
-                    <img src="img/medal.png" alt="特許出願中" class="medal">
                 </div>
                 <div class="section-desc">
                     <p>APIキーがなくてもローカルLLMを使用可能。<br>社外に出せない機密情報でも、インターネット接続不要でAIが活用可能です。</p>
@@ -483,81 +482,108 @@
                 <span class="arrow-triangle"></span>
                 <div class="security-container-box">
                     <h1>回答生成</h1>
-                    <p>約8KBの検索結果のみ<br>をオンラインに送信</p>
+                    <p>オフラインの<br>ローカルLLMで回答生成</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="sec-whitepaper" class="section-wrapper white-paper">
+    <section id="sec-compare" class="section-wrapper bg-lightblue">
         <div class="section-top">
             <div class="section-title">
-                <h2>WHITE PAPER</h2>
-                <h1>AI活用のお役立ちヒント</h1>
+                <h2>COMPARE</h2>
+                <h1>オフィス連携型AIとの違い</h1>
             </div>
             <div class="section-desc">
-                <p>ビジネスのDXに役立つトピックスも満載。<br>仕事に役立つAIのヒントを、わかりやすくご紹介します。</p>
+                <p style="margin-bottom: 1.5em;">オフィスソフト連携型AIアシスタントは、すべてクラウド処理が前提。<br>機密情報は扱えず、LLMも選べません。</p>
             </div>
-            <div class="wp-main">
-                <div class="wp-main-container">
-                    <div class="wp-date">2024.02.21</div>
-                    <img src="img/wp04.jpg" alt="" class="wp-img">
-                    <div class="wp-text">
-                        <h1>業務のためのAIがひとつに。<br>DXアプリ「アイリア DX Insight」</h1>
-                        <p>営業職や研究職、さらにはお笑いまで？ビジネスのDXを多角的にサポートする、最新の"セキュアなDXアプリ"、「アイリア DX Insight」の真価と、そのご活用例について。</p>
-                    </div>
-                    <div class="wp-link-area">
-                        <p>PDF資料</p>
-                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-157750252952" href="#">無料ダウンロード</a>
-                    </div>
-                </div>
-                <div class="wp-main-container">
-                    <div class="wp-date">2023.10.12</div>
-                    <img src="img/wp01.jpg" alt="" class="wp-img">
-                    <div class="wp-text">
-                        <h1>ビジネスにどう効く？AIの専門家に聞いた<br>「画像生成AI」の現在地と未来</h1>
-                        <p>ビジネスの現場において、画像生成AIはどう活用できるのか。AIの専門家が語る画像生成AIの最新事情と、導入に際しておさえておきたいポイントにフォーカスする。</p>
-                    </div>
-                    <div class="wp-link-area">
-                        <p>PDF資料</p>
-                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-157651965349" href="#">無料ダウンロード</a>
-                    </div>
-                </div>
+        </div>
+        <div class="section-inner" style="max-width: 900px; margin: 0 auto; padding: 0 1em;">
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; min-width: 560px; border-collapse: separate; border-spacing: 0; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+                    <thead>
+                        <tr style="background: #f5f7fa;">
+                            <th style="padding: 1em 1.2em; text-align: left; border-bottom: 2px solid #e0e0e0; font-size: 0.95em; font-weight: 600;">項目</th>
+                            <th style="padding: 1em 1em; border-bottom: 2px solid #3498db; font-size: 0.95em; font-weight: 600; background: #eef4fb; color: #1a5490;">DX Insight</th>
+                            <th style="padding: 1em 1em; border-bottom: 2px solid #e0e0e0; font-size: 0.95em; font-weight: 600; color: #666;">オフィスソフト連携型<br>AIアシスタント</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.95em 1.2em; border-bottom: 1px solid #eee; font-weight: 500;">機密度による使い分け</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; background: #f7fafd; font-size: 0.88em; line-height: 1.5;"><span style="color: #00a878; font-weight: 600;">✓ 対応</span><br>ローカル / クラウドを選択</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; color: #999; font-size: 0.9em;">ー</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.95em 1.2em; border-bottom: 1px solid #eee; font-weight: 500;">機密情報の扱い</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; background: #f7fafd; font-size: 0.88em; line-height: 1.5;"><span style="color: #00a878; font-weight: 600;">✓ 完全ローカル</span><br>ローカルLLM利用時</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; color: #999; font-size: 0.9em;">クラウド送信必須</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.95em 1.2em; border-bottom: 1px solid #eee; font-weight: 500;">オフライン動作</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; background: #f7fafd; font-size: 0.9em;"><span style="color: #00a878; font-weight: bold;">✓</span> 対応</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; color: #999; font-size: 0.9em;">ー</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.95em 1.2em; border-bottom: 1px solid #eee; font-weight: 500;">複数LLMの切替</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; background: #f7fafd; font-size: 0.9em;"><span style="color: #00a878; font-weight: bold;">✓</span> ローカル ＋ 4社</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; color: #999; font-size: 0.9em;">1社固定</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.95em 1.2em; border-bottom: 1px solid #eee; font-weight: 500;">社内文書RAG</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; background: #f7fafd; font-size: 0.9em;"><span style="color: #00a878; font-weight: bold;">✓</span> フォルダ単位・ローカル</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; color: #999; font-size: 0.9em;">△ クラウド保存前提</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.95em 1.2em; border-bottom: 1px solid #eee; font-weight: 500;">議事録作成</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; background: #f7fafd; font-size: 0.9em;"><span style="color: #00a878; font-weight: bold;">✓</span> 話者分離・ローカル</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; color: #999; font-size: 0.9em;">△ クラウド依存</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.95em 1.2em; border-bottom: 1px solid #eee; font-weight: 500;">本体料金</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; background: #f7fafd; font-size: 0.88em; line-height: 1.5;"><span style="color: #00a878; font-weight: 600;">1年間無料</span>（評価ライセンス）<br>ローカルLLMはAPI料金も不要</td>
+                            <td style="padding: 0.95em 1em; border-bottom: 1px solid #eee; text-align: center; color: #999; font-size: 0.9em;">月額 約$30/user〜</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="wp-main hide">
-                <div class="wp-main-container">
-                    <div class="wp-date">2023.09.13</div>
-                    <img src="img/wp02.jpg" alt="" class="wp-img">
-                    <div class="wp-text">
-                        <h1>なかの人が徹底解説<br>ゼロから知る6つの『アイリア』とは?</h1>
-                        <p>AI開発におけるさまざまな領域で、幅広いソリューション＆サービスを展開している「アイリア」。その特性やラインナップについて、分かりやすくご紹介します。</p>
-                    </div>
-                    <div class="wp-link-area">
-                        <p>PDF資料</p>
-                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-136070509938" href="#">無料ダウンロード</a>
-                    </div>
-                </div>
-                <div class="wp-main-container">
-                    <div class="wp-date">2023.07.13</div>
-                    <img src="img/wp03.jpg" alt="" class="wp-img">
-                    <div class="wp-text">
-                        <h1>Whisperを使いこなす！ エッジで使える<br>安心・安全な音声認識AIの条件とは？</h1>
-                        <p>「AI音声認識って？」「Whisperってなにがすごい？」。音声認識AIの基礎知識と、エッジで使える安心・安全な音声認識AIの条件についてご紹介。</p>
-                    </div>
-                    <div class="wp-link-area">
-                        <p>PDF資料</p>
-                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-131341753962" href="#">無料ダウンロード</a>
-                    </div>
-                </div>
+            <p style="text-align: center; font-size: 0.82em; color: #999; margin-top: 1.2em;">※代表的なオフィス連携型AIサービスとの比較です。各社の個別仕様については公式情報をご参照ください。</p>
+        </div>
+    </section>
+
+    <section id="sec-voices" class="section-wrapper" style="padding-bottom: 5em;">
+        <div class="section-top">
+            <div class="section-title">
+                <h2>USE CASES</h2>
+                <h1>活用シーン</h1>
             </div>
-            <a href="" class="link-btn fold">一部表示</a>
+            <div class="section-desc">
+                <p style="margin-bottom: 1.5em;">機密情報を扱う業務から日常業務まで、DX Insightはさまざまな現場で活用できます。</p>
+            </div>
+        </div>
+        <div class="section-inner" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5em; max-width: 1100px; margin: 0 auto; padding: 0 1em;">
+            <div style="background: #f7f9fc; padding: 2em 1.8em; border-radius: 12px; border-left: 4px solid #3498db;">
+                <p style="font-size: 1em; line-height: 1.85; margin: 0 0 1.5em; color: #333;">特許出願前の発明情報など、クラウドに送れないR&D資料もローカルLLMで要約・翻訳。機密データを外部送信せずに開発スピードを加速できます。</p>
+                <p style="color: #666; font-size: 0.9em; margin: 0; font-weight: 500;">製造業 / 研究開発部門</p>
+            </div>
+            <div style="background: #f7f9fc; padding: 2em 1.8em; border-radius: 12px; border-left: 4px solid #3498db;">
+                <p style="font-size: 1em; line-height: 1.85; margin: 0 0 1.5em; color: #333;">顧客情報を含む書類の取扱いに、完全ローカルで動作するAIを活用。コンプライアンスを守りながらAIの恩恵を受けられます。</p>
+                <p style="color: #666; font-size: 0.9em; margin: 0; font-weight: 500;">金融機関 / 営業推進部門</p>
+            </div>
+            <div style="background: #f7f9fc; padding: 2em 1.8em; border-radius: 12px; border-left: 4px solid #3498db;">
+                <p style="font-size: 1em; line-height: 1.85; margin: 0 0 1.5em; color: #333;">契約書のレビューや翻訳で、クライアントの情報を外部に出さずに処理。PDFのレイアウトを保持したまま多言語化が可能です。</p>
+                <p style="color: #666; font-size: 0.9em; margin: 0; font-weight: 500;">法律事務所 / 企業法務部門</p>
+            </div>
         </div>
     </section>
 
     <section class="section-wrapper p-internal">
         <div class="section-top">
             <div class="section-title">
-                <h1>AI開発をさらに広げる、<br class="sp-br">アイリアのAI事業</h1>
+                <h1>さらに機密性のある<br class="sp-br">業務への対応</h1>
+            </div>
+            <div class="section-desc">
+                <p>DX Insightをベースとしたカスタム開発や、アイリアSDKを使用したエッジAIアプリの受託開発を行うことも可能です。</p>
             </div>
         </div>
         <div class="section-inner p-internal-main">
@@ -569,10 +595,10 @@
                 </div>
             </div>
             <div class="p-internal-container">
-                <h1>AIコンピューティング</h1>
-                <p>AIソフトウェア高速化サービス</p>
+                <h1>AIアプリケーション</h1>
+                <p>業界課題を解決するAIソリューション</p>
                 <div class="p-internal-btn">
-                    <a href="/ai-computing/" class="link-btn">AIコンピューティングを見る</a>
+                    <a href="https://ailia.ai/ai-application/" class="link-btn">AIアプリケーションを見る</a>
                 </div>
             </div>
         </div>
@@ -580,9 +606,9 @@
 
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white">
-            <div class="link-btn-desc"><p>無料ダウンロード</p></div>
-            <a class="btn dllink link-btn">アイリア DX Insightを使ってみる</a>
-            <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div>
+            <div class="link-btn-desc"><p>評価版を無料ダウンロード</p></div>
+            <a class="btn dllink link-btn">DX Insightを使ってみる</a>
+            <!-- <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div> -->
         </div>
     </section>
 
@@ -602,9 +628,9 @@
                     <h1>利用可能なパソコンのスペックを教えてください。</h1>
                     <p>windows環境ではCore i7以上のCPUと、8GB以上のメモリが必要です。<br>macOS環境ではM1以上のCPUと、8GB以上のメモリが必要です。</p>
                     <h1>GPUは必要ですか？</h1>
-                    <p>アイリア DX InsightはCPUのみでも実行可能です。<br>対応するGPU（Intel® Core™ Ultra シリーズの内蔵GPU、Intel® Arc™ GPU など）を使用した場合、ドキュメントの登録や議事録作成などで高速処理が可能です。</p>
+                    <p>DX InsightはCPUのみでも実行可能です。<br>対応するGPU（Intel® Core™ Ultra シリーズの内蔵GPU、Intel® Arc™ GPU など）を使用した場合、ドキュメントの登録や議事録作成などで高速処理が可能です。</p>
                     <h1>共有フォルダは使用できますか？</h1>
-                    <p>アイリア DX Insightはマウントされたファイルを扱うことができるため、ネットワーク経由の共有フォルダも使用可能です。</p>
+                    <p>DX Insightはマウントされたファイルを扱うことができるため、ネットワーク経由の共有フォルダも使用可能です。</p>
                     <h1>対応しているファイルフォーマットを教えてください。</h1>
                     <p>下記のドキュメントフォーマットに対応しています。<br>'c', 'cpp', 'csv', 'json', 'java', 'md', 'py', 'rb', 'tex', 'txt', 'css', 'php', 'pdf', 'docx', 'xlsx'<br>
                     下記の画像フォーマットに対応しています。<br>
@@ -612,11 +638,11 @@
                     下記の音声フォーマットに対応しています。<br>
                     'wav'</p>
                     <h1>ChatGPT のAPI KEY がなくても使用できますか？</h1>
-                    <p>アイリア DX Insightは、ChatGPT、Gemini、Azure、OpenAI互換サーバ、ローカルLLMに対応しています。<br>
+                    <p>DX Insightは、ローカルLLM、OpenAI（ChatGPT）、Anthropic（Claude）、Google（Gemini）、Azure、OpenAI互換サーバに対応しています。<br>
                     ローカルLLMを使用する場合、ChatGPTのAPI KEY がなくても使用可能です。<br>
                     また、議事録と画像検索、OCRについては常にローカルで処理されるため、ChatGPTのAPI KEY がなくても使用可能です。</p>
                     <h1>価格を教えてください。</h1>
-                    <p>アイリアDX Insightは完全無償でご利用いただくことが出来ます。アカウント作成やメールアドレス登録も必要なく、無料で商用利用可能です。</p>
+                    <p>現在は評価版として1年間無償でご利用いただけるライセンスでご利用いただけます。</p>
                 </div>
             </div>
         </div>
@@ -653,31 +679,12 @@
 
     <section class="section-wrapper bg-lightblue">
         <div class="section-inner bg-white">
-            <div class="link-btn-desc"><p>無料ダウンロード</p></div>
-            <a class="btn dllink link-btn">アイリア DX Insightを使ってみる</a>
-            <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div>
+            <div class="link-btn-desc"><p>評価版を無料ダウンロード</p></div>
+            <a class="btn dllink link-btn">DX Insightを使ってみる</a>
+            <!-- <div class="link-btn-desc-under"><p>アカウント不要・クレジットカード不要・商用利用無料</p></div> -->
         </div>
     </section>
     
-    <section class="section-wrapper client-list">
-        <div class="section-inner">
-            <div class="client-list-title">
-                <h1>アイリアSDK採用企業一覧</h1>
-            </div>
-            <div class="client-logo">
-                <div class="client-logo-inner">
-                    <img src="img/dev_co_logo02.png" alt="">
-                    <img src="img/dev_co_logo03.png" alt="">
-                    <img src="img/dev_co_logo04.png" alt="">
-                    <img src="img/dev_co_logo05.png" alt="">
-                    <img src="img/dev_co_logo06.png" alt="">
-                </div>
-            </div>
-            <div class="client-list-title"><h1>　</h1></div>
-        </div>
-    </section>
-
-
     <!-- FOOTER -->
     <footer>
 
@@ -686,7 +693,7 @@
                 <div class="left">
                     <div class="col">
                         <a href="/">アイリアAIシリーズ</a>
-                        <a href="/dx/">アイリア DX Insight</a>
+                        <a href="/dx/">DX Insight</a>
                         <a href="/sdk/">アイリア SDK</a>
                         <a href="https://www.ailia.ai/voice">アイリア AI VOICE</a>
                         <a href="https://www.ailia.ai/speech">アイリア AI SPEECH</a>
@@ -754,9 +761,6 @@
 					<li class="sitemapbtn sitemap04">
 						<div class="sitemapbox"><span class="btntext">FEATURE</span><a class="btn modalclose" href="#feature">特徴</a></div>
 					</li>
-					<li class="sitemapbtn sitemap05">
-						<div class="sitemapbox"><span class="btntext">WHITE PAPER</span><a class="btn modalclose" href="#hint">AI活用のお役立ちヒント</a></div>
-					</li>
 					<li class="sitemapbtn sitemap06">
 						<div class="sitemapbox"><span class="btntext">FAQ</span><a class="btn modalclose" href="#faq">よくあるご質問</a></div>
 					</li>
@@ -795,7 +799,7 @@
 			<div class="downloadinner">
 				<div class="btn_close"><a class="btn modalclose2">CLOSE</a></div>
 				<div class="downloadbody">
-					<h2>アイリアDX Insightを無料ダウンロード</h2>
+					<h2>DX Insight 評価版を無料ダウンロード</h2>
 					<div class="dlbtn01" style="display:none;">
 						<div class="btnset">
 							<div class="btnbox btn01"><span class="btntext">Windows版</span><a class="btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT">ダウンロード</a></div>
@@ -810,7 +814,7 @@
 					</div>
 				</div>
 				<div class="downloadfoot">
-					<div class="label">アカウント不要・クレジットカード不要・商用利用無料</div>
+					<div class="label">評価版ライセンス申し込み</div>
 					<a class="link-btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT">アプリをダウンロード</a>
 				</div>
 			</div>

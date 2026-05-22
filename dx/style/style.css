@@ -6,6 +6,10 @@ body, html {
     background-color: #ffffff;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 450;
+    word-break: auto-phrase;
+}
+#chatbtn .chatbtnwindow {
+    word-break: break-word;
 }
 
 
@@ -95,7 +99,7 @@ body, html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     overflow: visible;
     /* テキストSwiperが重なるので padding-bottom で h2 分のスペースを確保 */
     padding-bottom: 120px;
@@ -198,14 +202,14 @@ body, html {
 
 /* --- 5. テキストスタイル --- */
 .hero-wrapper h1 { 
-    font-size: 3.2vw;
+    font-size: 3vw;
     font-weight: bold;
     color: #222; 
     margin-bottom: 4vw; 
     line-height: 1.8; 
     letter-spacing: 0.05em; 
     margin-top: 0;
-    transform: none;
+    transform: translateX(1vw);
 }
 
 .highlight { 
@@ -217,10 +221,10 @@ body, html {
     font-size: 1.2vw;
     font-weight: 600;
     color: #555; 
-    line-height: 1; 
+    line-height: 1.8; 
     margin-bottom: 1.2vw; 
     margin-top: 0;
-    transform: translateX(-1vw);
+    transform: none;
 }
 
 .hero-wrapper h2 {
@@ -237,7 +241,7 @@ body, html {
 
     font-size: 1.2vw;
     font-weight: 700;
-    width: 22vw;
+    width: 26vw;
     padding: 10px 0;
     border-radius: 50px;
     color: #00bbe0;
@@ -255,29 +259,6 @@ body, html {
     color: #fff;
     box-shadow: none;
     transform: translateY(5px);
-}
-
-/* --- スマホ対応 --- */
-@media (max-width: 900px) {
-    /* .mv-container { 
-        flex-direction: column-reverse; 
-        padding: 20px; 
-        text-align: center; 
-        gap: 40px; 
-        justify-content: flex-start;
-        padding-top: 60px;
-    }
-    .text-area {
-        flex: none;
-        height: auto;
-    }
-    .text-content {
-        align-items: center;
-    }
-    .hero-wrapper h1 { font-size: 2rem; }
-    .btn-modern { align-self: center; }
-    .swiper-button-next, .swiper-button-prev { display: none; } 
-    .swiper-container-box { aspect-ratio: 16 / 11; } */
 }
 
 
@@ -478,7 +459,7 @@ section {
     text-shadow: 2px 2px #fff;
 }
 .section-title h2 {
-    font-size: 3.6rem;
+    font-size: 2.2rem;
     color: #00bbe0;
     text-shadow: 2px 2px #fff;
     letter-spacing: 1rem;
@@ -488,7 +469,7 @@ section {
 }
 .section-title h1{
     position: relative;
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     font-weight: bold;
     margin: 20px 0 40px;
     color: #2d2d2d;
@@ -496,7 +477,7 @@ section {
     z-index: 30;
 }
 .section-desc {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: #2d2d2d;
     text-shadow: 2px 2px #fff;
