@@ -3,7 +3,7 @@ body, html {
     padding: 0; 
     height: 100%; 
     font-family: "Helvetica Neue", Arial, sans-serif; 
-    background-color: #f8fcff;
+    background-color: #fff;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 450;
     word-break: auto-phrase;
@@ -17,13 +17,14 @@ body, html {
 .hero-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 16/9;
-    background-color: #f8fcff;
+    aspect-ratio: auto;
+    min-height: 520px;
+    background-color: #ffff;
     overflow: hidden; 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
+    padding: 160px 0 60px;
 }
 
 .hero-wrapper-inner {
@@ -46,71 +47,70 @@ body, html {
     z-index: 1;
 } */
 
-/* --- 3. コンテンツレイアウト（左右並び） --- */
+/* --- 3. コンテンツレイアウト（縦並び：画像上・テキスト下） --- */
 .mv-container {
     position: relative;
     z-index: 10;
     width: 100%;
-    /* min-width: 1080px; */
-    /* height: 100%;  */
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px; /* 左右の余白 */
+    justify-content: center;
+    gap: 12px;
     box-sizing: border-box;
     margin: 0;
 }
 
 
 
-/* テキストSwiperを左側テキストエリアに絶対配置で重ねる */
+/* テキストSwiperを縦並び時はstatic配置 */
 .myTextSwiper {
-    position: absolute;
-    /* ヘッダー高さ(60px)と固定テキスト分を考慮して縦位置を調整 */
-    top: 45%;
-    left: 0;                /* mv-container の padding と合わせる */
-    transform: translateY(-10%);
-    width: calc(50% - 80px);  /* 左半分から gap 分を引いた幅 */
-    z-index: 15;              /* mv-container(z-index:10)より前面 */
-    pointer-events: none;     /* スライダー自体はクリック不可 */
+    position: static;
+    transform: none;
+    width: 100%;
+    z-index: 15;
+    pointer-events: auto;
+    margin-top: 40px;
+    order: 3;
     overflow: visible;
 }
 
-/* 各テキストスライドはフェードに任せる（独自のopacity指定なし） */
+/* 各テキストスライド */
 .text-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    pointer-events: none;
-}
-
-/* リンクボタンだけはクリック可能に戻す */
-.myTextSwiper .swiper-slide-active .btn-modern {
+    align-items: center;
+    text-align: center;
     pointer-events: auto;
 }
 
-/* 固定テキスト（h1, p）はそのままtext-areaに残す */
+/* 固定テキスト（h1, p）はorder:2（下）・全幅 */
+.text-area {
+    width: 100%;
+    order: 2;
+}
+
 .text-area .text-content-static {
     width: 100%;
-    flex: 0 1 45%;
-    height: 100%;
+    flex: none;
+    height: auto;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     overflow: visible;
-    /* テキストSwiperが重なるので padding-bottom で h2 分のスペースを確保 */
-    padding-bottom: 120px;
+    padding-bottom: 10px;
 }
 
 .slider-area { 
-    width: 60%;
-    flex: 0 1 50%;
+    width: 90%;
+    max-width: 1080px;
+    flex: none;
+    order: 1;
     position: relative;
-    /* display: flex;
-    justify-content: flex-end; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* アクセントボックスとスライダー本体 */
@@ -208,26 +208,31 @@ body, html {
 
 /* ページネーション（ドット） */
 .swiper-pagination {
-    position: absolute;
-    bottom: 30px !important; 
-    left: 50% !important;
-    transform: translateX(-50%);
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
     z-index: 20;
-    width: auto !important; 
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    height: 20px;
 }
 
 .swiper-pagination-bullet { 
-    background: transparent; 
+    background: #00bbe0; 
     opacity: 1; 
     width: 10px; 
     height: 10px; 
     margin: 0 6px !important;
-    border: 1px solid #00bbe0;
     box-sizing: border-box;
 }
 
 .swiper-pagination-bullet-active { 
-    background: #00bbe0 !important; 
+    background: transparent !important;
+    border: 1px solid #00bbe0;
     opacity: 1; 
     width: 25px; 
     border-radius: 5px; 
@@ -236,14 +241,14 @@ body, html {
 
 /* --- 5. テキストスタイル --- */
 .hero-wrapper h1 { 
-    font-size: 3vw;
+    font-size: 3.7125rem; /* 固定値: 1080px時の計算値 (旧: clamp(2.8rem, 5.5vw, 4.8rem)) */
     font-weight: 500;
     color: #444; 
-    margin-bottom: 4vw; 
+    margin-bottom: 2rem; 
     line-height: 1.8; 
     letter-spacing: 0.05em; 
     margin-top: 0;
-    transform: translateX(1vw);
+    text-align: center;
 }
 
 .highlight { 
@@ -252,75 +257,57 @@ body, html {
 }
 
 .hero-wrapper p { 
-    font-size: 1.2vw;
+    font-size: 1.4rem; /* 固定値: 1080px時の計算値 (旧: clamp(1.4rem, 2vw, 2rem)) */
     font-weight: 600;
     color: #555; 
     line-height: 1.8; 
-    margin-bottom: 1.2vw; 
+    margin-bottom: 1rem; 
     margin-top: 0;
     transform: none;
+    text-align: center;
 }
 
 .hero-wrapper h2 {
-    font-size: clamp(1.2rem, 1.5vw, 2.4rem);
+    font-size: 2.565rem; /* 固定値: 1080px時の計算値 (旧: clamp(2rem, 3.8vw, 3.2rem)) */
     margin-bottom: 15px;
-    transform: translateX(1vw);
+    white-space: nowrap;
     color: #555;
-}
-
-/* .btn-modern { 
-    display: inline-block; 
-    text-decoration: none; 
-    transition: all 0.2s; 
-    align-self: flex-start;
-
-    font-size: 1.2vw;
-    font-weight: 700;
-    width: 26vw;
-    padding: 10px 0;
-    border-radius: 30px;
-    color: #00bbe0;
-    border: 1px solid #00bbe0;
-    box-sizing: border-box;
-    margin-bottom: 10px;
     text-align: center;
-    outline: 1px solid transparent;
+    width: 100%;
 }
 
-.btn-modern:hover { 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    outline: 1px solid #00bbe0;
-    background-color: #fff;
-} */
 .btn-modern { 
     display: inline-flex; 
     text-decoration: none; 
-    transition: all 0.2s; 
-    /* align-self: flex-start; */
+    transition: font-size 0.2s, box-shadow 0.2s, opacity 0.2s;
     align-items: center;
     justify-content: center;
 
-    font-size: 1.2vw;
+    font-size: 1.4rem; /* 固定値: 1080px時の計算値 (旧: clamp(1.4rem, 2vw, 2rem)) */
     font-weight: 700;
-    width: 26vw;
-    height: 4.2vw;
-    padding: 10px 0;
+    width: 345.6px; /* 固定値: 1080px時の計算値 (旧: clamp(280px, 32vw, 480px)) */
+    height: 45.36px; /* 固定値: 1080px時の計算値 (旧: clamp(44px, 4.2vw, 68px)) */
+    padding: 0 1.5em;
     border-radius: 30px;
-    color: #00bbe0;
-    border: 1px solid #00bbe0;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     text-align: center;
 
-    background-color: #ffffff3a;
+    background-color: #00bbe0;
 }
 
 .btn-modern:hover { 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    outline: 1px solid #00bbe0;
-    color: #00bbe0;
-    background-color: #fff;
-    font-size: 1.3vw;
+    opacity: 0.8;
+    font-size: 1.52rem; /* 固定値: 1080px時の計算値 (旧: clamp(1.52rem, 2.16vw, 2.16rem)) */
+}
+
+.btn-modern:hover span {
+    font-size: 1.08em;
 } 
 
 
@@ -412,13 +399,25 @@ body, html {
 
 /* ボタン系のスタイルをヘッダーの雰囲気に合わせる */
 .head02nav .btn {
-    display: inline-block;
-    padding: 8px 20px;
-    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 38px;
+    padding: 0;
+    border-radius: 30px;
     font-size: 1.3rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
     text-decoration: none;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s, opacity 0.2s;
+}
+
+.head02nav .btn span {
+    transition: font-size 0.2s;
 }
 
 .navbtn0201 .btn {
@@ -427,14 +426,18 @@ body, html {
 }
 
 .navbtn0202 .btn {
-    border: 2px solid #00bbe0;
-    color: #00bbe0 !important;
-    background-color: #fff;
+    background-color: #00bbe0;
+    color: #fff !important;
+    border: none;
 }
 
 .navbtn0201 .btn:hover, .navbtn0202 .btn:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     opacity: 0.8;
-    transform: translateY(-2px);
+}
+
+.navbtn0201 .btn:hover span, .navbtn0202 .btn:hover span {
+    font-size: 1.08em;
 }
 
 /* 補足説明テキスト（必要に応じて表示/非表示） */
@@ -487,26 +490,22 @@ section {
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    color: #00bbe0;
-    width: 40rem;
+    color: #fff;
+    width: 35rem;
     height: 6rem;
-    padding: 10px 40px;
+    padding: 5px 20px;
     border-radius: 50px;
 
     margin: 15px auto 0;
-    border: 1px solid #00bbe0;
-    background-color: none;
+    background-color: #00bbe0;
 
     transition: 0.2s;
     font-weight: 700;
     font-size: 2rem;
 }
 .link-btn:hover{
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    outline: 1px solid #00bbe0;
-    color: #00bbe0;
-    background-color: #fff;
-    font-size: 2.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
 }
 .link-btn-desc {
     font-size: 2.4rem;
@@ -525,7 +524,7 @@ section {
     text-shadow: 2px 2px #fff;
 }
 .section-title h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #00bbe0;
     text-shadow: 2px 2px #fff;
     letter-spacing: 1rem;
@@ -535,7 +534,7 @@ section {
 }
 .section-title h1{
     position: relative;
-    font-size: 3.8rem;
+    font-size: 2.8rem;
     font-weight: bold;
     margin: 20px 0 40px;
     color: #2d2d2d;
@@ -543,8 +542,8 @@ section {
     z-index: 30;
 }
 .section-desc {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 400;
     color: #2d2d2d;
     text-shadow: 2px 2px #fff;
 }
@@ -554,20 +553,39 @@ section {
 /* -------------- コンテンツ別設定 ---------------- */
 
 /* youtubeリンク */
-/* 親要素を基準位置にする */
 .video-wrapper {
-    position: relative; 
     width: 70%;
     max-width: 800px;
-    margin: 160px auto 0; /* 上に余白を作る */
+    margin: 160px auto 0;
 }
+
+/* accent-box がiframeを一回り大きく囲む枠 */
+.video-wrapper .accent-box {
+    display: block;
+    padding: 16px;
+    border: 1px solid #00bbe0;
+    border-radius: 14px;
+    background: transparent;
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+    z-index: auto;
+    transition: box-shadow 0.2s, opacity 0.2s, outline 0.2s;
+}
+.video-wrapper .accent-box:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    outline: 1px solid #00bbe0;
+}
+
 .iframe-container {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
-    z-index: 3;
+    position: relative;
 }
+
 .iframe-container::after {
     content: "";
     position: absolute;
@@ -575,40 +593,21 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    /* ここで影を指定 */
-    box-shadow: 0 0 20px gray; 
-    /* 強制的に前面へ持ってくる */
-    z-index: 10; 
-    pointer-events: none; /* 動画操作の邪魔をしないように設定 */
-}
-/* iframe の設定（z-indexで前面へ） */
-.video-wrapper iframe {
-    position: relative; /* z-indexを有効にするため */
-    z-index: 2;
-    width: 101%; /* 親の .video-wrapper に合わせる */
-    transform: translateX(-0.5%); /*位置合わせ*/
-    max-width: none; 
-    display: block;
-    aspect-ratio: 16/9;
-    transform-origin: center;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 10;
+    pointer-events: none;
 }
 
-/* 背後のアクセントボックス（z-indexで背面へ） */
-.video-wrapper .accent-box {
-    position: absolute; /* 絶対配置に切り替え */
-    z-index: 1;
-    /* ここで位置を px 指定 */
-    top: 50%; 
-    left: 50%;
-    transform: translate(-45%, -55%);
-    /* iframeと同じサイズにする、または個別に指定 */
-    width: 100%; 
-    height: 100%;
-    /* background-color: #00bbe0; */
-    border-color: #00bbe0;
-    border-width: 1px;
-    border-radius: 10px;
+/* iframe の設定 */
+.video-wrapper iframe {
+    display: block;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 16/9;
+    position: relative;
+    z-index: 2;
+    transform: none;
 }
 
 
@@ -820,7 +819,9 @@ section {
 }
 .function-main-container.rev .function-main-text-desc {
     left: 0;
+    right: calc(50% + 20px); /* 右側の画像エリア(50%)を避けて重ならないよう制限＋余白 */
     margin-left: 30px;
+    box-sizing: border-box;
 }
 .function-main-text-desc h3 {
     margin-top: 2rem;
@@ -838,7 +839,7 @@ section {
     font-weight: 400;
 }
 .rev .function-main-text-desc p {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 
@@ -847,7 +848,7 @@ section {
     display: flex;
     justify-content: space-between;
 
-    margin: 84px auto 0;
+    margin: 40px auto 0;
     padding-top: 60px;
     padding-bottom: 170px;
     width: 40%;
@@ -870,7 +871,7 @@ section {
 }
 .feature-container-box h1 {
     font-size: clamp(16px, 1.2vw, 17px);
-    font-weight: bold;
+    font-weight: 500;
     margin-top: 10%;
 }
 .feature-container-box svg {
@@ -897,7 +898,7 @@ section {
 .feature-container-desc {
     margin-top: 20px;
     font-size: clamp(10px, 1vw, 12px);
-    font-weight: 800;
+    font-weight: 400;
 }
 
 
@@ -925,20 +926,18 @@ section {
     justify-content: space-between;
     width: 100%;
     margin: 0 auto;
-    margin-top: 120px;
+    margin-top: 80px;
 }
 .security-container-box {
     width: 22%;
     aspect-ratio: 8/5;
-    border-width: 4px 4px 4px 18px;
+    border-width: 1px;
     border-color: #00bbe0;
     border-radius: 5px;
 }
 .security-container-box:last-child {
-    background-color: #00bbe0;
-    border-width: 0;
-    border-left: 18px solid #a8e2ed;
-    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-width: 2px;
 }
 .security-container-box h1 {
     font-weight: bold;
@@ -1116,30 +1115,31 @@ section {
     width: 45%;
     aspect-ratio: 16/9;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: transparent;
     position: relative;
+    border: 1px solid #00bbe0;
+    outline: 1px solid transparent;
+    overflow: hidden;
+}
 
+/* アイリアSDKカード：縁色・ボタン色 #ec3055 */
+.p-internal-container.p-internal-sdk {
+    border-color: #ec3055;
 }
-.p-internal-container::before {
-    /* アクセントボックス */
-    content: "";
-    position: absolute;
-    /* 位置の調整：右下に 15px ずつずらす例 */
-    top: 20%;
-    left: -2%; 
-    
-    width: 108%;
-    height: 90%;
-    
-    /* 色の設定：既存の青系（#a8e2ed や #00bbe0） */
-    background-color: #a8e2ed; 
-    border-radius: 10px;
-    
-    /* 本体より背面に配置 */
-    z-index: -1;
+.p-internal-container.p-internal-sdk .link-btn {
+    background-color: #ec3055;
 }
+
+/* AIアプリケーションカード：縁色・ボタン色 #141e53 */
+.p-internal-container.p-internal-aiapp {
+    border-color: #141e53;
+}
+.p-internal-container.p-internal-aiapp .link-btn {
+    background-color: #141e53;
+}
+
 .p-internal .p-internal-container h1 {
-    font-size: clamp(30px, 1.8vw, 36px);
+    font-size: clamp(17px, 1.2vw, 24px);
     font-weight: bold;
     margin-top: 10%;
 }
@@ -1157,9 +1157,76 @@ section {
     width: 100%;   /* ボタンの親として幅を確保 */
     text-align: center;
 }
-.p-internal-btn .link-btn {
-    font-size: clamp(13px, 1vw, 18px);
+
+
+/* dl-card: ダウンロードセクションのカード */
+.dl-card {
+    width: 70rem;
+    aspect-ratio: 16/9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 1.6rem;
+    margin: 0 auto;
+    background-color: transparent;
 }
+.dl-card .dl-card-title {
+    font-size: clamp(17px, 1.2vw, 24px);
+    font-weight: 600;
+    color: #444;
+    margin: 0;
+}
+.dl-card .p-internal-btn {
+    position: static;
+    transform: none;
+    width: auto;
+}
+
+.dl-card .trust-strip {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em 1.8em;
+    font-size: 1.3rem;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+.dl-card .trust-strip span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+}
+.dl-card .trust-strip .check {
+    color: #00a878;
+    font-weight: bold;
+}
+
+/* p-internal-container をリンク化したときのリセットとホバー */
+a.p-internal-container {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: box-shadow 0.2s, opacity 0.2s, outline 0.2s;
+}
+a.p-internal-container .link-btn {
+    transition: font-size 0.2s;
+}
+a.p-internal-container:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    outline: 1px solid #00bbe0;
+}
+a.p-internal-container:hover .link-btn {
+    font-size: 2.2rem !important;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: none;
+}
+
 
 
 /* FAQ */
@@ -1226,10 +1293,16 @@ section {
     text-align: center;
 }
 .support-container img {
-    width: 210px;
+    width: 170px;
 }
 .support-container .link-btn {
     width: 300px;
+    transition: all 0.2s;
+}
+.support-container .link-btn:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    opacity: 0.8;
+    font-size: 2.2rem;
 }
 .support-container p {
     margin-top: 5rem;
@@ -1275,6 +1348,141 @@ section {
     height: 70%;
 }
 
+
+
+/* ============================================================
+   COMPARE セクション
+   ============================================================ */
+.compare-inner {
+    max-width: 900px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.compare-scroll-wrapper {
+    overflow-x: auto;
+}
+.compare-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 187, 224, 0.10);
+    border: 1px solid #00bbe0;
+}
+.compare-th {
+    padding: 1.6rem 1.4rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+
+    font-family: "Poppins", sans-serif;
+}
+.compare-th-label {
+    text-align: left;
+    background: #f5f7fa;
+    color: #555;
+    border-bottom-color: #e0e0e0;
+    width: 35%;
+}
+.compare-th-insight {
+    background: #e8f7fc;
+    color: #00bbe0;
+
+    letter-spacing: 0.05em;
+}
+.compare-th-other {
+    background: #f5f7fa;
+    color: #888;
+    border-bottom-color: #e0e0e0;
+}
+.compare-tr:hover .compare-td {
+    background-color: #f0fbfd;
+}
+.compare-td {
+    padding: 1.4rem 1.4rem;
+    border-bottom: 1px solid #eef6f9;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    vertical-align: middle;
+    text-align: center;
+}
+.compare-td-label {
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    background: #fafcfd;
+}
+.compare-td-insight {
+    background: #f5fcff;
+    color: #333;
+    font-size: 1.25rem;
+}
+.compare-td-other {
+    color: #999;
+    font-size: 1.25rem;
+}
+.compare-td-na {
+    font-size: 1.6rem;
+    color: #ccc;
+}
+.compare-tr:last-child .compare-td {
+    border-bottom: none;
+}
+.compare-check {
+    color: #00bbe0;
+    font-weight: 700;
+}
+.compare-note {
+    margin-top: 1.6rem;
+    font-size: 1.2rem;
+    color: #aaa;
+    text-align: center;
+}
+
+
+/* ============================================================
+   USE CASES セクション
+   ============================================================ */
+.usecase-section {
+}
+.usecase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+.usecase-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #d6f0f7;
+    border-top: 4px solid #00bbe0;
+    padding: 3rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 2px 16px rgba(0, 187, 224, 0.08);
+}
+.usecase-card-text {
+    font-size: 1.4rem;
+    line-height: 1.9;
+    color: #333;
+    margin: 0 0 2rem;
+    flex: 1;
+}
+.usecase-card-label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #00bbe0;
+    letter-spacing: 0.03em;
+    margin: 0;
+    padding-top: 1.6rem;
+    border-top: 1px solid #d6f0f7;
+    width: 100%;
+}
 
 
 /* --------------------------英語対応--------------------------------------- */
@@ -1534,4 +1742,80 @@ section {
         min-width: 0;
         width: 90%;
     }
+}
+/* ============================================
+   FUNCTION カード型グリッド
+   ============================================ */
+.function-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 32px;
+    width: 80%;
+    max-width: 1100px;
+    margin: 60px auto 80px;
+}
+
+.function-card {
+    border: 2px solid #00BBE0;
+    border-radius: 12px;
+    padding: 36px 36px 32px;
+    background: #fff;
+    /* subgridで4行（タイトル・LLM・説明文・ポイント）を列間で揃える */
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    row-gap: 0;
+}
+
+.function-card-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #00BBE0;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    align-self: end;
+}
+
+.function-card-llm {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #00BBE0;
+    margin-bottom: 20px;
+    align-self: end;
+}
+
+.function-card-llm p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.function-card-desc {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    color: #333;
+    margin: 0 0 20px 0;
+    align-self: start;
+}
+
+.function-card-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    align-self: start;
+}
+
+.function-card-points span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00BBE0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-point-icon {
+    font-size: 1.4rem;
 }
