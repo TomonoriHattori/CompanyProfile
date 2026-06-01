@@ -139,7 +139,7 @@ br.sp-br {
     .navbtn0202 .btn {
         width: 100px;
         height: 28px;
-        font-size: clamp(9px, 1.2vw, 12px);
+        font-size: clamp(9px, 1.0vw, 10.5px); /* 幅100px内に8文字収まるよう上限を下げる。ホバー×1.08emでも余裕あり */
         padding: 0;
     }
     .navbtn0201 .btn:hover span,
@@ -395,10 +395,10 @@ br.sp-br {
         max-width: 480px;
         margin: 0 auto;
         aspect-ratio: auto;
-        padding-bottom: 60px;
+        padding: 8% 8% 60px;
     }
     .p-internal .p-internal-container h1 {
-        margin-top: 2.4rem;
+        margin-top: 0;
     }
     .p-internal p {
         margin-bottom: 4rem;
@@ -718,6 +718,14 @@ br.sp-br {
     }
     
 
+    /* --- dl-card --- */
+    .dl-card {
+        width: 100%;
+        aspect-ratio: auto;
+        gap: 1rem;
+        padding: 6% 20px;
+    }
+
     /* --- p-internal --- */
     .p-internal-main {
         width: 100%;
@@ -726,20 +734,30 @@ br.sp-br {
     .p-internal-container {
         width: 100%;
         max-width: 100%;
-        padding: 20px 20px 70px;
+        padding: 8% 20px 8%;
     }
     .p-internal-container::before {
         display: none;
     }
     .p-internal .p-internal-container h1 {
         font-size: 2.4rem;
-        margin-top: 5%;
+        margin-top: 0;
     }
     .p-internal p {
         font-size: 1.5rem;
     }
+    .p-internal-btn {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 5%;
+    }
     .p-internal-btn .link-btn {
         font-size: 1.4rem;
+        width: auto;
+        max-width: 100%;
+        min-width: unset;
+        box-sizing: border-box;
     }
 
     /* --- FAQ --- */

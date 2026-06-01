@@ -892,7 +892,7 @@ section {
 .feature-container-box.purple {
     border-color: #b061a3;
 }
-.feature-container-box.purple {
+.feature-container-box.purple svg {
     fill: #b061a3;
 }
 .feature-container-desc {
