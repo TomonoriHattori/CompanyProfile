@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Linear MV - Auto & Manual</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: "Helvetica Neue", Arial, sans-serif; background: #f5f9fa; }
+
+        /* 背景エリア */
+        #tsparticles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* メインレイアウト */
+        .mv-container {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            padding: 0 8%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .text-area {
+            flex: 1;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+
+        .slider-area {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* アクセントボックス（後ろの青い四角） */
+        .accent-box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #00bbe0;
+            top: 20px;
+            right: -20px;
+            border-radius: 20px;
+            z-index: 0;
+        }
+
+        /* スライダー本体 */
+        .swiper-container-box {
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 16 / 10;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+        }
+
+        .swiper, .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- 追加：スライダーのナビゲーション（矢印） --- */
+        .swiper-button-next, .swiper-button-prev {
+            color: #fff !important; /* 矢印の色 */
+            background: rgba(0, 187, 224, 0.8); /* 背景の丸 */
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 18px !important; /* 矢印のサイズ調整 */
+            font-weight: bold;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background: #0099b8;
+            transform: scale(1.1);
+        }
+
+        /* --- 追加：スライダーのページネーション（下の点々） --- */
+        .swiper-pagination-bullet {
+            background: #ccc;
+            opacity: 0.5;
+            width: 10px;
+            height: 10px;
+            margin: 0 6px !important;
+        }
+        .swiper-pagination-bullet-active {
+            background: #00bbe0 !important; /* アクティブな点は指定カラー */
+            opacity: 1;
+            width: 25px; /* アクティブ時は少し横長にしてモダンに */
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        /* テキストエリア */
+        h1 { font-size: 3.2rem; color: #222; margin-bottom: 25px; line-height: 1.2; letter-spacing: 0.05em; }
+        .highlight { color: #00bbe0; background: linear-gradient(transparent 70%, rgba(0, 187, 224, 0.2) 70%); }
+        p { font-size: 1.1rem; color: #555; line-height: 1.8; margin-bottom: 40px; }
+
+        .btn-modern {
+            display: inline-block;
+            background: #222;
+            color: #fff;
+            padding: 16px 50px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            letter-spacing: 0.05em;
+        }
+        .btn-modern:hover { background: #00bbe0; transform: translateY(-2px); }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; transform: translateY(20px); }
+        }
+
+        @media (max-width: 900px) {
+            .mv-container { flex-direction: column-reverse; gap: 40px; padding: 20px; text-align: center; }
+            .accent-box { top: 15px; right: -15px; }
+            h1 { font-size: 2rem; }
+            .swiper-button-next, .swiper-button-prev { display: none; } /* スマホでは矢印を消してスワイプのみにする */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="tsparticles"></div>
+
+    <div class="mv-container">
+        <div class="text-area">
+            <h1><span class="highlight">知性</span>が導く、<br>新しいワークフロー。</h1>
+            <p>
+                複雑なデータ処理も、日々のルーチンワークも。<br>
+                あなたの手のひらで、シンプルに完結します。<br>
+                企業レベルのDXを、個人のデバイスへ。
+            </p>
+            <a href="#" class="btn-modern">無料で始める</a>
+        </div>
+
+        <div class="slider-area">
+            <div class="accent-box"></div>
+            
+            <div class="swiper-container-box">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260" alt="Slide 1"></div>
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260" alt="Slide 2"></div>
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260" alt="Slide 3"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
+    <script>
+        // Swiper 設定
+        var swiper = new Swiper(".mySwiper", {
+            effect: "slide",
+            loop: true,
+            speed: 800,
+            
+            // --- 重要：自動再生の設定 ---
+            autoplay: {
+                delay: 4000, // 4秒ごとに切り替え
+                disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
+            },
+
+            // ナビゲーション（矢印）
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            // ページネーション（下の点々）
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true, // 点をクリックして移動できるようにする
+            },
+        });
+
+        // tsParticles 設定（前回と同じ幾何学デザイン）
+        tsParticles.load("tsparticles", {
+            background: { color: "#f5f9fa" },
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: "#cccccc" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5 },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00bbe0",
+                    opacity: 0.3,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.5,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" }
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 1 } }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>

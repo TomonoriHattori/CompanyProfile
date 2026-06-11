@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ailia DX Insight</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/dlmodal.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/style_header.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="img/favicon.png" sizes="180x180">
+
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript" src="js/smoothScroll.js"></script>
+    <script type="text/javascript" src="js/top.js"></script>
+    <script type="text/javascript" src="js/spnavi.js"></script>
+    <script type="text/javascript" src="js/profmodal.js"></script>
+    <script type="text/javascript" src="js/move.js"></script>
+    <script type="text/javascript" src="js/mp_config.js"></script>
+    <script type="text/javascript" src="js/mp_fileio.js"></script>
+    <script type="text/javascript" src="js/mp_lib.js"></script>
+    <script type="text/javascript" src="js/chatwindow.js"></script>
+    <script type="text/javascript" src="js/jquery-modal-video.min.js"></script>
+    <script type="text/javascript" src="js/top_blog.js"></script>
+    <script type="text/javascript" src="js/ailia_dx_chat.js"></script>
+    <script type="text/javascript" src="js/dlmodal.js"></script>
+
+    <meta name="description"
+		content="ailia DX Insight is a DX app that combines multiple AIs for office work into one.With patent-pending local LLM support, it delivers top-level security.DX in various business operations is supported from multiple angles" />
+	<meta charset="utf-8" />
+	<meta property="og:title" content="ailia DX Insight｜ailia">
+	<meta property="og:description"
+		content="ailia DX Insight is a DX app that combines multiple AIs for office work into one.With patent-pending local LLM support, it delivers top-level security.DX in various business operations is supported from multiple angles">
+	<meta property="og:image"
+		content="https://ailia.ai/dx/img/dx-insight-ogp_en.png">
+	<meta property="og:url" content="https://ailia.ai/en/dx/">
+	<meta property="og:site_name" content="ailia">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5Q579RMM');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <div class="navArea">
+                <div class="inner cw">
+                    <h1>
+                        <a class="navLogo" href="/"><img class="" src="img/common/logo.svg" alt="ailia">
+                            <span class="siteTitle">ailia</span>
+                        </a>
+                    </h1>
+                    <ul class="navList">
+                        <li>
+                            <a href="/" class="">ailia AI series</a>
+                        </li>
+                        <li>
+                            <a href="/ai-computing/" class="ai-computing">AI Computing</a>
+                        </li>
+                        <li>
+                            <a href="/en/ai-application/" class="ai-application">AI Application</a>
+                        </li>
+                        <li>
+                            <a href="/en/company/" class="company">Company Profile</a>
+                        </li>
+                        <li class="lang">
+                            <a href="/dx/" lang="jp">JP</a>
+                            <a href="/en/dx/" class="current" lang="en">EN</a>
+                        </li>
+                        <li class="contact">
+                            <a class="" href="https://ailia.ai/en/contact/" target="_blank">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="https://ailia.ai/en/contact/" target="_blank" class="spContact">Contact</a>
+                <a class="spNavBtn" href="javascript:void(0);"><span></span><span></span><span></span></a>
+            </div>
+        </nav>
+    </header>
+
+    <nav id="head02">
+        <div class="headinner">
+            <div class="logo"><a href="#" class="logo-top-link"><img src="img/mv_logo.png" alt="Back to top"></a></div>
+            <ul class="head02nav">
+                <li class="nav0201"><a href="#sec-function">Functions</a></li>
+                <li class="nav0201"><a href="#sec-features">Characteristics</a></li>
+                <!-- <li class="nav0201"><a href="#sec-whitepaper">Useful tips for AI utilization</a></li> -->
+                <li class="nav0201"><a href="#sec-faq">FAQ</a></li>
+                <li class="navbtn0201"><a class="btn dllink">Try using the app.</a></li>
+                <li class="navbtn0202"><a href="https://share.hsforms.com/1Dgb6tZ96TLSkcK7TIau1tgbq8vm" target="_blank" class="btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="hero-wrapper">
+
+        <div class="hero-wrapper-inner">
+
+            <div id="tsparticles"></div>
+
+            <div class="mv-container">
+                <!-- Static text area (non-sliding) -->
+                <div class="text-area">
+                    <div class="text-content-static">
+                        <p>Text search, translation, meeting notes, image generation &amp; more!</p>
+                        <h1>The moment you launch,<br><span class="highlight">AI is by your side.</span></h1>
+                    </div>
+                </div>
+
+                <!-- Right side image slider -->
+                <div class="slider-area">
+                    <div class="slider-contents-wrapper">
+                        <div class="swiper myImageSwiper swiper-container-box">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/mv_01_en.png" alt="Slide 1"></div>
+                                <div class="swiper-slide"><img src="img/mv_02_en.png" alt="Slide 2"></div>
+                                <div class="swiper-slide"><img src="img/mv_03_en.png" alt="Slide 3"></div>
+                                <div class="swiper-slide"><img src="img/mv_04_en.png" alt="Slide 4"></div>
+                            </div>
+                        </div>
+                        <div class="accent-box"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Text slider overlaid on the left side -->
+            <div class="swiper myTextSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text-content">
+                        <h2>Instant answers<br>from your documents</h2>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/en/RAG.html" target="_blank" class="btn-modern">Learn more about RAG</a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>Generate images<br>from prompts</h2>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/en/GenerateImage.html" target="_blank" class="btn-modern">Learn more about Image Generation</a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>Auto-generate meeting notes<br>with voice interaction</h2>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/en/Recording.html" target="_blank" class="btn-modern">Learn more about Speech Recognition</a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>Top-level<br>security</h2>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/en/Security.html" target="_blank" class="btn-modern">Learn more about Local LLM</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <!-- AI Chatbot -->
+    <div id="chatbtn">
+        <div class="chatbtnbox chatopen">
+            <div class="chatbtnwindow">I'll answer anything about ainyan ailia.</div>
+            <div class="chara">
+                <canvas id="avatar" width="256" height="256"></canvas>
+                <img src="img/chara_sp.png" width="108" height="109" alt="あいにゃん" class="sp">
+            </div>
+        </div>
+        <div class="btnclose chatclose">Close</div>
+        <div class="btnprof profopen">Profile</div>
+    </div>
+    <div id="chatwindow">
+        <div class="aichatinner">
+            <!-- チャット部分 -->
+            <div class="logarea">
+                <div class="loghead">
+                    <div class="logtitle">Ainyan Chat BOT (automatic response)</div>
+                    <div id="chatclose" class="winclose">Close</div>
+                </div>
+                <div class="logbody" id="logbody">
+                    <div class="logtext">
+                        <div id="chat"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatarea">
+                <div class="chatbody">
+                    <form name="chat_form" action="javascript:chat_api('https://ailia-llm-insight.uw.r.appspot.com/');">
+                        <div class="chatformbox">
+                            <input type="text" name="prompt" id="prompt" size="40" placeholder="Please enter your question here (e.g., what is ailia)">
+                        </div>
+                        <div class="chatbutton">
+                            <button type="button" onclick="chat_api('https://ailia-llm-insight.uw.r.appspot.com/')">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section-wrapper bg-lightblue">
+        <div class="section-inner bg-white youtube-link">
+            <div class="link-btn-desc"><p>Free download.</p></div>
+            <a class="btn dllink link-btn">Try using ailia DX Insight.</a>
+            <div class="link-btn-desc-under"><p>No account required / No credit card required / Free for commercial use</p></div>
+            <div class="video-wrapper">
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/jGhKwrF3by8" title="ailia DX Insight Promotion Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="accent-box"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="sec-function" class="section-wrapper function">
+        <div class="function-top-img">
+            <img src="img/function_top.jpg" alt="function_top.jpg">
+        </div>
+        <div class="function-top">
+            <div class="section-title">
+                <h2>FUNCTION</h2>
+                <h1>A super app that integrates<br class="sp-br">multiple AIs in one</h1>
+            </div>
+            <div class="section-desc">
+                <p>"ailia DX Insight" is a DX app that combines multiple AIs for office work into one.<br>With patent-pending local LLM support, it delivers top-level security.<br>DX in various business operations is supported from multiple angles.</p>
+            </div>
+            <div class="function-tag">
+                <ul>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-800v241-1 400-640 200-200Zm0 720q-33 0-56.5-23.5T120-160v-640q0-33 23.5-56.5T200-880h320l240 240v100q-19-8-39-12.5t-41-6.5v-41H480v-200H200v640h241q16 24 36 44.5T521-80H200Zm531-149q29-29 29-71t-29-71q-29-29-71-29t-71 29q-29 29-29 71t29 71q29 29 71 29t71-29ZM864-40 756-148q-21 14-45.5 21t-50.5 7q-75 0-127.5-52.5T480-300q0-75 52.5-127.5T660-480q75 0 127.5 52.5T840-300q0 26-7 50.5T812-204L920-96l-56 56Z"/></svg>Text search</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M400-240q-33 0-56.5-23.5T320-320v-50q-57-39-88.5-100T200-600q0-117 81.5-198.5T480-880q117 0 198.5 81.5T760-600q0 69-31.5 129.5T640-370v50q0 33-23.5 56.5T560-240H400Zm0-80h160v-92l34-24q41-28 63.5-71.5T680-600q0-83-58.5-141.5T480-800q-83 0-141.5 58.5T280-600q0 49 22.5 92.5T366-436l34 24v92Zm0 240q-17 0-28.5-11.5T360-120v-40h240v40q0 17-11.5 28.5T560-80H400Zm80-520Z"/></svg>Idea generation</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M400-40v-80H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h200v-80h80v880h-80ZM200-200h200v-80H280v-80h120v-80H280v-80h120v-80H280v-80h120v-80H200v560Zm360-560v-80h200q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H560v-80h200v-560H560Zm0 320v-80h120v80H560Zm0-160v-80h120v80H560ZM400-480Z"/></svg>Text summarization</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>Text proofreading</li>
+                </ul>
+                <ul>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z"/></svg>Text translation</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m798-322-62-62q44-41 69-97t25-119q0-63-25-118t-69-96l62-64q56 53 89 125t33 153q0 81-33 153t-89 125ZM670-450l-64-64q18-17 29-38.5t11-47.5q0-26-11-47.5T606-686l64-64q32 29 50 67.5t18 82.5q0 44-18 82.5T670-450Zm-310 10q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-120v-112q0-33 17-62t47-44q51-26 115-44t141-18q77 0 141 18t115 44q30 15 47 44t17 62v112H40Zm80-80h480v-32q0-11-5.5-20T580-266q-36-18-92.5-36T360-320q-71 0-127.5 18T140-266q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q440-567 440-600t-23.5-56.5Q393-680 360-680t-56.5 23.5Q280-633 280-600t23.5 56.5Q327-520 360-520t56.5-23.5ZM360-600Zm0 400Z"/></svg>Meeting minutes</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>Image/voice search</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Zm182.5-377.5Q400-595 400-620t-17.5-42.5Q365-680 340-680t-42.5 17.5Q280-645 280-620t17.5 42.5Q315-560 340-560t42.5-17.5Z"/></svg>Image generation</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M80-720v-200h200v80H160v120H80Zm720 0v-120H680v-80h200v200h-80ZM80-40v-200h80v120h120v80H80Zm600 0v-80h120v-120h80v200H680ZM280-240h400v-480H280v480Zm0 80q-33 0-56.5-23.5T200-240v-480q0-33 23.5-56.5T280-800h400q33 0 56.5 23.5T760-720v480q0 33-23.5 56.5T680-160H280Zm80-400h240v-80H360v80Zm0 120h240v-80H360v80Zm0 120h240v-80H360v80Zm-80 80v-480 480Z"/></svg>Document OCR</li>
+                </ul>
+            </div>
+        </div>
+        <div class="function-main">
+            <div class="function-main-container">
+                <div class="accent-box"></div>
+                <div class="function-main-text-title">
+                        <h1>AI assistant chat</h1>
+                    </div>
+                <div class="function-main-img">
+                    <img src="img/ai_chat_en.png" alt="">
+                    <div class="accent-box"></div>
+                </div>
+                <div class="function-main-text">
+                    <div class="function-main-text-desc">
+                        <h3>Cloud: ChatGPT, Azure OpenAI, Gemini, Claude<br>On-device: ailia SDK (indexing, vector search, Re-Rank), custom LLM</h3>
+                        <p>ailia DX Insight is an AI assistant that quickly answers questions using files and images.<br>Work efficiency is greatly improved. Custom prompts that respond in specific styles such as email creation and automation of repetitive tasks are also possible.</p>
+                        <div class="function-main-text-point">
+                            <h2>Text search</h2>
+                            <h2>Idea generation</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="function-main-container rev">
+                <div class="accent-box"></div>
+                <div class="function-main-text-title">
+                        <h1>AI search</h1>
+                    </div>
+                <div class="function-main-img">
+                    <img src="img/ai_search_en.png" alt="">
+                    <div class="accent-box"></div>
+                </div>
+                <div class="function-main-text">
+                    <div class="function-main-text-desc">
+                        <h3>Cloud: ChatGPT, Azure OpenAI, Gemini, Claude<br>On-device: ailia SDK (indexing, vector search, Re-Rank), custom LLM</h3>
+                        <p>Relevant elements are quickly detected and extracted from text, images, and audio data. The necessary elements are highlighted so you can access them quickly.</p>
+                        <div class="function-main-text-point">
+                            <h2>Image search</h2>
+                            <h2>Voice search</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="function-main-container">
+                <div class="accent-box"></div>
+                <div class="function-main-text-title">
+                        <h1>AI document</h1>
+                    </div>
+                <div class="function-main-img">
+                    <img src="img/ai_document_en.png" alt="">
+                    <div class="accent-box"></div>
+                </div>
+                <div class="function-main-text">
+                    <div class="function-main-text-desc">
+                        <h3>Cloud: ChatGPT, Azure OpenAI, Gemini, Claude<br>On-device: ailia SDK (indexing, vector search, Re-Rank), custom LLM</h3>
+                        <p>AI document is an AI tool with four functions: long text summarization, multilingual translation, text improvement, and text extraction using OCR.</p>
+                        <div class="function-main-text-point">
+                            <h2>Text summarization</h2>
+                            <h2>Text proofreading</h2>
+                            <h2>Text translation</h2>
+                            <h2>Document OCR</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="function-main-container rev">
+                <div class="accent-box"></div>
+                <div class="function-main-text-title">
+                        <h1>AI office</h1>
+                    </div>
+                <div class="function-main-img">
+                    <img src="img/ai_office_en.png" alt="">
+                    <div class="accent-box"></div>
+                </div>
+                <div class="function-main-text">
+                    <div class="function-main-text-desc">
+                        <h3>Cloud: Whisper Large V3 Turbo<br>On-device: ailia SDK</h3>
+                        <p>AI office is a meeting minutes creation tool that automatically records and organizes meetings and supports English translation. You can concentrate on the conversation and check the recorded minutes immediately after the meeting ends.</p>
+                        <div class="function-main-text-point">
+                            <h2>Meeting minutes</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="function-main-container">
+                <div class="accent-box"></div>
+                <div class="function-main-text-title">
+                        <h1>AI creative</h1>
+                    </div>
+                <div class="function-main-img">
+                    <img src="img/ai_creative_en.png" alt="">
+                    <div class="accent-box"></div>
+                </div>
+                <div class="function-main-text">
+                    <div class="function-main-text-desc">
+                        <h3>Cloud: DALL-E<br>On-device: Stable Diffusion (*in preparation)</h3>
+                        <p>AI creative is a tool that allows anyone to easily generate images from text input alone. It is also possible to edit generated images to bring them closer to what you want, and to generate images with watermarks embedded for copyright protection and tampering prevention. In addition, with the real-time voice synthesis function that also supports Japanese, it is easy to make AI speak.</p>
+                        <div class="function-main-text-point">
+                            <h2>Image generation</h2>
+                            <h2>Voice synthesis</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-wrapper bg-lightblue">
+        <div class="section-inner bg-white">
+            <div class="link-btn-desc"><p>Free download.</p></div>
+            <a class="btn dllink link-btn">Try using ailia DX Insight.</a>
+            <div class="link-btn-desc-under"><p>No account required / No credit card required / Free for commercial use</p></div>
+        </div>
+    </section>
+
+    <section id="sec-features" class="section-wrapper features">
+        <div class="section-top">
+            <div class="section-title">
+                <h2>FEATURES</h2>
+                <h1>Reasons why DX Insight is chosen</h1>
+            </div>
+        </div>
+        <div class="section-inner feature-main">
+            <div class="feature-container">
+                <div class="feature-container-box red">
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.83 13.85">
+                        <path d="M.99.49c0-.27-.22-.49-.49-.49s-.49.23-.49.49v10.89c0,1.37,1.11,2.47,2.47,2.47h12.87c.27,0,.49-.23.49-.5s-.22-.49-.49-.49H2.47c-.82,0-1.48-.67-1.48-1.48V.49h0ZM5.94,4.7c.1,0,.19-.02.29-.06.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29s-.02-.19-.06-.29c-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24s-.06.19-.06.29.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06ZM9.65,6.93c0-.1-.02-.19-.06-.29-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.18-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06s.19-.02.29-.06c.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29ZM11.87,9.65c.1,0,.19-.02.29-.06.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29s-.02-.19-.06-.29c-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.19-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06ZM13.61,2.97c0-.1-.02-.19-.06-.29-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.19-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06s.19-.02.29-.06c.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29ZM4.95,9.65c.1,0,.19-.02.29-.06.09-.04.17-.09.24-.16.07-.07.12-.15.16-.24.04-.09.06-.19.06-.29s-.02-.19-.06-.29c-.04-.09-.09-.17-.16-.24-.07-.07-.15-.12-.24-.16-.09-.04-.19-.06-.29-.06s-.19.02-.29.06c-.09.04-.17.09-.24.16-.07.07-.12.15-.16.24-.04.09-.06.19-.06.29s.02.19.06.29c.04.09.09.17.16.24.07.07.15.12.24.16.09.04.19.06.29.06"/>
+                    </svg>
+                    <h1>High speed and lightweight</h1>
+                </div>
+                <div class="feature-container-desc">
+                    <p>High speed unique to a native app,<br>not a browser app.</p>
+                </div>
+            </div>
+            <div class="feature-container">
+                <div class="feature-container-box green">
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.16 12.11" height="48px">
+                        <path d="M15.13,1.01c0,1.11.9,2.02,2.02,2.02v-1.01c0-.56-.45-1.01-1.01-1.01h-1.01,0ZM14.12,1.01H4.04c0,1.67-1.36,3.02-3.02,3.02v4.04c1.67,0,3.02,1.36,3.02,3.02h10.09c0-1.67,1.36-3.02,3.02-3.02v-4.04c-1.67,0-3.02-1.36-3.02-3.02ZM1.01,10.09c0,.56.45,1.01,1.01,1.01h1.01c0-1.11-.9-2.02-2.02-2.02v1.01h0ZM17.15,9.08c-1.11,0-2.02.9-2.02,2.02h1.01c.56,0,1.01-.45,1.01-1.01v-1.01h0ZM2.02,1.01c-.56,0-1.01.45-1.01,1.01v1.01c1.11,0,2.02-.9,2.02-2.02h-1.01,0ZM0,2.02C0,.9.9,0,2.02,0h14.12c1.11,0,2.02.9,2.02,2.02v8.07c0,1.11-.9,2.02-2.02,2.02H2.02c-1.11,0-2.02-.9-2.02-2.02V2.02ZM11.1,6.05c0-.27-.05-.53-.16-.78-.1-.25-.25-.46-.44-.66-.19-.19-.41-.33-.66-.44-.25-.1-.51-.15-.77-.15s-.53.05-.77.15c-.25.1-.46.25-.66.44-.19.19-.33.41-.44.66-.1.25-.16.51-.16.78s.05.53.16.77c.1.25.25.47.44.66.19.19.41.33.66.44.25.1.51.16.77.16s.53-.05.77-.16c.25-.1.46-.25.66-.44.19-.19.33-.41.44-.66.1-.25.16-.51.16-.77ZM6.05,6.05c0-.2.02-.4.06-.59s.1-.38.17-.57c.08-.18.17-.36.28-.52.11-.17.24-.32.38-.46.14-.14.29-.26.46-.38.17-.11.34-.2.52-.28.18-.08.37-.13.57-.17.19-.04.39-.06.59-.06s.4.02.59.06c.19.04.38.1.57.17.18.08.36.17.52.28.17.11.32.24.46.38.14.14.26.3.38.46.11.17.2.34.28.52.08.18.13.37.17.57.04.19.06.39.06.59s-.02.39-.06.59c-.04.2-.1.38-.17.57-.08.18-.17.36-.28.52-.11.17-.24.32-.38.46-.14.14-.3.26-.46.38-.17.11-.34.2-.52.28-.18.08-.37.13-.57.17-.19.04-.39.06-.59.06s-.4-.02-.59-.06c-.19-.04-.38-.1-.57-.17-.18-.08-.36-.17-.52-.28-.17-.11-.32-.24-.46-.38-.14-.14-.26-.29-.38-.46-.11-.17-.2-.34-.28-.52-.08-.18-.13-.37-.17-.57-.04-.19-.06-.39-.06-.59"/>
+                    </svg>
+                    <h1>Cost reduction</h1>
+                </div>
+                <div class="feature-container-desc">
+                    <p>Since it can be used with an API key,<br>costs can be reduced by paying only for what is used.</p>
+                </div>
+            </div>
+            <div class="feature-container">
+                <div class="feature-container-box purple">
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.71 17.71" height="52px">
+                        <path d="M8.86,0C3.97,0,0,3.97,0,8.86s3.97,8.86,8.86,8.86,8.86-3.97,8.86-8.86S13.74,0,8.86,0ZM8.86,16.53c-4.23,0-7.68-3.44-7.68-7.68S4.62,1.18,8.86,1.18s7.68,3.44,7.68,7.68-3.44,7.68-7.68,7.68Z"/>
+                        <path d="M13.12,6.07c-.26-.19-.63-.13-.82.13l-3.89,5.41-3.07-2.73c-.24-.22-.62-.19-.83.05-.22.24-.19.62.05.83l3.56,3.17c.11.1.25.15.39.15.02,0,.04,0,.06,0,.17-.02.32-.11.41-.24l4.27-5.94c.19-.26.13-.63-.13-.82Z"/>
+                    </svg>
+                    <h1>Cooperation with multiple services</h1>
+                </div>
+                <div class="feature-container-desc">
+                    <p>OpenAI, Gemini, Claude and other<br>AIs can be switched and used.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper security">
+        <div class="section-inner">
+            <div class="section-top">
+                <div class="section-title">
+                    <h2>SECURITY</h2>
+                    <h1>Building a secure environment <br>with local LLM</h1>
+                    <img src="img/medal_en.png" alt="Patent pending" class="medal">
+                </div>
+                <div class="section-desc">
+                    <p>Local LLM can be used without an API key.<br>Even confidential information that cannot be shared outside the company can be utilized with AI without requiring an internet connection.</p>
+                </div>
+            </div>
+        
+            <div class="security-main">
+                <div class="security-container-box">
+                    <h1>Corporate documents</h1>
+                    <p>Documents that serve as<br>important internal<br>information sources</p>
+                </div>
+                <span class="arrow-triangle"></span>
+                <div class="security-container-box">
+                    <h1>AI index creation</h1>
+                    <p>Analyze and organize<br>documents<br>offline</p>
+                </div>
+                <span class="arrow-triangle"></span>
+                <div class="security-container-box">
+                    <h1>AI search</h1>
+                    <p>Extract related<br>information<br>offline</p>
+                </div>
+                <span class="arrow-triangle"></span>
+                <div class="security-container-box">
+                    <h1>Answer generation</h1>
+                    <p>Only about 8KB of search results<br>are sent online</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="sec-whitepaper" class="section-wrapper white-paper">
+        <div class="section-top">
+            <div class="section-title">
+                <h2>WHITE PAPER</h2>
+                <h1>Useful tips for AI utilization</h1>
+            </div>
+            <div class="section-desc">
+                <p>Full of topics useful for business DX.<br>AI hints useful for work are introduced in an easy-to-understand way.</p>
+            </div>
+            <div class="wp-main">
+                <div class="wp-main-container">
+                    <div class="wp-date">2024.02.21</div>
+                    <img src="img/wp04.jpg" alt="" class="wp-img">
+                    <div class="wp-text">
+                        <h1>AI for business work becomes one.<br>DX app "ailia DX Insight"</h1>
+                        <p>Sales positions, research positions, and even comedy? About the true value of the latest "secure DX app" that comprehensively supports business DX from multiple angles, "ailia DX Insight," and examples of its use.</p>
+                    </div>
+                    <div class="wp-link-area">
+                        <p>PDF data</p>
+                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-157750252952" href="#">Free download.</a>
+                    </div>
+                </div>
+                <div class="wp-main-container">
+                    <div class="wp-date">2023.10.12</div>
+                    <img src="img/wp01.jpg" alt="" class="wp-img">
+                    <div class="wp-text">
+                        <h1>How effective is it for business? An AI expert talks about<br>the current state and future of "image generation AI"</h1>
+                        <p>How can image generation AI be utilized in business settings? We focus on the latest situation of image generation AI as told by AI experts and the points to keep in mind when introducing it.</p>
+                    </div>
+                    <div class="wp-link-area">
+                        <p>PDF data</p>
+                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-157651965349" href="#">Free download.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wp-main hide">
+                <div class="wp-main-container">
+                    <div class="wp-date">2023.09.13</div>
+                    <img src="img/wp02.jpg" alt="" class="wp-img">
+                    <div class="wp-text">
+                        <h1>Thoroughly explained by insiders.<br>What are the 6 "ailia" you should know from scratch?</h1>
+                        <p>ailia, which develops a wide range of solutions and services in various fields of AI development. The characteristics and lineup are introduced in an easy-to-understand way.</p>
+                    </div>
+                    <div class="wp-link-area">
+                        <p>PDF data</p>
+                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-136070509938" href="#">Free download.</a>
+                    </div>
+                </div>
+                <div class="wp-main-container">
+                    <div class="wp-date">2023.07.13</div>
+                    <img src="img/wp03.jpg" alt="" class="wp-img">
+                    <div class="wp-text">
+                        <h1>Mastering Whisper! Usable with edge.<br>What are the conditions for safe and secure voice recognition AI?</h1>
+                        <p>"What is AI speech recognition?" "What's so great about Whisper?" Introduction to the basics of AI speech recognition and the conditions for using safe and secure AI speech recognition on the edge.</p>
+                    </div>
+                    <div class="wp-link-area">
+                        <p>PDF data</p>
+                        <a class="link-btn hs-cta-trigger-button hs-cta-trigger-button-131341753962" href="#">Free download.</a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="link-btn fold">Show partial</a>
+        </div>
+    </section> -->
+
+    <section class="section-wrapper p-internal">
+        <div class="section-top">
+            <div class="section-title">
+                <h1>Expanding AI development further.<br class="sp-br">ailia's AI business</h1>
+            </div>
+        </div>
+        <div class="section-inner p-internal-main">
+            <div class="p-internal-container">
+                <h1>ailia SDK</h1>
+                <p>Lightweight, high-performance AI inference SDK</p>
+                <div class="p-internal-btn">
+                    <a href="/en/sdk/" class="link-btn">Try using ailia SDK.</a>
+                </div>
+            </div>
+            <div class="p-internal-container">
+                <h1>AI Computing</h1>
+                <p>AI software acceleration service</p>
+                <div class="p-internal-btn">
+                    <a href="/ai-computing/" class="link-btn">View AI Computing.</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-lightblue">
+        <div class="section-inner bg-white">
+            <div class="link-btn-desc"><p>Free download.</p></div>
+            <a class="btn dllink link-btn">Try using ailia DX Insight.</a>
+            <div class="link-btn-desc-under"><p>No account required / No credit card required / Free for commercial use</p></div>
+        </div>
+    </section>
+
+    <section id="sec-faq" class="section-wrapper faq">
+        <div class="section-inner">
+            <div class="section-top">
+                <div class="section-title">
+                    <h2>FAQ</h2>
+                    <h1>Frequently asked questions</h1>
+                </div>
+                <div class="section-desc">
+                    <p>Regarding the frequently asked questions inquiries, we will post the answer.</p>
+                </div>
+            </div>
+            <div class="faq-main">
+                <div class="faq-text">
+                    <h1>Please let me know the specifications of the available computer.</h1>
+                    <p>You need a CPU of Core i7 or higher and 8GB or more of memory in Windows environments.<br>For macOS environment, a CPU of M1 or higher and 8GB or more of memory are required.</p>
+                    <h1>Do you need a GPU?</h1>
+                    <p>ailia DX Insight can be executed using only a CPU.<br>When using a compatible GPU (such as the built-in GPU of the Intel® Core™ Ultra series or the Intel® Arc™ GPU), high-speed processing is possible for document registration and minutes creation.</p>
+                    <h1>Can I use the shared folder?</h1>
+                    <p>ailia DX Insight can handle mounted files, so it can also use shared folders via the network.</p>
+                    <h1>Please tell me the supported file formats.</h1>
+                    <p>It supports the following document formats.<br>'c', 'cpp', 'csv', 'json', 'java', 'md', 'py', 'rb', 'tex', 'txt', 'css', 'php', 'pdf', 'docx', 'xlsx'<br>
+                    <br>It supports the following image formats.<br>
+                    'png', 'jpg', 'jpeg'<br>
+                    <br>It supports the following audio formats.<br>
+                    'wav'</p>
+                    <h1>Can it be used without a ChatGPT API KEY?</h1>
+                    <p>ailia DX Insight supports ChatGPT, Gemini, Azure, OpenAI-compatible servers, and local LLM.<br>
+                    When using a local LLM, it can be used without a ChatGPT API KEY.<br>
+                    Additionally, since meeting minutes and image searches, as well as OCR, are always processed locally, they can be used without a ChatGPT API KEY.</p>
+                    <h1>Please tell me the price.</h1>
+                    <p>ailia DX Insight can be used completely free of charge. No account creation or email address registration is required, and it is free for commercial use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper support">
+        <div class="section-top">
+            <div class="section-title">
+                <h2>SUPPORT</h2>
+                <h1>Support</h1>
+            </div>
+            <div class="section-desc">
+                <p>Documents and sample programs, etc. We have prepared.</p>
+            </div>
+        </div>
+        <div class="support-main">
+            <div class="support-container">
+                <img src="img/support_pic01.png" alt="" width="240px">
+                <a href="https://ailia-ai.github.io/ailia-dx-insight/en/" target="_blank" class="link-btn">Document</a>
+                <p>I will introduce the details of the introduction method and how to use it.</p>
+            </div>
+            <div class="support-container">
+                <img src="img/support_pic02.png" alt="" width="240px">
+                <a href="https://join.slack.com/t/axinc-ailia/shared_invite/zt-f5hboxhj-kZ~APYIHTHeSopL5NWqGtA" target="_blank" class="link-btn">Support Slack</a>
+                <p>It is possible to ask questions via chat.</p>
+            </div>
+            <div class="support-container">
+                <img src="img/support_pic03.png" alt="" width="240px">
+                <a href="https://share.hsforms.com/1Dgb6tZ96TLSkcK7TIau1tgbq8vm" target="_blank" class="link-btn">Contact</a>
+                <p>Please feel free to inquire about unclear points<br>regarding the service or consultations toward introduction.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-lightblue">
+        <div class="section-inner bg-white">
+            <div class="link-btn-desc"><p>Free download.</p></div>
+            <a class="btn dllink link-btn">Try using ailia DX Insight.</a>
+            <div class="link-btn-desc-under"><p>No account required / No credit card required / Free for commercial use</p></div>
+        </div>
+    </section>
+    
+    <section class="section-wrapper client-list">
+        <div class="section-inner">
+            <div class="client-list-title">
+                <h1>ailia SDK corporate list</h1>
+            </div>
+            <div class="client-logo">
+                <div class="client-logo-inner">
+                    <img src="img/dev_co_logo02.png" alt="">
+                    <img src="img/dev_co_logo03.png" alt="">
+                    <img src="img/dev_co_logo04.png" alt="">
+                    <img src="img/dev_co_logo05.png" alt="">
+                    <img src="img/dev_co_logo06.png" alt="">
+                </div>
+            </div>
+            <div class="client-list-title"><h1>&nbsp;</h1></div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="cw">
+            <div class="wrap">
+                <div class="left">
+                    <div class="col">
+                        <a href="/en/">ailia AI series</a>
+                        <a href="/en/dx/">ailia DX Insight</a>
+                        <a href="/en/sdk/">ailia SDK</a>
+                        <a href="https://www.ailia.ai/voice">ailia AI VOICE</a>
+                        <a href="https://www.ailia.ai/speech">ailia AI SPEECH</a>
+                        <a href="/en/embedded/">ailia Embedded AI</a>
+                    </div>
+                    <div class="col">
+                        <a href="/ai-computing/">AI Computing</a>
+                        <a href="/ai-computing/ai-deeplearning-acceleration/">AI Deeplearning Acceleration</a>
+                        <a href="/ai-computing/embedded-acceleration/">Embedded Acceleration</a>
+                        <a href="/ai-computing/image-processing-acceleration/">Image Processing Acceleration</a>
+                        <a href="/ai-computing/gpu-acceleration/">GPU Acceleration</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/">AI Application</a>
+                        <a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/">AI Agent</a>
+                    </div>
+                    <div class="col">
+                        <a href="/en/company/">Company Profile</a>
+                        <a href="https://www.axell.co.jp/browser/">Terms of Service</a>
+                        <a href="https://www.axell.co.jp/privacy/">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <p class="company">ailia Inc.</p>
+                    <p class="address">5F Tosokaikan, 19-22 Uguisudanicho, Shibuya-ku, Tokyo 150-0032 Japan</p>
+                    <p class="btnWrap">
+                        <a class="btn btnContact" href="https://ailia.ai/en/contact/" target="_blank">
+                            <span class="icon"><img src="img/common/icon_contact.svg" alt=""></span>
+                            <span class="label">Contact</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bannerArea">
+                <a href="https://blog.ailia.ai/" target="_blank">
+                    <img src="img/common/footer_banner_01.webp" alt="AIでしごとするなら「AI専門メディア」">
+                </a>
+                <a href="https://ailia.ai/en/sdk/" target="_blank">
+                    <img src="img/common/footer_banner_02.webp" alt="ソフトウェア開発きっとアイリアSDK">
+                </a>
+
+            </div>
+
+        </div>
+        <p class="copyright">Copyright &copy; ailia Inc. / Axell Co., Ltd</p>
+    </footer>
+
+
+    <!-- MODAL -->
+    <div id="sitemap">
+        <div class="sitemapinner">
+            <div class="btn_close"><a class="btn modalclose">CLOSE</a></div>
+            <div class="sitemapbody">
+                <ul class="sitemaplist">
+                    <li class="sitemapbtn sitemap01">
+                        <div class="sitemapbox"><span class="btntext">INTRODUCTION</span><a class="btn modalclose" href="#introduction">ailia DX is.</a></div>
+                    </li>
+                    <li class="sitemapbtn sitemap02">
+                        <div class="sitemapbox"><span class="btntext">CASE STUDY</span><a class="btn modalclose" href="#casestudy">Example of use</a></div>
+                    </li>
+                    <li class="sitemapbtn sitemap03">
+                        <div class="sitemapbox"><span class="btntext">FOLLOW UP</span><a class="btn modalclose" href="#followup">Follow-up</a></div>
+                    </li>
+                    <li class="sitemapbtn sitemap04">
+                        <div class="sitemapbox"><span class="btntext">FEATURE</span><a class="btn modalclose" href="#feature">Characteristics</a></div>
+                    </li>
+                    <li class="sitemapbtn sitemap05">
+                        <div class="sitemapbox"><span class="btntext">WHITE PAPER</span><a class="btn modalclose" href="#hint">Useful tips for AI utilization</a></div>
+                    </li>
+                    <li class="sitemapbtn sitemap06">
+                        <div class="sitemapbox"><span class="btntext">FAQ (Frequently Asked Questions)</span><a class="btn modalclose" href="#faq">Frequently asked questions</a></div>
+                    </li>
+                    <li class="sitemapbtn sitemap07">
+                        <div class="sitemapbox"><span class="btntext">SUPPORT</span><a class="btn modalclose" href="#support">Support</a></div>
+                    </li>
+                    <li class="sitemapbtn sitemap08">
+                        <div class="sitemapbox"><span class="btntext">DEVELOP &amp; IMPLEMENT</span><a class="btn modalclose" href="#development">Development and implementation support</a></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="sitemapfoot">
+                <div class="sitemapbtn cpbtn">
+                    <div class="btnset">
+                        <div class="btnbox btn01"><span class="btntext">30-day free demo app download.</span><a class="btn dllink modalclose">I will try using ailia DX Insight.</a></div>
+                        <div class="btnbox btn02"><span class="btntext">Download materials.</span><a class="btn hs-cta-trigger-button hs-cta-trigger-button-186855482027" href="#" target="_blank">Download materials.</a></div>
+                    </div>
+                </div>
+                <div class="sitemapfootnav">
+                    <div class="footnavset">
+                        <ul class="navlist list01">
+                            <li class="nav0101"><a href="https://axinc.jp/" target="_blank"><img src="img/sitemap_ax.png" width="94" height="45" alt="ax"/></a></li>
+                            <li class="nav0102"><a href="https://www.axell.co.jp/" target="_blank"><img src="img/sitemap_axell.png" width="124" height="45" alt="Axell"/></a></li>
+                        </ul>
+                        <ul class="navlist list02">
+                            <li class="nav0201"><a href="https://www.axell.co.jp/browser/">Terms of service</a></li>
+                            <li class="nav0201"><a href="https://www.axell.co.jp/privacy/">Privacy policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="download">
+        <div class="downloadbox">
+            <div class="downloadinner">
+                <div class="btn_close"><a class="btn modalclose2">CLOSE</a></div>
+                <div class="downloadbody">
+                    <h2>Download ailia DX Insight for free</h2>
+                    <div class="dlbtn01" style="display:none;">
+                        <div class="btnset">
+                            <div class="btnbox btn01"><span class="btntext">Windows version</span><a class="btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT">Download</a></div>
+                            <div class="btnbox btn02"><span class="btntext">Mac version</span><a class="btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT">Download</a></div>
+                        </div>
+                    </div>
+                    <div class="dlbtn02" style="display:none;">
+                        <div class="btnset">
+                            <div class="btnbox btn01"><span class="btntext">Android version</span><a class="btn" href="#"><img src="img/btn_appstore.png" width="328" height="121" alt="App Store"/></a></div>
+                            <div class="btnbox btn02"><span class="btntext">iOS version</span><a class="btn" href="#"><img src="img/btn_googleplay.png" width="406" height="121" alt="Google Play"/></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="downloadfoot">
+                    <div class="label">No account required / No credit card required / Free for commercial use</div>
+                    <a class="link-btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT?lang=en">Download the app</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /MODAL -->
+    
+</body>
+</html>

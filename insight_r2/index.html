@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DX Insight</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/dlmodal.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/style_header.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="img/favicon.png" sizes="180x180">
+
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+
+    
+
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript" src="js/smoothScroll.js"></script>
+	<script type="text/javascript" src="js/top.js"></script>
+	<script type="text/javascript" src="js/spnavi.js"></script>
+	<script type="text/javascript" src="js/profmodal.js"></script>
+	<script type="text/javascript" src="js/move.js"></script>
+	<script type="text/javascript" src="js/mp_config.js"></script>
+	<script type="text/javascript" src="js/mp_fileio.js"></script>
+	<script type="text/javascript" src="js/mp_lib.js"></script>
+	<script type="text/javascript" src="js/chatwindow.js"></script>
+	<script type="text/javascript" src="js/jquery-modal-video.min.js"></script>
+    <script type="text/javascript" src="js/top_blog.js"></script>
+    <script type="text/javascript" src="js/ailia_dx_chat.js"></script>
+    <script type="text/javascript" src="js/dlmodal.js"></script>
+
+    <!-- OGP画像 -->
+    <meta name="description"
+		content="「DX Insight」は、機密度に応じてAIを使い分ける統合AIアプリ。社外秘データはローカルLLMですべて端末内で処理、一般業務はChatGPT・Claude・Geminiから最適なモデルを選択できます。" />
+	<meta charset="utf-8" />
+	<meta property="og:title" content="DX Insight｜アイリア">
+	<meta property="og:description"
+		content="「DX Insight」は、機密度に応じてAIを使い分ける統合AIアプリ。社外秘データはローカルLLMですべて端末内で処理、一般業務はChatGPT・Claude・Geminiから最適なモデルを選択できます。">
+	<meta property="og:image"
+		content="https://ailia.ai/dx/img/dx-insight-ogp.png">
+	<meta property="og:url" content="https://ailia.ai/dx/">
+	<meta property="og:site_name" content="アイリア">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5Q579RMM');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <div class="navArea">
+                <div class="inner cw">
+                    <h1>
+                        <a class="navLogo" href="/"><img class="" src="img/common/logo.svg" alt="ailia">
+                            <span class="siteTitle">アイリア</span>
+                        </a>
+                    </h1>
+                    <ul class="navList">
+                        <li>
+                            <a href="/" class="">アイリアAIシリーズ</a>
+                        </li>
+                        <li>
+                            <a href="/ai-computing/" class="ai-computing">AIコンピューティング</a>
+                        </li>
+                        <li>
+                            <a href="/ai-application/" class="ai-application">AIアプリケーション</a>
+                        </li>
+                        <li>
+                            <a href="/ailia.ai/company/" class="company">会社情報</a>
+                        </li>
+                        <li class="lang">
+                            <a href="/dx/" class="current" lang="jp">JP</a>
+                            <a href="/en/dx/" lang="en">EN</a>
+                        </li>
+                        <li class="contact">
+                            <a class="" href="https://ailia.ai/contact/" target="_blank">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="https://ailia.ai/contact/" target="_blank" class="spContact">お問い合わせ</a>
+                <a class="spNavBtn" href="javascript:void(0);"><span></span><span></span><span></span></a>
+            </div>
+        </nav>
+    </header>
+
+    <nav id="head02">
+        <div class="headinner">
+            <div class="logo"><a href="#" class="logo-top-link"><img src="img/mv_logo.png" alt="ページトップへ戻る"></a></div>
+            <ul class="head02nav">
+                <li class="nav0201"><a href="#sec-function">機能紹介</a></li>
+                <li class="nav0201"><a href="#sec-features">特徴</a></li>
+                <li class="nav0201"><a href="#sec-faq">FAQ</a></li>
+                <li class="navbtn0201"><a class="btn dllink"><span>アプリを使ってみる</span></a></li>
+                <li class="navbtn0202"><a href="#" target="_blank" class="btn hs-cta-trigger-button hs-cta-trigger-button-186855482027"><span>資料ダウンロード</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    
+
+
+    <div class="hero-wrapper">
+
+        <div class="hero-wrapper-inner">
+
+            <div id="tsparticles"></div>
+
+            <div class="mv-container">
+                <!-- 固定テキスト（スライドしない部分） -->
+                <div class="text-area">
+                    <div class="text-content-static">
+                        <p>機密文書も、一般業務も、ひとつのAIアプリで</p>
+                        <h1><span class="highlight">ローカルLLM</span>で、<span class="highlight">すべての業務</span>にAIを</h1>
+                    </div>
+                </div>
+
+                <!-- 右側の画像スライダー -->
+                <div class="slider-area">
+                    <div class="slider-contents-wrapper">
+                        <div class="swiper myImageSwiper swiper-container-box">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 1"></div>
+                                <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 3"></div>
+                                <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 4"></div>
+                                <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                
+            </div>
+
+            <!-- テキストスライダーを hero-wrapper 直下に置き、絶対配置で左側に重ねる -->
+            <div class="swiper myTextSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text-content">
+                        <h2>機密文書を社外に出さずRAGで精度を向上</h2>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/RAG.html" class="btn-modern" target="_blank"><span>RAGについて詳しく見る</span></a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>機密会議の議事録を完全ローカルで</h2>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/Recording.html" class="btn-modern" target="_blank"><span>議事録について詳しく見る</span></a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>画像・音声を端末内で検索</h2>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/SearchImage.html" class="btn-modern" target="_blank"><span>画像・音声検索について詳しく見る</span></a>
+                    </div>
+                    <div class="swiper-slide text-content">
+                        <h2>資料に使う画像を生成</h2>
+                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/GenerateImage.html" class="btn-modern" target="_blank"><span>画像生成について詳しく見る</span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    // tsParticles 初期化 — プレビューツールで調整した設定値
+    (async () => {
+        await tsParticles.load("tsparticles", {
+            fullScreen: { enable: false },
+            background: { color: { value: "transparent" } },
+            fpsLimit: 60,
+            particles: {
+                number: { value: 120 },
+                color: {
+                    value: ["#e5f4ff", "#48acf9"]
+                },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 0.5,
+                    animation: { enable: true, speed: 0.6, minimumValue: 0.1, sync: false }
+                },
+                size: {
+                    value: { min: 1, max: 4 },
+                    animation: { enable: false }
+                },
+                move: {
+                    enable: true,
+                    speed: 0.6,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    outModes: { default: "out" }
+                },
+                links: {
+                    enable: true,
+                    distance: 100,
+                    color: "#00bbe0",
+                    opacity: 0.30,
+                    width: 0.6
+                }
+            },
+            interactivity: {
+                events: {
+                    onHover: { enable: true, mode: "repulse" },
+                    onClick: { enable: false }
+                },
+                modes: {
+                    repulse: { distance: 80, duration: 0.4 }
+                }
+            },
+            detectRetina: true
+        });
+    })();
+    </script>
+
+
+
+    <!--あいにゃんチャットボット-->
+    <div id="chatbtn">
+        <div class="chatbtnbox chatopen">
+            <div class="chatbtnwindow">ボク、あいにゃん。アイリアのことならなんでも聞いてくれにゃ。</div>
+            <div class="chara">
+                <canvas id="avatar" width="256" height="256"></canvas>
+                <img src="img/chara_sp.png" width="108" height="109" alt="あいにゃん" class="sp" />
+            </div>
+        </div>
+        <div class="btnclose chatclose">閉じる</div>
+        <div class="btnprof profopen">プロフィール</div>
+    </div>
+    <div id="chatwindow">
+        <div class="aichatinner">
+            <!-- チャット部分 -->
+            <div class="logarea">
+                <div class="loghead">
+                    <div class="logtitle">あいにゃんチャットBOT（自動応答）</div>
+                    <div id="chatclose" class="winclose">閉じる</div>
+                </div>
+                <div class="logbody" id="logbody">
+                    <div class="logtext">
+                        <div id="chat"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatarea">
+                <div class="chatbody">
+                    <form name="chat_form"
+                        action="javascript:chat_api('https://ailia-llm-insight.uw.r.appspot.com/');">
+                        <div class="chatformbox">
+                            <input type="text" name="prompt" id="prompt" size="40"
+                                placeholder="※ここに質問を入力（例：アイリアについて）">
+                        </div>
+                        <div class="chatbutton">
+                            <button type="button"
+                                onclick="chat_api('https://ailia-llm-insight.uw.r.appspot.com/')">送信</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CHARAPROF -->
+    <div id="profmodal">
+        <div class="profbg"></div>
+        <div class="profwindow">
+            <div class="profinner">
+                <div class="profclose">閉じる</div>
+                <div class="pic"><img src="img/chara_detail_pic.png" width="447" height="574" alt="" /></div>
+                <div class="textarea">
+                    <div class="label">アイリアブランド公式キャラクター</div>
+                    <div class="name">あいにゃん</div>
+                    <div class="text">
+                        未来の世界からやってきた、AIにくわしい謎の生物。「◯◯だにゃ」としゃべるが、ねこではないらしい。アイリアブランドの製品やサービスに関する情報を教えてくれる。 【好きな食べ物】
+                        キャットフード</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <section class="section-wrapper bg-lightblue">
+        <div class="section-inner bg-white youtube-link">
+                <a class="dllink dl-card p-internal-container">
+                <p class="dl-card-title">評価版を無料ダウンロード</p>
+                <div class="p-internal-btn">
+                    <span class="link-btn">DX Insightを使ってみる</span>
+                </div>
+                <div class="trust-strip">
+                    <span><span class="check">✓</span> 1年間 無償評価ライセンス</span>
+                    <span><span class="check">✓</span> Windows / macOS対応</span>
+                    <span><span class="check">✓</span> GPU不要・8GB RAM〜</span>
+                </div>
+            </a>
+            <div class="video-wrapper">
+                <div class="accent-box">
+                    <div class="iframe-container">
+                        <iframe src="https://www.youtube.com/embed/jGhKwrF3by8" title="ailia DX Insight Promotion Video (Japanese)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="sec-function" class="section-wrapper function">
+        
+        <div class="function-top">
+            <div class="section-title">
+                <h2>FUNCTION</h2>
+                <h1>機密業務はローカルLLMで、<br class="sp-br">一般業務はクラウドLLMで。</h1>
+            </div>
+            <div class="section-desc">
+                <p>「DX Insight」は、社外秘データはローカルLLMですべて端末内で処理、<br>一般業務はChatGPT・Claude・Geminiから最適なモデルを選択——<br>機密度に応じてAIを使い分けられる統合AIアプリです。</p>
+                <p style="margin-top: 1em;">金融・医療・法務・研究開発の機密業務から、日々のドキュメント作成まで。<br>機密会議の議事録、社外秘文書の翻訳、画像検索もひとつの画面で完結します。</p>
+            </div>
+        </div>
+        <div class="function-card-grid">
+            <div class="function-card">
+                <div class="function-card-illust"><img src="img/Function_chat.png" alt="チャット"></div>
+                <div class="function-card-body">
+                    <h3 class="function-card-title">チャット</h3>
+                    <p class="function-card-desc">メールのドラフトや契約書の確認、ファイル・画像を読み込んでの対話まで。機密度に応じてローカルLLMとクラウドLLMを使い分けられます。</p>
+                </div>
+            </div>
+            <div class="function-card">
+                <div class="function-card-illust"><img src="img/Function_rag.png" alt="RAG"></div>
+                <div class="function-card-body">
+                    <h3 class="function-card-title">RAG</h3>
+                    <p class="function-card-desc">フォルダ単位で社内文書を取り込み、根拠を示しながら回答。機密文書も端末内のローカルLLMで安全に参照できます。</p>
+                </div>
+            </div>
+            <div class="function-card">
+                <div class="function-card-illust"><img src="img/Function_search.png" alt="情報検索"></div>
+                <div class="function-card-body">
+                    <h3 class="function-card-title">情報検索</h3>
+                    <p class="function-card-desc">キーワードからAIが画像の内容や音声の特徴を理解し、該当ファイルを検索。機密性の高い画像・音声もローカルで安全に扱えます。</p>
+                </div>
+            </div>
+            <div class="function-card">
+                <div class="function-card-illust"><img src="img/Function_translate.png" alt="翻訳"></div>
+                <div class="function-card-body">
+                    <h3 class="function-card-title">翻訳</h3>
+                    <p class="function-card-desc">PDF2PDFでレイアウトを保ったまま多言語化。長文翻訳や校正も、社外秘文書を外部に送信せずローカルLLMで処理できます。</p>
+                </div>
+            </div>
+            <div class="function-card">
+                <div class="function-card-illust"><img src="img/Function_minutes.png" alt="議事録作成"></div>
+                <div class="function-card-body">
+                    <h3 class="function-card-title">議事録作成</h3>
+                    <p class="function-card-desc">会議の発言を話者ごとに分離して自動で書き起こし、終了と同時に議事録が完成。録音ファイルからの作成や英語翻訳にも対応します。</p>
+                </div>
+            </div>
+            <div class="function-card">
+                <div class="function-card-illust"><img src="img/Function_generate.png" alt="画像生成・音声合成"></div>
+                <div class="function-card-body">
+                    <h3 class="function-card-title">画像生成・音声合成</h3>
+                    <p class="function-card-desc">テキストから画像を生成・編集。dall-e-3／gpt-image-1／Gemini 2.5 Flashを用途で選択でき、日本語対応のリアルタイム音声合成も搭載します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="sec-features" class="section-wrapper features">
+        <div class="section-top">
+            <div class="section-title">
+                <h2>FEATURES</h2>
+                <h1>DX Insightが選ばれる理由</h1>
+            </div>
+        </div>
+        <div class="section-inner feature-main">
+            <div class="feature-container">
+                <div class="feature-container-box red">
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="48px" height="48px" fill="currentColor">
+                        <path d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-156q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T520-440q0-17-11.5-28.5T480-480q-17 0-28.5 11.5T440-440q0 17 11.5 28.5T480-400Zm0-80Z"/>
+                    </svg>
+                    <h1>機密も扱える</h1>
+                </div>
+                <div class="feature-container-desc">
+                    <p>社外秘データもローカルLLMなら<br>端末内で完結して処理。クラウドに<br>出せない情報もAIで扱える。</p>
+                </div>
+            </div>
+            <div class="feature-container">
+                <div class="feature-container-box green">
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="48px" height="48px" fill="currentColor">
+                        <path d="M280-240q-33 0-56.5-23.5T200-320v-80h80v80h400v-400h-80v-80h80q33 0 56.5 23.5T760-720v400q0 33-23.5 56.5T680-240H280Zm-120-80v-80h80v80h-80Zm0-160v-80h80v80h-80Zm0-160v-80h80v80h-80Zm160 320v-80h80v80h-80Zm0-320v-80h80v80h-80ZM240-480h280L400-600h-40l-80 80-40-40-80 80Zm280-160q25 0 42.5-17.5T580-700q0-25-17.5-42.5T520-760q-25 0-42.5 17.5T460-700q0 25 17.5 42.5T520-640ZM240-160v-80q0-33 23.5-56.5T320-320h240q33 0 56.5 23.5T640-240v80q0 33-23.5 56.5T560-80H320q-33 0-56.5-23.5T240-160Zm80 0h240v-80H320v80Zm120-40Z"/>
+                    </svg>
+                    <h1>業務で選べる</h1>
+                </div>
+                <div class="feature-container-desc">
+                    <p>ChatGPT、Claude、Gemini、<br>ローカルLLM。タスクや機密度に<br>応じて最適なAIを使い分け。</p>
+                </div>
+            </div>
+            <div class="feature-container">
+                <div class="feature-container-box purple">
+                    <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="48px" height="48px" fill="currentColor">
+                        <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm-43-183 226-227-56-56-170 170-85-85-57 57 142 141Zm43-137Z"/>
+                    </svg>
+                    <h1>導入しやすい</h1>
+                </div>
+                <div class="feature-container-desc">
+                    <p>1年間無料で利用できる<br>評価ライセンス付き。<br>ローカルLLMはAPI料金も不要。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper security">
+        <div class="section-inner">
+            <div class="section-top">
+                <div class="section-title">
+                    <h2>SECURITY</h2>
+                    <h1>ローカルLLMで<br class="sp-br">セキュアな環境構築</h1>
+                </div>
+                <div class="section-desc">
+                    <p>APIキーがなくてもローカルLLMを使用可能。<br>社外に出せない機密情報でも、インターネット接続不要でAIが活用可能です。</p>
+                </div>
+            </div>
+        
+            <div class="security-main">
+                <div class="security-container-box">
+                    <h1>企業ドキュメント</h1>
+                    <p>社内の重要な<br>情報源となる文書類</p>
+                </div>
+                <span class="arrow-triangle"></span>
+                <div class="security-container-box">
+                    <h1>AIインデックス作成</h1>
+                    <p>オフラインで<br>ドキュメントを<br>分析・整理</p>
+                </div>
+                <span class="arrow-triangle"></span>
+                <div class="security-container-box">
+                    <h1>AI検索</h1>
+                    <p>オフラインで<br>関連情報を抽出</p>
+                </div>
+                <span class="arrow-triangle"></span>
+                <div class="security-container-box">
+                    <h1>回答生成</h1>
+                    <p>オフラインの<br>ローカルLLMで回答生成</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec-compare" class="section-wrapper bg-lightblue">
+        <div class="section-top">
+            <div class="section-title">
+                <h2>COMPARE</h2>
+                <h1>オフィス連携型AIとの違い</h1>
+            </div>
+            <div class="section-desc">
+                <p>オフィスソフト連携型AIアシスタントは、すべてクラウド処理が前提。<br>機密情報は扱えず、LLMも選べません。</p>
+            </div>
+        </div>
+        <div class="section-inner compare-inner">
+            <div class="compare-scroll-wrapper">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th class="compare-th compare-th-label">項目</th>
+                            <th class="compare-th compare-th-insight">DX Insight</th>
+                            <th class="compare-th compare-th-other">オフィスソフト連携型<br>AIアシスタント</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-tr">
+                            <td class="compare-td compare-td-label">機密度による使い分け</td>
+                            <td class="compare-td compare-td-insight"><span class="compare-check">✓ 対応</span><br>ローカル / クラウドを選択</td>
+                            <td class="compare-td compare-td-other compare-td-na">ー</td>
+                        </tr>
+                        <tr class="compare-tr">
+                            <td class="compare-td compare-td-label">機密情報の扱い</td>
+                            <td class="compare-td compare-td-insight"><span class="compare-check">✓ 完全ローカル</span><br>ローカルLLM利用時</td>
+                            <td class="compare-td compare-td-other">クラウド送信必須</td>
+                        </tr>
+                        <tr class="compare-tr">
+                            <td class="compare-td compare-td-label">オフライン動作</td>
+                            <td class="compare-td compare-td-insight"><span class="compare-check">✓</span> 対応</td>
+                            <td class="compare-td compare-td-other compare-td-na">ー</td>
+                        </tr>
+                        <tr class="compare-tr">
+                            <td class="compare-td compare-td-label">複数LLMの切替</td>
+                            <td class="compare-td compare-td-insight"><span class="compare-check">✓</span> ローカル ＋ 4社</td>
+                            <td class="compare-td compare-td-other">1社固定</td>
+                        </tr>
+                        <tr class="compare-tr">
+                            <td class="compare-td compare-td-label">社内文書RAG</td>
+                            <td class="compare-td compare-td-insight"><span class="compare-check">✓</span> フォルダ単位・ローカル</td>
+                            <td class="compare-td compare-td-other">△ クラウド保存前提</td>
+                        </tr>
+                        <tr class="compare-tr">
+                            <td class="compare-td compare-td-label">議事録作成</td>
+                            <td class="compare-td compare-td-insight"><span class="compare-check">✓</span> 話者分離・ローカル</td>
+                            <td class="compare-td compare-td-other">△ クラウド依存</td>
+                        </tr>
+                        <tr class="compare-tr">
+                            <td class="compare-td compare-td-label">本体料金</td>
+                            <td class="compare-td compare-td-insight"><span class="compare-check">1年間無料</span>（評価ライセンス）<br>ローカルLLMはAPI料金も不要</td>
+                            <td class="compare-td compare-td-other">月額 約$30/user〜</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="compare-note">※代表的なオフィス連携型AIサービスとの比較です。各社の個別仕様については公式情報をご参照ください。</p>
+        </div>
+    </section>
+
+    <section id="sec-voices" class="section-wrapper usecase-section">
+        <div class="section-top">
+            <div class="section-title">
+                <h2>USE CASES</h2>
+                <h1>活用シーン</h1>
+            </div>
+            <div class="section-desc">
+                <p>機密情報を扱う業務から日常業務まで、DX Insightはさまざまな現場で活用できます。</p>
+            </div>
+        </div>
+        <div class="section-inner usecase-grid">
+            <div class="usecase-card">
+                <p class="usecase-card-text">特許出願前の発明情報など、クラウドに送れないR&D資料もローカルLLMで要約・翻訳。機密データを外部送信せずに開発スピードを加速できます。</p>
+                <p class="usecase-card-label">製造業 / 研究開発部門</p>
+            </div>
+            <div class="usecase-card">
+                <p class="usecase-card-text">顧客情報を含む書類の取扱いに、完全ローカルで動作するAIを活用。コンプライアンスを守りながらAIの恩恵を受けられます。</p>
+                <p class="usecase-card-label">金融機関 / 営業推進部門</p>
+            </div>
+            <div class="usecase-card">
+                <p class="usecase-card-text">契約書のレビューや翻訳で、クライアントの情報を外部に出さずに処理。PDFのレイアウトを保持したまま多言語化が可能です。</p>
+                <p class="usecase-card-label">法律事務所 / 企業法務部門</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec-faq" class="section-wrapper faq">
+        <div class="section-inner">
+            <div class="section-top">
+                <div class="section-title">
+                    <h2>FAQ</h2>
+                    <h1>よくあるご質問</h1>
+                </div>
+                <div class="section-desc">
+                    <p>お問い合わせの多いご質問について、回答を掲載させていただきます。</p>
+                </div>
+            </div>
+            <div class="faq-main">
+                <div class="faq-text">
+                    <h1>利用可能なパソコンのスペックを教えてください。</h1>
+                    <p>windows環境ではCore i7以上のCPUと、8GB以上のメモリが必要です。<br>macOS環境ではM1以上のCPUと、8GB以上のメモリが必要です。</p>
+                    <h1>GPUは必要ですか？</h1>
+                    <p>DX InsightはCPUのみでも実行可能です。<br>対応するGPU（Intel® Core™ Ultra シリーズの内蔵GPU、Intel® Arc™ GPU など）を使用した場合、ドキュメントの登録や議事録作成などで高速処理が可能です。</p>
+                    <h1>共有フォルダは使用できますか？</h1>
+                    <p>DX Insightはマウントされたファイルを扱うことができるため、ネットワーク経由の共有フォルダも使用可能です。</p>
+                    <h1>対応しているファイルフォーマットを教えてください。</h1>
+                    <p>下記のドキュメントフォーマットに対応しています。<br>'c', 'cpp', 'csv', 'json', 'java', 'md', 'py', 'rb', 'tex', 'txt', 'css', 'php', 'pdf', 'docx', 'xlsx'<br>
+                    下記の画像フォーマットに対応しています。<br>
+                    'png', 'jpg', 'jpeg'<br>
+                    下記の音声フォーマットに対応しています。<br>
+                    'wav'</p>
+                    <h1>ChatGPT のAPI KEY がなくても使用できますか？</h1>
+                    <p>DX Insightは、ローカルLLM、OpenAI（ChatGPT）、Anthropic（Claude）、Google（Gemini）、Azure、OpenAI互換サーバに対応しています。<br>
+                    ローカルLLMを使用する場合、ChatGPTのAPI KEY がなくても使用可能です。<br>
+                    また、議事録と画像検索、OCRについては常にローカルで処理されるため、ChatGPTのAPI KEY がなくても使用可能です。</p>
+                    <h1>価格を教えてください。</h1>
+                    <p>現在は評価版として1年間無償でご利用いただけるライセンスでご利用いただけます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper support">
+        <div class="section-top">
+            <div class="section-title">
+                <h2>SUPPORT</h2>
+                <h1>サポート</h1>
+            </div>
+            <div class="section-desc">
+                <p>ドキュメントやサンプルプログラム等もご用意しております。</p>
+            </div>
+        </div>
+        <div class="support-main">
+            <div class="support-container">
+                <img src="img/support_pic01.png" alt="" width="240px">
+                <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/" target="_blank" class="link-btn">ドキュメント</a>
+                <p>導入方法や使い方を紹介します。</p>
+            </div>
+            <div class="support-container">
+                <img src="img/support_pic02.png" alt="" width="240px">
+                <a href="https://join.slack.com/t/axinc-ailia/shared_invite/zt-f5hboxhj-kZ~APYIHTHeSopL5NWqGtA" target="_blank" class="link-btn">サポートSlack</a>
+                <p>チャットベースで質問が可能です。</p>
+            </div>
+            <div class="support-container">
+                <img src="img/support_pic03.png" alt="" width="240px">
+                <a href="https://share.hsforms.com/1YnSCAiFtTwejuSHHcrGCMQbq8vm" target="_blank" class="link-btn">導入のご相談</a>
+                <p>サービスについての不明点や導入に向けた<br>ご相談などお気軽にお問い合わせください。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-lightblue">
+        <div class="section-inner bg-white">
+                <a class="dllink dl-card p-internal-container">
+                <p class="dl-card-title">評価版を無料ダウンロード</p>
+                <div class="p-internal-btn">
+                    <span class="link-btn">DX Insightを使ってみる</span>
+                </div>
+                <div class="trust-strip">
+                    <span><span class="check">✓</span> 1年間 無償評価ライセンス</span>
+                    <span><span class="check">✓</span> Windows / macOS対応</span>
+                    <span><span class="check">✓</span> GPU不要・8GB RAM〜</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="cw">
+            <div class="wrap">
+                <div class="left">
+                    <div class="col">
+                        <a href="/">アイリアAIシリーズ</a>
+                        <a href="/dx/">DX Insight</a>
+                        <a href="/sdk/">アイリア SDK</a>
+                        <a href="https://www.ailia.ai/voice">アイリア AI VOICE</a>
+                        <a href="https://www.ailia.ai/speech">アイリア AI SPEECH</a>
+                        <a href="/embedded/">アイリア Embedded AI</a>
+                    </div>
+                    <div class="col">
+                        <a href="/ai-computing/">AIコンピューティング</a>
+                        <a href="/ai-computing/ai-deeplearning-acceleration/">AI・深層学習向け高速化</a>
+                        <a href="/ai-computing/embedded-acceleration/">組込み高速化</a>
+                        <a href="/ai-computing/image-processing-acceleration/">画像処理高速化</a>
+                        <a href="/ai-computing/gpu-acceleration/">GPU向け高速化</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/">AIアプリケーション</a>
+                        <a href="https://blog.ailia.ai/pickup/ailia-ai-agent-01/">AIエージェント</a>
+                    </div>
+                    <div class="col">
+                        <a href="/company/">会社情報</a>
+                        <a href="https://www.axell.co.jp/browser/">利用規約</a>
+                        <a href="https://www.axell.co.jp/privacy/">プライバシーポリシー</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <p class="company">アイリア株式会社</p>
+                    <p class="address">〒150-0032　東京都渋谷区鶯谷町19-22　塗装会館5F</p>
+                    <p class="btnWrap">
+                        <a class="btn btnContact" href="https://ailia.ai/contact/" target="_blank">
+                            <span class="icon"><img src="img/common/icon_contact.svg" alt=""></span>
+                            <span class="label">お問い合わせ</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bannerArea">
+                <a href="https://blog.ailia.ai/" target="_blank">
+                    <img src="img/common/footer_banner_01.webp" alt="AIでしごとするなら「AI専門メディア」">
+                </a>
+                <a href="https://ailia.ai/sdk/" target="_blank">
+                    <img src="img/common/footer_banner_02.webp" alt="ソフトウェア開発きっとアイリアSDK">
+                </a>
+
+            </div>
+
+        </div>
+        <p class="copyright">Copyright &copy; アイリア株式会社 / 株式会社アクセル</p>
+    </footer>
+
+
+    <!-- MODAL -->
+	<div id="sitemap">
+		<div class="sitemapinner">
+			<div class="btn_close"><a class="btn modalclose">CLOSE</a></div>
+			<div class="sitemapbody">
+				<ul class="sitemaplist">
+					<li class="sitemapbtn sitemap01">
+						<div class="sitemapbox"><span class="btntext">INTRODUCTION</span><a class="btn modalclose" href="#introduction">アイリア DXとは</a></div>
+					</li>
+					<li class="sitemapbtn sitemap02">
+						<div class="sitemapbox"><span class="btntext">CASE STUDY</span><a class="btn modalclose" href="#casestudy">ご活用例</a></div>
+					</li>
+					<li class="sitemapbtn sitemap03">
+						<div class="sitemapbox"><span class="btntext">FOLLOW UP</span><a class="btn modalclose" href="#followup">フォローアップ</a></div>
+					</li>
+					<li class="sitemapbtn sitemap04">
+						<div class="sitemapbox"><span class="btntext">FEATURE</span><a class="btn modalclose" href="#feature">特徴</a></div>
+					</li>
+					<li class="sitemapbtn sitemap06">
+						<div class="sitemapbox"><span class="btntext">FAQ</span><a class="btn modalclose" href="#faq">よくあるご質問</a></div>
+					</li>
+					<li class="sitemapbtn sitemap07">
+						<div class="sitemapbox"><span class="btntext">SUPPORT</span><a class="btn modalclose" href="#support">サポート</a></div>
+					</li>
+					<li class="sitemapbtn sitemap08">
+						<div class="sitemapbox"><span class="btntext">DEVELOP &amp; IMPLEMENT</span><a class="btn modalclose" href="#development">開発・実装支援</a></div>
+					</li>
+				</ul>
+			</div>
+			<div class="sitemapfoot">
+				<div class="sitemapbtn cpbtn">
+					<div class="btnset">
+						<div class="btnbox btn01"><span class="btntext">無料アプリダウンロード</span><a class="btn dllink modalclose">DX Insightを使ってみる</a></div>
+						<div class="btnbox btn02"><span class="btntext">資料ダウンロード</span><a class="btn hs-cta-trigger-button hs-cta-trigger-button-186855482027" href="#" target="_blank">資料ダウンロード</a></div>
+					</div>
+				</div>
+				<div class="sitemapfootnav">
+					<div class="footnavset">
+						<ul class="navlist list01">
+							<li class="nav0101"><a href="https://axinc.jp/" target="_blank"><img src="img/sitemap_ax.png" width="94" height="45" alt="ax"/></a></li>
+							<li class="nav0102"><a href="https://www.axell.co.jp/" target="_blank"><img src="img/sitemap_axell.png" width="124" height="45" alt="Axell"/></a></li>
+						</ul>
+						<ul class="navlist list02">
+							<li class="nav0201"><a href="https://www.axell.co.jp/browser/">Terms of service</a></li>
+							<li class="nav0201"><a href="https://www.axell.co.jp/privacy/">Privacy policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="download">
+		<div class="downloadbox">
+			<div class="downloadinner">
+				<div class="btn_close"><a class="btn modalclose2">CLOSE</a></div>
+				<div class="downloadbody">
+					<h2>DX Insight 評価版を無料ダウンロード</h2>
+					<div class="dlbtn01" style="display:none;">
+						<div class="btnset">
+							<div class="btnbox btn01"><span class="btntext">Windows版</span><a class="btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT">ダウンロード</a></div>
+							<div class="btnbox btn02"><span class="btntext">Mac版</span><a class="btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT">ダウンロード</a></div>
+						</div>
+					</div>
+					<div class="dlbtn02" style="display:none;">
+						<div class="btnset">
+							<div class="btnbox btn01"><span class="btntext">Android版</span><a class="btn" href="#"><img src="img/btn_appstore.png" width="328" height="121" alt="App Store"/></a></div>
+							<div class="btnbox btn02"><span class="btntext">iOS版</span><a class="btn" href="#"><img src="img/btn_googleplay.png" width="406" height="121" alt="Google Play"/></a></div>
+						</div>
+					</div>
+				</div>
+				<div class="downloadfoot">
+					<div class="label">評価版ライセンス申し込み</div>
+					<a class="link-btn" href="https://axip-console.appspot.com/trial/terms/AILIA-DX-INSIGHT">アプリをダウンロード</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /MODAL -->
+    
+</body>
+</html>

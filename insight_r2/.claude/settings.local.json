@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(cp -n img/mac1.png img/mac1_noshadow_uncropped.png)",
+      "Bash(awk '/\\\\.section-wrapper[ ,{]/,/}/' /Users/kyakuno/Desktop/insight/style/style.css)",
+      "Bash(ls -la mac*.png)",
+      "Bash(awk '/\\\\.function-\\(top|tag|card\\)/{p=1} p{print NR\": \"$0} /^\\\\}/{if\\(p\\)c++; if\\(c>0 && p && $0==\"}\"\\){}}' style.css)"
+    ]
+  }
+}
