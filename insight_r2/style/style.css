@@ -19,7 +19,8 @@ body, html {
     width: 100%;
     aspect-ratio: auto;
     min-height: 100dvh; /* ファーストビューに全体を収める */
-    background: linear-gradient(166deg, #ffffff 0%, #ffffff 40%, #c8f0f8 53%, #00bbe0 66%, #0095cc 72%, #0a3a63 100%);
+    /* SP/タブレット: 縦方向グラデーション（上=白→下=青） */
+    background: linear-gradient(180deg, #ffffff 35%, #00bbe0 40%, #0a3a63 65%);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -28,20 +29,16 @@ body, html {
     box-sizing: border-box;
 }
 
-.hero-wrapper {
-  background: linear-gradient(170deg, #ffffff 0%, #ffffff 30%, #c8f0f8 50%, #78bdf2 70%, #49acd0 90%, #097adc 100%);
-}
-
 /* --- MV背景グラデーション（斜めウェッジから変更） --- */
 /* ::before / ::after は不要になったため削除 */
 /* 青ウェッジに重なる下部キャプションは白文字に */
 .hero-wrapper .myTextSwiper h2 {
-    color: #fff;
+    color: #;
 }
 
 .hero-wrapper-inner {
     position: relative;
-    width: 80%;
+    width: 90%;
     min-width: auto;
     max-width: 1800px;
     display: flex;
@@ -59,7 +56,7 @@ body, html {
     z-index: 2; /* ::before/::after(z1)の前面・コンテンツ(z10)の背面 */
 }
 
-/* --- 3. コンテンツレイアウト（縦並び：画像上・テキスト下） --- */
+/* --- 3. コンテンツレイアウト（デフォルト：縦並び） --- */
 .mv-container {
     position: relative;
     z-index: 10;
@@ -73,9 +70,7 @@ body, html {
     margin: 0;
 }
 
-
-
-/* テキストSwiperを縦並び時はstatic配置 */
+/* テキストSwiper：デフォルト */
 .myTextSwiper {
     position: static;
     transform: none;
@@ -131,6 +126,20 @@ body, html {
     padding-bottom: 4px;
 }
 
+/* .myTextSwiper はtaxt-area内に収まるためorderはtext-areaに準ずる */
+.myTextSwiper {
+    position: static;
+    transform: none;
+    width: 90%;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 15;
+    pointer-events: auto;
+    margin-top: 8px;
+    overflow: visible;
+}
+
 .slider-area { 
     width: 80%;
     max-width: 720px;
@@ -139,6 +148,79 @@ body, html {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* --- PC（981px以上）のみ横並びレイアウト --- */
+@media (min-width: 981px) {
+    /* PC: 横方向グラデーション（左=白→右=青） */
+    .hero-wrapper {
+        background: linear-gradient(90deg, #ffffff 35%, #00bbe0 40%, #0a3a63 65%);
+    }
+    .mv-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .text-area {
+        flex: 0 0 30%;
+        min-width: 0;
+        width: auto;
+        order: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .text-area .text-content-static {
+        align-items: center;
+    }
+    .slider-area {
+        flex: 0 0 56%;
+        min-width: 0;
+        width: auto;
+        max-width: none;
+        order: unset;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .myTextSwiper {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 60px;
+        order: unset;
+    }
+    .text-content {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+        text-align: left;
+    }
+    .text-content h2 {
+        flex: unset;
+        text-align: left;
+        white-space: normal;
+    }
+    .text-content .btn-modern {
+        align-self: center;   /* 左右の矢印で対称に挟むため中央寄せ */
+        margin-top: auto;     /* スライド下部にボタンを固定し矢印位置を安定させる */
+        margin-bottom: 0;
+    }
+    /* 矢印の配置基準をテキストスライダーにする */
+    .myTextSwiper {
+        position: relative;
+    }
+    .hero-wrapper h1 {
+        text-align: center;
+    }
+    .hero-wrapper p {
+        text-align: center;
+    }
+    .hero-wrapper h2 {
+        text-align: center;
+    }
 }
 
 /* アクセントボックスとスライダー本体 */
@@ -155,14 +237,48 @@ body, html {
     z-index: 0;
 }
 
-.swiper-container-box {
-    width: 100%;
-    aspect-ratio: 1671 / 904;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 20px 50px rgba(0, 187, 224, 0.37);
-    overflow: hidden;
+/* === MVデバイス枠（MacBook） ===
+   枠画像(.device-frame-img)を最前面に重ね、その透明な画面部分から
+   裏のスライダー(.device-screen)が見える構造。
+   画面位置は枠画像から実測した値。ズレたらこの4変数だけ微調整すればOK。 */
+.device-frame {
+    --frame-aspect: 4340 / 2860;   /* 枠画像の縦横比 */
+    --screen-top: 10.80%;          /* 透明画面の上インセット */
+    --screen-right: 10.16%;        /* 透明画面の右インセット */
+    --screen-bottom: 8.22%;        /* 透明画面の下インセット */
+    --screen-left: 10.14%;         /* 透明画面の左インセット */
+    --screen-overscan: 0.7%;       /* 黒ベゼルの内側へ少し潜らせて端を隠す（ベゼル幅未満にすること） */
     position: relative;
+    width: 100%;
+    aspect-ratio: var(--frame-aspect);
+    z-index: 2;
+}
+
+/* 枠画像：最前面・操作は透過させる */
+.device-frame-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;          /* 下のスワイパー操作を妨げない */
+    user-select: none;
+    z-index: 3;
+    /* ラップトップ形状に沿った柔らかい影でグラデーション背景から浮かせる */
+    filter: drop-shadow(0 18px 38px rgba(0, 187, 224, 0.28));
+}
+
+/* 画面領域に収まるスライダー本体 */
+.device-frame .device-screen {
+    position: absolute;
+    top: calc(var(--screen-top) - var(--screen-overscan));
+    right: calc(var(--screen-right) - var(--screen-overscan));
+    bottom: calc(var(--screen-bottom) - var(--screen-overscan));
+    left: calc(var(--screen-left) - var(--screen-overscan));
+    width: auto;
+    height: auto;
+    background: #000;              /* 画像読み込み前の画面下地 */
+    overflow: hidden;
     z-index: 2;
 }
 
@@ -177,10 +293,11 @@ body, html {
 /* 左右の矢印 */
 .swiper-button-next, .swiper-button-prev {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: auto;
+    bottom: 9px;               /* スライドボタンの上下中央に合わせる */
+    transform: none;
     z-index: 20;
-    color: #0086e0 !important; /* 矢印自体の色を今の円の色に変更 */
+    color: #00bbe0 !important; /* 矢印自体の色を今の円の色に変更 */
     background: transparent;   /* 背景の円を透明にして消す */
     width: auto !important;    /* 固定サイズを解除 */
     height: auto !important;   /* 固定サイズを解除 */
@@ -190,8 +307,8 @@ body, html {
 
 /* マウスを乗せた時の動き */
 .swiper-button-next:hover, .swiper-button-prev:hover { 
-    color: #0099b8 !important; /* ホバー時は矢印の色を少し濃くする */
-    transform: translateY(-50%) scale(1.1); /* 少しだけ大きくなる動きは残す */
+    color: #0074e0 !important; /* ホバー時は矢印の色を少し濃くする */
+    transform: scale(1.1); /* 少しだけ大きくなる動きは残す */
 }
 
 /* 矢印のサイズと太さ */
@@ -230,9 +347,9 @@ body, html {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpolyline points='10,4 20,14 10,24' fill='none' stroke='%230099b8' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-/* エリアの左右端に固定 */
-.swiper-button-prev { left: 30px !important; }
-.swiper-button-next { right: 30px !important; }
+/* ボタンの左右に配置（ボタン幅345.6px / 半幅172.8px + 余白12px = 184.8px） */
+.swiper-button-prev { right: calc(50% + 140px) !important; left: auto !important; }
+.swiper-button-next { left: calc(50% + 140px) !important; right: auto !important; }
 
 /* ページネーション（ドット） */
 .swiper-pagination {
@@ -269,7 +386,7 @@ body, html {
 
 /* --- 5. テキストスタイル --- */
 .hero-wrapper h1 { 
-    font-size: 3.4rem; /* 固定値: 1080px時の計算値 (旧: clamp(2.8rem, 5.5vw, 4.8rem)) */
+    font-size: 3.4rem;
     font-weight: 800;
     color: #444; 
     margin-bottom: 0.6rem; 
@@ -285,7 +402,7 @@ body, html {
 }
 
 .hero-wrapper p { 
-    font-size: 1.8rem; /* 固定値: 1080px時の計算値 (旧: clamp(1.4rem, 2vw, 2rem)) */
+    font-size: 1.4rem;
     font-weight: 500;
     color: #444; 
     line-height: 1.8; 
@@ -296,7 +413,7 @@ body, html {
 }
 
 .hero-wrapper h2 {
-    font-size: 1.8rem; /* 固定値: 1080px時の計算値 (旧: clamp(2rem, 3.8vw, 3.2rem)) */
+    font-size: 1.8rem;
     margin-bottom: 6px;
     white-space: nowrap;
     color: #555;
@@ -313,7 +430,7 @@ body, html {
 
     font-size: 1.4rem; /* 固定値: 1080px時の計算値 (旧: clamp(1.4rem, 2vw, 2rem)) */
     font-weight: 700;
-    width: 345.6px; /* 固定値: 1080px時の計算値 (旧: clamp(280px, 32vw, 480px)) */
+    width: 280px; /* 固定値: 1080px時の計算値 (旧: clamp(280px, 32vw, 480px)) */
     height: 45.36px; /* 固定値: 1080px時の計算値 (旧: clamp(44px, 4.2vw, 68px)) */
     padding: 0 1.5em;
     border-radius: 30px;
@@ -334,17 +451,17 @@ body, html {
     font-size: 1.52rem; /* 固定値: 1080px時の計算値 (旧: clamp(1.52rem, 2.16vw, 2.16rem)) */
 }
 
-.btn-modern{
+/* .btn-modern{
     color: #00bbe0;
 
     background-color: #fff;
     border: 1px solid #00bbe0;
 
-}
-.btn-modern:hover{
+} */
+/* .btn-modern:hover{
     opacity: 1;
     border: 2px solid #0074e0;
-}
+} */
 
 
 .btn-modern:hover span {
@@ -366,6 +483,31 @@ body, html {
     /* display:flex を外す → .inner.cw と同じ構造にする */
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     transition: none;
+}
+
+/* ページ最上部（.at-top）では head02 の背景を完全に透明化する。
+   PCウィンドウ幅（981px以上）のみ適用し、タブレット以下では
+   現状の半透明白（#ffffffc9）の動作をそのまま維持する。
+   .at-top クラスの付け外しは header.js のスクロール判定が担当。 */
+@media (min-width: 981px) {
+    #head02 {
+        /* 背景の切替だけ滑らかに。top はトランジション対象外なので
+           navArea への追従（即時切替）は従来どおり維持される。 */
+        transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    #head02.at-top {
+        background-color: transparent;
+        border-bottom-color: transparent;
+        box-shadow: none;
+    }
+    /* 完全透過時はメニューの文字色を白に切替（背景フェードに合わせて color もトランジション）。
+       .navbtn0201 / .navbtn0202 のボタンは色指定が !important のため影響を受けず白のまま。 */
+    #head02 .head02nav li a {
+        transition: color 0.3s ease;
+    }
+    #head02.at-top .head02nav li a {
+        color: #fff;
+    }
 }
 
 @media (max-width: 1023px) {

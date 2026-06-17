@@ -26,26 +26,35 @@ br.sp-br {
         width: 90%;
     }
     .mv-container {
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
+    /* display:contents で text-area の子要素を mv-container のフローに直接参加させる */
     .text-area {
-        width: 100%;
-        order: 2;
+        display: contents;
     }
+    /* 表示順：① p+h1 → ② 画像 → ③ テキストスライダー */
     .text-area .text-content-static {
+        order: 1;
+        width: 100%;
         padding-bottom: 4px;
         align-items: center;
     }
     .slider-area {
+        order: 2;
         width: 80%;
         flex: none;
-        order: 1;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .myTextSwiper {
-        margin-top: 8px;
+    .text-area .myTextSwiper {
         order: 3;
         width: 90%;
         max-width: 720px;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
     .text-content {
         pointer-events: auto;
@@ -95,6 +104,7 @@ br.sp-br {
         margin-bottom: 6px;
         white-space: nowrap;
         text-align: center;
+        color: #fff;
     }
     /* 英語では折り返しを許可 */
     :lang(en) .hero-wrapper h2 {

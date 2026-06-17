@@ -38,6 +38,9 @@ $(function () {
   /* ------ スクロール監視を開始 ------ */
   onScroll();
 
+  /* ------ 初期表示時の最上部判定（背景透明化用の .at-top を付与） ------ */
+  updateHead02TopState($(window).scrollTop());
+
   /* ------ subNav の詳細エリア開閉 ------ */
   $('.subNav .service').on('click', function () {
     if (!$(this).hasClass('active')) {
@@ -107,6 +110,9 @@ function onScroll() {
 
     startPos = scTop;
 
+    /* ページ最上部かどうかを判定して .at-top を付け外し（背景透明化用） */
+    updateHead02TopState(scTop);
+
     /* head02 を毎スクロールで同期 */
     syncHead02();
   });
@@ -126,6 +132,24 @@ function syncHead02() {
   var isHidden = navAreaEl ? navAreaEl.classList.contains('hide') : false;
 
   head02.style.top = isHidden ? '0px' : navH + 'px';
+}
+
+/* ============================================================
+   updateHead02TopState — ページ最上部かどうかで #head02 に .at-top を付与
+   ============================================================
+   背景を完全透明にする見た目の切替は CSS 側（PCウィンドウ幅のみ）が担当。
+   ここではスクロール位置の判定とクラスの付け外しのみを行うため、
+   タブレット以下では .at-top が付いても CSS が反応せず現状動作を維持する。
+   ============================================================ */
+function updateHead02TopState(scTop) {
+  var head02 = document.getElementById('head02');
+  if (!head02) return;
+
+  if (scTop <= 0) {
+    head02.classList.add('at-top');
+  } else {
+    head02.classList.remove('at-top');
+  }
 }
 
 /* ============================================================

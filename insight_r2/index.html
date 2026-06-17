@@ -117,63 +117,67 @@
 
     <div class="hero-wrapper">
 
+        <div id="tsparticles"></div>
         <div class="hero-wrapper-inner">
 
-            <div id="tsparticles"></div>
+            
 
             <div class="mv-container">
-                <!-- 固定テキスト（スライドしない部分） -->
+                <!-- 左カラム：固定テキスト＋テキストスライダー -->
                 <div class="text-area">
                     <div class="text-content-static">
                         <p>機密文書も、一般業務も、ひとつのAIアプリで</p>
-                        <h1><span class="highlight">ローカルLLM</span>で、<span class="highlight">すべての業務</span>にAIを</h1>
+                        <h1><span class="highlight">ローカルLLM</span>で、<br class="pc"><span class="highlight">すべての業務</span>にAIを</h1>
+                    </div>
+                    <!-- テキストスライダー -->
+                    <div class="swiper myTextSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide text-content">
+                                <h2>機密文書を社外に出さずRAGで精度を向上</h2>
+                                <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/RAG.html" class="btn-modern" target="_blank"><span>RAGについて詳しく見る</span></a>
+                            </div>
+                            <div class="swiper-slide text-content">
+                                <h2>機密会議の議事録を完全ローカルで</h2>
+                                <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/Recording.html" class="btn-modern" target="_blank"><span>議事録について詳しく見る</span></a>
+                            </div>
+                            <div class="swiper-slide text-content">
+                                <h2>画像・音声を端末内で検索</h2>
+                                <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/SearchImage.html" class="btn-modern" target="_blank"><span>画像・音声検索について詳しく見る</span></a>
+                            </div>
+                            <div class="swiper-slide text-content">
+                                <h2>資料に使う画像を生成</h2>
+                                <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/GenerateImage.html" class="btn-modern" target="_blank"><span>画像生成について詳しく見る</span></a>
+                            </div>
+                        </div>
+                        <!-- スライドナビ矢印：ボタンの左右に配置 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
 
-                <!-- 右側の画像スライダー -->
+                <!-- 右カラム：画像スライダー -->
                 <div class="slider-area">
                     <div class="slider-contents-wrapper">
-                        <div class="swiper myImageSwiper swiper-container-box">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 1"></div>
-                                <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 3"></div>
-                                <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 4"></div>
-                                <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 2"></div>
+                        <!-- PCデバイス枠：画面が透明なPNG枠の裏にスライダーを敷く -->
+                        <div class="device-frame">
+                            <!-- 画面（スライダー本体） -->
+                            <div class="swiper myImageSwiper device-screen">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 1"></div>
+                                    <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 3"></div>
+                                    <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 4"></div>
+                                    <div class="swiper-slide"><img src="img/mac1.png" alt="Slide 2"></div>
+                                </div>
                             </div>
+                            <!-- PC枠画像（画面部分が透明）：最前面に重ねる -->
+                            <img class="device-frame-img" src="img/MacBook_Pro_M4_16-inch_Silver.png" alt="">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-
-                
-            </div>
-
-            <!-- テキストスライダーを hero-wrapper 直下に置き、絶対配置で左側に重ねる -->
-            <div class="swiper myTextSwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide text-content">
-                        <h2>機密文書を社外に出さずRAGで精度を向上</h2>
-                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/RAG.html" class="btn-modern" target="_blank"><span>RAGについて詳しく見る</span></a>
-                    </div>
-                    <div class="swiper-slide text-content">
-                        <h2>機密会議の議事録を完全ローカルで</h2>
-                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/Recording.html" class="btn-modern" target="_blank"><span>議事録について詳しく見る</span></a>
-                    </div>
-                    <div class="swiper-slide text-content">
-                        <h2>画像・音声を端末内で検索</h2>
-                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/SearchImage.html" class="btn-modern" target="_blank"><span>画像・音声検索について詳しく見る</span></a>
-                    </div>
-                    <div class="swiper-slide text-content">
-                        <h2>資料に使う画像を生成</h2>
-                        <a href="https://ailia-ai.github.io/ailia-dx-insight/ja/GenerateImage.html" class="btn-modern" target="_blank"><span>画像生成について詳しく見る</span></a>
-                    </div>
-                </div>
             </div>
 
         </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
 
     </div>
 

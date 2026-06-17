@@ -336,7 +336,7 @@ body {
   height: 60px;
   transition: all ease 0.3s;
   background: #fff;
-  box-shadow: 0px 5px 8px 0px rgba(10, 10, 10, 0.1);
+
 }
 .navArea .spNavBtn {
   display: none;
@@ -565,7 +565,7 @@ body {
     height: 48px;
     transition: all ease 0.3s;
     background: #fff;
-    box-shadow: 0px 5px 8px 0px rgba(10, 10, 10, 0.1);
+  
   }
   .navArea .inner {
     max-width: 1820px;
