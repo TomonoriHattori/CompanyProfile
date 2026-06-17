@@ -129,9 +129,23 @@ br.sp-br {
         font-size: clamp(1rem, 1.5vw, 1.5rem);
         padding: 8px 1.6em;
     }
+    /* タブレット以下でも左右の矢印を表示する */
+    .myTextSwiper {
+        position: relative; /* 矢印の位置基準をテキストスワイパーにする（PC以外はstaticのため） */
+    }
     .swiper-button-next,
     .swiper-button-prev {
-        display: none;
+        display: block;
+        bottom: 19px; /* スライドボタン(高さ45.36px＋下マージン10px)の中央に合わせる */
+    }
+    /* ボタン幅345.6pxの左右へ配置（半幅172.8px＋わずかな余白） */
+    .swiper-button-prev {
+        right: calc(50% + 175px) !important;
+        left: auto !important;
+    }
+    .swiper-button-next {
+        left: calc(50% + 175px) !important;
+        right: auto !important;
     }
 
     /* --- head02 サブナビ --- */
@@ -550,6 +564,25 @@ br.sp-br {
     }
     .myTextSwiper {
         margin-top: 8px;
+    }
+    /* スマホ：80vwボタンの左右（画面端側の余白）に矢印を配置 */
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: block;
+        bottom: 22px;
+    }
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        width: 22px;
+        height: 22px;
+    }
+    .swiper-button-prev {
+        right: calc(50% + 40vw) !important;
+        left: auto !important;
+    }
+    .swiper-button-next {
+        left: calc(50% + 40vw) !important;
+        right: auto !important;
     }
 
     /* --- head02 サブナビ --- */

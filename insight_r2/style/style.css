@@ -20,7 +20,7 @@ body, html {
     aspect-ratio: auto;
     min-height: 100dvh; /* ファーストビューに全体を収める */
     /* SP/タブレット: 縦方向グラデーション（上=白→下=青） */
-    background: linear-gradient(180deg, #ffffff 35%, #00bbe0 40%, #0a3a63 65%);
+    background: linear-gradient(180deg, #ffffff 30%, #00bbe0 35%, #0a3a63 60%);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -175,13 +175,15 @@ body, html {
         align-items: center;
     }
     .slider-area {
-        flex: 0 0 56%;
+        flex: 0 0 63%;
         min-width: 0;
         width: auto;
         max-width: none;
         order: unset;
         margin-left: 0;
         margin-right: 0;
+        /* 画像スライドを少し右へ移動（数値を上げるほど右、下げる/マイナスで左） */
+        transform: translateX(4%);
     }
     .myTextSwiper {
         width: 100%;
@@ -428,7 +430,7 @@ body, html {
     align-items: center;
     justify-content: center;
 
-    font-size: 1.4rem; /* 固定値: 1080px時の計算値 (旧: clamp(1.4rem, 2vw, 2rem)) */
+    font-size: 12px; /* 固定値: 1080px時の計算値 (旧: clamp(1.4rem, 2vw, 2rem)) */
     font-weight: 700;
     width: 280px; /* 固定値: 1080px時の計算値 (旧: clamp(280px, 32vw, 480px)) */
     height: 45.36px; /* 固定値: 1080px時の計算値 (旧: clamp(44px, 4.2vw, 68px)) */
@@ -445,10 +447,21 @@ body, html {
     background-color: #00bbe0;
 }
 
+/* スライドテキストボタンの文字横アイコン（open_in_new） */
+.btn-modern .btn-icon {
+    width: 1.25em;        /* SVGは枠の約75%しか描画されないため、文字に合わせ少し大きめに */
+    height: 1.25em;
+    margin-left: 0.4em;
+    flex-shrink: 0;       /* 固定幅ボタン内でアイコンが潰れないようにする */
+    fill: currentColor;   /* ボタンの文字色(#fff)をそのまま継承 */
+    transform: translateY(1px);            /* 文字とのベースライン調整で2px下げる */
+    transition: width 0.2s, height 0.2s;  /* ホバー時の拡大を滑らかに */
+}
+
 .btn-modern:hover { 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     opacity: 0.8;
-    font-size: 1.52rem; /* 固定値: 1080px時の計算値 (旧: clamp(1.52rem, 2.16vw, 2.16rem)) */
+    font-size: 13px; /* 固定値: 1080px時の計算値 (旧: clamp(1.52rem, 2.16vw, 2.16rem)) */
 }
 
 /* .btn-modern{
@@ -466,6 +479,12 @@ body, html {
 
 .btn-modern:hover span {
     font-size: 1.08em;
+} 
+
+/* ホバー時、文字(span)と同じ比率でアイコンも拡大（1.25em × 1.08） */
+.btn-modern:hover .btn-icon {
+    width: 1.35em;
+    height: 1.35em;
 } 
 
 
@@ -1952,10 +1971,11 @@ a.p-internal-container:hover .link-btn {
 }
 
 .function-card {
-    border: 2px solid #00BBE0;
+    border: none;
     border-radius: 12px;
     overflow: hidden;
     background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
     display: flex;
     flex-direction: column;
 }
@@ -1988,6 +2008,14 @@ a.p-internal-container:hover .link-btn {
     margin: 0 0 14px 0;
     line-height: 1.3;
 }
+
+/* 機能カードごとのタイトル文字色（カード単位で個別に変更可能） */
+.function-card.fc-chat .function-card-title { color: #005fbd; }      /* チャット */
+.function-card.fc-rag .function-card-title { color: #008531; }       /* RAG */
+.function-card.fc-search .function-card-title { color: #c73b6c; }    /* 情報検索 */
+.function-card.fc-translate .function-card-title { color: #005fbd; } /* 翻訳 */
+.function-card.fc-minutes .function-card-title { color: #008531; }   /* 議事録作成 */
+.function-card.fc-generate .function-card-title { color: #c73b6c; }  /* 画像生成・音声合成 */
 
 .function-card-llm {
     padding-bottom: 16px;
