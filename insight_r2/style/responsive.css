@@ -79,14 +79,8 @@ br.sp-br {
         line-height: 1.5;
         text-align: center;
     }
-    /* 英語では折り返しを許可して切れを防ぐ */
-    :lang(en) .hero-wrapper h1 {
-        white-space: normal;
-        font-size: clamp(1.6rem, 3.8vw, 3rem);
-    }
     /* 900px以下ではh1内・h2内の<br>を非表示にして1行にまとめる */
-    .text-content-static h1 br,
-    .myTextSwiper h2 br {
+    .text-content-static h1 br {
         display: none;
     }
     .hero-wrapper p {
@@ -95,21 +89,12 @@ br.sp-br {
         transform: none;
         text-align: center;
     }
-    /* 英語キャッチコピー（p）は小さく */
-    :lang(en) .hero-wrapper p {
-        font-size: clamp(1rem, 1.5vw, 1.5rem);
-    }
     .hero-wrapper h2 {
         font-size: 1.9rem;
         margin-bottom: 6px;
         white-space: nowrap;
         text-align: center;
         color: #fff;
-    }
-    /* 英語では折り返しを許可 */
-    :lang(en) .hero-wrapper h2 {
-        white-space: normal;
-        font-size: clamp(1.4rem, 2.8vw, 2.2rem);
     }
     /* ボタン：中央揃え */
     .btn-modern {
@@ -122,12 +107,6 @@ br.sp-br {
         white-space: nowrap;
         margin-bottom: 10px;
         align-self: center;
-    }
-    /* 英語ボタンは折り返し許可・小さめサイズ */
-    :lang(en) .btn-modern {
-        white-space: normal;
-        font-size: clamp(1rem, 1.5vw, 1.5rem);
-        padding: 8px 1.6em;
     }
     /* タブレット以下でも左右の矢印を表示する */
     .myTextSwiper {
@@ -185,6 +164,7 @@ br.sp-br {
         font-size: clamp(9px, 1.0vw, 10.5px); /* 幅100px内に8文字収まるよう上限を下げる。ホバー×1.08emでも余裕あり */
         padding: 0;
     }
+    :lang(en) {}
     .navbtn0201 .btn:hover span,
     .navbtn0202 .btn:hover span {
         font-size: 1.08em;
@@ -518,6 +498,8 @@ br.sp-br {
     }
     .hero-wrapper {
         box-sizing: border-box;
+        min-height: 600px;
+        padding: 120px 0 60px 0;
     }
     .hero-wrapper-inner {
         width: 100%;
@@ -535,10 +517,13 @@ br.sp-br {
         padding-bottom: 0;
     }
     .hero-wrapper h1 {
-        font-size: clamp(1.8rem, 5.5vw, 2.8rem);
+        font-size: 1.8rem;
         margin-bottom: 0.6rem;
         line-height: 1.5;
         text-align: center;
+    }
+    :lang(en) .hero-wrapper h1 {
+        font-size: 1.6rem;
     }
     .hero-wrapper p {
         font-size: clamp(1rem, 2.8vw, 1.2rem);
@@ -550,6 +535,9 @@ br.sp-br {
         margin-bottom: 6px;
         white-space: nowrap;
         text-align: center;
+    }
+    :lang(en) .text-content h2 {
+        font-size: 1.2rem;
     }
     .btn-modern {
         font-size: 3.2vw;
@@ -647,6 +635,10 @@ br.sp-br {
     .link-btn-desc-under {
         font-size: clamp(0.9rem, 2.8vw, 1.4rem);
         white-space: nowrap;
+    }
+    /* ダウンロードモーダルの「アプリをダウンロード」ボタンを600px以下で少し狭く */
+    #download .downloadfoot .link-btn {
+        width: 30rem;
     }
 
     /* --- YouTube動画 --- */

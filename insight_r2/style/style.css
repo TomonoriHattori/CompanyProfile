@@ -423,6 +423,48 @@ body, html {
     width: 100%;
 }
 
+/* --------------------------------------------
+   英語版 MV 固定テキスト調整（PC: 981px以上）
+-------------------------------------------- */
+/* --- タブレット横（981〜1023px）：従来のレイアウトを維持 ---
+   テキスト列を広げて h1 を2行に保ち、スライダーは 56%。
+   ※デスクトップとは別扱いにし、タブレットでのスライドテキスト位置を変えないため。 */
+@media (min-width: 981px) and (max-width: 1023px) {
+    :lang(en) .text-content-static h1 {
+        font-size: clamp(1.3rem, 2.3vw, 3rem);
+        white-space: nowrap;
+    }
+    :lang(en) .text-area {
+        flex-basis: 37%;
+    }
+    :lang(en) .slider-area {
+        flex-basis: 56%;
+    }
+}
+
+/* --- デスクトップ（1024px以上）：スライダーを日本語版と同じサイズに ---
+   slider を 63%（=JP）に戻すため text-area も 30%（=JP）へ。
+   30%列に収まるよう h1 を調整（<br class="pc"> による2行構成は維持、はみ出し防止に折り返し許可）。
+   ※h1 を大きくしたい場合は下の 1.7vw / 2.1rem を増減して調整 */
+@media (min-width: 1024px) {
+    :lang(en) .text-content-static h1 {
+        font-size: clamp(1.1rem, 1.7vw, 2.1rem);
+        white-space: normal;
+    }
+    :lang(en) .text-area {
+        flex-basis: 30%;
+    }
+    :lang(en) .slider-area {
+        flex-basis: 63%;
+    }
+}
+/* p: 「everyday work」後の改行は PC（981px以上）でのみ表示 */
+@media (max-width: 980px) {
+    .text-content-static p br.mv-pc-br {
+        display: none;
+    }
+}
+
 .btn-modern { 
     display: inline-flex; 
     text-decoration: none; 
@@ -778,7 +820,10 @@ section {
     height: auto;
     transform: none;
     z-index: auto;
-    transition: box-shadow 0.2s, opacity 0.2s, outline 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    transition: box-shadow 0.2s, opacity 0.2s;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 .video-wrapper .accent-box:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -1421,6 +1466,7 @@ a.p-internal-container {
 }
 a.p-internal-container .link-btn {
     transition: font-size 0.2s;
+    white-space: nowrap;
 }
 a.p-internal-container:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -1693,265 +1739,6 @@ a.p-internal-container:hover .link-btn {
     width: 100%;
 }
 
-
-/* --------------------------英語対応--------------------------------------- */
-
-:lang(en) .hero-wrapper h1 {
-    font-size: clamp(1.8rem, 2.4vw, 3.2vw);
-    letter-spacing: 0.02em;
-    line-height: 1.6;
-    white-space: normal;
-}
- 
-:lang(en) .hero-wrapper p {
-    font-size: clamp(1.1rem, 1vw, 1.2vw);
-    line-height: 1.5;
-    white-space: normal;
-    transform: none; /* EN: p を h1 に揃える（日本語版は translateX(-1vw) でずらしているため上書き） */
-}
- 
-:lang(en) .hero-wrapper h2 {
-    font-size: clamp(1.5rem, 2.4vw, 2.2rem);
-    line-height: 1.5;
-    white-space: normal;
-}
- 
-:lang(en) .btn-modern {
-    font-size: clamp(1rem, 1vw, 1.2vw);
-    width: auto;
-    min-width: 22vw;
-    max-width: 32vw;
-    padding: 10px 1.6em;
-    white-space: normal;
-    line-height: 1.4;
-}
- 
-/* head02 sub-nav: allow buttons to shrink for longer English labels */
-:lang(en) .navbtn0201 .btn,
-:lang(en) .navbtn0202 .btn {
-    font-size: clamp(8px, 1.05vw, 13px);
-    padding: 8px 14px;
-    white-space: nowrap;
-}
- 
-:lang(en) .head02nav li a {
-    font-size: clamp(10px, 1.15vw, 13px);
-}
- 
-/* function-tag li: remove fixed width so English labels don't overflow */
-:lang(en) .function-tag li {
-    width: auto;
-    min-width: 130px;
-    padding: 0 12px;
-    font-size: clamp(1.2rem, 1.3vw, 1.7rem);
-}
- 
-/* section titles & descriptions */
-:lang(en) .section-title h1 {
-    font-size: clamp(2.8rem, 3.6vw, 4.4rem);
-    line-height: 1.4;
-}
- 
-:lang(en) .section-desc {
-    font-size: clamp(1.6rem, 1.8vw, 2.2rem);
-    line-height: 1.8;
-}
- 
-/* link buttons: let width grow naturally with English text */
-:lang(en) .link-btn {
-    font-size: clamp(1.4rem, 1.5vw, 2rem);
-    padding: 10px 2.4em;
-    white-space: normal;
-    text-align: center;
-}
- 
-:lang(en) .link-btn-desc {
-    font-size: clamp(1.8rem, 2vw, 2.4rem);
-}
- 
-:lang(en) .link-btn-desc-under {
-    font-size: clamp(1.4rem, 1.5vw, 1.8rem);
-}
- 
-/* function-main text */
-:lang(en) .function-main-text-desc h3 {
-    font-size: clamp(8px, 0.75vw, 11px);
-    white-space: normal;
-    line-height: 1.6;
-}
- 
-:lang(en) .rev .function-main-text-desc h3 {
-    width: 55%;
-    white-space: normal;
-}
- 
-:lang(en) .function-main-text-desc p {
-    font-size: clamp(10px, 0.95vw, 14px);
-    line-height: 1.8;
-}
- 
-:lang(en) .function-main-text-point h2 {
-    font-size: clamp(1.6rem, 1.8vw, 2.2rem);
-}
- 
-:lang(en) .function-main-text-title {
-    font-size: clamp(2rem, 2.4vw, 3rem);
-}
- 
-/* feature cards: allow text to wrap */
-:lang(en) .feature-container-box h1 {
-    font-size: clamp(12px, 1.05vw, 15px);
-    line-height: 1.4;
-    padding: 0 8%;
-    text-align: center;
-}
- 
-:lang(en) .feature-container-desc {
-    font-size: clamp(9px, 0.9vw, 11px);
-    line-height: 1.6;
-}
- 
-/* security boxes */
-:lang(en) .security-container-box h1 {
-    font-size: clamp(12px, 1.1vw, 22px);
-    line-height: 2;
-}
- 
-:lang(en) .security-container-box p {
-    font-size: clamp(9px, 0.9vw, 13px);
-    line-height: 1.6;
-}
- 
-/* white paper text */
-:lang(en) .wp-text h1 {
-    font-size: clamp(11px, 1.1vw, 20px);
-    line-height: 1.5;
-}
- 
-:lang(en) .wp-text p {
-    font-size: clamp(10px, 1vw, 17px);
-    line-height: 1.8;
-}
- 
-/* FAQ */
-:lang(en) .faq-main h1 {
-    font-size: clamp(1.5rem, 1.8vw, 2.2rem);
-    line-height: 1.7;
-}
- 
-:lang(en) .faq-main p {
-    font-size: clamp(1.4rem, 1.6vw, 1.8rem);
-    line-height: 1.9;
-}
- 
-/* support */
-:lang(en) .support-container .link-btn {
-    width: auto;
-    min-width: 280px;
-    padding: 10px 2em;
-}
- 
-:lang(en) .support-container p {
-    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
-    line-height: 1.7;
-}
- 
-/* p-internal */
-:lang(en) .p-internal .p-internal-container h1 {
-    font-size: clamp(22px, 1.5vw, 30px);
-    line-height: 1.4;
-    padding: 0 5%;
-}
- 
-:lang(en) .p-internal p {
-    font-size: clamp(14px, 1vw, 20px);
-    line-height: 1.6;
-    padding: 0 5%;
-}
- 
-:lang(en) .p-internal-btn .link-btn {
-    font-size: clamp(11px, 0.9vw, 16px);
-    padding: 10px 1.6em;
-}
- 
-/* client list title */
-:lang(en) .client-list-title h1 {
-    font-size: clamp(2rem, 2.2vw, 2.8rem);
-}
- 
-/* Tablet adjustments for English (980px and below) */
-@media (max-width: 980px) {
-    :lang(en) .hero-wrapper h1 {
-        font-size: clamp(1.6rem, 3.8vw, 3rem);
-        white-space: normal;
-    }
-    :lang(en) .hero-wrapper h2 {
-        font-size: clamp(1.4rem, 2.8vw, 2.2rem);
-        white-space: normal;
-    }
-    :lang(en) .hero-wrapper p {
-        font-size: clamp(1rem, 1.5vw, 1.5rem);
-    }
-    :lang(en) .btn-modern {
-        font-size: clamp(1rem, 1.5vw, 1.5rem);
-        max-width: none;
-        min-width: 0;
-        padding: 8px 1.6em;
-        white-space: normal;
-    }
-    :lang(en) .function-tag li {
-        min-width: 0;
-        padding: 0 8px;
-        font-size: clamp(1rem, 1.5vw, 1.4rem);
-    }
-    :lang(en) .navbtn0201 .btn,
-    :lang(en) .navbtn0202 .btn {
-        font-size: clamp(8px, 1.1vw, 12px);
-    }
-}
- 
-/* Mobile adjustments for English (600px and below) */
-@media (max-width: 600px) {
-    :lang(en) .hero-wrapper h1 {
-        font-size: 4.8vw;
-        white-space: nowrap;
-    }
-    :lang(en) .hero-wrapper h2 {
-        font-size: 4.8vw;
-        white-space: nowrap;
-    }
-    :lang(en) .hero-wrapper p {
-        font-size: 2.8vw;
-    }
-    :lang(en) .btn-modern {
-        font-size: 2.8vw;
-        padding: 8px 1.6em;
-        white-space: nowrap;
-    }
-    :lang(en) .link-btn {
-        font-size: clamp(1rem, 3.2vw, 1.4rem);
-        padding: 10px 1.4em;
-        white-space: normal;
-    }
-    :lang(en) .link-btn-desc-under {
-        font-size: clamp(0.8rem, 2.4vw, 1.2rem);
-        white-space: normal;
-    }
-    :lang(en) .section-title h1 {
-        font-size: clamp(2rem, 5.5vw, 2.8rem);
-    }
-    :lang(en) .faq-main h1 {
-        font-size: 1.4rem;
-        line-height: 1.6;
-    }
-    :lang(en) .faq-main p {
-        font-size: 1.3rem;
-    }
-    :lang(en) .support-container .link-btn {
-        min-width: 0;
-        width: 90%;
-    }
-}
 /* ============================================
    FUNCTION カード型グリッド
    ============================================ */
